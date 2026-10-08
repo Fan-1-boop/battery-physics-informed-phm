@@ -1,0 +1,66 @@
+{
+  "status": "REAL_DATA_EXPLORATORY_V9_5_TARGET_SCREEN",
+  "date": "2026-10-08",
+  "readme": "Six observable charge features, not true electrode states",
+  "fixed_v8_folds": true,
+  "source_model": "results/v8/rw_source8_model.json",
+  "target_cell_count": 47,
+  "label_budget": "2 target-train-pool cells, each first 25% lifetime capacity labels",
+  "methods": {
+    "random": "v8 repeated random acquisition baseline (5 repeats)",
+    "representative": "v8 six-dimensional target centroid + farthest point",
+    "pred_extreme": "min and max source-predicted early mean capacity (first 12 cycles)",
+    "pred_median": "source-predicted early median-nearest + most different",
+    "source_novelty": "smallest and largest normalized Euclidean distance to RW training-feature center"
+  },
+  "results": [
+    {
+      "name": "2C",
+      "random": 27.788759,
+      "representative": 28.228372,
+      "pred_extreme": 26.967861759946096,
+      "pred_median": 28.015527208994847,
+      "source_novelty": 26.008318708731807
+    },
+    {
+      "name": "3C",
+      "random": 44.031411,
+      "representative": 43.160497,
+      "pred_extreme": 50.944733050434735,
+      "pred_median": 53.05427958013122,
+      "source_novelty": 43.429283317655496
+    },
+    {
+      "name": "R2.5",
+      "random": 42.504471,
+      "representative": 42.327157,
+      "pred_extreme": 42.38135412642625,
+      "pred_median": 43.78449572104441,
+      "source_novelty": 44.94187359715674
+    },
+    {
+      "name": "R3",
+      "random": 46.62878,
+      "representative": 54.192845,
+      "pred_extreme": 47.521246195491685,
+      "pred_median": 50.498119630632516,
+      "source_novelty": 51.46061088528823
+    },
+    {
+      "name": "Sim_satellite",
+      "random": 47.714009,
+      "representative": 61.196562,
+      "pred_extreme": 54.15494370214735,
+      "pred_median": 55.182314511834406,
+      "source_novelty": 43.25744778385407
+    }
+  ],
+  "macro": {
+    "random": 41.733486,
+    "representative": 45.8210866,
+    "pred_extreme": 44.394027766889224,
+    "pred_median": 46.106947330527476,
+    "source_novelty": 41.819506858537274
+  },
+  "interpretation": "No strategy improves over random macro average; source novelty near parity with random and improves satellite, but not demonstrated statistical superiority. This is not exact replication of literature methods."
+}
