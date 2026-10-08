@@ -1,5 +1,16 @@
 # Physics-Informed Battery PHM
 
+## v9 — RW→五工况低标签电芯选样（2026-10-08）
+
+**真实 55 电芯探索实验已完成；8 种选样策略共享 v8 的 RW8 源模型、相同电芯级五折及 2 个标注电芯前25%循环标签预算。**
+
+**预测容量四分位分层**获得五工况等权容量 MAE **41.42 mAh**，随机标注 **41.73 mAh**，原六维中心+最远点 **45.82 mAh**。随机−四分位 MAE 差约 **+0.317 mAh**，探索性电芯 bootstrap 95% 区间 **[-2.00,+2.63] mAh**（包含零）。因此不能宣称预测分层已经稳定优于随机。根据近年论文思想尝试的六维/输出分布 medoids、源模型分歧及不确定性加覆盖策略亦无整体优势。
+
+[正式研究报告](reports/v9_rw_source_active_selection.md) · [8 策略数值表](results/v9/summary_five_domain_selection.csv) · [可运行实验代码](experiments/rw_selection/benchmark.py) · [配对统计](results/v9/summary_five_domains_and_paired_bootstrap.json)
+
+**下一个小范围实验**：固定前 N 次循环标签，比较随机/预测四分位选样下的均值偏差校准、残差 Ridge、实例加权式迁移，不增设新大网络。文献思想启发与完整原论文复现需区别报告。
+
+
 ## v8 55-cell 实际实验结果（2026-10-08）
 
 固定 RW 全部 8 电芯训练源 Ridge；五个目标工况合计 47 电芯；每次只使用 2 个目标候选训练电芯的前 25% 寿命循环标签。全部目标域电芯级 5-fold 测试已经完成；可移植 Python 代码和 7 项协议测试见仓库。
