@@ -1,0 +1,1485 @@
+{
+  "domain": "3C",
+  "source": "RW_8",
+  "fixed_source": "results/v8/rw_source8_model.json",
+  "method": "same source coefficients, same v8 folds, 2 target cells with first 25% cycles, alpha10 residual Ridge",
+  "selection": "unlabeled first-12-cycle charge statistics only",
+  "records": [
+    {
+      "fold": 0,
+      "policy": "random",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-6",
+          "n_label_cycles": 76
+        },
+        {
+          "id": "3C_battery-15",
+          "n_label_cycles": 40
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-3",
+          "mae_mAh": 44.757444190765675
+        },
+        {
+          "id": "3C_battery-5",
+          "mae_mAh": 29.03368443094077
+        },
+        {
+          "id": "3C_battery-11",
+          "mae_mAh": 75.06608950551015
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "rep": 1,
+      "selected": [
+        {
+          "id": "3C_battery-14",
+          "n_label_cycles": 34
+        },
+        {
+          "id": "3C_battery-4",
+          "n_label_cycles": 79
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-3",
+          "mae_mAh": 48.002978699627434
+        },
+        {
+          "id": "3C_battery-5",
+          "mae_mAh": 23.952654644173105
+        },
+        {
+          "id": "3C_battery-11",
+          "mae_mAh": 67.30977817242064
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "rep": 2,
+      "selected": [
+        {
+          "id": "3C_battery-14",
+          "n_label_cycles": 34
+        },
+        {
+          "id": "3C_battery-1",
+          "n_label_cycles": 71
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-3",
+          "mae_mAh": 55.20074087801474
+        },
+        {
+          "id": "3C_battery-5",
+          "mae_mAh": 21.063676086811476
+        },
+        {
+          "id": "3C_battery-11",
+          "mae_mAh": 63.35950956294156
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "rep": 3,
+      "selected": [
+        {
+          "id": "3C_battery-9",
+          "n_label_cycles": 69
+        },
+        {
+          "id": "3C_battery-14",
+          "n_label_cycles": 34
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-3",
+          "mae_mAh": 62.761417567606806
+        },
+        {
+          "id": "3C_battery-5",
+          "mae_mAh": 22.910386806904192
+        },
+        {
+          "id": "3C_battery-11",
+          "mae_mAh": 58.97047235900719
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "rep": 4,
+      "selected": [
+        {
+          "id": "3C_battery-1",
+          "n_label_cycles": 71
+        },
+        {
+          "id": "3C_battery-8",
+          "n_label_cycles": 63
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-3",
+          "mae_mAh": 54.26943490728818
+        },
+        {
+          "id": "3C_battery-5",
+          "mae_mAh": 16.1271283319017
+        },
+        {
+          "id": "3C_battery-11",
+          "mae_mAh": 49.4750744866574
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "representative",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-12",
+          "n_label_cycles": 48
+        },
+        {
+          "id": "3C_battery-15",
+          "n_label_cycles": 40
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-3",
+          "mae_mAh": 66.95641320025896
+        },
+        {
+          "id": "3C_battery-5",
+          "mae_mAh": 26.665488496381528
+        },
+        {
+          "id": "3C_battery-11",
+          "mae_mAh": 61.01110969038399
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "pred_extremes",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-15",
+          "n_label_cycles": 40
+        },
+        {
+          "id": "3C_battery-1",
+          "n_label_cycles": 71
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-3",
+          "mae_mAh": 54.67190562631294
+        },
+        {
+          "id": "3C_battery-5",
+          "mae_mAh": 23.27692043941021
+        },
+        {
+          "id": "3C_battery-11",
+          "mae_mAh": 69.49583123974372
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "pred_quartiles",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-13",
+          "n_label_cycles": 51
+        },
+        {
+          "id": "3C_battery-4",
+          "n_label_cycles": 79
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-3",
+          "mae_mAh": 48.35059298550096
+        },
+        {
+          "id": "3C_battery-5",
+          "mae_mAh": 17.31054591536412
+        },
+        {
+          "id": "3C_battery-11",
+          "mae_mAh": 52.86035008412714
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "pred_medoids",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-9",
+          "n_label_cycles": 69
+        },
+        {
+          "id": "3C_battery-14",
+          "n_label_cycles": 34
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-3",
+          "mae_mAh": 62.761417567606806
+        },
+        {
+          "id": "3C_battery-5",
+          "mae_mAh": 22.910386806904192
+        },
+        {
+          "id": "3C_battery-11",
+          "mae_mAh": 58.97047235900719
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "feature_medoids",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-6",
+          "n_label_cycles": 76
+        },
+        {
+          "id": "3C_battery-15",
+          "n_label_cycles": 40
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-3",
+          "mae_mAh": 44.757444190765675
+        },
+        {
+          "id": "3C_battery-5",
+          "mae_mAh": 29.03368443094077
+        },
+        {
+          "id": "3C_battery-11",
+          "mae_mAh": 75.06608950551015
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-5",
+          "n_label_cycles": 70
+        },
+        {
+          "id": "3C_battery-13",
+          "n_label_cycles": 51
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-1",
+          "mae_mAh": 35.34059032236061
+        },
+        {
+          "id": "3C_battery-4",
+          "mae_mAh": 27.540708774778167
+        },
+        {
+          "id": "3C_battery-12",
+          "mae_mAh": 40.37444549714447
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "rep": 1,
+      "selected": [
+        {
+          "id": "3C_battery-10",
+          "n_label_cycles": 37
+        },
+        {
+          "id": "3C_battery-14",
+          "n_label_cycles": 34
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-1",
+          "mae_mAh": 42.32018396691343
+        },
+        {
+          "id": "3C_battery-4",
+          "mae_mAh": 38.643970585940195
+        },
+        {
+          "id": "3C_battery-12",
+          "mae_mAh": 60.47253804364163
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "rep": 2,
+      "selected": [
+        {
+          "id": "3C_battery-13",
+          "n_label_cycles": 51
+        },
+        {
+          "id": "3C_battery-7",
+          "n_label_cycles": 76
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-1",
+          "mae_mAh": 47.0974347050375
+        },
+        {
+          "id": "3C_battery-4",
+          "mae_mAh": 35.4848694526321
+        },
+        {
+          "id": "3C_battery-12",
+          "mae_mAh": 47.27086618059929
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "rep": 3,
+      "selected": [
+        {
+          "id": "3C_battery-6",
+          "n_label_cycles": 76
+        },
+        {
+          "id": "3C_battery-8",
+          "n_label_cycles": 63
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-1",
+          "mae_mAh": 35.420160371347436
+        },
+        {
+          "id": "3C_battery-4",
+          "mae_mAh": 28.417403858477513
+        },
+        {
+          "id": "3C_battery-12",
+          "mae_mAh": 42.09651109738948
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "rep": 4,
+      "selected": [
+        {
+          "id": "3C_battery-7",
+          "n_label_cycles": 76
+        },
+        {
+          "id": "3C_battery-9",
+          "n_label_cycles": 69
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-1",
+          "mae_mAh": 42.164300246760874
+        },
+        {
+          "id": "3C_battery-4",
+          "mae_mAh": 30.741232508331976
+        },
+        {
+          "id": "3C_battery-12",
+          "mae_mAh": 40.8163947760835
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "representative",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-13",
+          "n_label_cycles": 51
+        },
+        {
+          "id": "3C_battery-11",
+          "n_label_cycles": 31
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-1",
+          "mae_mAh": 29.937634663891306
+        },
+        {
+          "id": "3C_battery-4",
+          "mae_mAh": 35.0856880875011
+        },
+        {
+          "id": "3C_battery-12",
+          "mae_mAh": 48.720247261834835
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "pred_extremes",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-11",
+          "n_label_cycles": 31
+        },
+        {
+          "id": "3C_battery-3",
+          "n_label_cycles": 66
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-1",
+          "mae_mAh": 54.452848241766496
+        },
+        {
+          "id": "3C_battery-4",
+          "mae_mAh": 50.46698114473779
+        },
+        {
+          "id": "3C_battery-12",
+          "mae_mAh": 76.41705120861018
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "pred_quartiles",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-10",
+          "n_label_cycles": 37
+        },
+        {
+          "id": "3C_battery-6",
+          "n_label_cycles": 76
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-1",
+          "mae_mAh": 54.29316131119502
+        },
+        {
+          "id": "3C_battery-4",
+          "mae_mAh": 46.2087520234793
+        },
+        {
+          "id": "3C_battery-12",
+          "mae_mAh": 71.04910169519717
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "pred_medoids",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-6",
+          "n_label_cycles": 76
+        },
+        {
+          "id": "3C_battery-14",
+          "n_label_cycles": 34
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-1",
+          "mae_mAh": 42.756309015824705
+        },
+        {
+          "id": "3C_battery-4",
+          "mae_mAh": 36.21390275794759
+        },
+        {
+          "id": "3C_battery-12",
+          "mae_mAh": 55.110549007939994
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "feature_medoids",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-6",
+          "n_label_cycles": 76
+        },
+        {
+          "id": "3C_battery-15",
+          "n_label_cycles": 40
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-1",
+          "mae_mAh": 45.902893799277415
+        },
+        {
+          "id": "3C_battery-4",
+          "mae_mAh": 39.579591663459965
+        },
+        {
+          "id": "3C_battery-12",
+          "mae_mAh": 61.119412149592904
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-2",
+          "n_label_cycles": 68
+        },
+        {
+          "id": "3C_battery-1",
+          "n_label_cycles": 71
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-7",
+          "mae_mAh": 36.0263801690097
+        },
+        {
+          "id": "3C_battery-9",
+          "mae_mAh": 57.459978927213896
+        },
+        {
+          "id": "3C_battery-10",
+          "mae_mAh": 35.382781141866886
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "rep": 1,
+      "selected": [
+        {
+          "id": "3C_battery-3",
+          "n_label_cycles": 66
+        },
+        {
+          "id": "3C_battery-6",
+          "n_label_cycles": 76
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-7",
+          "mae_mAh": 42.51068017037746
+        },
+        {
+          "id": "3C_battery-9",
+          "mae_mAh": 48.961532372230344
+        },
+        {
+          "id": "3C_battery-10",
+          "mae_mAh": 30.215986923772626
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "rep": 2,
+      "selected": [
+        {
+          "id": "3C_battery-1",
+          "n_label_cycles": 71
+        },
+        {
+          "id": "3C_battery-2",
+          "n_label_cycles": 68
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-7",
+          "mae_mAh": 36.02638016900965
+        },
+        {
+          "id": "3C_battery-9",
+          "mae_mAh": 57.45997892721396
+        },
+        {
+          "id": "3C_battery-10",
+          "mae_mAh": 35.382781141866886
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "rep": 3,
+      "selected": [
+        {
+          "id": "3C_battery-6",
+          "n_label_cycles": 76
+        },
+        {
+          "id": "3C_battery-2",
+          "n_label_cycles": 68
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-7",
+          "mae_mAh": 27.431415189249037
+        },
+        {
+          "id": "3C_battery-9",
+          "mae_mAh": 67.19653310237568
+        },
+        {
+          "id": "3C_battery-10",
+          "mae_mAh": 38.725905706153455
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "rep": 4,
+      "selected": [
+        {
+          "id": "3C_battery-15",
+          "n_label_cycles": 40
+        },
+        {
+          "id": "3C_battery-14",
+          "n_label_cycles": 34
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-7",
+          "mae_mAh": 61.18011133949524
+        },
+        {
+          "id": "3C_battery-9",
+          "mae_mAh": 37.945621238085565
+        },
+        {
+          "id": "3C_battery-10",
+          "mae_mAh": 32.559256783978654
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "representative",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-12",
+          "n_label_cycles": 48
+        },
+        {
+          "id": "3C_battery-11",
+          "n_label_cycles": 31
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-7",
+          "mae_mAh": 68.46927373820606
+        },
+        {
+          "id": "3C_battery-9",
+          "mae_mAh": 37.82461962513607
+        },
+        {
+          "id": "3C_battery-10",
+          "mae_mAh": 35.28798325436693
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "pred_extremes",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-11",
+          "n_label_cycles": 31
+        },
+        {
+          "id": "3C_battery-1",
+          "n_label_cycles": 71
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-7",
+          "mae_mAh": 47.8698016085969
+        },
+        {
+          "id": "3C_battery-9",
+          "mae_mAh": 59.956817643853505
+        },
+        {
+          "id": "3C_battery-10",
+          "mae_mAh": 44.39521420832571
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "pred_quartiles",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-13",
+          "n_label_cycles": 51
+        },
+        {
+          "id": "3C_battery-8",
+          "n_label_cycles": 63
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-7",
+          "mae_mAh": 60.35164695724613
+        },
+        {
+          "id": "3C_battery-9",
+          "mae_mAh": 31.559902688532365
+        },
+        {
+          "id": "3C_battery-10",
+          "mae_mAh": 28.153511815274122
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "pred_medoids",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-6",
+          "n_label_cycles": 76
+        },
+        {
+          "id": "3C_battery-15",
+          "n_label_cycles": 40
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-7",
+          "mae_mAh": 38.33787329501451
+        },
+        {
+          "id": "3C_battery-9",
+          "mae_mAh": 58.851030123905744
+        },
+        {
+          "id": "3C_battery-10",
+          "mae_mAh": 37.66297738511303
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "feature_medoids",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-6",
+          "n_label_cycles": 76
+        },
+        {
+          "id": "3C_battery-15",
+          "n_label_cycles": 40
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-7",
+          "mae_mAh": 38.33787329501451
+        },
+        {
+          "id": "3C_battery-9",
+          "mae_mAh": 58.851030123905744
+        },
+        {
+          "id": "3C_battery-10",
+          "mae_mAh": 37.66297738511303
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-1",
+          "n_label_cycles": 71
+        },
+        {
+          "id": "3C_battery-6",
+          "n_label_cycles": 76
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-2",
+          "mae_mAh": 23.066131968060063
+        },
+        {
+          "id": "3C_battery-8",
+          "mae_mAh": 42.399841119610244
+        },
+        {
+          "id": "3C_battery-13",
+          "mae_mAh": 26.86711802156908
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "rep": 1,
+      "selected": [
+        {
+          "id": "3C_battery-7",
+          "n_label_cycles": 76
+        },
+        {
+          "id": "3C_battery-9",
+          "n_label_cycles": 69
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-2",
+          "mae_mAh": 23.678168858700698
+        },
+        {
+          "id": "3C_battery-8",
+          "mae_mAh": 46.79762079729699
+        },
+        {
+          "id": "3C_battery-13",
+          "mae_mAh": 26.84633802965642
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "rep": 2,
+      "selected": [
+        {
+          "id": "3C_battery-7",
+          "n_label_cycles": 76
+        },
+        {
+          "id": "3C_battery-5",
+          "n_label_cycles": 70
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-2",
+          "mae_mAh": 22.913116396481474
+        },
+        {
+          "id": "3C_battery-8",
+          "mae_mAh": 62.17002485605413
+        },
+        {
+          "id": "3C_battery-13",
+          "mae_mAh": 45.27070465940302
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "rep": 3,
+      "selected": [
+        {
+          "id": "3C_battery-12",
+          "n_label_cycles": 48
+        },
+        {
+          "id": "3C_battery-14",
+          "n_label_cycles": 34
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-2",
+          "mae_mAh": 32.5966797992807
+        },
+        {
+          "id": "3C_battery-8",
+          "mae_mAh": 29.914068829544064
+        },
+        {
+          "id": "3C_battery-13",
+          "mae_mAh": 19.00704691806923
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "rep": 4,
+      "selected": [
+        {
+          "id": "3C_battery-15",
+          "n_label_cycles": 40
+        },
+        {
+          "id": "3C_battery-7",
+          "n_label_cycles": 76
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-2",
+          "mae_mAh": 27.578433565074132
+        },
+        {
+          "id": "3C_battery-8",
+          "mae_mAh": 72.35911855495446
+        },
+        {
+          "id": "3C_battery-13",
+          "mae_mAh": 61.12859151899293
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "representative",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-12",
+          "n_label_cycles": 48
+        },
+        {
+          "id": "3C_battery-11",
+          "n_label_cycles": 31
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-2",
+          "mae_mAh": 34.85537305429869
+        },
+        {
+          "id": "3C_battery-8",
+          "mae_mAh": 32.35325585406671
+        },
+        {
+          "id": "3C_battery-13",
+          "mae_mAh": 28.37658654426842
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "pred_extremes",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-11",
+          "n_label_cycles": 31
+        },
+        {
+          "id": "3C_battery-1",
+          "n_label_cycles": 71
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-2",
+          "mae_mAh": 27.794872613190915
+        },
+        {
+          "id": "3C_battery-8",
+          "mae_mAh": 48.45363952103803
+        },
+        {
+          "id": "3C_battery-13",
+          "mae_mAh": 49.46430424400303
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "pred_quartiles",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-10",
+          "n_label_cycles": 37
+        },
+        {
+          "id": "3C_battery-6",
+          "n_label_cycles": 76
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-2",
+          "mae_mAh": 25.84917186278442
+        },
+        {
+          "id": "3C_battery-8",
+          "mae_mAh": 65.0915178830485
+        },
+        {
+          "id": "3C_battery-13",
+          "mae_mAh": 55.69876903856276
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "pred_medoids",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-4",
+          "n_label_cycles": 79
+        },
+        {
+          "id": "3C_battery-14",
+          "n_label_cycles": 34
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-2",
+          "mae_mAh": 21.663477849501596
+        },
+        {
+          "id": "3C_battery-8",
+          "mae_mAh": 47.521297275469735
+        },
+        {
+          "id": "3C_battery-13",
+          "mae_mAh": 36.92587712292841
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "feature_medoids",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-5",
+          "n_label_cycles": 70
+        },
+        {
+          "id": "3C_battery-15",
+          "n_label_cycles": 40
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-2",
+          "mae_mAh": 23.193881430727515
+        },
+        {
+          "id": "3C_battery-8",
+          "mae_mAh": 55.98400290657272
+        },
+        {
+          "id": "3C_battery-13",
+          "mae_mAh": 46.95764655621212
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-12",
+          "n_label_cycles": 48
+        },
+        {
+          "id": "3C_battery-10",
+          "n_label_cycles": 37
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-6",
+          "mae_mAh": 18.421430219640214
+        },
+        {
+          "id": "3C_battery-14",
+          "mae_mAh": 61.93185011182207
+        },
+        {
+          "id": "3C_battery-15",
+          "mae_mAh": 55.254581130970706
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "rep": 1,
+      "selected": [
+        {
+          "id": "3C_battery-7",
+          "n_label_cycles": 76
+        },
+        {
+          "id": "3C_battery-3",
+          "n_label_cycles": 66
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-6",
+          "mae_mAh": 15.604464793673271
+        },
+        {
+          "id": "3C_battery-14",
+          "mae_mAh": 63.29982210068119
+        },
+        {
+          "id": "3C_battery-15",
+          "mae_mAh": 57.64619775290747
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "rep": 2,
+      "selected": [
+        {
+          "id": "3C_battery-10",
+          "n_label_cycles": 37
+        },
+        {
+          "id": "3C_battery-12",
+          "n_label_cycles": 48
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-6",
+          "mae_mAh": 18.42143021964017
+        },
+        {
+          "id": "3C_battery-14",
+          "mae_mAh": 61.93185011182212
+        },
+        {
+          "id": "3C_battery-15",
+          "mae_mAh": 55.254581130970756
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "rep": 3,
+      "selected": [
+        {
+          "id": "3C_battery-7",
+          "n_label_cycles": 76
+        },
+        {
+          "id": "3C_battery-2",
+          "n_label_cycles": 68
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-6",
+          "mae_mAh": 32.975229035639586
+        },
+        {
+          "id": "3C_battery-14",
+          "mae_mAh": 80.22970611917161
+        },
+        {
+          "id": "3C_battery-15",
+          "mae_mAh": 73.83113232852735
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "rep": 4,
+      "selected": [
+        {
+          "id": "3C_battery-11",
+          "n_label_cycles": 31
+        },
+        {
+          "id": "3C_battery-7",
+          "n_label_cycles": 76
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-6",
+          "mae_mAh": 40.093637166204104
+        },
+        {
+          "id": "3C_battery-14",
+          "mae_mAh": 88.38810420224857
+        },
+        {
+          "id": "3C_battery-15",
+          "mae_mAh": 85.5514086789769
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "representative",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-9",
+          "n_label_cycles": 69
+        },
+        {
+          "id": "3C_battery-11",
+          "n_label_cycles": 31
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-6",
+          "mae_mAh": 27.88292122572122
+        },
+        {
+          "id": "3C_battery-14",
+          "mae_mAh": 58.725221108078784
+        },
+        {
+          "id": "3C_battery-15",
+          "mae_mAh": 55.25563514695071
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "pred_extremes",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-11",
+          "n_label_cycles": 31
+        },
+        {
+          "id": "3C_battery-1",
+          "n_label_cycles": 71
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-6",
+          "mae_mAh": 20.662560217981095
+        },
+        {
+          "id": "3C_battery-14",
+          "mae_mAh": 70.03948761226948
+        },
+        {
+          "id": "3C_battery-15",
+          "mae_mAh": 66.75276018668109
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "pred_quartiles",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-12",
+          "n_label_cycles": 48
+        },
+        {
+          "id": "3C_battery-8",
+          "n_label_cycles": 63
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-6",
+          "mae_mAh": 23.272554563325453
+        },
+        {
+          "id": "3C_battery-14",
+          "mae_mAh": 36.84979007155542
+        },
+        {
+          "id": "3C_battery-15",
+          "mae_mAh": 35.02747255029785
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "pred_medoids",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-4",
+          "n_label_cycles": 79
+        },
+        {
+          "id": "3C_battery-10",
+          "n_label_cycles": 37
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-6",
+          "mae_mAh": 18.078601441560174
+        },
+        {
+          "id": "3C_battery-14",
+          "mae_mAh": 78.86423106294845
+        },
+        {
+          "id": "3C_battery-15",
+          "mae_mAh": 71.41615292049676
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "feature_medoids",
+      "rep": 0,
+      "selected": [
+        {
+          "id": "3C_battery-5",
+          "n_label_cycles": 70
+        },
+        {
+          "id": "3C_battery-10",
+          "n_label_cycles": 37
+        }
+      ],
+      "test": [
+        {
+          "id": "3C_battery-6",
+          "mae_mAh": 20.475098522089066
+        },
+        {
+          "id": "3C_battery-14",
+          "mae_mAh": 80.4460939625508
+        },
+        {
+          "id": "3C_battery-15",
+          "mae_mAh": 73.11502003426985
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "random": {
+      "mae_mAh": 44.031411110874025,
+      "n_predictions": 75
+    },
+    "representative": {
+      "mae_mAh": 43.16049673008968,
+      "n_predictions": 15
+    },
+    "pred_extremes": {
+      "mae_mAh": 50.944733050434735,
+      "n_predictions": 15
+    },
+    "pred_quartiles": {
+      "mae_mAh": 43.46178942969938,
+      "n_predictions": 15
+    },
+    "pred_medoids": {
+      "mae_mAh": 45.86963706614459,
+      "n_predictions": 15
+    },
+    "feature_medoids": {
+      "mae_mAh": 48.69884933040014,
+      "n_predictions": 15
+    }
+  }
+}
