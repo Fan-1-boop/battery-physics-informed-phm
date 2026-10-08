@@ -1,5 +1,16 @@
 # Physics-Informed Battery PHM
 
+## 当前硕士论文研究主线（v8，2026-10-08）
+
+**唯一源域：XJTU RW 随机工况；目标域：3C、2C、R2.5、R3、Sim_satellite；只研究 RW → 目标工况。**
+
+只保留一个核心方法问题：**目标域极少量容量标签下，利用无标签充电特征选择代表性电芯，并用简单残差校准改善容量/SOH 估计。**
+
+前期 RW→3C 的 12 电芯 pilot：零样本 42.90 mAh，2 个目标电芯前 25% 标签下代表性选样 + Ridge 32.93 mAh。仅为探索性先导数据，不等于完整 55 电芯结论。
+
+正式实验协议见 [v8 单向 RW→多工况冻结方案](docs/V8_RW_SOURCE_MULTI_TARGET_FROZEN_PROTOCOL.md)。历史 v3–v7 结果作为研究档案保留；v8 **尚未运行完整五目标验证**。
+
+
 ## v7 — External XJTU transfer stress test (2026-10-08)
 
 **External pilot, NOT cross-chemistry Che physical-latent reproduction.** The first independent XJTU evaluation uses 12 separate NCM batteries from 3C/RW charge conditions, 2,942 cycle-level records, six observable charge statistics, and discharge-capacity targets. It is not the same input task as Che2025's partial discharge V(Q) to SOH.
