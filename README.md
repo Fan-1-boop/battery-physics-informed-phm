@@ -1,5 +1,18 @@
 # Physics-Informed Battery PHM
 
+## v7 — External XJTU transfer stress test (2026-10-08)
+
+**External pilot, NOT cross-chemistry Che physical-latent reproduction.** The first independent XJTU evaluation uses 12 separate NCM batteries from 3C/RW charge conditions, 2,942 cycle-level records, six observable charge statistics, and discharge-capacity targets. It is not the same input task as Che2025's partial discharge V(Q) to SOH.
+
+- Fixed holdout sets first: 15 paired two-cell test splits per target condition; two labeled acquisition batteries; early-life labels restricted to 10%, 25%, or entire lifetime. All target test batteries are unseen as labeled data.
+- RW → 3C: representative selection + residual Ridge, 25% early-life labels gives 32.928 mAh, vs source-only 42.896 mAh.
+- 3C → RW: the same strategy gives **60.506 mAh**, WORSE than source-only 52.411 mAh (**negative transfer**).
+- A cell-level leave-one-labeled-battery-out transfer gate also failed to prevent RW negative transfer (62.909 mAh).
+- Results are exploratory: 12 of the public 55 cells, split overlap and deterministic acquisition repeats preclude treating every row as independent.
+
+See [full research report](reports/v7_external_xjtu_transfer_and_negative_transfer.md), [portable benchmark runner](experiments/external_xjtu_v7/benchmark.py), and [fixed protocol](results/v7/PROTOCOL.md). Raw third-party CSV files are not committed. The full 55-cell test is implemented, but not yet run here.
+
+
 Che et al. (Joule 2025) Dataset 2 reproduction, ablations and subsequent short-fragment SOH transfer-learning research.
 
 **Current status:** Dataset 2: 6 rates × 5 folds, 30 runs, archived SOH MAE 1.880 percentage points vs paper 1.860. Dataset 1 and 3 have **not** been fully reproduced. The v4 ablations are **exploratory and use shorter training budgets**.
