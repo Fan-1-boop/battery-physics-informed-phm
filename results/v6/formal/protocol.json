@@ -1,0 +1,40 @@
+{
+  "cache_sha256": null,
+  "source_model": "Che2025 Dataset1 best_model.pth",
+  "warning": "Source model training includes overlapping cells; not unseen-cell or cross-chemistry validation.",
+  "data": "Dataset2 ResVal 91 usable cells; six diagnostic rates, one input fragment per cell",
+  "model_class": "Independently implemented algorithm families, NOT exact published paper architectures",
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "shots": [
+    4,
+    14
+  ],
+  "repeats": 3,
+  "methods": [
+    "ridge_physics",
+    "ridge_source",
+    "ridge_input",
+    "krr_rbf",
+    "svr_rbf",
+    "gp_rbf",
+    "catboost",
+    "xgboost",
+    "extra_trees"
+  ],
+  "policies": [
+    "random",
+    "source_cluster",
+    "physical_cluster",
+    "input_cluster"
+  ],
+  "selection": "LOOCV among target labels only; no source/test target labels for selection",
+  "data_access": "Unlabeled target training pool available for acquisition and standardization",
+  "task": "SOH output residual calibration; not physics-consistent latent correction",
+  "metric": "outer test cell MAE, SOH percentage points; 3 repeated labeled selections do NOT mean 15 independent folds"
+}
