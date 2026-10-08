@@ -1,0 +1,13 @@
+{
+  "cache": "/mnt/data/che2025_official/cache_dataset2.npz",
+  "assets": "/mnt/data/che2025_official/code",
+  "out": "/mnt/data/battery-physics-informed-phm/results/v5/formal_screen",
+  "folds": "0,1,2,3,4",
+  "repeats": 3,
+  "shots": "4,14",
+  "modes": "full,encoder,encoder_prox,encoder_prox_unlab",
+  "epochs": 400,
+  "lr": 0.0001,
+  "prox": 0.01,
+  "unlabeled_weight": 0.1
+}
