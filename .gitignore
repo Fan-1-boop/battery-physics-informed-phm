@@ -1,0 +1,16 @@
+# large/binary/private assets
+data/
+outputs/
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.npz
+*.zip
+*.json.gz
+*.csv.gz
+__pycache__/
+.pytest_cache/
+.venv/
+.env
+.env.*
