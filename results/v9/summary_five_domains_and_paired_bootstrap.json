@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-08",
+  "protocol": "RW8 fixed, same V8 fivefolds, k2 prefix25%, target-cell MAE, five random repeats, deterministic methods once",
+  "literature_relation": "inspired adapters, not exact reproductions",
+  "domains": [
+    {
+      "domain": "2C",
+      "n_target_cells": 8,
+      "means_mAh": {
+        "random": 27.788759252326052,
+        "representative": 28.228371884089377,
+        "pred_extremes": 26.967861759946096,
+        "pred_quartiles": 26.763483837410817,
+        "pred_medoids": 26.13215722534456,
+        "feature_medoids": 28.11111909795939
+      }
+    },
+    {
+      "domain": "3C",
+      "n_target_cells": 15,
+      "means_mAh": {
+        "random": 44.031411110874025,
+        "representative": 43.16049673008968,
+        "pred_extremes": 50.944733050434735,
+        "pred_quartiles": 43.46178942969938,
+        "pred_medoids": 45.86963706614459,
+        "feature_medoids": 48.69884933040014
+      }
+    },
+    {
+      "domain": "R2.5",
+      "n_target_cells": 8,
+      "means_mAh": {
+        "random": 42.504470677009174,
+        "representative": 42.32715661153976,
+        "pred_extremes": 42.381354126426245,
+        "pred_quartiles": 42.21751517351633,
+        "pred_medoids": 42.97378712693345,
+        "feature_medoids": 42.04312808081483
+      }
+    },
+    {
+      "domain": "R3",
+      "n_target_cells": 8,
+      "means_mAh": {
+        "random": 46.6287800066289,
+        "representative": 54.19284505931,
+        "pred_extremes": 47.521246195491685,
+        "pred_quartiles": 47.96911162239316,
+        "pred_medoids": 43.852009188021725,
+        "feature_medoids": 43.93794915374515
+      }
+    },
+    {
+      "domain": "Sim_satellite",
+      "n_target_cells": 8,
+      "means_mAh": {
+        "random": 47.71400906445707,
+        "representative": 61.19656205974028,
+        "pred_extremes": 54.15494370214735,
+        "pred_quartiles": 46.671709754804816,
+        "pred_medoids": 56.28800522403995,
+        "feature_medoids": 56.39528093353582
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "contrast": "random minus pred_quartiles",
+      "effect_mAh": 0.3167640586941493,
+      "ci95": [
+        -2.004862263288581,
+        2.634469212721013
+      ],
+      "domain_effects": {
+        "2C": 1.025275414915236,
+        "3C": 0.5696216811746434,
+        "R2.5": 0.28695550349284726,
+        "R3": -1.3403316157642537,
+        "Sim_satellite": 1.0422993096522735
+      },
+      "domain_wins": 4,
+      "n_independent_target_cells": 47,
+      "uncertainty": "exploratory hierarchical target-cell bootstrap; shared source and reused training pools not independent"
+    },
+    {
+      "contrast": "random minus pred_medoids",
+      "effect_mAh": -1.2896331438378046,
+      "ci95": [
+        -3.469426991219069,
+        1.030223056222535
+      ],
+      "domain_effects": {
+        "2C": 1.6566020269814885,
+        "3C": -1.8382259552705669,
+        "R2.5": -0.4693164499242739,
+        "R3": 2.7767708186071847,
+        "Sim_satellite": -8.573996159582855
+      },
+      "domain_wins": 2,
+      "n_independent_target_cells": 47,
+      "uncertainty": "exploratory hierarchical target-cell bootstrap; shared source and reused training pools not independent"
+    },
+    {
+      "contrast": "random minus feature_medoids",
+      "effect_mAh": -2.103779297032019,
+      "ci95": [
+        -5.078429362691686,
+        0.98733319080426
+      ],
+      "domain_effects": {
+        "2C": -0.3223598456333363,
+        "3C": -4.667438219526123,
+        "R2.5": 0.4613425961943456,
+        "R3": 2.6908308528837552,
+        "Sim_satellite": -8.681271869078737
+      },
+      "domain_wins": 2,
+      "n_independent_target_cells": 47,
+      "uncertainty": "exploratory hierarchical target-cell bootstrap; shared source and reused training pools not independent"
+    },
+    {
+      "contrast": "random minus representative",
+      "effect_mAh": -4.08760044669477,
+      "ci95": [
+        -7.072041819482669,
+        -1.0775416899231967
+      ],
+      "domain_effects": {
+        "2C": -0.4396126317633233,
+        "3C": 0.8709143807843378,
+        "R2.5": 0.17731406546941564,
+        "R3": -7.56406505268109,
+        "Sim_satellite": -13.482552995283195
+      },
+      "domain_wins": 2,
+      "n_independent_target_cells": 47,
+      "uncertainty": "exploratory hierarchical target-cell bootstrap; shared source and reused training pools not independent"
+    }
+  ],
+  "reference_sources": [
+    "https://doi.org/10.1038/s41467-023-38458-w",
+    "https://doi.org/10.1016/j.apenergy.2024.124245",
+    "https://doi.org/10.1002/qre.3424"
+  ]
+}
