@@ -1,0 +1,409 @@
+{
+  "description": "POST-HOC diagnostic only. v8 RW8 source → original first six 3C target batteries, v8 5fold parameters; not main benchmark",
+  "source_cells": 8,
+  "target_ids": [
+    "3C_battery-1",
+    "3C_battery-2",
+    "3C_battery-3",
+    "3C_battery-4",
+    "3C_battery-5",
+    "3C_battery-6"
+  ],
+  "folds": [
+    [
+      "3C_battery-1",
+      "3C_battery-3"
+    ],
+    [
+      "3C_battery-2"
+    ],
+    [
+      "3C_battery-6"
+    ],
+    [
+      "3C_battery-4"
+    ],
+    [
+      "3C_battery-5"
+    ]
+  ],
+  "summary": {
+    "source": 38.039066423436545,
+    "random": 31.87667297321493,
+    "representative": 33.16333924959435
+  },
+  "records": [
+    {
+      "fold": 0,
+      "policy": "source",
+      "vals": [
+        16.29816928687411,
+        73.95392805152807
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "representative",
+      "vals": [
+        60.39778898202085,
+        38.059762085090846
+      ],
+      "labeled": [
+        "3C_battery-5",
+        "3C_battery-2"
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "vals": [
+        60.7087120592735,
+        38.04549698969272
+      ],
+      "labeled": [
+        "3C_battery-6",
+        "3C_battery-2"
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "vals": [
+        41.70475663864983,
+        43.328469678511034
+      ],
+      "labeled": [
+        "3C_battery-4",
+        "3C_battery-6"
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "vals": [
+        44.84010990977289,
+        41.782771487311855
+      ],
+      "labeled": [
+        "3C_battery-6",
+        "3C_battery-5"
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "vals": [
+        41.26942342333909,
+        43.551349143777195
+      ],
+      "labeled": [
+        "3C_battery-5",
+        "3C_battery-4"
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "vals": [
+        60.39778898202086,
+        38.05976208509085
+      ],
+      "labeled": [
+        "3C_battery-2",
+        "3C_battery-5"
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "source",
+      "vals": [
+        49.43492537650696
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "representative",
+      "vals": [
+        21.90040423283915
+      ],
+      "labeled": [
+        "3C_battery-4",
+        "3C_battery-6"
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "vals": [
+        24.45667720170665
+      ],
+      "labeled": [
+        "3C_battery-1",
+        "3C_battery-4"
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "vals": [
+        23.261962232258757
+      ],
+      "labeled": [
+        "3C_battery-5",
+        "3C_battery-1"
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "vals": [
+        21.929504401481356
+      ],
+      "labeled": [
+        "3C_battery-6",
+        "3C_battery-3"
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "vals": [
+        24.456677201706555
+      ],
+      "labeled": [
+        "3C_battery-4",
+        "3C_battery-1"
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "vals": [
+        22.284409041808022
+      ],
+      "labeled": [
+        "3C_battery-4",
+        "3C_battery-3"
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "source",
+      "vals": [
+        42.05215685085585
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "representative",
+      "vals": [
+        9.313754640958056
+      ],
+      "labeled": [
+        "3C_battery-5",
+        "3C_battery-3"
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "vals": [
+        9.287892165167209
+      ],
+      "labeled": [
+        "3C_battery-4",
+        "3C_battery-3"
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "vals": [
+        18.31784691406035
+      ],
+      "labeled": [
+        "3C_battery-4",
+        "3C_battery-2"
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "vals": [
+        11.217647040353
+      ],
+      "labeled": [
+        "3C_battery-5",
+        "3C_battery-1"
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "vals": [
+        22.201184907984445
+      ],
+      "labeled": [
+        "3C_battery-3",
+        "3C_battery-2"
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "vals": [
+        12.538235815481958
+      ],
+      "labeled": [
+        "3C_battery-2",
+        "3C_battery-1"
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "source",
+      "vals": [
+        20.43121721668749
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "representative",
+      "vals": [
+        33.16365597816402
+      ],
+      "labeled": [
+        "3C_battery-5",
+        "3C_battery-3"
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "vals": [
+        27.084569425011264
+      ],
+      "labeled": [
+        "3C_battery-1",
+        "3C_battery-5"
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "vals": [
+        34.56092587516592
+      ],
+      "labeled": [
+        "3C_battery-6",
+        "3C_battery-5"
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "vals": [
+        49.13510286882583
+      ],
+      "labeled": [
+        "3C_battery-6",
+        "3C_battery-2"
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "vals": [
+        27.084569425011253
+      ],
+      "labeled": [
+        "3C_battery-5",
+        "3C_battery-1"
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "vals": [
+        48.95057561385775
+      ],
+      "labeled": [
+        "3C_battery-5",
+        "3C_battery-2"
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "source",
+      "vals": [
+        26.06400175816677
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "representative",
+      "vals": [
+        36.14466957849316
+      ],
+      "labeled": [
+        "3C_battery-4",
+        "3C_battery-2"
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "vals": [
+        22.645260958118048
+      ],
+      "labeled": [
+        "3C_battery-6",
+        "3C_battery-4"
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "vals": [
+        29.984743911640187
+      ],
+      "labeled": [
+        "3C_battery-1",
+        "3C_battery-2"
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "vals": [
+        17.096879135561377
+      ],
+      "labeled": [
+        "3C_battery-4",
+        "3C_battery-1"
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "vals": [
+        17.096879135561263
+      ],
+      "labeled": [
+        "3C_battery-1",
+        "3C_battery-4"
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "vals": [
+        39.020005528246834
+      ],
+      "labeled": [
+        "3C_battery-2",
+        "3C_battery-6"
+      ]
+    }
+  ]
+}
