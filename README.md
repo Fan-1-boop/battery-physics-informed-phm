@@ -37,3 +37,13 @@ python -m pytest -q tests/test_fewshot_protocol.py
 ```
 
 No source data, binary checkpoints, or original third-party source package are redistributed.
+
+## v6 — Strong literature-informed baselines under matched low-label protocol
+
+**Status: exploratory, not paper-by-paper exact reproduction.** An updated [2021–2026 literature baseline register](docs/LITERATURE_BASELINE_REGISTER_v6.md) covers PINN4SOH (Nature Communications 2024; official code confirmed), CNN+MMD (IEEE TNNLS 2024), unlabeled latent consistency (Energy 2025), MMD–SMDA–FT (Energy 2025), few-shot meta-learning and AT-GPR. The [v6 research report](reports/v6_literature_strong_baselines.md) documents method comparability and evidence limitations.
+
+Independent method-family implementations (nine regression configurations): Ridge (source-only, physical latents, input summary), RBF kernel Ridge, RBF SVR, standard RBF Gaussian process, CatBoost, XGBoost and Extra Trees. Fixed Dataset2 5-fold splits, 3 labeled-cell selections, k=4/14, six diagnostic rates, and four acquisition policies produced **6480 measured rows**. All tuning occurs within labeled training cells; test data are not used for selection. Historical v5 physics-Ridge metrics reproduced to <0.0001 pp.
+
+For *four labeled cells selected by physical clustering*, source-SOH-only Ridge achieves **1.857 pp** MAE vs 1.982 pp with all physical latents, and random-acquisition source-SOH Ridge 2.866 pp. For 14 labels selected via input-summary clustering, physics-Ridge reaches **1.618 pp** vs source-only Ridge 1.851 pp. Results are exploratory on an overlapping source/target physical-cell population, so **not evidence of previously unseen-cell or cross-chemistry transfer**. Calibrated scalar SOH is not projected back into physically self-consistent latent states.
+
+Run `python -m pytest -q tests/test_literature_benchmark_v6.py` then see `experiments/literature_bench_v6/README.md` for the source assets required. Committed `results/v6/formal/` includes rate/fold summaries, paired blocked CIs, and 10 compact per-run CSV shards (`per_run_fold{0..4}_part{0,1}.csv`), without original datasets or model weights.
