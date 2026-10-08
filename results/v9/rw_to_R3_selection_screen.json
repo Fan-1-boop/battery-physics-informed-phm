@@ -1,0 +1,238 @@
+{
+  "domain": "R3",
+  "source": "RW8",
+  "note": "same v8 fixed fivefold tests, 2 cells * 25% prefix capacity labels, alpha10 residual ridge, three unlabeled strategies",
+  "summary": {
+    "prediction_extremes": {
+      "MAE_mAh": 47.521246195491685,
+      "records": [
+        {
+          "fold": 0,
+          "cell": "R3_battery-1",
+          "MAE_mAh": 30.652494165025622,
+          "labeled_ids": [
+            "R3_battery-4",
+            "R3_battery-7"
+          ]
+        },
+        {
+          "fold": 0,
+          "cell": "R3_battery-5",
+          "MAE_mAh": 42.67981082771854,
+          "labeled_ids": [
+            "R3_battery-4",
+            "R3_battery-7"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "R3_battery-2",
+          "MAE_mAh": 45.20618438296607,
+          "labeled_ids": [
+            "R3_battery-4",
+            "R3_battery-7"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "R3_battery-6",
+          "MAE_mAh": 24.696305953699422,
+          "labeled_ids": [
+            "R3_battery-4",
+            "R3_battery-7"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "R3_battery-7",
+          "MAE_mAh": 87.51840531867379,
+          "labeled_ids": [
+            "R3_battery-4",
+            "R3_battery-2"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "R3_battery-8",
+          "MAE_mAh": 51.09103921361893,
+          "labeled_ids": [
+            "R3_battery-4",
+            "R3_battery-2"
+          ]
+        },
+        {
+          "fold": 3,
+          "cell": "R3_battery-3",
+          "MAE_mAh": 33.31108788656941,
+          "labeled_ids": [
+            "R3_battery-4",
+            "R3_battery-7"
+          ]
+        },
+        {
+          "fold": 4,
+          "cell": "R3_battery-4",
+          "MAE_mAh": 65.01464181566173,
+          "labeled_ids": [
+            "R3_battery-3",
+            "R3_battery-7"
+          ]
+        }
+      ]
+    },
+    "prediction_median_extreme": {
+      "MAE_mAh": 50.498119630632516,
+      "records": [
+        {
+          "fold": 0,
+          "cell": "R3_battery-1",
+          "MAE_mAh": 38.37560484794005,
+          "labeled_ids": [
+            "R3_battery-2",
+            "R3_battery-4"
+          ]
+        },
+        {
+          "fold": 0,
+          "cell": "R3_battery-5",
+          "MAE_mAh": 52.73121995983841,
+          "labeled_ids": [
+            "R3_battery-2",
+            "R3_battery-4"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "R3_battery-2",
+          "MAE_mAh": 56.181465064693924,
+          "labeled_ids": [
+            "R3_battery-5",
+            "R3_battery-4"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "R3_battery-6",
+          "MAE_mAh": 33.922918483629985,
+          "labeled_ids": [
+            "R3_battery-5",
+            "R3_battery-4"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "R3_battery-7",
+          "MAE_mAh": 88.41679349712692,
+          "labeled_ids": [
+            "R3_battery-5",
+            "R3_battery-4"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "R3_battery-8",
+          "MAE_mAh": 51.49320546229712,
+          "labeled_ids": [
+            "R3_battery-5",
+            "R3_battery-4"
+          ]
+        },
+        {
+          "fold": 3,
+          "cell": "R3_battery-3",
+          "MAE_mAh": 27.63921261401614,
+          "labeled_ids": [
+            "R3_battery-6",
+            "R3_battery-4"
+          ]
+        },
+        {
+          "fold": 4,
+          "cell": "R3_battery-4",
+          "MAE_mAh": 55.22453711551759,
+          "labeled_ids": [
+            "R3_battery-6",
+            "R3_battery-3"
+          ]
+        }
+      ]
+    },
+    "novelty_extremes": {
+      "MAE_mAh": 51.46061088528823,
+      "records": [
+        {
+          "fold": 0,
+          "cell": "R3_battery-1",
+          "MAE_mAh": 30.652494165025185,
+          "labeled_ids": [
+            "R3_battery-7",
+            "R3_battery-4"
+          ]
+        },
+        {
+          "fold": 0,
+          "cell": "R3_battery-5",
+          "MAE_mAh": 42.679810827717986,
+          "labeled_ids": [
+            "R3_battery-7",
+            "R3_battery-4"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "R3_battery-2",
+          "MAE_mAh": 45.20618438296566,
+          "labeled_ids": [
+            "R3_battery-7",
+            "R3_battery-4"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "R3_battery-6",
+          "MAE_mAh": 24.696305953699042,
+          "labeled_ids": [
+            "R3_battery-7",
+            "R3_battery-4"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "R3_battery-7",
+          "MAE_mAh": 90.63611966928508,
+          "labeled_ids": [
+            "R3_battery-6",
+            "R3_battery-4"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "R3_battery-8",
+          "MAE_mAh": 53.438850758256514,
+          "labeled_ids": [
+            "R3_battery-6",
+            "R3_battery-4"
+          ]
+        },
+        {
+          "fold": 3,
+          "cell": "R3_battery-3",
+          "MAE_mAh": 33.311087886569666,
+          "labeled_ids": [
+            "R3_battery-7",
+            "R3_battery-4"
+          ]
+        },
+        {
+          "fold": 4,
+          "cell": "R3_battery-4",
+          "MAE_mAh": 91.06403343878665,
+          "labeled_ids": [
+            "R3_battery-7",
+            "R3_battery-2"
+          ]
+        }
+      ]
+    }
+  }
+}
