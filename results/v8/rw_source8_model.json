@@ -1,0 +1,81 @@
+{
+  "title": "v8 fixed RW source 8-cell ridge model",
+  "source_commit": "cc3cc5053caf38f04e0665f7f88cb109144d035e",
+  "source_cells": [
+    {
+      "name": "RW_battery-1.csv",
+      "sha": "0532fbd013b0657c0f0c0af34629a3db8e373f86",
+      "cycles": 159
+    },
+    {
+      "name": "RW_battery-2.csv",
+      "sha": "dd47f64ad0a38a355186d11896b7ab59565fdc6a",
+      "cycles": 242
+    },
+    {
+      "name": "RW_battery-3.csv",
+      "sha": "ac430f575ba840d21908d0149f1541b58fb8d3d7",
+      "cycles": 278
+    },
+    {
+      "name": "RW_battery-4.csv",
+      "sha": "98c72101e292c2779bf9c6474711415ccc550d20",
+      "cycles": 182
+    },
+    {
+      "name": "RW_battery-5.csv",
+      "sha": "6975abf7f68bc014ed4f73fcf71cdc429b7274c1",
+      "cycles": 208
+    },
+    {
+      "name": "RW_battery-6.csv",
+      "sha": "80c20ff4a6acaf5bbb21c0d24dcf3c773b7840e4",
+      "cycles": 164
+    },
+    {
+      "name": "RW_battery-7.csv",
+      "sha": "fd8788ecea54dab8d16fb3d862a3afc772b46c44",
+      "cycles": 140
+    },
+    {
+      "name": "RW_battery-8.csv",
+      "sha": "be7209c32b29d083e5dfed0cab56e30efabbe22a",
+      "cycles": 162
+    }
+  ],
+  "feature_indices": [
+    0,
+    4,
+    5,
+    8,
+    12,
+    13
+  ],
+  "source_alpha": 1,
+  "source_cell_weight": "1/n_cycles",
+  "mean": [
+    4.094366595064109,
+    0.4023280616605786,
+    244.48154099777847,
+    0.23431157608269065,
+    0.06155881187490384,
+    942.882688549527
+  ],
+  "sd": [
+    0.0011804372255771437,
+    0.016774348864537186,
+    32.12743185720823,
+    0.007136710055777342,
+    0.011034982536347767,
+    140.03344094595235
+  ],
+  "coefficients": [
+    1.8621477617011841,
+    0.04078796725179313,
+    0.02097739125355747,
+    0.007218610374398673,
+    0.025187593100813584,
+    -0.02123253752306732,
+    -0.029104791553108873
+  ]
+}
