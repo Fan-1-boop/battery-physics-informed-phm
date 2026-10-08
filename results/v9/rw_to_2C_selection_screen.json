@@ -1,0 +1,242 @@
+{
+  "domain": "2C",
+  "methods": [
+    "prediction_extremes",
+    "prediction_median_extreme",
+    "novelty_extremes"
+  ],
+  "protocol": "same v8 heldout folds RW8 source; two label target cells earliest 25% lifetime; no heldout features used for acquisition; fixed alpha10",
+  "summary": {
+    "prediction_extremes": {
+      "MAE_mAh": 26.967861759946096,
+      "records": [
+        {
+          "fold": 0,
+          "cell": "2C_battery-1",
+          "MAE_mAh": 17.920244485997,
+          "labels": [
+            "2C_battery-6",
+            "2C_battery-8"
+          ]
+        },
+        {
+          "fold": 0,
+          "cell": "2C_battery-3",
+          "MAE_mAh": 24.56255786386839,
+          "labels": [
+            "2C_battery-6",
+            "2C_battery-8"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "2C_battery-5",
+          "MAE_mAh": 23.165792330244063,
+          "labels": [
+            "2C_battery-6",
+            "2C_battery-2"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "2C_battery-8",
+          "MAE_mAh": 29.304594150752273,
+          "labels": [
+            "2C_battery-6",
+            "2C_battery-2"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "2C_battery-2",
+          "MAE_mAh": 30.928758950166213,
+          "labels": [
+            "2C_battery-6",
+            "2C_battery-8"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "2C_battery-4",
+          "MAE_mAh": 26.19954163696374,
+          "labels": [
+            "2C_battery-6",
+            "2C_battery-8"
+          ]
+        },
+        {
+          "fold": 3,
+          "cell": "2C_battery-7",
+          "MAE_mAh": 28.94953591611647,
+          "labels": [
+            "2C_battery-6",
+            "2C_battery-8"
+          ]
+        },
+        {
+          "fold": 4,
+          "cell": "2C_battery-6",
+          "MAE_mAh": 34.711868745460606,
+          "labels": [
+            "2C_battery-3",
+            "2C_battery-8"
+          ]
+        }
+      ]
+    },
+    "prediction_median_extreme": {
+      "MAE_mAh": 28.015527208994847,
+      "records": [
+        {
+          "fold": 0,
+          "cell": "2C_battery-1",
+          "MAE_mAh": 18.509745202515354,
+          "labels": [
+            "2C_battery-7",
+            "2C_battery-8"
+          ]
+        },
+        {
+          "fold": 0,
+          "cell": "2C_battery-3",
+          "MAE_mAh": 24.504052082446954,
+          "labels": [
+            "2C_battery-7",
+            "2C_battery-8"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "2C_battery-5",
+          "MAE_mAh": 22.876540303817098,
+          "labels": [
+            "2C_battery-1",
+            "2C_battery-6"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "2C_battery-8",
+          "MAE_mAh": 29.956633446602183,
+          "labels": [
+            "2C_battery-1",
+            "2C_battery-6"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "2C_battery-2",
+          "MAE_mAh": 29.19200797238939,
+          "labels": [
+            "2C_battery-1",
+            "2C_battery-8"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "2C_battery-4",
+          "MAE_mAh": 31.217006946529608,
+          "labels": [
+            "2C_battery-1",
+            "2C_battery-8"
+          ]
+        },
+        {
+          "fold": 3,
+          "cell": "2C_battery-7",
+          "MAE_mAh": 33.195623370859735,
+          "labels": [
+            "2C_battery-4",
+            "2C_battery-8"
+          ]
+        },
+        {
+          "fold": 4,
+          "cell": "2C_battery-6",
+          "MAE_mAh": 34.6726083467985,
+          "labels": [
+            "2C_battery-1",
+            "2C_battery-8"
+          ]
+        }
+      ]
+    },
+    "novelty_extremes": {
+      "MAE_mAh": 26.008318708731807,
+      "records": [
+        {
+          "fold": 0,
+          "cell": "2C_battery-1",
+          "MAE_mAh": 20.802944302841077,
+          "labels": [
+            "2C_battery-4",
+            "2C_battery-7"
+          ]
+        },
+        {
+          "fold": 0,
+          "cell": "2C_battery-3",
+          "MAE_mAh": 27.853923247533515,
+          "labels": [
+            "2C_battery-4",
+            "2C_battery-7"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "2C_battery-5",
+          "MAE_mAh": 24.784599646766846,
+          "labels": [
+            "2C_battery-3",
+            "2C_battery-7"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "2C_battery-8",
+          "MAE_mAh": 26.1226579942132,
+          "labels": [
+            "2C_battery-3",
+            "2C_battery-7"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "2C_battery-2",
+          "MAE_mAh": 34.50935735518006,
+          "labels": [
+            "2C_battery-3",
+            "2C_battery-7"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "2C_battery-4",
+          "MAE_mAh": 24.028516000313033,
+          "labels": [
+            "2C_battery-3",
+            "2C_battery-7"
+          ]
+        },
+        {
+          "fold": 3,
+          "cell": "2C_battery-7",
+          "MAE_mAh": 27.086884429979552,
+          "labels": [
+            "2C_battery-3",
+            "2C_battery-6"
+          ]
+        },
+        {
+          "fold": 4,
+          "cell": "2C_battery-6",
+          "MAE_mAh": 22.877666693027162,
+          "labels": [
+            "2C_battery-3",
+            "2C_battery-7"
+          ]
+        }
+      ]
+    }
+  }
+}
