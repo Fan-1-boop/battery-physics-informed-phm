@@ -1,5 +1,25 @@
 # Physics-Informed Battery PHM
 
+## v8 55-cell 实际实验结果（2026-10-08）
+
+固定 RW 全部 8 电芯训练源 Ridge；五个目标工况合计 47 电芯；每次只使用 2 个目标候选训练电芯的前 25% 寿命循环标签。全部目标域电芯级 5-fold 测试已经完成；可移植 Python 代码和 7 项协议测试见仓库。
+
+| RW → target | Source MAE (mAh) | Random+Ridge | Representative+Ridge |
+|---|---:|---:|---:|
+| 2C (8) | 60.35 | **27.79** | 28.23 |
+| 3C (15) | **35.11** | 44.03 | 43.16 |
+| R2.5 (8) | 77.74 | 42.50 | **42.33** |
+| R3 (8) | 94.77 | **46.63** | 54.19 |
+| Sim_satellite (8) | 100.86 | **47.71** | 61.20 |
+| 五目标等权 | 73.76 | **41.73** | 45.82 |
+
+**解释：** 少标签校准在 4/5 个目标域降低容量 MAE，但在完整 3C 上不成立；当前代表性选样并未整体优于随机。不要把先前 6+6 电芯 pilot 当作 55-cell 结论，也不要将容量 MAE 直接写为 SOH MAE。
+
+- [v8 完整研究报告](reports/v8_rw_source_55cell_5target.md)
+- [可移植 benchmark](experiments/rw_multitarget/benchmark.py)
+- [55-cell 逐电芯聚合](results/v8/summary_five_domains.json)
+- [v8 冻结协议](docs/V8_RW_SOURCE_MULTI_TARGET_FROZEN_PROTOCOL.md)
+
 ## 当前硕士论文研究主线（v8，2026-10-08）
 
 **唯一源域：XJTU RW 随机工况；目标域：3C、2C、R2.5、R3、Sim_satellite；只研究 RW → 目标工况。**
@@ -8,7 +28,7 @@
 
 前期 RW→3C 的 12 电芯 pilot：零样本 42.90 mAh，2 个目标电芯前 25% 标签下代表性选样 + Ridge 32.93 mAh。仅为探索性先导数据，不等于完整 55 电芯结论。
 
-正式实验协议见 [v8 单向 RW→多工况冻结方案](docs/V8_RW_SOURCE_MULTI_TARGET_FROZEN_PROTOCOL.md)。历史 v3–v7 结果作为研究档案保留；v8 **尚未运行完整五目标验证**。
+正式实验协议见 [v8 单向 RW→多工况冻结方案](docs/V8_RW_SOURCE_MULTI_TARGET_FROZEN_PROTOCOL.md)。历史 v3–v7 结果作为研究档案保留；v8 **已执行首轮五目标验证**；详见上方实测结果。
 
 
 ## v7 — External XJTU transfer stress test (2026-10-08)
