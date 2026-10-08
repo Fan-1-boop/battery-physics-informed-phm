@@ -1,0 +1,13 @@
+target_domain,label_cycle_fraction,labeled_cells,selection,source_MAE_mAh,residual_ridge_MAE_mAh,loo_gate_ridge_MAE_mAh,study_status
+3C,1.00,2,random,42.896,34.944,,external_12cell_pilot
+3C,1.00,2,representative,42.896,31.770,,external_12cell_pilot
+RW,1.00,2,random,52.411,52.558,,external_12cell_pilot
+RW,1.00,2,representative,52.411,52.597,,external_12cell_pilot
+3C,0.25,2,random,42.896,33.920,35.394,external_12cell_pilot
+3C,0.25,2,representative,42.896,32.928,32.928,external_12cell_pilot
+RW,0.25,2,random,52.411,60.413,61.715,external_12cell_pilot
+RW,0.25,2,representative,52.411,60.506,62.909,external_12cell_pilot
+3C,0.10,2,random,42.896,33.840,,external_12cell_pilot
+3C,0.10,2,representative,42.896,31.728,,external_12cell_pilot
+RW,0.10,2,random,52.411,63.804,,external_12cell_pilot
+RW,0.10,2,representative,52.411,59.790,,external_12cell_pilot
