@@ -7,7 +7,7 @@ Che et al. (Joule 2025) Dataset 2 reproduction, ablations and subsequent short-f
 ## Repository layout
 - `scripts/legacy`: independently written experimental scripts copied from earlier research checkpoints **without silently changing their original absolute paths**. To execute, adjust `/mnt/data/che2025_official` paths or use the paths documented in the original reports.
 - `src/che2025`: synthetic smoke test, **not paper replication**.
-- `results/v3` and `results/v4`: compact CSV/JSON measurements; regenerate example charts with `python scripts/plot_results.py`.
+- `results/v3` and `results/v4`: compact measurements and charts exported from existing checkpoints.
 - `reports`: detailed reproduction and ablation methods / boundaries.
 - `docs`: dataset manifest and research protocol.
 
@@ -16,13 +16,24 @@ Original dataset archives, original author's source code, model weights, experim
 
 This is an archival transfer of previous research snapshots: **no new 30-run training is claimed to have happened as part of this repository import**.
 
-See [import provenance and limitations](docs/IMPORT_NOTES.md) for precisely what was pushed and which experiment artifacts remain local.
-
-```bash
-python -m pip install -r requirements.txt
-python scripts/plot_results.py  # regenerate archived-summary figures, no training
-python scripts/verify_official_assets.py ./data  # check official archives if available
-```
-
 ## Upcoming work
 Develop reproducible path-based CLI and tests; statistically robust few-shot protocols; encoder-only/full fine-tuning comparisons; physical-consistency and constraint ablations.
+
+## v5 — Few-shot transfer / active label acquisition (2026-10-08)
+
+**Status: exploratory, not cross-chemistry verified.** The 91 valid ResVal cells overlap the Dataset-1 source corpus physically, so these are adaptation-under-diagnostic-shift experiments rather than unseen-cell generalization.
+
+See [v5 full report](reports/v5_fewshot_physical_transfer.md).
+
+With four labeled target-training cells selected by unsupervised target-training-pool k-means (roughly 72 unlabeled candidates), physics-feature ridge calibration using labeled-only LOOCV achieved **1.982 SOH percentage-point MAE averaged over six diagnostic rates** versus 3.204 with random label acquisition. This is a post-hoc exploratory design requiring independent validation; its five-fold paired confidence interval versus random includes zero. Physics-specific superiority over SOH-only clustering is **not established**. Corrected SOH is not yet projected back onto physically consistent latent states.
+
+Run after downloading the original author's assets, building `cache_dataset2.npz` with the legacy Maccor preprocessing script, and putting `best_model.pth` plus the two half-cell OCP CSVs under a local `data/external/che2025/` directory:
+
+```bash
+python experiments/fewshot_physical_transfer/run.py --cache ./data/processed/cache_dataset2.npz --assets ./data/external/che2025 --out ./outputs/fewshot --epochs 400
+python experiments/fewshot_physical_transfer/cross_rate_acquisition.py --cache ./data/processed/cache_dataset2.npz --assets ./data/external/che2025 --out ./outputs/cross_rate.csv --alpha-selection loo
+python experiments/fewshot_physical_transfer/plot_v5.py  # works on tracked compact CSV files
+python -m pytest -q tests/test_fewshot_protocol.py
+```
+
+No source data, binary checkpoints, or original third-party source package are redistributed.
