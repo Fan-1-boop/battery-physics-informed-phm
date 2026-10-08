@@ -1,0 +1,458 @@
+{
+  "date": "2026-10-08",
+  "status": "FIVE_TARGET_EXPLORATORY_COMPLETE",
+  "source": "RW8 fixed source, 47 independent target batteries",
+  "task": "XJTU processed charge-statistics to discharge capacity, not Che physical latent",
+  "metric": "equal-weight target-cell MAE mAh",
+  "label_budget": "2 acquisition cells, earliest 25% lifetime capacity labels, 5 heldout folds",
+  "random_policy": "5 random repeats per fold; cell independence is 47, not 235",
+  "macro": {
+    "source": 73.76434513632412,
+    "random": 41.73348602225905,
+    "representative": 45.82108646895382
+  },
+  "domains": [
+    {
+      "domain": "2C",
+      "n_cells": 8,
+      "source": 60.350239928106575,
+      "random": 27.788759252326052,
+      "representative": 28.228371884089377,
+      "random_better_than_source": 8,
+      "rep_better_than_source": 8,
+      "rep_better_than_random": 5,
+      "worst_negative_transfer_cells": [
+        {
+          "id": "2C_battery-8",
+          "gain_source_to_random": 18.98720730483062,
+          "gain_source_to_rep": 15.498913179737404,
+          "rep_minus_random": 3.4882941250932156
+        },
+        {
+          "id": "2C_battery-2",
+          "gain_source_to_random": 18.116448551424178,
+          "gain_source_to_rep": 19.926651360174898,
+          "rep_minus_random": -1.81020280875072
+        },
+        {
+          "id": "2C_battery-3",
+          "gain_source_to_random": 22.44747559357799,
+          "gain_source_to_rep": 23.46289211513778,
+          "rep_minus_random": -1.0154165215597892
+        }
+      ],
+      "per_cell": [
+        {
+          "id": "2C_battery-1",
+          "source": 55.021575619024276,
+          "random": 23.889616052463715,
+          "representative": 22.832071840547833
+        },
+        {
+          "id": "2C_battery-3",
+          "source": 53.35036441151389,
+          "random": 30.902888817935896,
+          "representative": 29.887472296376107
+        },
+        {
+          "id": "2C_battery-5",
+          "source": 73.04973704629367,
+          "random": 25.247357687369735,
+          "representative": 22.62193884288413
+        },
+        {
+          "id": "2C_battery-8",
+          "source": 45.1815560543318,
+          "random": 26.19434874950118,
+          "representative": 29.682642874594396
+        },
+        {
+          "id": "2C_battery-2",
+          "source": 51.13093841343848,
+          "random": 33.0144898620143,
+          "representative": 31.20428705326358
+        },
+        {
+          "id": "2C_battery-4",
+          "source": 63.94437989023102,
+          "random": 25.844986748427722,
+          "representative": 27.670947482434688
+        },
+        {
+          "id": "2C_battery-7",
+          "source": 64.46193195984617,
+          "random": 29.137987263636592,
+          "representative": 27.48667646396188
+        },
+        {
+          "id": "2C_battery-6",
+          "source": 76.66143603017336,
+          "random": 28.078398837259282,
+          "representative": 34.44093821865239
+        }
+      ]
+    },
+    {
+      "domain": "3C",
+      "n_cells": 15,
+      "source": 35.11005497302879,
+      "random": 44.031411110874025,
+      "representative": 43.16049673008968,
+      "random_better_than_source": 6,
+      "rep_better_than_source": 5,
+      "rep_better_than_random": 7,
+      "worst_negative_transfer_cells": [
+        {
+          "id": "3C_battery-12",
+          "gain_source_to_random": -31.433041105582227,
+          "gain_source_to_rep": -33.94713724844539,
+          "rep_minus_random": 2.51409614286316
+        },
+        {
+          "id": "3C_battery-14",
+          "gain_source_to_random": -41.19127961330149,
+          "gain_source_to_rep": -28.760234192231156,
+          "rep_minus_random": -12.431045421070337
+        },
+        {
+          "id": "3C_battery-15",
+          "gain_source_to_random": -31.70531445876562,
+          "gain_source_to_rep": -21.453369401245688,
+          "rep_minus_random": -10.251945057519933
+        }
+      ],
+      "per_cell": [
+        {
+          "id": "3C_battery-3",
+          "source": 73.95392805152805,
+          "random": 52.99840324866058,
+          "representative": 66.95641320025898
+        },
+        {
+          "id": "3C_battery-5",
+          "source": 26.06400175816677,
+          "random": 22.61750606014625,
+          "representative": 26.665488496381524
+        },
+        {
+          "id": "3C_battery-11",
+          "source": 39.89127642726151,
+          "random": 62.83618481730738,
+          "representative": 61.01110969038398
+        },
+        {
+          "id": "3C_battery-1",
+          "source": 16.29816928687411,
+          "random": 40.468533922483964,
+          "representative": 29.937634663891302
+        },
+        {
+          "id": "3C_battery-4",
+          "source": 20.43121721668749,
+          "random": 32.16563703603198,
+          "representative": 35.085688087501104
+        },
+        {
+          "id": "3C_battery-12",
+          "source": 14.773110013389447,
+          "random": 46.206151118971675,
+          "representative": 48.720247261834835
+        },
+        {
+          "id": "3C_battery-7",
+          "source": 86.01594252571745,
+          "random": 40.63499340742821,
+          "representative": 68.46927373820606
+        },
+        {
+          "id": "3C_battery-9",
+          "source": 17.941030120401518,
+          "random": 53.80472891342389,
+          "representative": 37.824619625136066
+        },
+        {
+          "id": "3C_battery-10",
+          "source": 39.51036536594475,
+          "random": 34.45334233952771,
+          "representative": 35.28798325436692
+        },
+        {
+          "id": "3C_battery-2",
+          "source": 49.43492537650696,
+          "random": 25.966506117519412,
+          "representative": 34.85537305429869
+        },
+        {
+          "id": "3C_battery-8",
+          "source": 21.690066049924642,
+          "random": 50.72813483149197,
+          "representative": 32.35325585406671
+        },
+        {
+          "id": "3C_battery-13",
+          "source": 14.827382890620525,
+          "random": 35.82395982953814,
+          "representative": 28.37658654426842
+        },
+        {
+          "id": "3C_battery-6",
+          "source": 42.05215685085585,
+          "random": 25.10323828695947,
+          "representative": 27.882921225721216
+        },
+        {
+          "id": "3C_battery-14",
+          "source": 29.96498691584763,
+          "random": 71.15626652914912,
+          "representative": 58.725221108078784
+        },
+        {
+          "id": "3C_battery-15",
+          "source": 33.80226574570502,
+          "random": 65.50758020447064,
+          "representative": 55.25563514695071
+        }
+      ]
+    },
+    {
+      "domain": "R2.5",
+      "n_cells": 8,
+      "source": 77.73607876855336,
+      "random": 42.504470677009174,
+      "representative": 42.32715661153976,
+      "random_better_than_source": 8,
+      "rep_better_than_source": 8,
+      "rep_better_than_random": 3,
+      "worst_negative_transfer_cells": [
+        {
+          "id": "R2.5_battery-7",
+          "gain_source_to_random": 14.610196729514186,
+          "gain_source_to_rep": 16.874538411086547,
+          "rep_minus_random": -2.264341681572361
+        },
+        {
+          "id": "R2.5_battery-6",
+          "gain_source_to_random": 15.612442991380632,
+          "gain_source_to_rep": 19.833923454631538,
+          "rep_minus_random": -4.221480463250906
+        },
+        {
+          "id": "R2.5_battery-4",
+          "gain_source_to_random": 27.03697375598864,
+          "gain_source_to_rep": 25.930925118781524,
+          "rep_minus_random": 1.1060486372071168
+        }
+      ],
+      "per_cell": [
+        {
+          "id": "R2.5_battery-2",
+          "source": 82.16663673519189,
+          "random": 43.56325352608486,
+          "representative": 43.90688491565833
+        },
+        {
+          "id": "R2.5_battery-3",
+          "source": 66.99206409924031,
+          "random": 36.629893272326505,
+          "representative": 39.058585151358685
+        },
+        {
+          "id": "R2.5_battery-4",
+          "source": 73.90484726318185,
+          "random": 46.86787350719321,
+          "representative": 47.973922144400326
+        },
+        {
+          "id": "R2.5_battery-8",
+          "source": 77.63100380033424,
+          "random": 34.19694163424515,
+          "representative": 34.345853880413046
+        },
+        {
+          "id": "R2.5_battery-1",
+          "source": 90.94989126050062,
+          "random": 36.53714383464658,
+          "representative": 36.20954549859372
+        },
+        {
+          "id": "R2.5_battery-7",
+          "source": 62.269765294953466,
+          "random": 47.65956856543928,
+          "representative": 45.39522688386692
+        },
+        {
+          "id": "R2.5_battery-5",
+          "source": 100.18535172397954,
+          "random": 42.40446409647349,
+          "representative": 43.77208790161365
+        },
+        {
+          "id": "R2.5_battery-6",
+          "source": 67.78906997104495,
+          "random": 52.17662697966432,
+          "representative": 47.955146516413414
+        }
+      ]
+    },
+    {
+      "domain": "R3",
+      "n_cells": 8,
+      "source": 94.76727484669168,
+      "random": 46.628780006628915,
+      "representative": 54.19284505931,
+      "random_better_than_source": 7,
+      "rep_better_than_source": 7,
+      "rep_better_than_random": 1,
+      "worst_negative_transfer_cells": [
+        {
+          "id": "R3_battery-7",
+          "gain_source_to_random": -34.91658342516992,
+          "gain_source_to_rep": -45.936798174208334,
+          "rep_minus_random": 11.020214749038416
+        },
+        {
+          "id": "R3_battery-2",
+          "gain_source_to_random": 37.30196241503318,
+          "gain_source_to_rep": 23.210953417084966,
+          "rep_minus_random": 14.091008997948215
+        },
+        {
+          "id": "R3_battery-5",
+          "gain_source_to_random": 47.64511916092829,
+          "gain_source_to_rep": 25.064459710813118,
+          "rep_minus_random": 22.58065945011517
+        }
+      ],
+      "per_cell": [
+        {
+          "id": "R3_battery-1",
+          "source": 89.61749500165433,
+          "random": 28.58832226626162,
+          "representative": 41.8257381688368
+        },
+        {
+          "id": "R3_battery-5",
+          "source": 80.71354860423413,
+          "random": 33.068429443305845,
+          "representative": 55.649088893421016
+        },
+        {
+          "id": "R3_battery-2",
+          "source": 79.39241848177889,
+          "random": 42.09045606674571,
+          "representative": 56.181465064693924
+        },
+        {
+          "id": "R3_battery-6",
+          "source": 94.31188859430776,
+          "random": 29.24656002129286,
+          "representative": 33.922918483629985
+        },
+        {
+          "id": "R3_battery-7",
+          "source": 44.699321495076745,
+          "random": 79.61590492024666,
+          "representative": 90.63611966928508
+        },
+        {
+          "id": "R3_battery-8",
+          "source": 82.13896767321886,
+          "random": 44.527590676565076,
+          "representative": 53.438850758256514
+        },
+        {
+          "id": "R3_battery-3",
+          "source": 128.08496633321604,
+          "random": 49.61783314130692,
+          "representative": 27.63921261401614
+        },
+        {
+          "id": "R3_battery-4",
+          "source": 159.1795925900467,
+          "random": 66.27514351730659,
+          "representative": 74.24936682234056
+        }
+      ]
+    },
+    {
+      "domain": "Sim_satellite",
+      "n_cells": 8,
+      "source": 100.85807716524013,
+      "random": 47.71400906445708,
+      "representative": 61.19656205974028,
+      "random_better_than_source": 8,
+      "rep_better_than_source": 6,
+      "rep_better_than_random": 2,
+      "worst_negative_transfer_cells": [
+        {
+          "id": "Sim_satellite_battery-5",
+          "gain_source_to_random": 10.415068968555182,
+          "gain_source_to_rep": -16.30052703003217,
+          "rep_minus_random": 26.715595998587354
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "gain_source_to_random": 31.68181535141563,
+          "gain_source_to_rep": -1.3121551547792905,
+          "rep_minus_random": 32.99397050619492
+        },
+        {
+          "id": "Sim_satellite_battery-4",
+          "gain_source_to_random": 29.0050904311422,
+          "gain_source_to_rep": 8.076724075671635,
+          "rep_minus_random": 20.928366355470565
+        }
+      ],
+      "per_cell": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "source": 171.38496903966313,
+          "random": 77.1604178920176,
+          "representative": 74.53901395113057
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "source": 84.23407685677562,
+          "random": 37.620630548966616,
+          "representative": 37.73407153633572
+        },
+        {
+          "id": "Sim_satellite_battery-1",
+          "source": 107.75097293998412,
+          "random": 35.91770479444419,
+          "representative": 43.70146672254616
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "source": 65.77157645226158,
+          "random": 55.3565074837064,
+          "representative": 82.07210348229376
+        },
+        {
+          "id": "Sim_satellite_battery-3",
+          "source": 84.31648995613098,
+          "random": 38.85037086831457,
+          "representative": 71.39968793589986
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "source": 77.70188919737731,
+          "random": 46.02007384596168,
+          "representative": 79.0140443521566
+        },
+        {
+          "id": "Sim_satellite_battery-4",
+          "source": 86.2006115255419,
+          "random": 57.1955210943997,
+          "representative": 78.12388744987027
+        },
+        {
+          "id": "Sim_satellite_battery-2",
+          "source": 129.50403135418625,
+          "random": 33.590845987845924,
+          "representative": 22.988221047689304
+        }
+      ]
+    }
+  ]
+}
