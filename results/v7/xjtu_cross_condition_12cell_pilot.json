@@ -1,0 +1,1754 @@
+{
+  "status": "PILOT - NOT FULL 55 CELLS",
+  "date": "2026-10-08",
+  "dataset": "PINN4SOH XJTU preprocessed cycle-level 16 features",
+  "subset": "first 6 3C cells and first 6 RW cells; 12 batteries only",
+  "supervision": "1 or 2 fully labeled target battery trajectories; remaining target cells never provide labels",
+  "task": "target condition charge statistics -> discharge capacity Ah, NOT Che V(Q) to SOH",
+  "features": [
+    "voltage mean",
+    "CC Q",
+    "CC charge time",
+    "current mean",
+    "CV Q",
+    "CV charge time"
+  ],
+  "source_ridge_alpha": 1,
+  "delta_ridge_alpha": 10,
+  "source_cell_weights": "1/n_cycles",
+  "random_repeats": 5,
+  "source_files": [
+    {
+      "id": "3C_battery-1.csv",
+      "n_cycles": 281,
+      "github_blob_sha": "fb2cd6f0a6dddb84601032dea7f725452ce64f3d"
+    },
+    {
+      "id": "3C_battery-2.csv",
+      "n_cycles": 272,
+      "github_blob_sha": "56d8caf8e73815a5cad850f050115d25cc4e8ac5"
+    },
+    {
+      "id": "3C_battery-3.csv",
+      "n_cycles": 264,
+      "github_blob_sha": "8cb540e7c67d69cba2fe60fcb35820b8ba0d3e5b"
+    },
+    {
+      "id": "3C_battery-4.csv",
+      "n_cycles": 313,
+      "github_blob_sha": "6f16c95db6b3b740dd41c494fea0e4db4a85b170"
+    },
+    {
+      "id": "3C_battery-5.csv",
+      "n_cycles": 277,
+      "github_blob_sha": "d68c6f886fc7f83b952cd2fab4ebf144a4b573d4"
+    },
+    {
+      "id": "3C_battery-6.csv",
+      "n_cycles": 302,
+      "github_blob_sha": "21b238eec378ad7a54023b52307b40b5cfe1495f"
+    },
+    {
+      "id": "RW_battery-1.csv",
+      "n_cycles": 159,
+      "github_blob_sha": "0532fbd013b0657c0f0c0af34629a3db8e373f86"
+    },
+    {
+      "id": "RW_battery-2.csv",
+      "n_cycles": 242,
+      "github_blob_sha": "dd47f64ad0a38a355186d11896b7ab59565fdc6a"
+    },
+    {
+      "id": "RW_battery-3.csv",
+      "n_cycles": 278,
+      "github_blob_sha": "ac430f575ba840d21908d0149f1541b58fb8d3d7"
+    },
+    {
+      "id": "RW_battery-4.csv",
+      "n_cycles": 182,
+      "github_blob_sha": "98c72101e292c2779bf9c6474711415ccc550d20"
+    },
+    {
+      "id": "RW_battery-5.csv",
+      "n_cycles": 208,
+      "github_blob_sha": "6975abf7f68bc014ed4f73fcf71cdc429b7274c1"
+    },
+    {
+      "id": "RW_battery-6.csv",
+      "n_cycles": 164,
+      "github_blob_sha": "80c20ff4a6acaf5bbb21c0d24dcf3c773b7840e4"
+    }
+  ],
+  "summary": [
+    {
+      "domain": "3C",
+      "k": 1,
+      "policy": "random",
+      "method": "source",
+      "mae_mAh": 43.336
+    },
+    {
+      "domain": "3C",
+      "k": 1,
+      "policy": "random",
+      "method": "offset",
+      "mae_mAh": 40.109
+    },
+    {
+      "domain": "3C",
+      "k": 1,
+      "policy": "random",
+      "method": "residual_ridge",
+      "mae_mAh": 39.767
+    },
+    {
+      "domain": "3C",
+      "k": 1,
+      "policy": "representative",
+      "method": "source",
+      "mae_mAh": 45.31
+    },
+    {
+      "domain": "3C",
+      "k": 1,
+      "policy": "representative",
+      "method": "offset",
+      "mae_mAh": 32.417
+    },
+    {
+      "domain": "3C",
+      "k": 1,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "mae_mAh": 32.518
+    },
+    {
+      "domain": "3C",
+      "k": 2,
+      "policy": "random",
+      "method": "source",
+      "mae_mAh": 44.247
+    },
+    {
+      "domain": "3C",
+      "k": 2,
+      "policy": "random",
+      "method": "offset",
+      "mae_mAh": 35.548
+    },
+    {
+      "domain": "3C",
+      "k": 2,
+      "policy": "random",
+      "method": "residual_ridge",
+      "mae_mAh": 35.149
+    },
+    {
+      "domain": "3C",
+      "k": 2,
+      "policy": "representative",
+      "method": "source",
+      "mae_mAh": 35.524
+    },
+    {
+      "domain": "3C",
+      "k": 2,
+      "policy": "representative",
+      "method": "offset",
+      "mae_mAh": 33.586
+    },
+    {
+      "domain": "3C",
+      "k": 2,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "mae_mAh": 29.903
+    },
+    {
+      "domain": "RW",
+      "k": 1,
+      "policy": "random",
+      "method": "source",
+      "mae_mAh": 53.196
+    },
+    {
+      "domain": "RW",
+      "k": 1,
+      "policy": "random",
+      "method": "offset",
+      "mae_mAh": 62.156
+    },
+    {
+      "domain": "RW",
+      "k": 1,
+      "policy": "random",
+      "method": "residual_ridge",
+      "mae_mAh": 58.019
+    },
+    {
+      "domain": "RW",
+      "k": 1,
+      "policy": "representative",
+      "method": "source",
+      "mae_mAh": 54.834
+    },
+    {
+      "domain": "RW",
+      "k": 1,
+      "policy": "representative",
+      "method": "offset",
+      "mae_mAh": 57.852
+    },
+    {
+      "domain": "RW",
+      "k": 1,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "mae_mAh": 55.904
+    },
+    {
+      "domain": "RW",
+      "k": 2,
+      "policy": "random",
+      "method": "source",
+      "mae_mAh": 51.891
+    },
+    {
+      "domain": "RW",
+      "k": 2,
+      "policy": "random",
+      "method": "offset",
+      "mae_mAh": 59.761
+    },
+    {
+      "domain": "RW",
+      "k": 2,
+      "policy": "random",
+      "method": "residual_ridge",
+      "mae_mAh": 50.279
+    },
+    {
+      "domain": "RW",
+      "k": 2,
+      "policy": "representative",
+      "method": "source",
+      "mae_mAh": 49.992
+    },
+    {
+      "domain": "RW",
+      "k": 2,
+      "policy": "representative",
+      "method": "offset",
+      "mae_mAh": 51.04
+    },
+    {
+      "domain": "RW",
+      "k": 2,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "mae_mAh": 41.573
+    }
+  ],
+  "per_run": [
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 0,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 38.28111568548475,
+      "labeled": [
+        "3C_battery-2.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 0,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 43.545745444254266,
+      "labeled": [
+        "3C_battery-2.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 0,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 42.35743361994829,
+      "labeled": [
+        "3C_battery-2.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 0,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 45.30987202817718,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 0,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 32.41741798961551,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 0,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 32.51788031505308,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 1,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 45.30987202817718,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 1,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 32.41741798961551,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 1,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 32.51788031505308,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 1,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 45.30987202817718,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 1,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 32.41741798961551,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 1,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 32.51788031505308,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 2,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 45.30987202817718,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 2,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 32.41741798961551,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 2,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 32.51788031505308,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 2,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 45.30987202817718,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 2,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 32.41741798961551,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 2,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 32.51788031505308,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 3,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 49.49863364691342,
+      "labeled": [
+        "3C_battery-1.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 3,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 48.61715622485934,
+      "labeled": [
+        "3C_battery-1.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 3,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 49.085548192160054,
+      "labeled": [
+        "3C_battery-1.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 3,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 45.30987202817718,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 3,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 32.41741798961551,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 3,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 32.51788031505308,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 4,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 38.28111568548475,
+      "labeled": [
+        "3C_battery-2.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 4,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 43.545745444254266,
+      "labeled": [
+        "3C_battery-2.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 4,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 42.35743361994829,
+      "labeled": [
+        "3C_battery-2.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 4,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 45.30987202817718,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 4,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 32.41741798961551,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 1,
+      "rep": 4,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 32.51788031505308,
+      "labeled": [
+        "3C_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 0,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 43.47974248224951,
+      "labeled": [
+        "3C_battery-2.csv",
+        "3C_battery-4.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 0,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 28.93640940051273,
+      "labeled": [
+        "3C_battery-2.csv",
+        "3C_battery-4.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 0,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 28.614971994759088,
+      "labeled": [
+        "3C_battery-2.csv",
+        "3C_battery-4.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 0,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 35.52362644918383,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-3.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 0,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 33.58629755011734,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-3.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 0,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 29.902792799975543,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-3.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 1,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 40.14484503779556,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-2.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 1,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 34.67489391884583,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-2.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 1,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 34.003364181829696,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-2.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 1,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 35.52362644918383,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-3.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 1,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 33.58629755011734,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-3.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 1,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 29.902792799975543,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-3.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 2,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 52.265687910615064,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-4.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 2,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 39.03628015131697,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-4.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 2,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 39.27512506568118,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-4.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 2,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 35.52362644918383,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-3.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 2,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 33.58629755011734,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-3.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 2,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 29.902792799975543,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-3.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 3,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 49.68441027713039,
+      "labeled": [
+        "3C_battery-1.csv",
+        "3C_battery-6.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 3,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 32.78087007021988,
+      "labeled": [
+        "3C_battery-1.csv",
+        "3C_battery-6.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 3,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 33.0123342686635,
+      "labeled": [
+        "3C_battery-1.csv",
+        "3C_battery-6.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 3,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 35.52362644918383,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-3.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 3,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 33.58629755011734,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-3.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 3,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 29.902792799975543,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-3.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 4,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 35.66251282534454,
+      "labeled": [
+        "3C_battery-2.csv",
+        "3C_battery-6.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 4,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 42.31391347080414,
+      "labeled": [
+        "3C_battery-2.csv",
+        "3C_battery-6.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 4,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 40.839921055605366,
+      "labeled": [
+        "3C_battery-2.csv",
+        "3C_battery-6.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 4,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 35.52362644918383,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-3.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 4,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 33.58629755011734,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-3.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "3C",
+      "k": 2,
+      "rep": 4,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 29.902792799975543,
+      "labeled": [
+        "3C_battery-5.csv",
+        "3C_battery-3.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 0,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 54.850465604175575,
+      "labeled": [
+        "RW_battery-4.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 0,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 58.22671726509272,
+      "labeled": [
+        "RW_battery-4.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 0,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 55.282717857418525,
+      "labeled": [
+        "RW_battery-4.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 0,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 54.83358357737594,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 0,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 57.85240817846247,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 0,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 55.90359986480934,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 1,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 48.05323458711914,
+      "labeled": [
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 1,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 72.917056765707,
+      "labeled": [
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 1,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 60.48299343413382,
+      "labeled": [
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 1,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 54.83358357737594,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 1,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 57.85240817846247,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 1,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 55.90359986480934,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 2,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 54.83358357737594,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 2,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 57.85240817846247,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 2,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 55.90359986480934,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 2,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 54.83358357737594,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 2,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 57.85240817846247,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 2,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 55.90359986480934,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 3,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 53.392586258796165,
+      "labeled": [
+        "RW_battery-3.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 3,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 63.55623542517895,
+      "labeled": [
+        "RW_battery-3.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 3,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 63.142403853929395,
+      "labeled": [
+        "RW_battery-3.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 3,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 54.83358357737594,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 3,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 57.85240817846247,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 3,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 55.90359986480934,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 4,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 54.850465604175575,
+      "labeled": [
+        "RW_battery-4.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 4,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 58.22671726509272,
+      "labeled": [
+        "RW_battery-4.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 4,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 55.282717857418525,
+      "labeled": [
+        "RW_battery-4.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 4,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 54.83358357737594,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 4,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 57.85240817846247,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 1,
+      "rep": 4,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 55.90359986480934,
+      "labeled": [
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 5
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 0,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 50.013069079462014,
+      "labeled": [
+        "RW_battery-4.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 0,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 68.96743620605803,
+      "labeled": [
+        "RW_battery-4.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 0,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 56.85845539496765,
+      "labeled": [
+        "RW_battery-4.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 0,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 49.99196654596247,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 0,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 51.0404542280988,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 0,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 41.572701250620774,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 1,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 49.99196654596247,
+      "labeled": [
+        "RW_battery-1.csv",
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 1,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 51.0404542280988,
+      "labeled": [
+        "RW_battery-1.csv",
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 1,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 41.572701250620774,
+      "labeled": [
+        "RW_battery-1.csv",
+        "RW_battery-5.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 1,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 49.99196654596247,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 1,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 51.0404542280988,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 1,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 41.572701250620774,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 2,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 52.74981476389717,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-6.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 2,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 54.16585545217212,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-6.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 2,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 45.768096108711035,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-6.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 2,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 49.99196654596247,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 2,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 51.0404542280988,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 2,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 41.572701250620774,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 3,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 56.687258669058295,
+      "labeled": [
+        "RW_battery-3.csv",
+        "RW_battery-4.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 3,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 55.66467121606469,
+      "labeled": [
+        "RW_battery-3.csv",
+        "RW_battery-4.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 3,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 50.33596689043242,
+      "labeled": [
+        "RW_battery-3.csv",
+        "RW_battery-4.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 3,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 49.99196654596247,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 3,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 51.0404542280988,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 3,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 41.572701250620774,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 4,
+      "policy": "random",
+      "method": "source",
+      "capacity_MAE_mAh": 50.013069079462014,
+      "labeled": [
+        "RW_battery-4.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 4,
+      "policy": "random",
+      "method": "offset",
+      "capacity_MAE_mAh": 68.96743620605803,
+      "labeled": [
+        "RW_battery-4.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 4,
+      "policy": "random",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 56.85845539496765,
+      "labeled": [
+        "RW_battery-4.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 4,
+      "policy": "representative",
+      "method": "source",
+      "capacity_MAE_mAh": 49.99196654596247,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 4,
+      "policy": "representative",
+      "method": "offset",
+      "capacity_MAE_mAh": 51.0404542280988,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    },
+    {
+      "target_domain": "RW",
+      "k": 2,
+      "rep": 4,
+      "policy": "representative",
+      "method": "residual_ridge",
+      "capacity_MAE_mAh": 41.572701250620774,
+      "labeled": [
+        "RW_battery-5.csv",
+        "RW_battery-1.csv"
+      ],
+      "n_test_batteries": 4
+    }
+  ]
+}
