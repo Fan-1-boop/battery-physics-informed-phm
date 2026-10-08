@@ -76,3 +76,17 @@ python -m unittest discover -s tests -p 'test_rw_multitarget_v8.py' -v
 脚本固定上游 commit，第一次运行需联网从作者仓库取得逐循环 CSV；后续从本地 `data/external/xjtu_processed` 缓存读取。本研究 GitHub 不二次分发作者原始数据。实验数值最初通过 GitHub 授权连接的逐文件公开 CSV 读取、独立 JS 计算归档；可移植 Python 实现提供相同公式、折号和随机种子，代码级回归 / 隔离测试通过，但由于沙盒不能访问外网，本次**没有在同一容器中重新以 Python 跑完全部 55 电芯**；该跨实现逐值重跑仍是后续必要的再现性验收。
 
 原作者：https://github.com/wang-fujin/PINN4SOH ；相关论文 DOI：https://doi.org/10.1038/s41467-024-48779-z
+
+
+## 7. 事后诊断：固定 RW8，只改变 3C 目标样本量
+
+为解释先导实验与完整 3C 结果差异，固定上述 RW 8 电芯训练的源模型、alpha、标签比例和五折随机种子规则，单独取 3C 最初 6 个电芯再次实验：
+
+| 3C target set | Source-only (mAh) | Random+Ridge (mAh) | Representative+Ridge (mAh) |
+|---|---:|---:|---:|
+| First 6 target batteries | 38.04 | **31.88** | 33.16 |
+| All 15 target batteries | **35.11** | 44.03 | 43.16 |
+
+因此即使 RW 源域都固定为 8 电芯，3C 前 6 电芯仍显示出迁移收益，而全 15 电芯结论相反。**样本组成及测试折定义影响结论**；该对照是看到完整结果之后做的解释性实验，不作为预注册的正式性能指标，更不是筛选前六电芯宣称成功。
+
+详见 `results/v8/posthoc_rw8_3C_first6_diagnostic.json`。
