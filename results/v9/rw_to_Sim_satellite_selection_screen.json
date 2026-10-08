@@ -1,0 +1,238 @@
+{
+  "domain": "Sim_satellite",
+  "source": "RW8",
+  "note": "same v8 fixed fivefold tests, 2 cells * 25% prefix capacity labels, alpha10 residual ridge, three unlabeled strategies",
+  "summary": {
+    "prediction_extremes": {
+      "MAE_mAh": 54.15494370214735,
+      "records": [
+        {
+          "fold": 0,
+          "cell": "Sim_satellite_battery-6",
+          "MAE_mAh": 69.26723269790305,
+          "labeled_ids": [
+            "Sim_satellite_battery-2",
+            "Sim_satellite_battery-7"
+          ]
+        },
+        {
+          "fold": 0,
+          "cell": "Sim_satellite_battery-8",
+          "MAE_mAh": 40.31998827254936,
+          "labeled_ids": [
+            "Sim_satellite_battery-2",
+            "Sim_satellite_battery-7"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "Sim_satellite_battery-1",
+          "MAE_mAh": 38.66116474797521,
+          "labeled_ids": [
+            "Sim_satellite_battery-6",
+            "Sim_satellite_battery-8"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "Sim_satellite_battery-5",
+          "MAE_mAh": 76.72774917312593,
+          "labeled_ids": [
+            "Sim_satellite_battery-6",
+            "Sim_satellite_battery-8"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "Sim_satellite_battery-3",
+          "MAE_mAh": 58.55172578508653,
+          "labeled_ids": [
+            "Sim_satellite_battery-6",
+            "Sim_satellite_battery-8"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "Sim_satellite_battery-7",
+          "MAE_mAh": 64.36392035743323,
+          "labeled_ids": [
+            "Sim_satellite_battery-6",
+            "Sim_satellite_battery-8"
+          ]
+        },
+        {
+          "fold": 3,
+          "cell": "Sim_satellite_battery-4",
+          "MAE_mAh": 64.31033075612297,
+          "labeled_ids": [
+            "Sim_satellite_battery-6",
+            "Sim_satellite_battery-8"
+          ]
+        },
+        {
+          "fold": 4,
+          "cell": "Sim_satellite_battery-2",
+          "MAE_mAh": 21.037437826982465,
+          "labeled_ids": [
+            "Sim_satellite_battery-6",
+            "Sim_satellite_battery-8"
+          ]
+        }
+      ]
+    },
+    "prediction_median_extreme": {
+      "MAE_mAh": 55.182314511834406,
+      "records": [
+        {
+          "fold": 0,
+          "cell": "Sim_satellite_battery-6",
+          "MAE_mAh": 65.77968833315117,
+          "labeled_ids": [
+            "Sim_satellite_battery-4",
+            "Sim_satellite_battery-2"
+          ]
+        },
+        {
+          "fold": 0,
+          "cell": "Sim_satellite_battery-8",
+          "MAE_mAh": 44.297489462503094,
+          "labeled_ids": [
+            "Sim_satellite_battery-4",
+            "Sim_satellite_battery-2"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "Sim_satellite_battery-1",
+          "MAE_mAh": 43.83718620394238,
+          "labeled_ids": [
+            "Sim_satellite_battery-3",
+            "Sim_satellite_battery-6"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "Sim_satellite_battery-5",
+          "MAE_mAh": 82.23466198145573,
+          "labeled_ids": [
+            "Sim_satellite_battery-3",
+            "Sim_satellite_battery-6"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "Sim_satellite_battery-3",
+          "MAE_mAh": 56.237874858134546,
+          "labeled_ids": [
+            "Sim_satellite_battery-5",
+            "Sim_satellite_battery-6"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "Sim_satellite_battery-7",
+          "MAE_mAh": 63.43174410439689,
+          "labeled_ids": [
+            "Sim_satellite_battery-5",
+            "Sim_satellite_battery-6"
+          ]
+        },
+        {
+          "fold": 3,
+          "cell": "Sim_satellite_battery-4",
+          "MAE_mAh": 62.65165010340211,
+          "labeled_ids": [
+            "Sim_satellite_battery-5",
+            "Sim_satellite_battery-6"
+          ]
+        },
+        {
+          "fold": 4,
+          "cell": "Sim_satellite_battery-2",
+          "MAE_mAh": 22.988221047689304,
+          "labeled_ids": [
+            "Sim_satellite_battery-4",
+            "Sim_satellite_battery-6"
+          ]
+        }
+      ]
+    },
+    "novelty_extremes": {
+      "MAE_mAh": 43.25744778385407,
+      "records": [
+        {
+          "fold": 0,
+          "cell": "Sim_satellite_battery-6",
+          "MAE_mAh": 84.15185999125099,
+          "labeled_ids": [
+            "Sim_satellite_battery-3",
+            "Sim_satellite_battery-5"
+          ]
+        },
+        {
+          "fold": 0,
+          "cell": "Sim_satellite_battery-8",
+          "MAE_mAh": 34.73881328471883,
+          "labeled_ids": [
+            "Sim_satellite_battery-3",
+            "Sim_satellite_battery-5"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "Sim_satellite_battery-1",
+          "MAE_mAh": 35.00332787730546,
+          "labeled_ids": [
+            "Sim_satellite_battery-3",
+            "Sim_satellite_battery-8"
+          ]
+        },
+        {
+          "fold": 1,
+          "cell": "Sim_satellite_battery-5",
+          "MAE_mAh": 38.75317438324676,
+          "labeled_ids": [
+            "Sim_satellite_battery-3",
+            "Sim_satellite_battery-8"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "Sim_satellite_battery-3",
+          "MAE_mAh": 31.326005718893736,
+          "labeled_ids": [
+            "Sim_satellite_battery-1",
+            "Sim_satellite_battery-5"
+          ]
+        },
+        {
+          "fold": 2,
+          "cell": "Sim_satellite_battery-7",
+          "MAE_mAh": 40.17473768026976,
+          "labeled_ids": [
+            "Sim_satellite_battery-1",
+            "Sim_satellite_battery-5"
+          ]
+        },
+        {
+          "fold": 3,
+          "cell": "Sim_satellite_battery-4",
+          "MAE_mAh": 38.95248022497805,
+          "labeled_ids": [
+            "Sim_satellite_battery-3",
+            "Sim_satellite_battery-5"
+          ]
+        },
+        {
+          "fold": 4,
+          "cell": "Sim_satellite_battery-2",
+          "MAE_mAh": 42.959183110169015,
+          "labeled_ids": [
+            "Sim_satellite_battery-3",
+            "Sim_satellite_battery-5"
+          ]
+        }
+      ]
+    }
+  }
+}
