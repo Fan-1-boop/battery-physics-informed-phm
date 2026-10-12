@@ -23,7 +23,7 @@ def sample(policy="pred_quartiles"):
         for rep in range(5 if policy=="random" else 1):
             rec.append(dict(fold=f,repeat=rep,policy=policy,budget=30,
                             heldout=held,selected=["3C_battery-10","3C_battery-11"],
-                            n_labeled_cycles=[30,30],lambda=0.8,
+                            n_labeled_cycles=[30,30],**{"lambda":0.8},
                             ridge=[dict(id=cid,mae_mAh=ridge[cid]) for cid in held],
                             shrink=[dict(id=cid,mae_mAh=ridge[cid]) for cid in held]))
     return dict(domain="3C",n_target_cells=8,folds=folds,source_predictions=source,
