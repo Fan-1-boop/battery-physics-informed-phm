@@ -1,0 +1,255 @@
+{
+  "date": "2026-10-12",
+  "type": "real-data v10 fixed label cycles, source GitHub PINN4SOH commit c c3...",
+  "provenance": "v8 RW8 source/model and v8 folds, v9 frozen acquisition IDs, 5 target domains 47 target cells",
+  "source_files": [
+    {
+      "path": "results/v10/rw_to_2C_fixed_N.json",
+      "github_blob_sha": "84cf659bf24cfe5d1cf85c4d64fc2ae6598fd196"
+    },
+    {
+      "path": "results/v10/rw_to_3C_fixed_N.json",
+      "github_blob_sha": "1645f365e10f1fde3545a93b4db5c82c131af0b5"
+    },
+    {
+      "path": "results/v10/rw_to_R2_5_fixed_N.json",
+      "github_blob_sha": "87326e8afc96ec251cc526e39e86a7bc5af3b7a9"
+    },
+    {
+      "path": "results/v10/rw_to_R3_fixed_N.json",
+      "github_blob_sha": "e35f4e3a715e4be5153566f0492396de10a3867d"
+    },
+    {
+      "path": "results/v10/rw_to_Sim_satellite_fixed_N.json",
+      "github_blob_sha": "c463ed7c9fdd31e0b1d8ca10fdbb83642e5273ce"
+    }
+  ],
+  "label_budget": "2 selected target-train cells × first N cycles each, N=10/20/30",
+  "random_5_reps_are_not_independent_cells": true,
+  "mean_error_unit": "mAh, within-domain cell equal then domains equal",
+  "tests": {
+    "problems": [],
+    "max_reference_v9_mae_mAh": 1.4210854715202004e-14
+  },
+  "by_domain": [
+    {
+      "domain": "2C",
+      "rows": [
+        {
+          "budget": 10,
+          "random_ridge": 39.88131671331696,
+          "quartile_ridge": 39.750416134790875,
+          "random_bias": 40.13391019691978,
+          "quartile_bias": 39.93793357349355,
+          "quartile_better_cells": 5,
+          "n_cells": 8,
+          "mean_delta": 0.13090057852608394
+        },
+        {
+          "budget": 20,
+          "random_ridge": 33.88136953665328,
+          "quartile_ridge": 33.18769270263783,
+          "random_bias": 34.30068069188924,
+          "quartile_bias": 33.5117959824802,
+          "quartile_better_cells": 5,
+          "n_cells": 8,
+          "mean_delta": 0.6936768340154353
+        },
+        {
+          "budget": 30,
+          "random_ridge": 30.38422541471178,
+          "quartile_ridge": 29.348525844095544,
+          "random_bias": 30.925752217469277,
+          "quartile_bias": 29.83516070047609,
+          "quartile_better_cells": 6,
+          "n_cells": 8,
+          "mean_delta": 1.0356995706162309
+        }
+      ],
+      "max_v9_parity": 7.105427357601002e-15
+    },
+    {
+      "domain": "3C",
+      "rows": [
+        {
+          "budget": 10,
+          "random_ridge": 44.758186051767616,
+          "quartile_ridge": 40.611583237880794,
+          "random_bias": 47.61446901690762,
+          "quartile_bias": 46.640362870888296,
+          "quartile_better_cells": 8,
+          "n_cells": 15,
+          "mean_delta": 4.146602813886837
+        },
+        {
+          "budget": 20,
+          "random_ridge": 40.75466653439256,
+          "quartile_ridge": 41.57048554557121,
+          "random_bias": 41.54395095599486,
+          "quartile_bias": 45.04328083227257,
+          "quartile_better_cells": 8,
+          "n_cells": 15,
+          "mean_delta": -0.8158190111786292
+        },
+        {
+          "budget": 30,
+          "random_ridge": 40.74180202189887,
+          "quartile_ridge": 42.47216016245201,
+          "random_bias": 40.89881116371877,
+          "quartile_bias": 44.75294998014138,
+          "quartile_better_cells": 8,
+          "n_cells": 15,
+          "mean_delta": -1.730358140553156
+        }
+      ],
+      "max_v9_parity": 1.4210854715202004e-14
+    },
+    {
+      "domain": "R2_5",
+      "rows": [
+        {
+          "budget": 10,
+          "random_ridge": 52.05262708401788,
+          "quartile_ridge": 51.350974805587235,
+          "random_bias": 52.67245619683765,
+          "quartile_bias": 51.88070882946584,
+          "quartile_better_cells": 5,
+          "n_cells": 8,
+          "mean_delta": 0.7016522784306574
+        },
+        {
+          "budget": 20,
+          "random_ridge": 44.965261679856724,
+          "quartile_ridge": 44.632387907552776,
+          "random_bias": 45.8839848853082,
+          "quartile_bias": 45.51074757726663,
+          "quartile_better_cells": 3,
+          "n_cells": 8,
+          "mean_delta": 0.33287377230394455
+        },
+        {
+          "budget": 30,
+          "random_ridge": 41.688111677756936,
+          "quartile_ridge": 41.66979927989811,
+          "random_bias": 42.8656531233189,
+          "quartile_bias": 42.80147027615787,
+          "quartile_better_cells": 4,
+          "n_cells": 8,
+          "mean_delta": 0.01831239785881955
+        }
+      ],
+      "max_v9_parity": 7.105427357601002e-15
+    },
+    {
+      "domain": "R3",
+      "rows": [
+        {
+          "budget": 10,
+          "random_ridge": 59.90054952303618,
+          "quartile_ridge": 59.29063757938698,
+          "random_bias": 60.85721374120972,
+          "quartile_bias": 61.00934269643221,
+          "quartile_better_cells": 5,
+          "n_cells": 8,
+          "mean_delta": 0.6099119436492098
+        },
+        {
+          "budget": 20,
+          "random_ridge": 51.851648149021344,
+          "quartile_ridge": 49.55391368670621,
+          "random_bias": 52.673745369377706,
+          "quartile_bias": 50.959736226378425,
+          "quartile_better_cells": 6,
+          "n_cells": 8,
+          "mean_delta": 2.2977344623151303
+        },
+        {
+          "budget": 30,
+          "random_ridge": 48.121105656404,
+          "quartile_ridge": 44.99433750497113,
+          "random_bias": 48.808533025932796,
+          "quartile_bias": 46.28728374236764,
+          "quartile_better_cells": 6,
+          "n_cells": 8,
+          "mean_delta": 3.126768151432872
+        }
+      ],
+      "max_v9_parity": 1.4210854715202004e-14
+    },
+    {
+      "domain": "Sim_satellite",
+      "rows": [
+        {
+          "budget": 10,
+          "random_ridge": 52.02302696316,
+          "quartile_ridge": 52.02165573736562,
+          "random_bias": 52.15092166096457,
+          "quartile_bias": 52.28875144702502,
+          "quartile_better_cells": 5,
+          "n_cells": 8,
+          "mean_delta": 0.001371225794384312
+        },
+        {
+          "budget": 20,
+          "random_ridge": 51.03540628403705,
+          "quartile_ridge": 50.90055084141078,
+          "random_bias": 51.084999483385644,
+          "quartile_bias": 51.23694874690177,
+          "quartile_better_cells": 4,
+          "n_cells": 8,
+          "mean_delta": 0.134855442626288
+        },
+        {
+          "budget": 30,
+          "random_ridge": 47.85468094988299,
+          "quartile_ridge": 46.92004547991357,
+          "random_bias": 48.00702631481382,
+          "quartile_bias": 47.39661414017138,
+          "quartile_better_cells": 6,
+          "n_cells": 8,
+          "mean_delta": 0.9346354699694208
+        }
+      ],
+      "max_v9_parity": 1.4210854715202004e-14
+    }
+  ],
+  "macro_by_budget": {
+    "10": {
+      "random_ridge_mAh": 49.723141267059724,
+      "pred_quartile_ridge_mAh": 48.6050534990023,
+      "random_offset_mAh": 50.685794162567866,
+      "pred_quartile_offset_mAh": 50.351419883460984,
+      "quartile_gain_vs_random_mAh": 1.1180877680574213,
+      "confidence95_bootstrap_exploratory_mAh": [
+        -0.8785230713368881,
+        3.1479903758065277
+      ],
+      "domains_quartiles_win": 5
+    },
+    "20": {
+      "random_ridge_mAh": 44.49767043679219,
+      "pred_quartile_ridge_mAh": 43.96900613677576,
+      "random_offset_mAh": 45.09747227719113,
+      "pred_quartile_offset_mAh": 45.25250187305992,
+      "quartile_gain_vs_random_mAh": 0.5286643000164304,
+      "confidence95_bootstrap_exploratory_mAh": [
+        -1.5561779258552029,
+        2.573826729410343
+      ],
+      "domains_quartiles_win": 4
+    },
+    "30": {
+      "random_ridge_mAh": 41.75798514413092,
+      "pred_quartile_ridge_mAh": 41.080973654266074,
+      "random_offset_mAh": 42.301155169050716,
+      "pred_quartile_offset_mAh": 42.21469576786287,
+      "quartile_gain_vs_random_mAh": 0.6770114898648458,
+      "confidence95_bootstrap_exploratory_mAh": [
+        -1.4289611128604043,
+        2.7246391175095543
+      ],
+      "domains_quartiles_win": 4
+    }
+  },
+  "uncertainty_limitation": "Exploratory stratified 47-cell bootstrap ignores overlapping fold training pools, common RW source and post-selection method screening; not confirmatory."
+}
