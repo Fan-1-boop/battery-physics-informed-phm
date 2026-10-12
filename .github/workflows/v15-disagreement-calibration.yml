@@ -1,0 +1,50 @@
+name: v15 unified disagreement-constrained kernel calibration
+
+on:
+  push:
+    branches: [research/v15-disagreement-shrinkage]
+    paths:
+      - 'docs/V15_INTERCELL_DISAGREEMENT_CALIBRATION_PROTOCOL_20261012.md'
+      - 'experiments/rw_multitarget/disagreement_calibration_v15.py'
+      - 'tests/test_disagreement_calibration_v15.py'
+      - '.github/workflows/v15-disagreement-calibration.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install numerical dependency
+        run: python -m pip install numpy==2.4.6
+      - name: Unit tests including prior code guards
+        run: |
+          python -m unittest discover -s tests -p 'test_rw_multitarget_v8.py' -v
+          python -m unittest discover -s tests -p 'test_rw_selection_v9.py' -v
+          python -m unittest discover -s tests -p 'test_fixed_budget_v10.py' -v
+          python -m unittest discover -s tests -p 'test_reliability_v12.py' -v
+          python -m unittest discover -s tests -p 'test_source_anchored_kernel_v14.py' -v
+          python -m unittest discover -s tests -p 'test_disagreement_calibration_v15.py' -v
+      - name: 55 original XJTU cells and full v14 prediction parity
+        run: python experiments/rw_multitarget/disagreement_calibration_v15.py --outdir results/v15
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v15-disagreement-55-cell-results
+          path: results/v15/
+          if-no-files-found: ignore
+      - name: Archive outcomes on research branch
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/v15/*.json
+          git diff --cached --quiet || git commit -m "results: archive all v15 intercell-disagreement correction outcomes"
+          git push origin HEAD:refs/heads/research/v15-disagreement-shrinkage

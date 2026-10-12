@@ -1,0 +1,3056 @@
+{
+  "date": "2026-10-12",
+  "status": "development_only_not_independent_validation",
+  "protocol": "docs/V15_INTERCELL_DISAGREEMENT_CALIBRATION_PROTOCOL_20261012.md",
+  "upstream_commit": "cc3cc5053caf38f04e0665f7f88cb109144d035e",
+  "source_cells": 8,
+  "target_cells": 47,
+  "rho": 0.05,
+  "correction_rule": "g_all^2/(g_all^2+((g1-g2)/2)^2) times g_all",
+  "budgets": [
+    10,
+    20,
+    30
+  ],
+  "policies": [
+    "random",
+    "pred_quartiles"
+  ],
+  "n_v14_archived_mae_replay_checks": 2585,
+  "max_v14_archived_mae_abs_diff_mAh": 1.3073986337985843e-12,
+  "macro": {
+    "10": {
+      "random": {
+        "five_domain_macro_mAh": {
+          "ridge": 49.72314112932651,
+          "offset": 50.685794010448745,
+          "RBF-X": 48.90631617641204,
+          "v15": 50.0839832493749
+        },
+        "source_only_macro_mAh": 73.76434500216853,
+        "negative_transfer_cell_counts": {
+          "ridge": 11,
+          "offset": 11,
+          "RBF-X": 9,
+          "v15": 9
+        },
+        "mean_lambda_across_domains": 0.8737623282134566,
+        "n_unique_target_test_cells": 47,
+        "n_capacity_truths_per_acquisition": 20
+      },
+      "pred_quartiles": {
+        "five_domain_macro_mAh": {
+          "ridge": 48.605053347442166,
+          "offset": 50.35141971127032,
+          "RBF-X": 48.519759068015766,
+          "v15": 49.73091127389988
+        },
+        "source_only_macro_mAh": 73.76434500216853,
+        "negative_transfer_cell_counts": {
+          "ridge": 9,
+          "offset": 9,
+          "RBF-X": 10,
+          "v15": 10
+        },
+        "mean_lambda_across_domains": 0.890316896808549,
+        "n_unique_target_test_cells": 47,
+        "n_capacity_truths_per_acquisition": 20
+      }
+    },
+    "20": {
+      "random": {
+        "five_domain_macro_mAh": {
+          "ridge": 44.4976702850293,
+          "offset": 45.097472107063275,
+          "RBF-X": 44.50195607204364,
+          "v15": 45.33242690000628
+        },
+        "source_only_macro_mAh": 73.76434500216853,
+        "negative_transfer_cell_counts": {
+          "ridge": 9,
+          "offset": 9,
+          "RBF-X": 8,
+          "v15": 8
+        },
+        "mean_lambda_across_domains": 0.8904306817326708,
+        "n_unique_target_test_cells": 47,
+        "n_capacity_truths_per_acquisition": 40
+      },
+      "pred_quartiles": {
+        "five_domain_macro_mAh": {
+          "ridge": 43.969005976527626,
+          "offset": 45.25250168906699,
+          "RBF-X": 44.08089955485788,
+          "v15": 44.93892438331409
+        },
+        "source_only_macro_mAh": 73.76434500216853,
+        "negative_transfer_cell_counts": {
+          "ridge": 9,
+          "offset": 9,
+          "RBF-X": 9,
+          "v15": 9
+        },
+        "mean_lambda_across_domains": 0.92253498294181,
+        "n_unique_target_test_cells": 47,
+        "n_capacity_truths_per_acquisition": 40
+      }
+    },
+    "30": {
+      "random": {
+        "five_domain_macro_mAh": {
+          "ridge": 41.757984987875844,
+          "offset": 42.30115499333341,
+          "RBF-X": 40.91248639646864,
+          "v15": 41.3476105100254
+        },
+        "source_only_macro_mAh": 73.76434500216853,
+        "negative_transfer_cell_counts": {
+          "ridge": 10,
+          "offset": 10,
+          "RBF-X": 8,
+          "v15": 8
+        },
+        "mean_lambda_across_domains": 0.9059224569865373,
+        "n_unique_target_test_cells": 47,
+        "n_capacity_truths_per_acquisition": 60
+      },
+      "pred_quartiles": {
+        "five_domain_macro_mAh": {
+          "ridge": 41.08097349075679,
+          "offset": 42.21469558106922,
+          "RBF-X": 40.055301254669814,
+          "v15": 40.54953856501552
+        },
+        "source_only_macro_mAh": 73.76434500216853,
+        "negative_transfer_cell_counts": {
+          "ridge": 10,
+          "offset": 10,
+          "RBF-X": 9,
+          "v15": 9
+        },
+        "mean_lambda_across_domains": 0.9323879700904829,
+        "n_unique_target_test_cells": 47,
+        "n_capacity_truths_per_acquisition": 60
+      }
+    }
+  },
+  "by_domain": {
+    "2C": {
+      "n_target_cells": 8,
+      "summary": {
+        "10": {
+          "random": {
+            "source_mAh": 60.35023986520356,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 25,
+            "capacity_truth_labels_per_acquisition": 20,
+            "ridge_mAh": 39.881316568538296,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 40.133910048410826,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 39.567999809007425,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 41.79676054148974,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.8602449415267767,
+            "mean_abs_disagreement_mAh": 7.133673643838231,
+            "n_test_cell_better_than_v14": 0,
+            "n_test_cell_worse_than_v14": 8,
+            "per_cell": [
+              {
+                "id": "2C_battery-1",
+                "source_mAh": 55.021575526620815,
+                "ridge_mAh": 26.71213494943902,
+                "offset_mAh": 26.759249804700108,
+                "RBF-X_mAh": 28.973636096393204,
+                "v15_mAh": 30.467695232413906
+              },
+              {
+                "id": "2C_battery-2",
+                "source_mAh": 51.13093832334917,
+                "ridge_mAh": 36.23245294225676,
+                "offset_mAh": 36.7297930691402,
+                "RBF-X_mAh": 30.519732253165103,
+                "v15_mAh": 34.12592788931097
+              },
+              {
+                "id": "2C_battery-3",
+                "source_mAh": 53.35036427525092,
+                "ridge_mAh": 29.598664069003327,
+                "offset_mAh": 29.63837356207124,
+                "RBF-X_mAh": 29.008704214721185,
+                "v15_mAh": 30.36342092042313
+              },
+              {
+                "id": "2C_battery-4",
+                "source_mAh": 63.94437980994641,
+                "ridge_mAh": 45.22637573873123,
+                "offset_mAh": 45.882140588318734,
+                "RBF-X_mAh": 41.486659147761586,
+                "v15_mAh": 45.26945656950242
+              },
+              {
+                "id": "2C_battery-5",
+                "source_mAh": 73.04973696446477,
+                "ridge_mAh": 50.2685641430197,
+                "offset_mAh": 50.369006075498724,
+                "RBF-X_mAh": 52.79600912328824,
+                "v15_mAh": 55.02243368577994
+              },
+              {
+                "id": "2C_battery-6",
+                "source_mAh": 76.66143586805879,
+                "ridge_mAh": 59.57593398616947,
+                "offset_mAh": 60.02427140632212,
+                "RBF-X_mAh": 59.82675489607948,
+                "v15_mAh": 62.39342546608308
+              },
+              {
+                "id": "2C_battery-7",
+                "source_mAh": 64.46193191270633,
+                "ridge_mAh": 46.77912848075015,
+                "offset_mAh": 46.97439423756916,
+                "RBF-X_mAh": 46.51630778197354,
+                "v15_mAh": 47.06322939795241
+              },
+              {
+                "id": "2C_battery-8",
+                "source_mAh": 45.1815562412313,
+                "ridge_mAh": 24.65727823893667,
+                "offset_mAh": 24.694051643666306,
+                "RBF-X_mAh": 27.41619495867705,
+                "v15_mAh": 29.668495170452037
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "source_mAh": 60.35023986520356,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 5,
+            "capacity_truth_labels_per_acquisition": 20,
+            "ridge_mAh": 39.75041597351499,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 39.93793341106762,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 40.145782849872724,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 43.12335828774776,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.859038959571195,
+            "mean_abs_disagreement_mAh": 9.400621620715032,
+            "n_test_cell_better_than_v14": 0,
+            "n_test_cell_worse_than_v14": 8,
+            "per_cell": [
+              {
+                "id": "2C_battery-1",
+                "source_mAh": 55.021575526620815,
+                "ridge_mAh": 30.99294769894152,
+                "offset_mAh": 31.032339223946806,
+                "RBF-X_mAh": 32.046537804410725,
+                "v15_mAh": 34.33560789254881
+              },
+              {
+                "id": "2C_battery-2",
+                "source_mAh": 51.13093832334917,
+                "ridge_mAh": 34.02779402578094,
+                "offset_mAh": 34.598768116696334,
+                "RBF-X_mAh": 31.5484190044396,
+                "v15_mAh": 36.014270893581816
+              },
+              {
+                "id": "2C_battery-3",
+                "source_mAh": 53.35036427525092,
+                "ridge_mAh": 32.84011539958742,
+                "offset_mAh": 32.740658981136015,
+                "RBF-X_mAh": 31.903134942032146,
+                "v15_mAh": 33.89329907122078
+              },
+              {
+                "id": "2C_battery-4",
+                "source_mAh": 63.94437980994641,
+                "ridge_mAh": 43.41904874994674,
+                "offset_mAh": 43.798591150106304,
+                "RBF-X_mAh": 43.68963048995795,
+                "v15_mAh": 48.19739800533804
+              },
+              {
+                "id": "2C_battery-5",
+                "source_mAh": 73.04973696446477,
+                "ridge_mAh": 50.59957508833898,
+                "offset_mAh": 50.76444126001846,
+                "RBF-X_mAh": 53.07938928897969,
+                "v15_mAh": 57.6258729543815
+              },
+              {
+                "id": "2C_battery-6",
+                "source_mAh": 76.66143586805879,
+                "ridge_mAh": 58.719670735944725,
+                "offset_mAh": 58.92368991080639,
+                "RBF-X_mAh": 61.13860855138213,
+                "v15_mAh": 61.19767222104984
+              },
+              {
+                "id": "2C_battery-7",
+                "source_mAh": 64.46193191270633,
+                "ridge_mAh": 43.05399226159198,
+                "offset_mAh": 43.01498557099988,
+                "RBF-X_mAh": 42.15354053971109,
+                "v15_mAh": 44.67022947984924
+              },
+              {
+                "id": "2C_battery-8",
+                "source_mAh": 45.1815562412313,
+                "ridge_mAh": 24.35018382798762,
+                "offset_mAh": 24.629993074830768,
+                "RBF-X_mAh": 25.607002178068438,
+                "v15_mAh": 29.052515784012122
+              }
+            ]
+          }
+        },
+        "20": {
+          "random": {
+            "source_mAh": 60.35023986520356,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 25,
+            "capacity_truth_labels_per_acquisition": 40,
+            "ridge_mAh": 33.88136939690146,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 34.300680541963416,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 33.2683670735461,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 35.159024036610916,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.8866069903060158,
+            "mean_abs_disagreement_mAh": 7.026609925281886,
+            "n_test_cell_better_than_v14": 0,
+            "n_test_cell_worse_than_v14": 8,
+            "per_cell": [
+              {
+                "id": "2C_battery-1",
+                "source_mAh": 55.021575526620815,
+                "ridge_mAh": 21.043665307127288,
+                "offset_mAh": 21.344306585591493,
+                "RBF-X_mAh": 21.516601431012617,
+                "v15_mAh": 22.732427649778277
+              },
+              {
+                "id": "2C_battery-2",
+                "source_mAh": 51.13093832334917,
+                "ridge_mAh": 32.505657474440554,
+                "offset_mAh": 33.24247576698525,
+                "RBF-X_mAh": 25.146089903724906,
+                "v15_mAh": 28.506474713476923
+              },
+              {
+                "id": "2C_battery-3",
+                "source_mAh": 53.35036427525092,
+                "ridge_mAh": 25.644333207541315,
+                "offset_mAh": 26.020269290183307,
+                "RBF-X_mAh": 21.59335991807625,
+                "v15_mAh": 22.739812127768747
+              },
+              {
+                "id": "2C_battery-4",
+                "source_mAh": 63.94437980994641,
+                "ridge_mAh": 39.13868203901445,
+                "offset_mAh": 39.877558485344046,
+                "RBF-X_mAh": 36.0650276809824,
+                "v15_mAh": 39.60697763008925
+              },
+              {
+                "id": "2C_battery-5",
+                "source_mAh": 73.04973696446477,
+                "ridge_mAh": 42.22370593215616,
+                "offset_mAh": 42.350268549326685,
+                "RBF-X_mAh": 45.76473307802862,
+                "v15_mAh": 47.53944198911254
+              },
+              {
+                "id": "2C_battery-6",
+                "source_mAh": 76.66143586805879,
+                "ridge_mAh": 50.640814110885664,
+                "offset_mAh": 51.15980291747492,
+                "RBF-X_mAh": 51.85360691025022,
+                "v15_mAh": 54.16471621870248
+              },
+              {
+                "id": "2C_battery-7",
+                "source_mAh": 64.46193191270633,
+                "ridge_mAh": 39.90441521245323,
+                "offset_mAh": 40.2782524090061,
+                "RBF-X_mAh": 39.884007701646546,
+                "v15_mAh": 40.24433027158558
+              },
+              {
+                "id": "2C_battery-8",
+                "source_mAh": 45.1815562412313,
+                "ridge_mAh": 19.949681891593002,
+                "offset_mAh": 20.132510331795537,
+                "RBF-X_mAh": 24.323509964647293,
+                "v15_mAh": 25.73801169237355
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "source_mAh": 60.35023986520356,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 5,
+            "capacity_truth_labels_per_acquisition": 40,
+            "ridge_mAh": 33.18769254893999,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 33.51179582327847,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 33.452867693192054,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 35.56925695647898,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.8880397342944913,
+            "mean_abs_disagreement_mAh": 8.873501331243773,
+            "n_test_cell_better_than_v14": 0,
+            "n_test_cell_worse_than_v14": 8,
+            "per_cell": [
+              {
+                "id": "2C_battery-1",
+                "source_mAh": 55.021575526620815,
+                "ridge_mAh": 24.225459734041962,
+                "offset_mAh": 24.365096943721248,
+                "RBF-X_mAh": 24.317053242008868,
+                "v15_mAh": 25.997845445431327
+              },
+              {
+                "id": "2C_battery-2",
+                "source_mAh": 51.13093832334917,
+                "ridge_mAh": 29.804408664796902,
+                "offset_mAh": 30.773378531639707,
+                "RBF-X_mAh": 24.561902377477146,
+                "v15_mAh": 27.46541524250837
+              },
+              {
+                "id": "2C_battery-3",
+                "source_mAh": 53.35036427525092,
+                "ridge_mAh": 27.793272728574877,
+                "offset_mAh": 27.88784574354487,
+                "RBF-X_mAh": 24.363363089428297,
+                "v15_mAh": 25.849919980389195
+              },
+              {
+                "id": "2C_battery-4",
+                "source_mAh": 63.94437980994641,
+                "ridge_mAh": 36.320905271470785,
+                "offset_mAh": 36.7975539937671,
+                "RBF-X_mAh": 36.83668068813719,
+                "v15_mAh": 40.03518779987113
+              },
+              {
+                "id": "2C_battery-5",
+                "source_mAh": 73.04973696446477,
+                "ridge_mAh": 42.48133884360839,
+                "offset_mAh": 42.632092591848526,
+                "RBF-X_mAh": 45.930165090068584,
+                "v15_mAh": 49.37850096745578
+              },
+              {
+                "id": "2C_battery-6",
+                "source_mAh": 76.66143586805879,
+                "ridge_mAh": 48.80631877465189,
+                "offset_mAh": 49.044974413175595,
+                "RBF-X_mAh": 53.55180000907815,
+                "v15_mAh": 53.57279733261373
+              },
+              {
+                "id": "2C_battery-7",
+                "source_mAh": 64.46193191270633,
+                "ridge_mAh": 36.79765113372484,
+                "offset_mAh": 36.95483944860194,
+                "RBF-X_mAh": 34.94209519572835,
+                "v15_mAh": 36.93812971556601
+              },
+              {
+                "id": "2C_battery-8",
+                "source_mAh": 45.1815562412313,
+                "ridge_mAh": 19.272185240650284,
+                "offset_mAh": 19.638584919928768,
+                "RBF-X_mAh": 23.119881853609854,
+                "v15_mAh": 25.31625916799626
+              }
+            ]
+          }
+        },
+        "30": {
+          "random": {
+            "source_mAh": 60.35023986520356,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 25,
+            "capacity_truth_labels_per_acquisition": 60,
+            "ridge_mAh": 30.384225269932713,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 30.92575206141165,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 29.24115216231867,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 30.722987490281167,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.9118671969421623,
+            "mean_abs_disagreement_mAh": 6.641432187974208,
+            "n_test_cell_better_than_v14": 0,
+            "n_test_cell_worse_than_v14": 8,
+            "per_cell": [
+              {
+                "id": "2C_battery-1",
+                "source_mAh": 55.021575526620815,
+                "ridge_mAh": 18.838135342407938,
+                "offset_mAh": 19.263094686203168,
+                "RBF-X_mAh": 17.628762473162077,
+                "v15_mAh": 18.52762325574755
+              },
+              {
+                "id": "2C_battery-2",
+                "source_mAh": 51.13093832334917,
+                "ridge_mAh": 30.567721050760014,
+                "offset_mAh": 31.467299633462677,
+                "RBF-X_mAh": 22.111635294449144,
+                "v15_mAh": 24.694055639985844
+              },
+              {
+                "id": "2C_battery-3",
+                "source_mAh": 53.35036427525092,
+                "ridge_mAh": 24.600431490664896,
+                "offset_mAh": 25.089208396501256,
+                "RBF-X_mAh": 17.818753315571204,
+                "v15_mAh": 18.602486547640314
+              },
+              {
+                "id": "2C_battery-4",
+                "source_mAh": 63.94437980994641,
+                "ridge_mAh": 34.75986178280573,
+                "offset_mAh": 35.51533150082163,
+                "RBF-X_mAh": 32.465444032072966,
+                "v15_mAh": 35.42616864884135
+              },
+              {
+                "id": "2C_battery-5",
+                "source_mAh": 73.04973696446477,
+                "ridge_mAh": 36.783952882674996,
+                "offset_mAh": 36.92546345085097,
+                "RBF-X_mAh": 40.95312910496265,
+                "v15_mAh": 42.29634946927771
+              },
+              {
+                "id": "2C_battery-6",
+                "source_mAh": 76.66143586805879,
+                "ridge_mAh": 43.60369893426215,
+                "offset_mAh": 44.173269715448114,
+                "RBF-X_mAh": 45.78605038285922,
+                "v15_mAh": 47.79869510812515
+              },
+              {
+                "id": "2C_battery-7",
+                "source_mAh": 64.46193191270633,
+                "ridge_mAh": 35.29854519954726,
+                "offset_mAh": 35.83714857240047,
+                "RBF-X_mAh": 34.8446470022439,
+                "v15_mAh": 35.17471841265567
+              },
+              {
+                "id": "2C_battery-8",
+                "source_mAh": 45.1815562412313,
+                "ridge_mAh": 18.621455476338735,
+                "offset_mAh": 19.13520053560493,
+                "RBF-X_mAh": 22.320795693228185,
+                "v15_mAh": 23.263802839975728
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "source_mAh": 60.35023986520356,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 5,
+            "capacity_truth_labels_per_acquisition": 60,
+            "ridge_mAh": 29.348525681619915,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 29.835160526853983,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 28.88857730221971,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 30.450772761676532,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.8895885029207158,
+            "mean_abs_disagreement_mAh": 8.394436710690295,
+            "n_test_cell_better_than_v14": 0,
+            "n_test_cell_worse_than_v14": 8,
+            "per_cell": [
+              {
+                "id": "2C_battery-1",
+                "source_mAh": 55.021575526620815,
+                "ridge_mAh": 20.094543104606476,
+                "offset_mAh": 20.295078233732497,
+                "RBF-X_mAh": 19.190524000253788,
+                "v15_mAh": 20.42118252616701
+              },
+              {
+                "id": "2C_battery-2",
+                "source_mAh": 51.13093832334917,
+                "ridge_mAh": 28.71006488669612,
+                "offset_mAh": 29.976510868506413,
+                "RBF-X_mAh": 20.57231755703846,
+                "v15_mAh": 22.33072864054162
+              },
+              {
+                "id": "2C_battery-3",
+                "source_mAh": 53.35036427525092,
+                "ridge_mAh": 25.01500135737906,
+                "offset_mAh": 25.193339692981482,
+                "RBF-X_mAh": 19.39801275223196,
+                "v15_mAh": 20.4331745782139
+              },
+              {
+                "id": "2C_battery-4",
+                "source_mAh": 63.94437980994641,
+                "ridge_mAh": 31.463285894512126,
+                "offset_mAh": 32.0361332797268,
+                "RBF-X_mAh": 32.11869643743058,
+                "v15_mAh": 34.56196081710686
+              },
+              {
+                "id": "2C_battery-5",
+                "source_mAh": 73.04973696446477,
+                "ridge_mAh": 36.60288845998749,
+                "offset_mAh": 36.76558352428085,
+                "RBF-X_mAh": 40.75582332707797,
+                "v15_mAh": 43.456090082611944
+              },
+              {
+                "id": "2C_battery-6",
+                "source_mAh": 76.66143586805879,
+                "ridge_mAh": 42.127307758716036,
+                "offset_mAh": 42.4162051377839,
+                "RBF-X_mAh": 47.61185600463368,
+                "v15_mAh": 47.6286821746273
+              },
+              {
+                "id": "2C_battery-7",
+                "source_mAh": 64.46193191270633,
+                "ridge_mAh": 33.22651146852953,
+                "offset_mAh": 33.53169028352653,
+                "RBF-X_mAh": 29.84355024274336,
+                "v15_mAh": 31.437708888245425
+              },
+              {
+                "id": "2C_battery-8",
+                "source_mAh": 45.1815562412313,
+                "ridge_mAh": 17.548602522532473,
+                "offset_mAh": 18.466743194293407,
+                "RBF-X_mAh": 21.617838096347864,
+                "v15_mAh": 23.33665438589821
+              }
+            ]
+          }
+        }
+      }
+    },
+    "3C": {
+      "n_target_cells": 15,
+      "summary": {
+        "10": {
+          "random": {
+            "source_mAh": 35.11005493663993,
+            "n_unique_test_cells": 15,
+            "n_acquisitions": 25,
+            "capacity_truth_labels_per_acquisition": 20,
+            "ridge_mAh": 44.7581860385429,
+            "n_negative_vs_source_ridge": 11,
+            "offset_mAh": 47.614468985635796,
+            "n_negative_vs_source_offset": 11,
+            "RBF-X_mAh": 36.21735252973905,
+            "n_negative_vs_source_RBF-X": 9,
+            "v15_mAh": 35.15269680360098,
+            "n_negative_vs_source_v15": 9,
+            "mean_lambda_across_test_evaluations": 0.7699110719055245,
+            "mean_abs_disagreement_mAh": 10.292796754652363,
+            "n_test_cell_better_than_v14": 10,
+            "n_test_cell_worse_than_v14": 5,
+            "per_cell": [
+              {
+                "id": "3C_battery-1",
+                "source_mAh": 16.298169234544577,
+                "ridge_mAh": 34.366040059347604,
+                "offset_mAh": 41.5593555226436,
+                "RBF-X_mAh": 23.010363224584772,
+                "v15_mAh": 21.300530962589256
+              },
+              {
+                "id": "3C_battery-2",
+                "source_mAh": 49.43492558389543,
+                "ridge_mAh": 33.06462511496963,
+                "offset_mAh": 32.45807630306823,
+                "RBF-X_mAh": 36.23469817303845,
+                "v15_mAh": 37.557663224272936
+              },
+              {
+                "id": "3C_battery-3",
+                "source_mAh": 73.95392786292508,
+                "ridge_mAh": 66.74467326953643,
+                "offset_mAh": 44.746022652697434,
+                "RBF-X_mAh": 69.47432402216617,
+                "v15_mAh": 69.76035606960207
+              },
+              {
+                "id": "3C_battery-4",
+                "source_mAh": 20.431217132308777,
+                "ridge_mAh": 32.143472432792706,
+                "offset_mAh": 37.56168108977867,
+                "RBF-X_mAh": 23.578065350711626,
+                "v15_mAh": 22.37822688151531
+              },
+              {
+                "id": "3C_battery-5",
+                "source_mAh": 26.06400167128936,
+                "ridge_mAh": 28.584352529342887,
+                "offset_mAh": 37.19634998771047,
+                "RBF-X_mAh": 27.963497138602758,
+                "v15_mAh": 26.93380757974585
+              },
+              {
+                "id": "3C_battery-6",
+                "source_mAh": 42.0521567101849,
+                "ridge_mAh": 27.903735887484174,
+                "offset_mAh": 31.921492170607983,
+                "RBF-X_mAh": 33.24575461985671,
+                "v15_mAh": 33.95931446212012
+              },
+              {
+                "id": "3C_battery-7",
+                "source_mAh": 86.01594210234185,
+                "ridge_mAh": 56.63705168176508,
+                "offset_mAh": 56.34225071341077,
+                "RBF-X_mAh": 71.31801282145148,
+                "v15_mAh": 74.49173689411516
+              },
+              {
+                "id": "3C_battery-8",
+                "source_mAh": 21.690065911414514,
+                "ridge_mAh": 34.3498611902211,
+                "offset_mAh": 49.21561699662031,
+                "RBF-X_mAh": 26.893137938428264,
+                "v15_mAh": 26.00504599463912
+              },
+              {
+                "id": "3C_battery-9",
+                "source_mAh": 17.94103019688625,
+                "ridge_mAh": 56.92531642445247,
+                "offset_mAh": 55.196355583326614,
+                "RBF-X_mAh": 31.477379068235184,
+                "v15_mAh": 26.86367964225467
+              },
+              {
+                "id": "3C_battery-10",
+                "source_mAh": 39.51036549669793,
+                "ridge_mAh": 45.642307486688324,
+                "offset_mAh": 43.99442880037428,
+                "RBF-X_mAh": 30.81310965081666,
+                "v15_mAh": 31.00282660652316
+              },
+              {
+                "id": "3C_battery-11",
+                "source_mAh": 39.8912764266467,
+                "ridge_mAh": 70.34006572856666,
+                "offset_mAh": 72.27359758490621,
+                "RBF-X_mAh": 48.235287935266555,
+                "v15_mAh": 44.97905117846232
+              },
+              {
+                "id": "3C_battery-12",
+                "source_mAh": 14.773110029790653,
+                "ridge_mAh": 42.68825445053309,
+                "offset_mAh": 46.66327157495813,
+                "RBF-X_mAh": 27.993340239570603,
+                "v15_mAh": 25.873027201396688
+              },
+              {
+                "id": "3C_battery-13",
+                "source_mAh": 14.827383019231307,
+                "ridge_mAh": 23.622606995088837,
+                "offset_mAh": 34.19166331629635,
+                "RBF-X_mAh": 14.265644893747492,
+                "v15_mAh": 13.727950066436208
+              },
+              {
+                "id": "3C_battery-14",
+                "source_mAh": 29.964986892216626,
+                "ridge_mAh": 61.45445986755594,
+                "offset_mAh": 67.78523553133087,
+                "RBF-X_mAh": 39.7636783218782,
+                "v15_mAh": 35.95670068312188
+              },
+              {
+                "id": "3C_battery-15",
+                "source_mAh": 33.80226577922495,
+                "ridge_mAh": 56.90596745979872,
+                "offset_mAh": 63.11163695680707,
+                "RBF-X_mAh": 38.99399454773079,
+                "v15_mAh": 36.50053460721997
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "source_mAh": 35.11005493663993,
+            "n_unique_test_cells": 15,
+            "n_acquisitions": 5,
+            "capacity_truth_labels_per_acquisition": 20,
+            "ridge_mAh": 40.61158319131065,
+            "n_negative_vs_source_ridge": 9,
+            "offset_mAh": 46.64036279092207,
+            "n_negative_vs_source_offset": 9,
+            "RBF-X_mAh": 38.36591848606486,
+            "n_negative_vs_source_RBF-X": 10,
+            "v15_mAh": 36.6546182345288,
+            "n_negative_vs_source_v15": 10,
+            "mean_lambda_across_test_evaluations": 0.8200837692328835,
+            "mean_abs_disagreement_mAh": 9.435382285584557,
+            "n_test_cell_better_than_v14": 13,
+            "n_test_cell_worse_than_v14": 2,
+            "per_cell": [
+              {
+                "id": "3C_battery-1",
+                "source_mAh": 16.298169234544577,
+                "ridge_mAh": 34.89982088783069,
+                "offset_mAh": 67.4301725000903,
+                "RBF-X_mAh": 26.308331924803962,
+                "v15_mAh": 23.974703029965923
+              },
+              {
+                "id": "3C_battery-2",
+                "source_mAh": 49.43492558389543,
+                "ridge_mAh": 28.202540834364942,
+                "offset_mAh": 26.406015151294557,
+                "RBF-X_mAh": 30.22274777943821,
+                "v15_mAh": 29.46764051810054
+              },
+              {
+                "id": "3C_battery-3",
+                "source_mAh": 73.95392786292508,
+                "ridge_mAh": 67.45100183520238,
+                "offset_mAh": 63.812189170873836,
+                "RBF-X_mAh": 72.72482227163762,
+                "v15_mAh": 72.53769670214383
+              },
+              {
+                "id": "3C_battery-4",
+                "source_mAh": 20.431217132308777,
+                "ridge_mAh": 36.90326689947124,
+                "offset_mAh": 55.737489525565735,
+                "RBF-X_mAh": 28.292346988957863,
+                "v15_mAh": 26.09766017522317
+              },
+              {
+                "id": "3C_battery-5",
+                "source_mAh": 26.06400167128936,
+                "ridge_mAh": 24.32006796149681,
+                "offset_mAh": 18.711284650033242,
+                "RBF-X_mAh": 32.28714014216205,
+                "v15_mAh": 29.467414040173576
+              },
+              {
+                "id": "3C_battery-6",
+                "source_mAh": 42.0521567101849,
+                "ridge_mAh": 25.75638796649879,
+                "offset_mAh": 24.780127547261337,
+                "RBF-X_mAh": 25.38987496600005,
+                "v15_mAh": 26.815608277067724
+              },
+              {
+                "id": "3C_battery-7",
+                "source_mAh": 86.01594210234185,
+                "ridge_mAh": 64.56564168782712,
+                "offset_mAh": 61.50184097818948,
+                "RBF-X_mAh": 68.36002717036804,
+                "v15_mAh": 69.71047410085869
+              },
+              {
+                "id": "3C_battery-8",
+                "source_mAh": 21.690065911414514,
+                "ridge_mAh": 46.04703225142032,
+                "offset_mAh": 75.63900738448513,
+                "RBF-X_mAh": 33.81904684524358,
+                "v15_mAh": 31.739764738977808
+              },
+              {
+                "id": "3C_battery-9",
+                "source_mAh": 17.94103019688625,
+                "ridge_mAh": 30.41781562642808,
+                "offset_mAh": 29.97089866313126,
+                "RBF-X_mAh": 31.084193366131416,
+                "v15_mAh": 30.255503150881605
+              },
+              {
+                "id": "3C_battery-10",
+                "source_mAh": 39.51036549669793,
+                "ridge_mAh": 29.23450457375008,
+                "offset_mAh": 27.982040842735664,
+                "RBF-X_mAh": 33.30348916335093,
+                "v15_mAh": 33.17701676821998
+              },
+              {
+                "id": "3C_battery-11",
+                "source_mAh": 39.8912764266467,
+                "ridge_mAh": 46.34905214075709,
+                "offset_mAh": 41.75593261169372,
+                "RBF-X_mAh": 48.39626261723908,
+                "v15_mAh": 44.84693586941354
+              },
+              {
+                "id": "3C_battery-12",
+                "source_mAh": 14.773110029790653,
+                "ridge_mAh": 58.32904654281982,
+                "offset_mAh": 75.01171220670827,
+                "RBF-X_mAh": 39.48600852077718,
+                "v15_mAh": 35.5270332874323
+              },
+              {
+                "id": "3C_battery-13",
+                "source_mAh": 14.827383019231307,
+                "ridge_mAh": 43.53418132016213,
+                "offset_mAh": 59.89487754518723,
+                "RBF-X_mAh": 23.252021174615624,
+                "v15_mAh": 19.694978281096105
+              },
+              {
+                "id": "3C_battery-14",
+                "source_mAh": 29.964986892216626,
+                "ridge_mAh": 37.461400356921,
+                "offset_mAh": 36.371875109388064,
+                "RBF-X_mAh": 39.87705148589337,
+                "v15_mAh": 37.17472455209666
+              },
+              {
+                "id": "3C_battery-15",
+                "source_mAh": 33.80226577922495,
+                "ridge_mAh": 35.70198698470926,
+                "offset_mAh": 34.599977977193234,
+                "RBF-X_mAh": 42.685412874353865,
+                "v15_mAh": 39.33212002628053
+              }
+            ]
+          }
+        },
+        "20": {
+          "random": {
+            "source_mAh": 35.11005493663993,
+            "n_unique_test_cells": 15,
+            "n_acquisitions": 25,
+            "capacity_truth_labels_per_acquisition": 40,
+            "ridge_mAh": 40.75466648187191,
+            "n_negative_vs_source_ridge": 9,
+            "offset_mAh": 41.543950891135744,
+            "n_negative_vs_source_offset": 9,
+            "RBF-X_mAh": 34.90699337038951,
+            "n_negative_vs_source_RBF-X": 8,
+            "v15_mAh": 33.845827404548416,
+            "n_negative_vs_source_v15": 8,
+            "mean_lambda_across_test_evaluations": 0.7735236610739372,
+            "mean_abs_disagreement_mAh": 10.905373522190473,
+            "n_test_cell_better_than_v14": 10,
+            "n_test_cell_worse_than_v14": 5,
+            "per_cell": [
+              {
+                "id": "3C_battery-1",
+                "source_mAh": 16.298169234544577,
+                "ridge_mAh": 33.212442785288275,
+                "offset_mAh": 39.122715634793686,
+                "RBF-X_mAh": 27.063351813727593,
+                "v15_mAh": 24.893034513923585
+              },
+              {
+                "id": "3C_battery-2",
+                "source_mAh": 49.43492558389543,
+                "ridge_mAh": 28.298706325221467,
+                "offset_mAh": 25.53831281259668,
+                "RBF-X_mAh": 32.360532980684994,
+                "v15_mAh": 34.052583645528344
+              },
+              {
+                "id": "3C_battery-3",
+                "source_mAh": 73.95392786292508,
+                "ridge_mAh": 60.03055724180315,
+                "offset_mAh": 45.51892005150073,
+                "RBF-X_mAh": 61.83026183273565,
+                "v15_mAh": 63.69167472385876
+              },
+              {
+                "id": "3C_battery-4",
+                "source_mAh": 20.431217132308777,
+                "ridge_mAh": 28.64165182692929,
+                "offset_mAh": 33.47343383547288,
+                "RBF-X_mAh": 23.92613789826259,
+                "v15_mAh": 22.482607977141452
+              },
+              {
+                "id": "3C_battery-5",
+                "source_mAh": 26.06400167128936,
+                "ridge_mAh": 24.407000260435204,
+                "offset_mAh": 25.530596882198175,
+                "RBF-X_mAh": 20.12283315651995,
+                "v15_mAh": 20.07111363724035
+              },
+              {
+                "id": "3C_battery-6",
+                "source_mAh": 42.0521567101849,
+                "ridge_mAh": 21.487376007995287,
+                "offset_mAh": 20.054971277388837,
+                "RBF-X_mAh": 30.16539584072006,
+                "v15_mAh": 30.29328275024138
+              },
+              {
+                "id": "3C_battery-7",
+                "source_mAh": 86.01594210234185,
+                "ridge_mAh": 45.97000197301416,
+                "offset_mAh": 41.66008887980359,
+                "RBF-X_mAh": 64.16422205041226,
+                "v15_mAh": 67.51312765503818
+              },
+              {
+                "id": "3C_battery-8",
+                "source_mAh": 21.690065911414514,
+                "ridge_mAh": 37.827383734485714,
+                "offset_mAh": 45.669291385951624,
+                "RBF-X_mAh": 28.437899581629534,
+                "v15_mAh": 27.200827924291538
+              },
+              {
+                "id": "3C_battery-9",
+                "source_mAh": 17.94103019688625,
+                "ridge_mAh": 48.70499421381764,
+                "offset_mAh": 53.40715507887823,
+                "RBF-X_mAh": 32.6891078098664,
+                "v15_mAh": 27.33664180045373
+              },
+              {
+                "id": "3C_battery-10",
+                "source_mAh": 39.51036549669793,
+                "ridge_mAh": 34.16257748232935,
+                "offset_mAh": 35.192635828537675,
+                "RBF-X_mAh": 31.41584781228728,
+                "v15_mAh": 32.166355478235054
+              },
+              {
+                "id": "3C_battery-11",
+                "source_mAh": 39.8912764266467,
+                "ridge_mAh": 63.607073183906245,
+                "offset_mAh": 62.830047230860046,
+                "RBF-X_mAh": 44.1966021700698,
+                "v15_mAh": 42.5383193244434
+              },
+              {
+                "id": "3C_battery-12",
+                "source_mAh": 14.773110029790653,
+                "ridge_mAh": 41.42314116959749,
+                "offset_mAh": 45.57833858182543,
+                "RBF-X_mAh": 30.380451632705377,
+                "v15_mAh": 27.36253324094207
+              },
+              {
+                "id": "3C_battery-13",
+                "source_mAh": 14.827383019231307,
+                "ridge_mAh": 25.189485078483347,
+                "offset_mAh": 29.96595294361356,
+                "RBF-X_mAh": 13.683187967507376,
+                "v15_mAh": 13.216717362734832
+              },
+              {
+                "id": "3C_battery-14",
+                "source_mAh": 29.964986892216626,
+                "ridge_mAh": 61.63052139953197,
+                "offset_mAh": 62.51431361728144,
+                "RBF-X_mAh": 41.664052432474804,
+                "v15_mAh": 37.14809055778038
+              },
+              {
+                "id": "3C_battery-15",
+                "source_mAh": 33.80226577922495,
+                "ridge_mAh": 56.72708454523988,
+                "offset_mAh": 57.102489326333554,
+                "RBF-X_mAh": 41.50501557623894,
+                "v15_mAh": 37.720500476373175
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "source_mAh": 35.11005493663993,
+            "n_unique_test_cells": 15,
+            "n_acquisitions": 5,
+            "capacity_truth_labels_per_acquisition": 40,
+            "ridge_mAh": 41.57048549396769,
+            "n_negative_vs_source_ridge": 9,
+            "offset_mAh": 45.043280753792814,
+            "n_negative_vs_source_offset": 9,
+            "RBF-X_mAh": 37.66184559148921,
+            "n_negative_vs_source_RBF-X": 9,
+            "v15_mAh": 36.10524903895465,
+            "n_negative_vs_source_v15": 9,
+            "mean_lambda_across_test_evaluations": 0.885664041360748,
+            "mean_abs_disagreement_mAh": 9.083871503335,
+            "n_test_cell_better_than_v14": 12,
+            "n_test_cell_worse_than_v14": 3,
+            "per_cell": [
+              {
+                "id": "3C_battery-1",
+                "source_mAh": 16.298169234544577,
+                "ridge_mAh": 44.02247348068935,
+                "offset_mAh": 64.01339849316194,
+                "RBF-X_mAh": 33.193861449782496,
+                "v15_mAh": 29.155310087753524
+              },
+              {
+                "id": "3C_battery-2",
+                "source_mAh": 49.43492558389543,
+                "ridge_mAh": 25.77361864543278,
+                "offset_mAh": 24.97532153341377,
+                "RBF-X_mAh": 23.511632104727383,
+                "v15_mAh": 23.327232884936596
+              },
+              {
+                "id": "3C_battery-3",
+                "source_mAh": 73.95392786292508,
+                "ridge_mAh": 57.65690069707044,
+                "offset_mAh": 56.50719312555494,
+                "RBF-X_mAh": 61.86977883465532,
+                "v15_mAh": 62.552862446653606
+              },
+              {
+                "id": "3C_battery-4",
+                "source_mAh": 20.431217132308777,
+                "ridge_mAh": 40.30196154889661,
+                "offset_mAh": 52.33286416034663,
+                "RBF-X_mAh": 31.219121583344254,
+                "v15_mAh": 28.043591019175132
+              },
+              {
+                "id": "3C_battery-5",
+                "source_mAh": 26.06400167128936,
+                "ridge_mAh": 17.315556166267484,
+                "offset_mAh": 15.859576153341315,
+                "RBF-X_mAh": 19.300809796202284,
+                "v15_mAh": 17.967322841593905
+              },
+              {
+                "id": "3C_battery-6",
+                "source_mAh": 42.0521567101849,
+                "ridge_mAh": 24.18726562775866,
+                "offset_mAh": 24.467696656838292,
+                "RBF-X_mAh": 22.652761320596305,
+                "v15_mAh": 25.368404610508836
+              },
+              {
+                "id": "3C_battery-7",
+                "source_mAh": 86.01594210234185,
+                "ridge_mAh": 61.66196527142808,
+                "offset_mAh": 61.30818963509867,
+                "RBF-X_mAh": 66.33529832109632,
+                "v15_mAh": 67.08302832316124
+              },
+              {
+                "id": "3C_battery-8",
+                "source_mAh": 21.690065911414514,
+                "ridge_mAh": 56.06744955011469,
+                "offset_mAh": 72.24945866844864,
+                "RBF-X_mAh": 40.56327858257176,
+                "v15_mAh": 37.89548899599438
+              },
+              {
+                "id": "3C_battery-9",
+                "source_mAh": 17.94103019688625,
+                "ridge_mAh": 31.320157073731473,
+                "offset_mAh": 30.14599411494905,
+                "RBF-X_mAh": 31.231344313589947,
+                "v15_mAh": 30.96886053842728
+              },
+              {
+                "id": "3C_battery-10",
+                "source_mAh": 39.51036549669793,
+                "ridge_mAh": 28.609606313130705,
+                "offset_mAh": 27.968226306481615,
+                "RBF-X_mAh": 31.30038232840168,
+                "v15_mAh": 31.181184760644864
+              },
+              {
+                "id": "3C_battery-11",
+                "source_mAh": 39.8912764266467,
+                "ridge_mAh": 48.817344129160304,
+                "offset_mAh": 46.48997983108679,
+                "RBF-X_mAh": 46.65198782510113,
+                "v15_mAh": 43.81202510108456
+              },
+              {
+                "id": "3C_battery-12",
+                "source_mAh": 14.773110029790653,
+                "ridge_mAh": 65.2766805798784,
+                "offset_mAh": 71.59493819977986,
+                "RBF-X_mAh": 49.647069196432355,
+                "v15_mAh": 44.94622893883575
+              },
+              {
+                "id": "3C_battery-13",
+                "source_mAh": 14.827383019231307,
+                "ridge_mAh": 50.08954913032715,
+                "offset_mAh": 56.51176633635663,
+                "RBF-X_mAh": 30.86614885029588,
+                "v15_mAh": 26.783082425889475
+              },
+              {
+                "id": "3C_battery-14",
+                "source_mAh": 29.964986892216626,
+                "ridge_mAh": 37.11828195351947,
+                "offset_mAh": 36.540319730672884,
+                "RBF-X_mAh": 37.50228269018251,
+                "v15_mAh": 35.63933464222062
+              },
+              {
+                "id": "3C_battery-15",
+                "source_mAh": 33.80226577922495,
+                "ridge_mAh": 35.338472242109646,
+                "offset_mAh": 34.684288361361375,
+                "RBF-X_mAh": 39.081926675358616,
+                "v15_mAh": 36.85477796744006
+              }
+            ]
+          }
+        },
+        "30": {
+          "random": {
+            "source_mAh": 35.11005493663993,
+            "n_unique_test_cells": 15,
+            "n_acquisitions": 25,
+            "capacity_truth_labels_per_acquisition": 60,
+            "ridge_mAh": 40.74180195074607,
+            "n_negative_vs_source_ridge": 9,
+            "offset_mAh": 40.898811079739254,
+            "n_negative_vs_source_offset": 9,
+            "RBF-X_mAh": 34.728195500137716,
+            "n_negative_vs_source_RBF-X": 8,
+            "v15_mAh": 33.37355064443219,
+            "n_negative_vs_source_v15": 8,
+            "mean_lambda_across_test_evaluations": 0.7964258514643486,
+            "mean_abs_disagreement_mAh": 11.4610241512028,
+            "n_test_cell_better_than_v14": 11,
+            "n_test_cell_worse_than_v14": 4,
+            "per_cell": [
+              {
+                "id": "3C_battery-1",
+                "source_mAh": 16.298169234544577,
+                "ridge_mAh": 35.52361415480277,
+                "offset_mAh": 40.25236024872767,
+                "RBF-X_mAh": 30.930031139664987,
+                "v15_mAh": 28.469387538139102
+              },
+              {
+                "id": "3C_battery-2",
+                "source_mAh": 49.43492558389543,
+                "ridge_mAh": 26.15521893474463,
+                "offset_mAh": 23.627830910426397,
+                "RBF-X_mAh": 29.721733704769314,
+                "v15_mAh": 31.149929785537335
+              },
+              {
+                "id": "3C_battery-3",
+                "source_mAh": 73.95392786292508,
+                "ridge_mAh": 55.88296848674158,
+                "offset_mAh": 46.2183484552733,
+                "RBF-X_mAh": 57.86035489990974,
+                "v15_mAh": 60.13848334750027
+              },
+              {
+                "id": "3C_battery-4",
+                "source_mAh": 20.431217132308777,
+                "ridge_mAh": 29.118199015393714,
+                "offset_mAh": 33.09966396866308,
+                "RBF-X_mAh": 24.897928113524678,
+                "v15_mAh": 23.26863207545015
+              },
+              {
+                "id": "3C_battery-5",
+                "source_mAh": 26.06400167128936,
+                "ridge_mAh": 22.418233384593798,
+                "offset_mAh": 22.390329725353563,
+                "RBF-X_mAh": 17.408423972807917,
+                "v15_mAh": 16.818925713892348
+              },
+              {
+                "id": "3C_battery-6",
+                "source_mAh": 42.0521567101849,
+                "ridge_mAh": 18.9618670095453,
+                "offset_mAh": 16.042214221188196,
+                "RBF-X_mAh": 28.20352312324614,
+                "v15_mAh": 27.536398627683077
+              },
+              {
+                "id": "3C_battery-7",
+                "source_mAh": 86.01594210234185,
+                "ridge_mAh": 44.411954744097535,
+                "offset_mAh": 38.28796672440204,
+                "RBF-X_mAh": 59.10748548278481,
+                "v15_mAh": 62.03813455375416
+              },
+              {
+                "id": "3C_battery-8",
+                "source_mAh": 21.690065911414514,
+                "ridge_mAh": 41.93326713443497,
+                "offset_mAh": 47.074860196448455,
+                "RBF-X_mAh": 30.67902912754124,
+                "v15_mAh": 29.266368899524828
+              },
+              {
+                "id": "3C_battery-9",
+                "source_mAh": 17.94103019688625,
+                "ridge_mAh": 49.10235616260092,
+                "offset_mAh": 55.074626446848015,
+                "RBF-X_mAh": 34.50475610177208,
+                "v15_mAh": 28.79742564261313
+              },
+              {
+                "id": "3C_battery-10",
+                "source_mAh": 39.51036549669793,
+                "ridge_mAh": 32.888769850187906,
+                "offset_mAh": 33.432798376651206,
+                "RBF-X_mAh": 30.495640165834743,
+                "v15_mAh": 31.414863769841258
+              },
+              {
+                "id": "3C_battery-11",
+                "source_mAh": 39.8912764266467,
+                "ridge_mAh": 62.28751651669626,
+                "offset_mAh": 60.22076917309653,
+                "RBF-X_mAh": 45.45262613248136,
+                "v15_mAh": 43.14946093283729
+              },
+              {
+                "id": "3C_battery-12",
+                "source_mAh": 14.773110029790653,
+                "ridge_mAh": 42.87858556373661,
+                "offset_mAh": 47.410709969911395,
+                "RBF-X_mAh": 31.536001805265006,
+                "v15_mAh": 28.519084544184835
+              },
+              {
+                "id": "3C_battery-13",
+                "source_mAh": 14.827383019231307,
+                "ridge_mAh": 28.064044479758728,
+                "offset_mAh": 31.340323886348312,
+                "RBF-X_mAh": 13.844480926948801,
+                "v15_mAh": 13.040801462149242
+              },
+              {
+                "id": "3C_battery-14",
+                "source_mAh": 29.964986892216626,
+                "ridge_mAh": 63.39454131550782,
+                "offset_mAh": 62.42358052494795,
+                "RBF-X_mAh": 43.050260606385116,
+                "v15_mAh": 38.17330908495137
+              },
+              {
+                "id": "3C_battery-15",
+                "source_mAh": 33.80226577922495,
+                "ridge_mAh": 58.10589250834861,
+                "offset_mAh": 56.585783367802684,
+                "RBF-X_mAh": 43.23065719912974,
+                "v15_mAh": 38.822053688424546
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "source_mAh": 35.11005493663993,
+            "n_unique_test_cells": 15,
+            "n_acquisitions": 5,
+            "capacity_truth_labels_per_acquisition": 60,
+            "ridge_mAh": 42.47216011286011,
+            "n_negative_vs_source_ridge": 9,
+            "offset_mAh": 44.75294991084152,
+            "n_negative_vs_source_offset": 9,
+            "RBF-X_mAh": 38.02775482668449,
+            "n_negative_vs_source_RBF-X": 9,
+            "v15_mAh": 36.55785609666261,
+            "n_negative_vs_source_v15": 9,
+            "mean_lambda_across_test_evaluations": 0.892378984111818,
+            "mean_abs_disagreement_mAh": 8.982687209941599,
+            "n_test_cell_better_than_v14": 11,
+            "n_test_cell_worse_than_v14": 4,
+            "per_cell": [
+              {
+                "id": "3C_battery-1",
+                "source_mAh": 16.298169234544577,
+                "ridge_mAh": 49.70706394379068,
+                "offset_mAh": 63.128655584513,
+                "RBF-X_mAh": 37.68802285587901,
+                "v15_mAh": 33.18806611547417
+              },
+              {
+                "id": "3C_battery-2",
+                "source_mAh": 49.43492558389543,
+                "ridge_mAh": 25.634919165945398,
+                "offset_mAh": 24.667540164643896,
+                "RBF-X_mAh": 21.436331772206483,
+                "v15_mAh": 21.581046864369295
+              },
+              {
+                "id": "3C_battery-3",
+                "source_mAh": 73.95392786292508,
+                "ridge_mAh": 52.40401357827739,
+                "offset_mAh": 52.67424129743252,
+                "RBF-X_mAh": 55.18614928173926,
+                "v15_mAh": 56.79542711578082
+              },
+              {
+                "id": "3C_battery-4",
+                "source_mAh": 20.431217132308777,
+                "ridge_mAh": 43.16777034391725,
+                "offset_mAh": 51.45377456101814,
+                "RBF-X_mAh": 33.1960771680902,
+                "v15_mAh": 29.742420474906194
+              },
+              {
+                "id": "3C_battery-5",
+                "source_mAh": 26.06400167128936,
+                "ridge_mAh": 16.307361505808007,
+                "offset_mAh": 16.046368799237644,
+                "RBF-X_mAh": 15.081094922381713,
+                "v15_mAh": 13.967783653380677
+              },
+              {
+                "id": "3C_battery-6",
+                "source_mAh": 42.0521567101849,
+                "ridge_mAh": 22.65293482977214,
+                "offset_mAh": 23.133201150397944,
+                "RBF-X_mAh": 21.45926418758139,
+                "v15_mAh": 24.1990179781062
+              },
+              {
+                "id": "3C_battery-7",
+                "source_mAh": 86.01594210234185,
+                "ridge_mAh": 60.01606193307878,
+                "offset_mAh": 60.30401551858878,
+                "RBF-X_mAh": 65.75139856632734,
+                "v15_mAh": 66.589538719592
+              },
+              {
+                "id": "3C_battery-8",
+                "source_mAh": 21.690065911414514,
+                "ridge_mAh": 61.22026109692014,
+                "offset_mAh": 71.37176550409173,
+                "RBF-X_mAh": 46.28404298934581,
+                "v15_mAh": 43.69316810139763
+              },
+              {
+                "id": "3C_battery-9",
+                "source_mAh": 17.94103019688625,
+                "ridge_mAh": 32.2211936863676,
+                "offset_mAh": 31.085677862143143,
+                "RBF-X_mAh": 31.012857609626703,
+                "v15_mAh": 30.848653694376218
+              },
+              {
+                "id": "3C_battery-10",
+                "source_mAh": 39.51036549669793,
+                "ridge_mAh": 28.37684007706901,
+                "offset_mAh": 27.905134627347852,
+                "RBF-X_mAh": 30.211781788824204,
+                "v15_mAh": 30.119517246330524
+              },
+              {
+                "id": "3C_battery-11",
+                "source_mAh": 39.8912764266467,
+                "ridge_mAh": 50.62662479610993,
+                "offset_mAh": 50.81431490298915,
+                "RBF-X_mAh": 45.00638927126471,
+                "v15_mAh": 42.74958838054051
+              },
+              {
+                "id": "3C_battery-12",
+                "source_mAh": 14.773110029790653,
+                "ridge_mAh": 68.55199900945576,
+                "offset_mAh": 70.71019529113093,
+                "RBF-X_mAh": 56.433452402606,
+                "v15_mAh": 50.889759993085235
+              },
+              {
+                "id": "3C_battery-13",
+                "source_mAh": 14.827383019231307,
+                "ridge_mAh": 53.285200628723366,
+                "offset_mAh": 55.63574010661065,
+                "RBF-X_mAh": 37.83066426716541,
+                "v15_mAh": 33.09152570736746
+              },
+              {
+                "id": "3C_battery-14",
+                "source_mAh": 29.964986892216626,
+                "ridge_mAh": 37.453822020031275,
+                "offset_mAh": 37.29571169891407,
+                "RBF-X_mAh": 36.40559855426021,
+                "v15_mAh": 35.07060147616947
+              },
+              {
+                "id": "3C_battery-15",
+                "source_mAh": 33.80226577922495,
+                "ridge_mAh": 35.456335077634996,
+                "offset_mAh": 35.06791159356337,
+                "RBF-X_mAh": 37.433196762969075,
+                "v15_mAh": 35.841725929062775
+              }
+            ]
+          }
+        }
+      }
+    },
+    "R2.5": {
+      "n_target_cells": 8,
+      "summary": {
+        "10": {
+          "random": {
+            "source_mAh": 77.73607868910474,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 25,
+            "capacity_truth_labels_per_acquisition": 20,
+            "ridge_mAh": 52.0526268958655,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 52.67245600126721,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 51.05519110664949,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 52.214728069393544,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.8962474241335446,
+            "mean_abs_disagreement_mAh": 5.457998615133796,
+            "n_test_cell_better_than_v14": 0,
+            "n_test_cell_worse_than_v14": 8,
+            "per_cell": [
+              {
+                "id": "R2.5_battery-1",
+                "source_mAh": 90.94989095945664,
+                "ridge_mAh": 60.061674251501316,
+                "offset_mAh": 60.61665119374292,
+                "RBF-X_mAh": 60.14777251606906,
+                "v15_mAh": 61.01868982291198
+              },
+              {
+                "id": "R2.5_battery-2",
+                "source_mAh": 82.16663660565577,
+                "ridge_mAh": 57.76271900839305,
+                "offset_mAh": 58.424985197575594,
+                "RBF-X_mAh": 54.832911860255344,
+                "v15_mAh": 55.49715004703969
+              },
+              {
+                "id": "R2.5_battery-3",
+                "source_mAh": 66.99206406030788,
+                "ridge_mAh": 41.876082176610055,
+                "offset_mAh": 42.5316862039964,
+                "RBF-X_mAh": 42.16131810818225,
+                "v15_mAh": 43.193982165121604
+              },
+              {
+                "id": "R2.5_battery-4",
+                "source_mAh": 73.90484716655392,
+                "ridge_mAh": 50.75573956508086,
+                "offset_mAh": 51.53915141802245,
+                "RBF-X_mAh": 45.80073263458879,
+                "v15_mAh": 46.78629053589368
+              },
+              {
+                "id": "R2.5_battery-5",
+                "source_mAh": 100.18535158761544,
+                "ridge_mAh": 70.9552592158037,
+                "offset_mAh": 71.34914414380583,
+                "RBF-X_mAh": 73.00869640181455,
+                "v15_mAh": 74.66694666491269
+              },
+              {
+                "id": "R2.5_battery-6",
+                "source_mAh": 67.78906995433265,
+                "ridge_mAh": 48.82547685970041,
+                "offset_mAh": 49.470291254437406,
+                "RBF-X_mAh": 46.20432392742057,
+                "v15_mAh": 48.22610709088778
+              },
+              {
+                "id": "R2.5_battery-7",
+                "source_mAh": 62.269765413970376,
+                "ridge_mAh": 37.09628067954276,
+                "offset_mAh": 37.74533551665693,
+                "RBF-X_mAh": 36.57805945584346,
+                "v15_mAh": 37.44976753551421
+              },
+              {
+                "id": "R2.5_battery-8",
+                "source_mAh": 77.63100376494532,
+                "ridge_mAh": 49.087783410291834,
+                "offset_mAh": 49.70240308190013,
+                "RBF-X_mAh": 49.70771394902187,
+                "v15_mAh": 50.878890692866705
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "source_mAh": 77.73607868910474,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 5,
+            "capacity_truth_labels_per_acquisition": 20,
+            "ridge_mAh": 51.35097459726747,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 51.88070861408217,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 50.373042019688214,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 51.03848534016591,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.9236547348801749,
+            "mean_abs_disagreement_mAh": 4.429862829039937,
+            "n_test_cell_better_than_v14": 0,
+            "n_test_cell_worse_than_v14": 8,
+            "per_cell": [
+              {
+                "id": "R2.5_battery-1",
+                "source_mAh": 90.94989095945664,
+                "ridge_mAh": 59.086374461563224,
+                "offset_mAh": 59.18344210286002,
+                "RBF-X_mAh": 61.342877877813656,
+                "v15_mAh": 62.1562732157389
+              },
+              {
+                "id": "R2.5_battery-2",
+                "source_mAh": 82.16663660565577,
+                "ridge_mAh": 54.57311093558293,
+                "offset_mAh": 55.2779928603939,
+                "RBF-X_mAh": 50.969995934713644,
+                "v15_mAh": 51.3333805536957
+              },
+              {
+                "id": "R2.5_battery-3",
+                "source_mAh": 66.99206406030788,
+                "ridge_mAh": 38.89391718172366,
+                "offset_mAh": 39.64565524651657,
+                "RBF-X_mAh": 38.325968231683994,
+                "v15_mAh": 38.568029690968906
+              },
+              {
+                "id": "R2.5_battery-4",
+                "source_mAh": 73.90484716655392,
+                "ridge_mAh": 51.69304756085229,
+                "offset_mAh": 52.50372463562937,
+                "RBF-X_mAh": 47.44354878709286,
+                "v15_mAh": 47.75013245303958
+              },
+              {
+                "id": "R2.5_battery-5",
+                "source_mAh": 100.18535158761544,
+                "ridge_mAh": 71.47749552062132,
+                "offset_mAh": 72.10725952291702,
+                "RBF-X_mAh": 72.91234088059154,
+                "v15_mAh": 74.31081798001411
+              },
+              {
+                "id": "R2.5_battery-6",
+                "source_mAh": 67.78906995433265,
+                "ridge_mAh": 47.52867418697812,
+                "offset_mAh": 48.03122724338999,
+                "RBF-X_mAh": 45.729959706519274,
+                "v15_mAh": 46.94742937340964
+              },
+              {
+                "id": "R2.5_battery-7",
+                "source_mAh": 62.269765413970376,
+                "ridge_mAh": 36.69430039493949,
+                "offset_mAh": 36.88656227628749,
+                "RBF-X_mAh": 34.23043103470285,
+                "v15_mAh": 34.72101932353052
+              },
+              {
+                "id": "R2.5_battery-8",
+                "source_mAh": 77.63100376494532,
+                "ridge_mAh": 50.860876535878724,
+                "offset_mAh": 51.40980502466299,
+                "RBF-X_mAh": 52.029213704387935,
+                "v15_mAh": 52.52080013092998
+              }
+            ]
+          }
+        },
+        "20": {
+          "random": {
+            "source_mAh": 77.73607868910474,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 25,
+            "capacity_truth_labels_per_acquisition": 40,
+            "ridge_mAh": 44.96526147576505,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 45.88398466733925,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 44.004718481229,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 44.65118150205104,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.9147240703887389,
+            "mean_abs_disagreement_mAh": 4.122000773697129,
+            "n_test_cell_better_than_v14": 0,
+            "n_test_cell_worse_than_v14": 8,
+            "per_cell": [
+              {
+                "id": "R2.5_battery-1",
+                "source_mAh": 90.94989095945664,
+                "ridge_mAh": 50.885626881901146,
+                "offset_mAh": 51.594271042658626,
+                "RBF-X_mAh": 50.19566800014152,
+                "v15_mAh": 50.533779001935045
+              },
+              {
+                "id": "R2.5_battery-2",
+                "source_mAh": 82.16663660565577,
+                "ridge_mAh": 50.013530792045245,
+                "offset_mAh": 50.81373793301453,
+                "RBF-X_mAh": 46.99499511559641,
+                "v15_mAh": 47.19753817436729
+              },
+              {
+                "id": "R2.5_battery-3",
+                "source_mAh": 66.99206406030788,
+                "ridge_mAh": 35.18177253394758,
+                "offset_mAh": 36.24986824194296,
+                "RBF-X_mAh": 35.42687159286963,
+                "v15_mAh": 35.977472895917465
+              },
+              {
+                "id": "R2.5_battery-4",
+                "source_mAh": 73.90484716655392,
+                "ridge_mAh": 45.037968453617054,
+                "offset_mAh": 46.28378120853604,
+                "RBF-X_mAh": 37.96958828053964,
+                "v15_mAh": 38.460678507809185
+              },
+              {
+                "id": "R2.5_battery-5",
+                "source_mAh": 100.18535158761544,
+                "ridge_mAh": 61.448688369196816,
+                "offset_mAh": 61.724296856923196,
+                "RBF-X_mAh": 66.91321617615024,
+                "v15_mAh": 67.93410750751575
+              },
+              {
+                "id": "R2.5_battery-6",
+                "source_mAh": 67.78906995433265,
+                "ridge_mAh": 43.6665714868295,
+                "offset_mAh": 44.89216245780617,
+                "RBF-X_mAh": 40.07885341765267,
+                "v15_mAh": 41.33610178209777
+              },
+              {
+                "id": "R2.5_battery-7",
+                "source_mAh": 62.269765413970376,
+                "ridge_mAh": 33.87448586646215,
+                "offset_mAh": 35.00237230034253,
+                "RBF-X_mAh": 31.685327430121912,
+                "v15_mAh": 32.428169015142416
+              },
+              {
+                "id": "R2.5_battery-8",
+                "source_mAh": 77.63100376494532,
+                "ridge_mAh": 39.613447422120885,
+                "offset_mAh": 40.51138729748993,
+                "RBF-X_mAh": 42.77322783675997,
+                "v15_mAh": 43.34160513162338
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "source_mAh": 77.73607868910474,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 5,
+            "capacity_truth_labels_per_acquisition": 40,
+            "ridge_mAh": 44.63238768665011,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 45.510747343660135,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 43.15543324944338,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 43.37297296337361,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.9563741536425701,
+            "mean_abs_disagreement_mAh": 2.8174813948446333,
+            "n_test_cell_better_than_v14": 0,
+            "n_test_cell_worse_than_v14": 8,
+            "per_cell": [
+              {
+                "id": "R2.5_battery-1",
+                "source_mAh": 90.94989095945664,
+                "ridge_mAh": 51.080613984125065,
+                "offset_mAh": 51.325892733438046,
+                "RBF-X_mAh": 53.41211891321986,
+                "v15_mAh": 53.645376031998985
+              },
+              {
+                "id": "R2.5_battery-2",
+                "source_mAh": 82.16663660565577,
+                "ridge_mAh": 47.67867699847114,
+                "offset_mAh": 48.63567465507979,
+                "RBF-X_mAh": 43.55568427157537,
+                "v15_mAh": 43.578905025464316
+              },
+              {
+                "id": "R2.5_battery-3",
+                "source_mAh": 66.99206406030788,
+                "ridge_mAh": 33.59387999641164,
+                "offset_mAh": 34.857047532667856,
+                "RBF-X_mAh": 32.64963710074815,
+                "v15_mAh": 32.850607180752284
+              },
+              {
+                "id": "R2.5_battery-4",
+                "source_mAh": 73.90484716655392,
+                "ridge_mAh": 45.14520186815925,
+                "offset_mAh": 46.58938513847851,
+                "RBF-X_mAh": 38.001547169742004,
+                "v15_mAh": 38.185217699199676
+              },
+              {
+                "id": "R2.5_battery-5",
+                "source_mAh": 100.18535158761544,
+                "ridge_mAh": 61.81710585487671,
+                "offset_mAh": 62.40806236429863,
+                "RBF-X_mAh": 65.9599598992465,
+                "v15_mAh": 66.32647423365717
+              },
+              {
+                "id": "R2.5_battery-6",
+                "source_mAh": 67.78906995433265,
+                "ridge_mAh": 43.45757888723319,
+                "offset_mAh": 44.47143404641672,
+                "RBF-X_mAh": 38.67223951428896,
+                "v15_mAh": 39.059966865864176
+              },
+              {
+                "id": "R2.5_battery-7",
+                "source_mAh": 62.269765413970376,
+                "ridge_mAh": 34.180884418042226,
+                "offset_mAh": 34.719465106940895,
+                "RBF-X_mAh": 29.682263006412022,
+                "v15_mAh": 29.856533759332404
+              },
+              {
+                "id": "R2.5_battery-8",
+                "source_mAh": 77.63100376494532,
+                "ridge_mAh": 40.10515948588172,
+                "offset_mAh": 41.07901717196064,
+                "RBF-X_mAh": 43.3100161203141,
+                "v15_mAh": 43.480702910719884
+              }
+            ]
+          }
+        },
+        "30": {
+          "random": {
+            "source_mAh": 77.73607868910474,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 25,
+            "capacity_truth_labels_per_acquisition": 60,
+            "ridge_mAh": 41.68811145020929,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 42.86565287728773,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 39.568095715291086,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 40.094195255312286,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.9182910896540981,
+            "mean_abs_disagreement_mAh": 4.0897722889526,
+            "n_test_cell_better_than_v14": 0,
+            "n_test_cell_worse_than_v14": 8,
+            "per_cell": [
+              {
+                "id": "R2.5_battery-1",
+                "source_mAh": 90.94989095945664,
+                "ridge_mAh": 45.04556137036748,
+                "offset_mAh": 45.77519480942327,
+                "RBF-X_mAh": 43.94404697185709,
+                "v15_mAh": 44.10744305131094
+              },
+              {
+                "id": "R2.5_battery-2",
+                "source_mAh": 82.16663660565577,
+                "ridge_mAh": 46.05255294390183,
+                "offset_mAh": 47.082608586457425,
+                "RBF-X_mAh": 42.08737776813284,
+                "v15_mAh": 42.289940960190464
+              },
+              {
+                "id": "R2.5_battery-3",
+                "source_mAh": 66.99206406030788,
+                "ridge_mAh": 32.706782269993155,
+                "offset_mAh": 34.13981820616557,
+                "RBF-X_mAh": 31.25330493569495,
+                "v15_mAh": 31.75969088352327
+              },
+              {
+                "id": "R2.5_battery-4",
+                "source_mAh": 73.90484716655392,
+                "ridge_mAh": 42.91893941184433,
+                "offset_mAh": 44.39732840186072,
+                "RBF-X_mAh": 33.57172062285601,
+                "v15_mAh": 33.91166784493203
+              },
+              {
+                "id": "R2.5_battery-5",
+                "source_mAh": 100.18535158761544,
+                "ridge_mAh": 55.19827026757717,
+                "offset_mAh": 55.41042391002236,
+                "RBF-X_mAh": 62.69168895633892,
+                "v15_mAh": 63.51989207434282
+              },
+              {
+                "id": "R2.5_battery-6",
+                "source_mAh": 67.78906995433265,
+                "ridge_mAh": 42.14715302689225,
+                "offset_mAh": 43.77187733949326,
+                "RBF-X_mAh": 36.2509266832187,
+                "v15_mAh": 37.217386898068185
+              },
+              {
+                "id": "R2.5_battery-7",
+                "source_mAh": 62.269765413970376,
+                "ridge_mAh": 33.885215696877275,
+                "offset_mAh": 35.47809937402521,
+                "RBF-X_mAh": 28.536750143766294,
+                "v15_mAh": 29.25157208841689
+              },
+              {
+                "id": "R2.5_battery-8",
+                "source_mAh": 77.63100376494532,
+                "ridge_mAh": 35.55041661422085,
+                "offset_mAh": 36.86987239085404,
+                "RBF-X_mAh": 38.2089496404639,
+                "v15_mAh": 38.69596824171371
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "source_mAh": 77.73607868910474,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 5,
+            "capacity_truth_labels_per_acquisition": 60,
+            "ridge_mAh": 41.66979903811931,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 42.801470019704986,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 38.61049223162367,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 38.77994848315474,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.9588016704687201,
+            "mean_abs_disagreement_mAh": 3.0953386079958802,
+            "n_test_cell_better_than_v14": 0,
+            "n_test_cell_worse_than_v14": 8,
+            "per_cell": [
+              {
+                "id": "R2.5_battery-1",
+                "source_mAh": 90.94989095945664,
+                "ridge_mAh": 45.979822760181705,
+                "offset_mAh": 46.27575816456974,
+                "RBF-X_mAh": 47.91870320188537,
+                "v15_mAh": 47.99867021265096
+              },
+              {
+                "id": "R2.5_battery-2",
+                "source_mAh": 82.16663660565577,
+                "ridge_mAh": 44.34033681978677,
+                "offset_mAh": 45.54306436946277,
+                "RBF-X_mAh": 38.46828492584742,
+                "v15_mAh": 38.482980963873416
+              },
+              {
+                "id": "R2.5_battery-3",
+                "source_mAh": 66.99206406030788,
+                "ridge_mAh": 32.0609537835483,
+                "offset_mAh": 33.695197853081766,
+                "RBF-X_mAh": 28.746525949884425,
+                "v15_mAh": 29.11070141910553
+              },
+              {
+                "id": "R2.5_battery-4",
+                "source_mAh": 73.90484716655392,
+                "ridge_mAh": 42.754453187605854,
+                "offset_mAh": 44.501174669932595,
+                "RBF-X_mAh": 32.910812847677335,
+                "v15_mAh": 33.09243295638047
+              },
+              {
+                "id": "R2.5_battery-5",
+                "source_mAh": 100.18535158761544,
+                "ridge_mAh": 56.29433143706596,
+                "offset_mAh": 56.837462049255535,
+                "RBF-X_mAh": 61.64772652281897,
+                "v15_mAh": 61.89175378375189
+              },
+              {
+                "id": "R2.5_battery-6",
+                "source_mAh": 67.78906995433265,
+                "ridge_mAh": 42.274381427636925,
+                "offset_mAh": 43.55676512937913,
+                "RBF-X_mAh": 34.72655758563098,
+                "v15_mAh": 34.845657875756
+              },
+              {
+                "id": "R2.5_battery-7",
+                "source_mAh": 62.269765413970376,
+                "ridge_mAh": 34.113375543599,
+                "offset_mAh": 34.9087188473386,
+                "RBF-X_mAh": 26.675545987695152,
+                "v15_mAh": 26.705623595819812
+              },
+              {
+                "id": "R2.5_battery-8",
+                "source_mAh": 77.63100376494532,
+                "ridge_mAh": 35.54073734552998,
+                "offset_mAh": 37.09361907461973,
+                "RBF-X_mAh": 37.78978083154967,
+                "v15_mAh": 38.111767057899876
+              }
+            ]
+          }
+        }
+      }
+    },
+    "R3": {
+      "n_target_cells": 8,
+      "summary": {
+        "10": {
+          "random": {
+            "source_mAh": 94.76727476200088,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 25,
+            "capacity_truth_labels_per_acquisition": 20,
+            "ridge_mAh": 59.900549307443185,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 60.857213500110234,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 61.278299994589844,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 64.36552944388644,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.8881358621861576,
+            "mean_abs_disagreement_mAh": 14.675410418936513,
+            "n_test_cell_better_than_v14": 1,
+            "n_test_cell_worse_than_v14": 7,
+            "per_cell": [
+              {
+                "id": "R3_battery-1",
+                "source_mAh": 89.61749463995794,
+                "ridge_mAh": 53.12611214955486,
+                "offset_mAh": 54.774164640234304,
+                "RBF-X_mAh": 51.57933429656491,
+                "v15_mAh": 56.151206199954615
+              },
+              {
+                "id": "R3_battery-2",
+                "source_mAh": 79.39241837100951,
+                "ridge_mAh": 43.71172834363334,
+                "offset_mAh": 44.865218994150055,
+                "RBF-X_mAh": 40.25490757277585,
+                "v15_mAh": 42.879941996927506
+              },
+              {
+                "id": "R3_battery-3",
+                "source_mAh": 128.08496623274476,
+                "ridge_mAh": 94.06450422588864,
+                "offset_mAh": 95.03056633828227,
+                "RBF-X_mAh": 98.37887634847388,
+                "v15_mAh": 100.67935584595675
+              },
+              {
+                "id": "R3_battery-4",
+                "source_mAh": 159.1795926315201,
+                "ridge_mAh": 116.73828335606713,
+                "offset_mAh": 118.94596670146798,
+                "RBF-X_mAh": 125.00223608970302,
+                "v15_mAh": 127.92719105190034
+              },
+              {
+                "id": "R3_battery-5",
+                "source_mAh": 80.7135484280637,
+                "ridge_mAh": 47.547673067378916,
+                "offset_mAh": 48.64372082980824,
+                "RBF-X_mAh": 45.8782207017192,
+                "v15_mAh": 50.456949311762095
+              },
+              {
+                "id": "R3_battery-6",
+                "source_mAh": 94.31188848959623,
+                "ridge_mAh": 50.2642828107213,
+                "offset_mAh": 51.60501538956621,
+                "RBF-X_mAh": 53.25877018263028,
+                "v15_mAh": 56.315537939322745
+              },
+              {
+                "id": "R3_battery-7",
+                "source_mAh": 44.69932162544897,
+                "ridge_mAh": 37.045953228834136,
+                "offset_mAh": 35.86029493328765,
+                "RBF-X_mAh": 36.384904798824195,
+                "v15_mAh": 34.75534648197594
+              },
+              {
+                "id": "R3_battery-8",
+                "source_mAh": 82.13896767766575,
+                "ridge_mAh": 36.705857277467125,
+                "offset_mAh": 37.13276017408513,
+                "RBF-X_mAh": 39.48914996602741,
+                "v15_mAh": 45.75870672329157
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "source_mAh": 94.76727476200088,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 5,
+            "capacity_truth_labels_per_acquisition": 20,
+            "ridge_mAh": 59.29063736792923,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 61.00934243922305,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 56.47765379101532,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 59.957054557331084,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.8800074829357061,
+            "mean_abs_disagreement_mAh": 14.692676601554886,
+            "n_test_cell_better_than_v14": 0,
+            "n_test_cell_worse_than_v14": 8,
+            "per_cell": [
+              {
+                "id": "R3_battery-1",
+                "source_mAh": 89.61749463995794,
+                "ridge_mAh": 44.23842023152568,
+                "offset_mAh": 47.89033846685515,
+                "RBF-X_mAh": 33.77800353707058,
+                "v15_mAh": 37.813619138850264
+              },
+              {
+                "id": "R3_battery-2",
+                "source_mAh": 79.39241837100951,
+                "ridge_mAh": 39.388872882868526,
+                "offset_mAh": 41.45827292740832,
+                "RBF-X_mAh": 31.56952055351224,
+                "v15_mAh": 36.666259573023005
+              },
+              {
+                "id": "R3_battery-3",
+                "source_mAh": 128.08496623274476,
+                "ridge_mAh": 100.37034383591615,
+                "offset_mAh": 101.40277430833085,
+                "RBF-X_mAh": 104.07882004932883,
+                "v15_mAh": 104.39632274454874
+              },
+              {
+                "id": "R3_battery-4",
+                "source_mAh": 159.1795926315201,
+                "ridge_mAh": 130.28902277368238,
+                "offset_mAh": 130.59341223356728,
+                "RBF-X_mAh": 141.96640404498118,
+                "v15_mAh": 142.4388429701967
+              },
+              {
+                "id": "R3_battery-5",
+                "source_mAh": 80.7135484280637,
+                "ridge_mAh": 39.410509198524466,
+                "offset_mAh": 42.071400221676086,
+                "RBF-X_mAh": 30.93594507635664,
+                "v15_mAh": 35.81806772955462
+              },
+              {
+                "id": "R3_battery-6",
+                "source_mAh": 94.31188848959623,
+                "ridge_mAh": 47.63135060542372,
+                "offset_mAh": 50.38813299270588,
+                "RBF-X_mAh": 44.417959058484435,
+                "v15_mAh": 49.766877193506446
+              },
+              {
+                "id": "R3_battery-7",
+                "source_mAh": 44.69932162544897,
+                "ridge_mAh": 32.69134738113146,
+                "offset_mAh": 32.88346215861161,
+                "RBF-X_mAh": 23.624536022838104,
+                "v15_mAh": 25.283611258896403
+              },
+              {
+                "id": "R3_battery-8",
+                "source_mAh": 82.13896767766575,
+                "ridge_mAh": 40.30523203436145,
+                "offset_mAh": 41.386946204629275,
+                "RBF-X_mAh": 41.45004198555055,
+                "v15_mAh": 47.472835850072514
+              }
+            ]
+          }
+        },
+        "20": {
+          "random": {
+            "source_mAh": 94.76727476200088,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 25,
+            "capacity_truth_labels_per_acquisition": 40,
+            "ridge_mAh": 51.85164797452231,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 52.673745167957534,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 53.79528731503042,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 55.987895909856604,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.9175448032598139,
+            "mean_abs_disagreement_mAh": 14.620257066167465,
+            "n_test_cell_better_than_v14": 1,
+            "n_test_cell_worse_than_v14": 7,
+            "per_cell": [
+              {
+                "id": "R3_battery-1",
+                "source_mAh": 89.61749463995794,
+                "ridge_mAh": 41.524386145318644,
+                "offset_mAh": 43.12107398609654,
+                "RBF-X_mAh": 40.16601120433721,
+                "v15_mAh": 43.7845078772019
+              },
+              {
+                "id": "R3_battery-2",
+                "source_mAh": 79.39241837100951,
+                "ridge_mAh": 37.99467003638877,
+                "offset_mAh": 38.98564967050062,
+                "RBF-X_mAh": 33.15051088589262,
+                "v15_mAh": 35.14756833204793
+              },
+              {
+                "id": "R3_battery-3",
+                "source_mAh": 128.08496623274476,
+                "ridge_mAh": 81.10762570758935,
+                "offset_mAh": 82.03000577342807,
+                "RBF-X_mAh": 88.7668622597529,
+                "v15_mAh": 91.16939697470771
+              },
+              {
+                "id": "R3_battery-4",
+                "source_mAh": 159.1795926315201,
+                "ridge_mAh": 102.12660881946233,
+                "offset_mAh": 103.58143884787566,
+                "RBF-X_mAh": 119.99391335734558,
+                "v15_mAh": 122.61225416463897
+              },
+              {
+                "id": "R3_battery-5",
+                "source_mAh": 80.7135484280637,
+                "ridge_mAh": 37.55141718384555,
+                "offset_mAh": 38.53638668850681,
+                "RBF-X_mAh": 36.93997279882064,
+                "v15_mAh": 40.23665458117281
+              },
+              {
+                "id": "R3_battery-6",
+                "source_mAh": 94.31188848959623,
+                "ridge_mAh": 39.974536244980314,
+                "offset_mAh": 40.98064334646407,
+                "RBF-X_mAh": 46.426625432925256,
+                "v15_mAh": 48.94043962318345
+              },
+              {
+                "id": "R3_battery-7",
+                "source_mAh": 44.69932162544897,
+                "ridge_mAh": 44.49631606456082,
+                "offset_mAh": 44.455459200130136,
+                "RBF-X_mAh": 31.79757045695511,
+                "v15_mAh": 29.350734987408885
+              },
+              {
+                "id": "R3_battery-8",
+                "source_mAh": 82.13896767766575,
+                "ridge_mAh": 30.03762359403267,
+                "offset_mAh": 29.69930383065839,
+                "RBF-X_mAh": 33.12083212421404,
+                "v15_mAh": 36.661610738491184
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "source_mAh": 94.76727476200088,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 5,
+            "capacity_truth_labels_per_acquisition": 40,
+            "ridge_mAh": 49.55391349860255,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 50.95973599640935,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 49.85558598173801,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 52.51164797796797,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.9132364216291444,
+            "mean_abs_disagreement_mAh": 13.838090760082885,
+            "n_test_cell_better_than_v14": 0,
+            "n_test_cell_worse_than_v14": 8,
+            "per_cell": [
+              {
+                "id": "R3_battery-1",
+                "source_mAh": 89.61749463995794,
+                "ridge_mAh": 32.22652124639819,
+                "offset_mAh": 34.929592533584604,
+                "RBF-X_mAh": 24.849984643853592,
+                "v15_mAh": 28.532705242545244
+              },
+              {
+                "id": "R3_battery-2",
+                "source_mAh": 79.39241837100951,
+                "ridge_mAh": 29.99455528102087,
+                "offset_mAh": 31.69144973187866,
+                "RBF-X_mAh": 24.09399626856253,
+                "v15_mAh": 28.408391053475405
+              },
+              {
+                "id": "R3_battery-3",
+                "source_mAh": 128.08496623274476,
+                "ridge_mAh": 87.45831490304617,
+                "offset_mAh": 88.1296916867203,
+                "RBF-X_mAh": 97.02976898010898,
+                "v15_mAh": 97.16573816014508
+              },
+              {
+                "id": "R3_battery-4",
+                "source_mAh": 159.1795926315201,
+                "ridge_mAh": 116.20093721083228,
+                "offset_mAh": 116.10663552127873,
+                "RBF-X_mAh": 136.8700503713202,
+                "v15_mAh": 137.14546281612172
+              },
+              {
+                "id": "R3_battery-5",
+                "source_mAh": 80.7135484280637,
+                "ridge_mAh": 28.48479209559366,
+                "offset_mAh": 30.533290267612472,
+                "RBF-X_mAh": 23.94589455325917,
+                "v15_mAh": 28.20045627354986
+              },
+              {
+                "id": "R3_battery-6",
+                "source_mAh": 94.31188848959623,
+                "ridge_mAh": 34.18144616833658,
+                "offset_mAh": 36.174173063691626,
+                "RBF-X_mAh": 38.48465639962659,
+                "v15_mAh": 43.069773827755895
+              },
+              {
+                "id": "R3_battery-7",
+                "source_mAh": 44.69932162544897,
+                "ridge_mAh": 38.9269057864104,
+                "offset_mAh": 40.33529118751972,
+                "RBF-X_mAh": 17.954634176620598,
+                "v15_mAh": 17.97110416395481
+              },
+              {
+                "id": "R3_battery-8",
+                "source_mAh": 82.13896767766575,
+                "ridge_mAh": 28.957835297182275,
+                "offset_mAh": 29.777763978988634,
+                "RBF-X_mAh": 35.61570246055242,
+                "v15_mAh": 39.59955228619572
+              }
+            ]
+          }
+        },
+        "30": {
+          "random": {
+            "source_mAh": 94.76727476200088,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 25,
+            "capacity_truth_labels_per_acquisition": 60,
+            "ridge_mAh": 48.12110550439969,
+            "n_negative_vs_source_ridge": 1,
+            "offset_mAh": 48.80853284785403,
+            "n_negative_vs_source_offset": 1,
+            "RBF-X_mAh": 49.457210156145116,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 51.06960922790087,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.930138184624371,
+            "mean_abs_disagreement_mAh": 14.79598601094192,
+            "n_test_cell_better_than_v14": 1,
+            "n_test_cell_worse_than_v14": 7,
+            "per_cell": [
+              {
+                "id": "R3_battery-1",
+                "source_mAh": 89.61749463995794,
+                "ridge_mAh": 35.144907635486405,
+                "offset_mAh": 36.59495138303044,
+                "RBF-X_mAh": 34.073711450024845,
+                "v15_mAh": 36.94357987434972
+              },
+              {
+                "id": "R3_battery-2",
+                "source_mAh": 79.39241837100951,
+                "ridge_mAh": 36.18041072645152,
+                "offset_mAh": 37.12697452714529,
+                "RBF-X_mAh": 29.23812685958797,
+                "v15_mAh": 30.760148135401284
+              },
+              {
+                "id": "R3_battery-3",
+                "source_mAh": 128.08496623274476,
+                "ridge_mAh": 72.68446314802974,
+                "offset_mAh": 73.45051263149358,
+                "RBF-X_mAh": 83.10299651674761,
+                "v15_mAh": 85.31162262260723
+              },
+              {
+                "id": "R3_battery-4",
+                "source_mAh": 159.1795926315201,
+                "ridge_mAh": 92.35610460567892,
+                "offset_mAh": 93.61441692468291,
+                "RBF-X_mAh": 115.53192401608062,
+                "v15_mAh": 118.1942998594157
+              },
+              {
+                "id": "R3_battery-5",
+                "source_mAh": 80.7135484280637,
+                "ridge_mAh": 32.954213598283935,
+                "offset_mAh": 33.78860419312541,
+                "RBF-X_mAh": 31.7449897519898,
+                "v15_mAh": 34.47320563664306
+              },
+              {
+                "id": "R3_battery-6",
+                "source_mAh": 94.31188848959623,
+                "ridge_mAh": 34.971550685770055,
+                "offset_mAh": 35.89141577089,
+                "RBF-X_mAh": 41.66812080626019,
+                "v15_mAh": 43.83681562776156
+              },
+              {
+                "id": "R3_battery-7",
+                "source_mAh": 44.69932162544897,
+                "ridge_mAh": 51.53094060447715,
+                "offset_mAh": 51.9173788448137,
+                "RBF-X_mAh": 30.578405146614216,
+                "v15_mAh": 27.230416912243886
+              },
+              {
+                "id": "R3_battery-8",
+                "source_mAh": 82.13896767766575,
+                "ridge_mAh": 29.14625303101975,
+                "offset_mAh": 28.084008507650918,
+                "RBF-X_mAh": 29.719406701855696,
+                "v15_mAh": 31.806785154784514
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "source_mAh": 94.76727476200088,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 5,
+            "capacity_truth_labels_per_acquisition": 60,
+            "ridge_mAh": 44.99433732558577,
+            "n_negative_vs_source_ridge": 1,
+            "offset_mAh": 46.287283525154365,
+            "n_negative_vs_source_offset": 1,
+            "RBF-X_mAh": 45.3252731682167,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 47.27172959978317,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.9317801926277804,
+            "mean_abs_disagreement_mAh": 13.6097829532501,
+            "n_test_cell_better_than_v14": 1,
+            "n_test_cell_worse_than_v14": 7,
+            "per_cell": [
+              {
+                "id": "R3_battery-1",
+                "source_mAh": 89.61749463995794,
+                "ridge_mAh": 25.368135576069903,
+                "offset_mAh": 27.538636030758894,
+                "RBF-X_mAh": 19.432548347734965,
+                "v15_mAh": 21.933431957453678
+              },
+              {
+                "id": "R3_battery-2",
+                "source_mAh": 79.39241837100951,
+                "ridge_mAh": 26.91387259527889,
+                "offset_mAh": 28.42513924328941,
+                "RBF-X_mAh": 18.917868584864085,
+                "v15_mAh": 22.18715375422518
+              },
+              {
+                "id": "R3_battery-3",
+                "source_mAh": 128.08496623274476,
+                "ridge_mAh": 79.00233939181194,
+                "offset_mAh": 79.56298451680372,
+                "RBF-X_mAh": 91.52258207125315,
+                "v15_mAh": 91.54913598678438
+              },
+              {
+                "id": "R3_battery-4",
+                "source_mAh": 159.1795926315201,
+                "ridge_mAh": 107.03240040468864,
+                "offset_mAh": 106.82871630187783,
+                "RBF-X_mAh": 132.7514667998148,
+                "v15_mAh": 132.8412064908895
+              },
+              {
+                "id": "R3_battery-5",
+                "source_mAh": 80.7135484280637,
+                "ridge_mAh": 24.100771732979787,
+                "offset_mAh": 25.82103234499111,
+                "RBF-X_mAh": 18.84961321211128,
+                "v15_mAh": 22.01887894620376
+              },
+              {
+                "id": "R3_battery-6",
+                "source_mAh": 94.31188848959623,
+                "ridge_mAh": 26.504619250995617,
+                "offset_mAh": 28.34089284559291,
+                "RBF-X_mAh": 33.206745491309505,
+                "v15_mAh": 37.226657516620094
+              },
+              {
+                "id": "R3_battery-7",
+                "source_mAh": 44.69932162544897,
+                "ridge_mAh": 45.95446394013534,
+                "offset_mAh": 47.75883461704597,
+                "RBF-X_mAh": 16.813167862341004,
+                "v15_mAh": 15.589301814787433
+              },
+              {
+                "id": "R3_battery-8",
+                "source_mAh": 82.13896767766575,
+                "ridge_mAh": 25.078095712726046,
+                "offset_mAh": 26.022032300875065,
+                "RBF-X_mAh": 31.108192976304778,
+                "v15_mAh": 34.82807033130135
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Sim_satellite": {
+      "n_target_cells": 8,
+      "summary": {
+        "10": {
+          "random": {
+            "source_mAh": 100.85807675789346,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 25,
+            "capacity_truth_labels_per_acquisition": 20,
+            "ridge_mAh": 52.023026836242664,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 52.15092151681969,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 56.41273744207439,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 56.89020138850381,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.9542723413152789,
+            "mean_abs_disagreement_mAh": 10.809843909195884,
+            "n_test_cell_better_than_v14": 2,
+            "n_test_cell_worse_than_v14": 6,
+            "per_cell": [
+              {
+                "id": "Sim_satellite_battery-1",
+                "source_mAh": 107.75097246460408,
+                "ridge_mAh": 53.31633099740206,
+                "offset_mAh": 54.25499766054354,
+                "RBF-X_mAh": 53.46269513590678,
+                "v15_mAh": 56.90150189405587
+              },
+              {
+                "id": "Sim_satellite_battery-2",
+                "source_mAh": 129.5040306911453,
+                "ridge_mAh": 68.6458967115574,
+                "offset_mAh": 70.33643906288705,
+                "RBF-X_mAh": 74.64067833114598,
+                "v15_mAh": 76.15580538853241
+              },
+              {
+                "id": "Sim_satellite_battery-3",
+                "source_mAh": 84.31648957199813,
+                "ridge_mAh": 39.609361974034684,
+                "offset_mAh": 39.24079093972261,
+                "RBF-X_mAh": 41.377834144478065,
+                "v15_mAh": 41.75968183963489
+              },
+              {
+                "id": "Sim_satellite_battery-4",
+                "source_mAh": 86.20061121569293,
+                "ridge_mAh": 42.06754332219883,
+                "offset_mAh": 40.45397867147271,
+                "RBF-X_mAh": 44.176209214585796,
+                "v15_mAh": 43.37335681837014
+              },
+              {
+                "id": "Sim_satellite_battery-5",
+                "source_mAh": 65.77157587174409,
+                "ridge_mAh": 25.440355256490143,
+                "offset_mAh": 23.363078422752245,
+                "RBF-X_mAh": 28.29854741167125,
+                "v15_mAh": 26.315274187407102
+              },
+              {
+                "id": "Sim_satellite_battery-6",
+                "source_mAh": 171.3849686687001,
+                "ridge_mAh": 108.95761674168816,
+                "offset_mAh": 112.08556571285624,
+                "RBF-X_mAh": 124.60476465389266,
+                "v15_mAh": 125.33072685267288
+              },
+              {
+                "id": "Sim_satellite_battery-7",
+                "source_mAh": 77.70188896473249,
+                "ridge_mAh": 40.05257448749307,
+                "offset_mAh": 39.40066775756788,
+                "RBF-X_mAh": 42.64903362762026,
+                "v15_mAh": 42.98271171573178
+              },
+              {
+                "id": "Sim_satellite_battery-8",
+                "source_mAh": 84.23407661453055,
+                "ridge_mAh": 38.094535199076994,
+                "offset_mAh": 38.07185390675524,
+                "RBF-X_mAh": 42.09213701729435,
+                "v15_mAh": 42.30255241162543
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "source_mAh": 100.85807675789346,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 5,
+            "capacity_truth_labels_per_acquisition": 20,
+            "ridge_mAh": 52.02165560718847,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 52.288751301056706,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 57.236398193437694,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 57.88103994972585,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.9687995374227858,
+            "mean_abs_disagreement_mAh": 6.776543654739147,
+            "n_test_cell_better_than_v14": 0,
+            "n_test_cell_worse_than_v14": 8,
+            "per_cell": [
+              {
+                "id": "Sim_satellite_battery-1",
+                "source_mAh": 107.75097246460408,
+                "ridge_mAh": 56.73281273946788,
+                "offset_mAh": 57.28645810642538,
+                "RBF-X_mAh": 59.112932001566854,
+                "v15_mAh": 61.47564423231762
+              },
+              {
+                "id": "Sim_satellite_battery-2",
+                "source_mAh": 129.5040306911453,
+                "ridge_mAh": 79.64731137296079,
+                "offset_mAh": 80.80531007255469,
+                "RBF-X_mAh": 86.1611962005032,
+                "v15_mAh": 86.41595168494968
+              },
+              {
+                "id": "Sim_satellite_battery-3",
+                "source_mAh": 84.31648957199813,
+                "ridge_mAh": 32.1812263655989,
+                "offset_mAh": 31.887149286737486,
+                "RBF-X_mAh": 34.82382199761595,
+                "v15_mAh": 35.51688605693009
+              },
+              {
+                "id": "Sim_satellite_battery-4",
+                "source_mAh": 86.20061121569293,
+                "ridge_mAh": 46.712479114857416,
+                "offset_mAh": 46.89418522538519,
+                "RBF-X_mAh": 48.99260628325226,
+                "v15_mAh": 49.83874754014554
+              },
+              {
+                "id": "Sim_satellite_battery-5",
+                "source_mAh": 65.77157587174409,
+                "ridge_mAh": 19.189157015982463,
+                "offset_mAh": 19.011773722041067,
+                "RBF-X_mAh": 21.636935436577986,
+                "v15_mAh": 21.972040393719954
+              },
+              {
+                "id": "Sim_satellite_battery-6",
+                "source_mAh": 171.3849686687001,
+                "ridge_mAh": 107.06629298893766,
+                "offset_mAh": 110.13027343686116,
+                "RBF-X_mAh": 124.3234746904823,
+                "v15_mAh": 124.44841226938306
+              },
+              {
+                "id": "Sim_satellite_battery-7",
+                "source_mAh": 77.70188896473249,
+                "ridge_mAh": 36.89597273813694,
+                "offset_mAh": 35.20556776052788,
+                "RBF-X_mAh": 39.81293046129962,
+                "v15_mAh": 40.302838214422245
+              },
+              {
+                "id": "Sim_satellite_battery-8",
+                "source_mAh": 84.23407661453055,
+                "ridge_mAh": 37.7479925215657,
+                "offset_mAh": 37.08929279792081,
+                "RBF-X_mAh": 43.0272884762034,
+                "v15_mAh": 43.07779920593866
+              }
+            ]
+          }
+        },
+        "20": {
+          "random": {
+            "source_mAh": 100.85807675789346,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 25,
+            "capacity_truth_labels_per_acquisition": 40,
+            "ridge_mAh": 51.035406096085765,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 51.08499926692046,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 56.534414120023214,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 57.018205646964454,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.9597538836348484,
+            "mean_abs_disagreement_mAh": 10.769517238576444,
+            "n_test_cell_better_than_v14": 2,
+            "n_test_cell_worse_than_v14": 6,
+            "per_cell": [
+              {
+                "id": "Sim_satellite_battery-1",
+                "source_mAh": 107.75097246460408,
+                "ridge_mAh": 53.20748669430581,
+                "offset_mAh": 54.22824425471087,
+                "RBF-X_mAh": 54.4321324319303,
+                "v15_mAh": 57.49006584753848
+              },
+              {
+                "id": "Sim_satellite_battery-2",
+                "source_mAh": 129.5040306911453,
+                "ridge_mAh": 67.91321576943623,
+                "offset_mAh": 69.0989019400447,
+                "RBF-X_mAh": 77.47820635381943,
+                "v15_mAh": 79.09395973362909
+              },
+              {
+                "id": "Sim_satellite_battery-3",
+                "source_mAh": 84.31648957199813,
+                "ridge_mAh": 37.54991227209693,
+                "offset_mAh": 37.465251885744685,
+                "RBF-X_mAh": 39.87811101897982,
+                "v15_mAh": 40.50568185161614
+              },
+              {
+                "id": "Sim_satellite_battery-4",
+                "source_mAh": 86.20061121569293,
+                "ridge_mAh": 41.41998894178313,
+                "offset_mAh": 40.24772320789428,
+                "RBF-X_mAh": 43.00827457716598,
+                "v15_mAh": 42.345512294165104
+              },
+              {
+                "id": "Sim_satellite_battery-5",
+                "source_mAh": 65.77157587174409,
+                "ridge_mAh": 25.523207061815587,
+                "offset_mAh": 23.59226481948786,
+                "RBF-X_mAh": 29.754586204983088,
+                "v15_mAh": 27.836800590978186
+              },
+              {
+                "id": "Sim_satellite_battery-6",
+                "source_mAh": 171.3849686687001,
+                "ridge_mAh": 106.98434415566824,
+                "offset_mAh": 108.71015468722612,
+                "RBF-X_mAh": 125.74397776817163,
+                "v15_mAh": 126.2148127334021
+              },
+              {
+                "id": "Sim_satellite_battery-7",
+                "source_mAh": 77.70188896473249,
+                "ridge_mAh": 38.64000658430786,
+                "offset_mAh": 38.48935261554624,
+                "RBF-X_mAh": 40.94026170545581,
+                "v15_mAh": 41.46020414417467
+              },
+              {
+                "id": "Sim_satellite_battery-8",
+                "source_mAh": 84.23407661453055,
+                "ridge_mAh": 37.0450872892723,
+                "offset_mAh": 36.848100724708935,
+                "RBF-X_mAh": 41.03976289967964,
+                "v15_mAh": 41.198607980211875
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "source_mAh": 100.85807675789346,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 5,
+            "capacity_truth_labels_per_acquisition": 40,
+            "ridge_mAh": 50.90055065447778,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 51.236948528194205,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 56.278765258426716,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 57.135494979795226,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.9693605637820966,
+            "mean_abs_disagreement_mAh": 7.936268493320727,
+            "n_test_cell_better_than_v14": 0,
+            "n_test_cell_worse_than_v14": 8,
+            "per_cell": [
+              {
+                "id": "Sim_satellite_battery-1",
+                "source_mAh": 107.75097246460408,
+                "ridge_mAh": 54.929781148835566,
+                "offset_mAh": 55.7906927312389,
+                "RBF-X_mAh": 57.09256910238461,
+                "v15_mAh": 59.746968215568515
+              },
+              {
+                "id": "Sim_satellite_battery-2",
+                "source_mAh": 129.5040306911453,
+                "ridge_mAh": 76.465512459602,
+                "offset_mAh": 77.58188602482004,
+                "RBF-X_mAh": 85.51186095064386,
+                "v15_mAh": 86.24832347451061
+              },
+              {
+                "id": "Sim_satellite_battery-3",
+                "source_mAh": 84.31648957199813,
+                "ridge_mAh": 31.0829327276851,
+                "offset_mAh": 31.008056232945712,
+                "RBF-X_mAh": 33.26524788662758,
+                "v15_mAh": 34.14732711618377
+              },
+              {
+                "id": "Sim_satellite_battery-4",
+                "source_mAh": 86.20061121569293,
+                "ridge_mAh": 45.29749687578033,
+                "offset_mAh": 45.58984756454551,
+                "RBF-X_mAh": 47.472496255982236,
+                "v15_mAh": 48.39989915588543
+              },
+              {
+                "id": "Sim_satellite_battery-5",
+                "source_mAh": 65.77157587174409,
+                "ridge_mAh": 19.293939117577494,
+                "offset_mAh": 19.220851979593583,
+                "RBF-X_mAh": 21.0898932721893,
+                "v15_mAh": 21.696366886143828
+              },
+              {
+                "id": "Sim_satellite_battery-6",
+                "source_mAh": 171.3849686687001,
+                "ridge_mAh": 107.21210780125732,
+                "offset_mAh": 108.81616699794712,
+                "RBF-X_mAh": 126.70292295322031,
+                "v15_mAh": 126.95787105180847
+              },
+              {
+                "id": "Sim_satellite_battery-7",
+                "source_mAh": 77.70188896473249,
+                "ridge_mAh": 35.96097089415254,
+                "offset_mAh": 35.266392230717834,
+                "RBF-X_mAh": 36.59622199979498,
+                "v15_mAh": 37.20613788926753
+              },
+              {
+                "id": "Sim_satellite_battery-8",
+                "source_mAh": 84.23407661453055,
+                "ridge_mAh": 36.961664210931936,
+                "offset_mAh": 36.62169446374498,
+                "RBF-X_mAh": 42.49890964657091,
+                "v15_mAh": 42.68106604899364
+              }
+            ]
+          }
+        },
+        "30": {
+          "random": {
+            "source_mAh": 100.85807675789346,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 25,
+            "capacity_truth_labels_per_acquisition": 60,
+            "ridge_mAh": 47.854680764091455,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 48.007026100374375,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 51.56777844845058,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 51.47770993220047,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.9728899622477059,
+            "mean_abs_disagreement_mAh": 9.675609545371639,
+            "n_test_cell_better_than_v14": 4,
+            "n_test_cell_worse_than_v14": 4,
+            "per_cell": [
+              {
+                "id": "Sim_satellite_battery-1",
+                "source_mAh": 107.75097246460408,
+                "ridge_mAh": 45.914231723278014,
+                "offset_mAh": 47.21462036566082,
+                "RBF-X_mAh": 45.40615827669007,
+                "v15_mAh": 46.67863552431355
+              },
+              {
+                "id": "Sim_satellite_battery-2",
+                "source_mAh": 129.5040306911453,
+                "ridge_mAh": 58.298311817818146,
+                "offset_mAh": 60.107189088474364,
+                "RBF-X_mAh": 66.95510658964828,
+                "v15_mAh": 68.18112689008574
+              },
+              {
+                "id": "Sim_satellite_battery-3",
+                "source_mAh": 84.31648957199813,
+                "ridge_mAh": 34.531538364702605,
+                "offset_mAh": 34.52415780992469,
+                "RBF-X_mAh": 35.83244330517666,
+                "v15_mAh": 35.62263126354781
+              },
+              {
+                "id": "Sim_satellite_battery-4",
+                "source_mAh": 86.20061121569293,
+                "ridge_mAh": 41.81890951116733,
+                "offset_mAh": 40.90280173136921,
+                "RBF-X_mAh": 39.57572697837004,
+                "v15_mAh": 38.216813956535084
+              },
+              {
+                "id": "Sim_satellite_battery-5",
+                "source_mAh": 65.77157587174409,
+                "ridge_mAh": 28.707080072362658,
+                "offset_mAh": 26.504350408218716,
+                "RBF-X_mAh": 27.958299696563692,
+                "v15_mAh": 25.78681824112423
+              },
+              {
+                "id": "Sim_satellite_battery-6",
+                "source_mAh": 171.3849686687001,
+                "ridge_mAh": 100.5878619364626,
+                "offset_mAh": 101.84448415734573,
+                "RBF-X_mAh": 122.67114342954865,
+                "v15_mAh": 123.24873814149858
+              },
+              {
+                "id": "Sim_satellite_battery-7",
+                "source_mAh": 77.70188896473249,
+                "ridge_mAh": 37.698784069855215,
+                "offset_mAh": 37.869162934280716,
+                "RBF-X_mAh": 36.97084373216053,
+                "v15_mAh": 36.61748107586031
+              },
+              {
+                "id": "Sim_satellite_battery-8",
+                "source_mAh": 84.23407661453055,
+                "ridge_mAh": 35.28072861708508,
+                "offset_mAh": 35.08944230772074,
+                "RBF-X_mAh": 37.17250557944677,
+                "v15_mAh": 37.469434364638474
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "source_mAh": 100.85807675789346,
+            "n_unique_test_cells": 8,
+            "n_acquisitions": 5,
+            "capacity_truth_labels_per_acquisition": 60,
+            "ridge_mAh": 46.92004529559884,
+            "n_negative_vs_source_ridge": 0,
+            "offset_mAh": 47.39661392279129,
+            "n_negative_vs_source_offset": 0,
+            "RBF-X_mAh": 49.424408744604506,
+            "n_negative_vs_source_RBF-X": 0,
+            "v15_mAh": 49.68738588380053,
+            "n_negative_vs_source_v15": 0,
+            "mean_lambda_across_test_evaluations": 0.9893905003233807,
+            "mean_abs_disagreement_mAh": 4.715768109992544,
+            "n_test_cell_better_than_v14": 2,
+            "n_test_cell_worse_than_v14": 6,
+            "per_cell": [
+              {
+                "id": "Sim_satellite_battery-1",
+                "source_mAh": 107.75097246460408,
+                "ridge_mAh": 46.11751087345326,
+                "offset_mAh": 47.13682236597224,
+                "RBF-X_mAh": 46.76567920642648,
+                "v15_mAh": 47.387410634441345
+              },
+              {
+                "id": "Sim_satellite_battery-2",
+                "source_mAh": 129.5040306911453,
+                "ridge_mAh": 65.39126787463698,
+                "offset_mAh": 67.04415915592595,
+                "RBF-X_mAh": 73.94330297061212,
+                "v15_mAh": 74.83175223180646
+              },
+              {
+                "id": "Sim_satellite_battery-3",
+                "source_mAh": 84.31648957199813,
+                "ridge_mAh": 29.16099590062169,
+                "offset_mAh": 29.132769247013986,
+                "RBF-X_mAh": 28.100425292383964,
+                "v15_mAh": 28.32872124684128
+              },
+              {
+                "id": "Sim_satellite_battery-4",
+                "source_mAh": 86.20061121569293,
+                "ridge_mAh": 39.716653988902195,
+                "offset_mAh": 40.634594838906104,
+                "RBF-X_mAh": 36.858618667343194,
+                "v15_mAh": 37.21970165550903
+              },
+              {
+                "id": "Sim_satellite_battery-5",
+                "source_mAh": 65.77157587174409,
+                "ridge_mAh": 24.137250811135086,
+                "offset_mAh": 23.412575566583914,
+                "RBF-X_mAh": 19.17376508692397,
+                "v15_mAh": 19.04861695463414
+              },
+              {
+                "id": "Sim_satellite_battery-6",
+                "source_mAh": 171.3849686687001,
+                "ridge_mAh": 99.56168160022843,
+                "offset_mAh": 100.78659477435757,
+                "RBF-X_mAh": 122.1575410109585,
+                "v15_mAh": 122.20688399039064
+              },
+              {
+                "id": "Sim_satellite_battery-7",
+                "source_mAh": 77.70188896473249,
+                "ridge_mAh": 36.28109623247909,
+                "offset_mAh": 36.26662860384521,
+                "RBF-X_mAh": 31.32607567503537,
+                "v15_mAh": 31.433646328802826
+              },
+              {
+                "id": "Sim_satellite_battery-8",
+                "source_mAh": 84.23407661453055,
+                "ridge_mAh": 34.993905083333985,
+                "offset_mAh": 34.75876682972537,
+                "RBF-X_mAh": 37.06986204715249,
+                "v15_mAh": 37.0423540279785
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "caveats": [
+    "Intercell disagreement is not a calibrated uncertainty interval",
+    "Same previously explored 47 target batteries, not independent confirmation",
+    "Random five selections per heldout cell are not five independent target cells",
+    "N10 label prefix selection requires first 12 unlabeled target cycles"
+  ]
+}
