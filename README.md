@@ -1,5 +1,16 @@
 # Physics-Informed Battery PHM
 
+## v13 选择性容量校准的理想性能空间诊断（2026-10-12）
+
+**正式执行完成；仅使用v12已归档测试电芯全寿命MAE进行事后Oracle诊断，没有训练/验证新模型。** N30四分位标注(两电芯各30容量标签)下，3C的15块电芯中9块更适合Source-only，6块更适合Ridge：Source-only **35.110**，Ridge **42.472**，LOCO **41.039**，事后理想折级二选一 **31.531**，逐电芯理想二选一 **27.667** mAh。五工况宏平均Ridge **41.081**，事后电芯Oracle **38.089** mAh。
+
+**不可混淆：Oracle使用了测试电芯真实容量误差，绝非可部署算法或有效模型成绩，更不代表通过独立验证。** 此诊断显示3C存在选择性校准的潜在空间，却没有证明合法无标签信号能识别校准有害的电芯。请勿在相同47目标电芯反复搜索后验gate并声称创新胜出。
+
+[正式v13科研报告](reports/v13_calibration_oracle_identifiability_20261012.md) | [完整折和逐电芯诊断JSON](results/v13/oracle_diagnostics.json) | [代码](experiments/rw_multitarget/oracle_diagnostic_v13.py) | [事先本轮协议](docs/V13_ORACLE_DIAGNOSTIC_PROTOCOL_20261012.md) | [自动化验收](https://github.com/Fan-1-boop/battery-physics-informed-phm/actions/runs/38216130638)
+
+---
+
+
 ## v12 交叉可靠性控制实验：实际运行完成，结果为负（2026-10-12）
 
 在v10原样标签和测试折、同一RW8源Ridge下，只增加两标注目标电芯的LOCO交叉验证残差收缩强度。GitHub Actions从原始PINN4SOH固定commit重跑**55电芯**，7+8+5+7共**27项测试PASS**，逐值校验历史v10 **1692个容量误差全部通过**（最大差5.81e-7mAh）。
