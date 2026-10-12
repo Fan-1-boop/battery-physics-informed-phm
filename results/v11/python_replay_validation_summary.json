@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-12",
+  "status": "PASS",
+  "audit_type": "independent Python raw-CSV replay of archived 55-cell v8/v9/v10 experiments",
+  "not_independent_external_validation": true,
+  "run_url": "https://github.com/Fan-1-boop/battery-physics-informed-phm/actions/runs/38198412254",
+  "run_id": 38198412254,
+  "run_commit": "1aaa1a10e6a063789c23d764d176c66913fc9547",
+  "artifact_id": 11724611867,
+  "artifact_name": "rw-python-replay-audit",
+  "original_commit": "cc3cc5053caf38f04e0665f7f88cb109144d035e",
+  "n_source_cells": 8,
+  "n_target_cells": 47,
+  "n_replay_checks": 7186,
+  "n_failed_checks": 0,
+  "unit_tests": {
+    "v8": 7,
+    "v9": 8,
+    "v10": 5,
+    "total": 20,
+    "passed": 20
+  },
+  "max_per_cell_mae_diff_mAh": 6.630410211982962e-7,
+  "per_cell_mae_tolerance_mAh": 0.000001,
+  "source_weight_tolerance": 1e-7,
+  "input_features": [
+    0,
+    4,
+    5,
+    8,
+    12,
+    13
+  ],
+  "per_domain_min_max_cycle_count": {
+    "2C": [
+      362,
+      388
+    ],
+    "3C": [
+      121,
+      313
+    ],
+    "R2.5": [
+      503,
+      651
+    ],
+    "R3": [
+      473,
+      646
+    ],
+    "Sim_satellite": [
+      669,
+      942
+    ]
+  },
+  "known_fixed_issues": [
+    "v9 import path used parents[2] instead of parents[1]",
+    "v10 3C archived JSON uses repeat while remaining four domains use rep"
+  ],
+  "original_result_files_untouched": true
+}
