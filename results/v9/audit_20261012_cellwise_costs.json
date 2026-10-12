@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-12",
+  "subject": "v9 result verification, NO additional model training",
+  "methods": "random versus pred_quartiles, with five-domain macro average",
+  "source_files": [
+    {
+      "path": "results/v9/rw_to_2C_selection.json",
+      "github_blob_sha": "eaf78779b55a1f71969b20d8fe56fb287a84a1fd"
+    },
+    {
+      "path": "results/v9/rw_to_3C_selection.json",
+      "github_blob_sha": "888c6dc2213ead26210d9a81a06385f2afd6cdc2"
+    },
+    {
+      "path": "results/v9/rw_to_R2_5_selection.json",
+      "github_blob_sha": "31904c92f94b2f8a93d6e1d23f0d8f6ef1430d7a"
+    },
+    {
+      "path": "results/v9/rw_to_R3_selection.json",
+      "github_blob_sha": "9c808e5ad823b2e88a00acf8b2de71daf475e288"
+    },
+    {
+      "path": "results/v9/rw_to_Sim_satellite_selection.json",
+      "github_blob_sha": "9d697b36d5ec562d762c6dafed5327796300779d"
+    }
+  ],
+  "test_cell_count": 47,
+  "per_domain": [
+    {
+      "domain": "2C",
+      "n_cells": 8,
+      "cost_mean_random": 186.56,
+      "cost_mean_quartiles": 186.2,
+      "cost_min_quartiles": 185,
+      "cost_max_quartiles": 188,
+      "wins_cells": 7,
+      "delta_mean": 1.025275414915236,
+      "delta_min": -1.4948674931657564,
+      "delta_max": 2.5852952746682902
+    },
+    {
+      "domain": "3C",
+      "n_cells": 15,
+      "cost_mean_random": 120.44,
+      "cost_mean_quartiles": 116.2,
+      "cost_min_quartiles": 111,
+      "cost_max_quartiles": 130,
+      "wins_cells": 9,
+      "delta_mean": 0.5696216811746434,
+      "delta_min": -24.84295057622549,
+      "delta_max": 34.3064764575937
+    },
+    {
+      "domain": "R2_5",
+      "n_cells": 8,
+      "cost_mean_random": 275.24,
+      "cost_mean_quartiles": 261.6,
+      "cost_min_quartiles": 256,
+      "cost_max_quartiles": 267,
+      "wins_cells": 2,
+      "delta_mean": 0.28695550349284726,
+      "delta_min": -4.060332317478917,
+      "delta_max": 6.993139877063911
+    },
+    {
+      "domain": "R3",
+      "n_cells": 8,
+      "cost_mean_random": 282.68,
+      "cost_mean_quartiles": 292.8,
+      "cost_min_quartiles": 278,
+      "cost_max_quartiles": 305,
+      "wins_cells": 4,
+      "delta_mean": -1.3403316157642537,
+      "delta_min": -12.621624686389623,
+      "delta_max": 6.383830434928747
+    },
+    {
+      "domain": "Sim_satellite",
+      "n_cells": 8,
+      "cost_mean_random": 390.12,
+      "cost_mean_quartiles": 378.2,
+      "cost_min_quartiles": 342,
+      "cost_max_quartiles": 406,
+      "wins_cells": 4,
+      "delta_mean": 1.0422993096522735,
+      "delta_min": -12.617300430236504,
+      "delta_max": 15.285974962353016
+    }
+  ],
+  "macro_random_mAh": 41.73348602225905,
+  "macro_pred_quartiles_mAh": 41.4167219635649,
+  "macro_improvement_mAh": 0.31676405869414737,
+  "bootstrap_note": "10,000 seeded resamples of battery-level paired differences, resample target batteries within each domain; accounts for no shared training-pool correlations, descriptive only; not confirmatory",
+  "paired_bootstrap_ci95": [
+    -1.978847988134167,
+    2.676583767066789
+  ],
+  "no_label_leakage_issues": [],
+  "warning": "Fraction=25% of full battery lifetime is retrospective budgeting, not feasible online stopping information; 2 labeled batteries can still require >100 label cycles"
+}
