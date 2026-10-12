@@ -168,7 +168,7 @@ def run(cache: Path):
         # per-heldout-cell MAE. Fully refit every correction from raw labels.
         fresh10 = v10.evaluate_domain(cs, domain, scaler, model, budgets=(10,20,30),
                                        random_repeats=5)
-        old10_map = {(r["fold"],r["policy"],r["rep"],r["budget"]):r
+        old10_map = {(r["fold"],r["policy"],r.get("rep", r.get("repeat")),r["budget"]):r
                      for r in old10["records"]}
         for r in fresh10["records"]:
             if r["policy"] == "source":
