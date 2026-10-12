@@ -1,5 +1,28 @@
 # Physics-Informed Battery PHM
 
+## 最新 v9 数值核验（2026-10-12）
+
+**这是先前 v9 全五目标实验的归档审计，不是新训练。** RW8 固定源模型 + 2 个目标训练电芯各自前25%容量标签 + 相同残差 Ridge；五工况宏平均 SOH 不适用，指标为容量 MAE mAh：
+
+| 选样 | 5工况宏平均容量 MAE |
+|---|---:|
+| Random | 41.73 mAh |
+| Predicted capacity 25%/75% quartiles | **41.42 mAh** |
+| Predicted capacity extreme values | 44.39 mAh |
+| Predicted capacity 2-medoids | 43.02 mAh |
+| Six-feature medoids | 43.84 mAh |
+| RW leave-one-battery-out uncertainty-top2 | 49.42 mAh |
+
+预测四分位对随机的改善约 **0.32 mAh**，按47目标电芯分层bootstrap 95%区间约 **[-1.98,+2.68] mAh**，**不足以证明选样策略有稳定显著优势**。更重要的是，每次标注的2个电芯合计可能需要约116–378个循环容量标签，不能表述为“只使用两条标签”。
+
+- [v9 审计报告与文献定位](reports/v9_verified_summary_20261012.md)
+- [逐电芯配对及标签成本核验](results/v9/audit_20261012_cellwise_costs.json)
+- [v9 实际执行的选样脚本](experiments/rw_selection/benchmark.py)
+- [v9 事后协议记录（明确非预注册）](docs/V9_SELECTION_PREDECLARED_PROTOCOL.md)
+
+下一阶段减少方法堆叠，只在固定**前10/20/30次循环**的实际标注预算下比较随机与预测四分位选样，并分离均值偏差校准和残差Ridge。
+
+
 ## v9 — RW→五工况低标签电芯选样（2026-10-08）
 
 **真实 55 电芯探索实验已完成；8 种选样策略共享 v8 的 RW8 源模型、相同电芯级五折及 2 个标注电芯前25%循环标签预算。**
