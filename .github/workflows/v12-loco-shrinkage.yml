@@ -1,0 +1,50 @@
+name: v12 LOCO shrinkage XJTU experiment
+
+on:
+  push:
+    branches: [research/v12-loco-shrinkage]
+    paths:
+      - 'docs/V12_LOCO_SHRINKAGE_DEVELOPMENT_PROTOCOL.md'
+      - 'experiments/rw_multitarget/reliability_v12.py'
+      - 'tests/test_reliability_v12.py'
+      - '.github/workflows/v12-loco-shrinkage.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  full-experiment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy==2.4.6
+      - name: v8-v12 offline unit tests
+        run: |
+          python -m unittest discover -s tests -p 'test_rw_multitarget_v8.py' -v
+          python -m unittest discover -s tests -p 'test_rw_selection_v9.py' -v
+          python -m unittest discover -s tests -p 'test_fixed_budget_v10.py' -v
+          python -m unittest discover -s tests -p 'test_reliability_v12.py' -v
+      - name: Execute 55-cell v12 and verify v10 archive parity
+        run: python experiments/rw_multitarget/reliability_v12.py --outdir results/v12
+      - name: Save complete v12 per-cell outputs as artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v12-full-55-cell-results
+          path: results/v12/
+          if-no-files-found: ignore
+      - name: Commit experiment results to research branch
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/v12/*.json
+          git diff --cached --quiet || git commit -m "results: archive executed v12 LOCO shrinkage full-cell experiment"
+          git push origin HEAD:refs/heads/research/v12-loco-shrinkage
