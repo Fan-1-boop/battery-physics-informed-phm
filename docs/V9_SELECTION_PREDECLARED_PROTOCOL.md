@@ -1,26 +1,31 @@
-# v9 选样方法冻结协议 — 2026-10-12
+# v9 选样方案追溯审计（非预注册文件）
 
-**研究问题：** RW 源域 8 电芯固定，五个目标域不变，2 个目标域电芯各自前 25% 容量标签，Ridge 残差校准固定。只比较从未标注训练电芯候选池选哪两块。严禁使用外层测试电芯信息选样、训练或调参。
+**审计日期：2026-10-12。重要说明：v9 数值结果已经在此文件创建前存在。** 本文件是事后协议归档，不构成预注册；不能据此声称候选方法在测试结果揭晓前冻结。
 
-**数据：** PINN4SOH 作者 XJTU 逐循环 16 充电统计特征 + 放电容量；只用列(0,4,5,8,12,13)，前 12 循环无标签特征；RW 标准化和预测器与 v8 `rw_source8_model.json` 完全相同；5-fold 测试电芯 ID、随机5次种子不变。
+## 固定实验条件
 
-**同协议方法（先冻结，再运行所有工况，不按目标测试效果择方法）：**
-1. `source`：未迁移。
-2. `random`：v8 固定种子5次随机标注。
-3. `centroid_farthest`：v8 中心最近电芯 + 最远点。
-4. `pred_extremes`：每块未标注候选电芯前12循环的**源模型预测容量均值**最小、最大的两块。
-5. `pred_medoids`：在同一维的源预测容量均值上选择两块，使整个候选池至最近所选样本的**平方距离之和**最小；全部配对枚举。
-6. `feature_kmedoids`：六维前12循环标准化充电统计特征的**两个 medoids**，平方距离之和最小；全部配对枚举。
-7. `feature_kcenter`：两个样本使所有未标注候选电芯至最近所选样本的**最大平方距离**最小；全部配对枚举。灵感：Sener & Savarese, ICLR 2018 core-set active learning；**不是原代码复现**。
-8. `kernel_herding`：采用 Gaussian RBF kernel 及在当前候选池上确定的 median pairwise squared distance；枚举大小为2的子集，使其与候选池的 `MMD^2` 最小（有放回形式 empirical kernel mean embedding）；灵感：核均值匹配/核 herd 思想，**不是原论文代码复现**。
-9. 同时对每种标注策略在**相同的选择结果**下计算 `residual Ridge(alpha=10)` 和 `mean offset`，用以分离“选样优势”与“校准优势”。
+- 8 个 RW 电芯训练同一 Ridge 源模型，47 个目标电芯，5 种目标工况：2C、3C、R2.5、R3、Sim_satellite。
+- v8 电芯级五折，RW 训练均值和标准差归一化，输入仅使用公开 XJTU 的 6 项逐循环充电统计特征。
+- 目标训练候选池中每次只选 2 个电芯；每个被选电芯使用前 25% 全寿命容量标签，Ridge 残差 alpha=10。
+- 未标注选样仅使用**候选池**前 12 循环特征及 RW 源预测，测试电芯特征/标签不得参与。
+- 5 次随机选样；确定性方法每折只有 1 次选择；先电芯等权，再五目标工况等权汇总，不能把重复选样视为独立样本。
+- 输入不是 Che 2025 的随机局部放电电压 V(Q)，不是真实电极 latent；目标是放电容量 mAh 而不是 SOH 百分点。
 
-**注意：** 所有策略只可以读取目标训练候选电芯前12循环**可测充电特征**和源预测容量；不能读取候选电芯的真实放电容量后再决定选样。真实容量只用于被选中电芯的前25%循环校准。外层测试电芯特征和标签不参与选样。
+## 已有真实 v9 结果中执行的选样方法
 
-**主结果：** 每个测试电芯先算全寿命平均绝对容量误差（mAh），再逐目标工况平均；报告5目标等权均值、每个工况排序、与随机的配对差值。随机的5次重复共享目标电芯，不能当作5倍独立测试。首轮为探索性方法筛选，后续需在**冻结一个方法**后做独立复验。
+真实方法包括：random、centroid+farthest (v8)、predicted capacity extremes、predicted capacity quartiles (25%/75%)、1D predicted capacity k-medoids、6D feature k-medoids、RW leave-one-battery-out ensemble disagreement top2、uncertainty-weighted feature medoids。此外有早期源域 novelty extremes 与 prediction median+extreme 的 screening。
 
-**文献界限：**
-- Lu et al., *Nature Communications* 2023: https://www.nature.com/articles/s41467-023-38458-w （源域样本分布调整，不是目标电芯主动选样的直接方法）
-- Sener & Savarese, ICLR 2018: https://openreview.net/forum?id=H1aIuk-RW （coreset k-center，有公开代码，但任务为图像分类）
-- Severson / active learning and physics-guided Discovery Learning, *Nature* 2026: https://www.nature.com/articles/s41586-025-09951-7 （极少试验/主动学习主题，不代表当前选样的相同数据与任务）
-- 2024 *npj Materials Sustainability* battery probabilistic ML review: https://www.nature.com/articles/s44296-024-00011-1 （随机与分层 bagging、训练样本分布讨论）
+数值见 `results/v9/summary_five_domains_and_paired_bootstrap.json` 和 `results/v9/summary_five_domain_selection.csv`。预测容量 quartiles 的五目标宏平均为 41.417 mAh，random 为 41.733 mAh，提升 0.317 mAh，47-cell 配对探索性 bootstrap CI 包含 0。**不能宣称统计显著优于随机或相对于外部文献 SOTA。**
+
+`feature_kcenter` 和 `kernel_herding` 曾在 2026-10-12 的方法设计说明里被列为候选，但**没有在这里找到五目标实测或逐值验证**，不属于 v9 已完成成果，也不混进结果表。若未来尝试，必须另立 v10 协议，在测试前冻结，而不是追加方法追求同一数据集上最优。
+
+## 文献关系
+
+- Lu et al., *Nature Communications* 2023: https://doi.org/10.1038/s41467-023-38458-w （源域分布修剪和集成，非目标电芯选样直接复现）。
+- Sener & Savarese, ICLR 2018: https://openreview.net/forum?id=H1aIuk-RW （k-center core-set 思想，非电池论文，且 v9 尚未实测 k-center）。
+- *Nature* 2026 Discovery Learning: https://www.nature.com/articles/s41586-025-09951-7 （active learning + physics-guided，非本实验模型的直接复现）。
+- 2024 *npj Materials Sustainability* battery probabilistic review: https://www.nature.com/articles/s44296-024-00011-1 （随机/分层采样和电池概率学习背景）。
+
+## 复现与独立性
+
+首轮探索之后，必须固定一个策略并在独立数据或预先隔离测试集上确认；进一步在原 47 电芯同一五折反复筛选算法会导致 benchmark 过拟合。GitHub 脚本 `experiments/rw_selection/benchmark.py` 提供实验定义，原作者数据需按固定 commit 下载；历史计算产生的 per-cell JSON 需做单独复算审计。
