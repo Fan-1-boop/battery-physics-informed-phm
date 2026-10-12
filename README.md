@@ -1,5 +1,16 @@
 # Physics-Informed Battery PHM
 
+## v12 交叉可靠性控制实验：实际运行完成，结果为负（2026-10-12）
+
+在v10原样标签和测试折、同一RW8源Ridge下，只增加两标注目标电芯的LOCO交叉验证残差收缩强度。GitHub Actions从原始PINN4SOH固定commit重跑**55电芯**，7+8+5+7共**27项测试PASS**，逐值校验历史v10 **1692个容量误差全部通过**（最大差5.81e-7mAh）。
+
+五域宏MAE（mAh）N10/N20/N30：Pred-quartiles+原Ridge **48.605/43.969/41.081**，Pred-quartiles+LOCO **52.680/46.542/42.447**；新法三档全失败。N30的3C从42.472改善至41.039，但仍差于RW源模型35.110，且**9/15 3C电芯继续负迁移**。不把该消融包装成创新成功，避免在同一47目标电芯反复后验搜索lambda公式。
+
+[完整报告](reports/v12_loco_shrinkage_negative_result_20261012.md) | [逐电芯结果与lambda](results/v12/summary_five_domains.json) | [v12方法性代码](experiments/rw_multitarget/reliability_v12.py) | [文献—创新证据边界](docs/INNOVATION_EVIDENCE_BOUNDARY_20261012.md) | [实际运行](https://github.com/Fan-1-boop/battery-physics-informed-phm/actions/runs/38202639992)
+
+---
+
+
 ## v11 原始55电芯独立 Python 复算验收（2026-10-12）
 
 **PASS：** GitHub Actions 下载固定作者commit的55份原始CSV，在全新Python 3.11环境重训RW8源Ridge，并逐折重算v8/v9/v10的原有实验，**7186项一致性检查无失败、最大逐电芯MAE差6.63e-7mAh**，v8/v9/v10 20项单元测试全部通过。修复了v9导入路径的可移植性bug（只改路径不改公式）；兼容v10 3C历史记录的`repeat`字段。

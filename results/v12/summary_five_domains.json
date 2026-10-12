@@ -1,0 +1,2959 @@
+{
+  "date": "2026-10-12",
+  "status": "executed_development_set_not_external_confirmation",
+  "source_commit": "cc3cc5053caf38f04e0665f7f88cb109144d035e",
+  "v12_protocol": "docs/V12_LOCO_SHRINKAGE_DEVELOPMENT_PROTOCOL.md",
+  "source_weights_retrained": [
+    1.8621477617032538,
+    0.04078796752596318,
+    0.02097739111478916,
+    0.00721861043414995,
+    0.02518759311987326,
+    -0.021232537634058905,
+    -0.02910479169128996
+  ],
+  "budgets": [
+    10,
+    20,
+    30
+  ],
+  "policies": [
+    "random",
+    "pred_quartiles"
+  ],
+  "random_repeats": 5,
+  "source_cells": 8,
+  "target_cells": 47,
+  "n_source_and_target_cells": 55,
+  "target_fold_provenance": "v8 frozen 5-fold IDs",
+  "lambda_cv": "cell-equal-weighted two-battery LOCO SSE minimizer clipped [0,1]",
+  "sum_archive_parity_checks": 1692,
+  "max_archive_mae_abs_diff_mAh": 5.810367440517439e-07,
+  "macro": {
+    "10": {
+      "random": {
+        "five_domain_macro_mAh": {
+          "ridge": 49.72314112932681,
+          "offset": 50.685794010449044,
+          "shrink": 52.99414556886014
+        },
+        "source_only_macro_mAh": 73.76434500216817,
+        "n_test_cells_negative_vs_source": {
+          "ridge": 11,
+          "offset": 11,
+          "shrink": 9
+        },
+        "mean_lambda_per_acquisition": 0.707637216291972,
+        "paired_ridge_minus_shrink_bootstrap": {
+          "effect_old_minus_new_mAh": -3.271004439533332,
+          "exploratory_ci95_mAh": [
+            -4.970858602643014,
+            -1.427155777199371
+          ],
+          "n_resamples": 10000,
+          "note": "exploratory target-cell stratified paired bootstrap; shared source and training folds dependent, prior post-selection on same data"
+        }
+      },
+      "pred_quartiles": {
+        "five_domain_macro_mAh": {
+          "ridge": 48.60505334744248,
+          "offset": 50.35141971127064,
+          "shrink": 52.679978190852715
+        },
+        "source_only_macro_mAh": 73.76434500216817,
+        "n_test_cells_negative_vs_source": {
+          "ridge": 9,
+          "offset": 9,
+          "shrink": 8
+        },
+        "mean_lambda_per_acquisition": 0.7436345387896466,
+        "paired_ridge_minus_shrink_bootstrap": {
+          "effect_old_minus_new_mAh": -4.074924843410236,
+          "exploratory_ci95_mAh": [
+            -5.691675170124441,
+            -2.3444081991186723
+          ],
+          "n_resamples": 10000,
+          "note": "exploratory target-cell stratified paired bootstrap; shared source and training folds dependent, prior post-selection on same data"
+        }
+      }
+    },
+    "20": {
+      "random": {
+        "five_domain_macro_mAh": {
+          "ridge": 44.49767028502952,
+          "offset": 45.097472107063496,
+          "shrink": 46.621903742721464
+        },
+        "source_only_macro_mAh": 73.76434500216817,
+        "n_test_cells_negative_vs_source": {
+          "ridge": 9,
+          "offset": 9,
+          "shrink": 9
+        },
+        "mean_lambda_per_acquisition": 0.8240134504193202,
+        "paired_ridge_minus_shrink_bootstrap": {
+          "effect_old_minus_new_mAh": -2.1242334576919335,
+          "exploratory_ci95_mAh": [
+            -3.531482515933633,
+            -0.5295397452278825
+          ],
+          "n_resamples": 10000,
+          "note": "exploratory target-cell stratified paired bootstrap; shared source and training folds dependent, prior post-selection on same data"
+        }
+      },
+      "pred_quartiles": {
+        "five_domain_macro_mAh": {
+          "ridge": 43.96900597652785,
+          "offset": 45.252501689067216,
+          "shrink": 46.54212726326735
+        },
+        "source_only_macro_mAh": 73.76434500216817,
+        "n_test_cells_negative_vs_source": {
+          "ridge": 9,
+          "offset": 9,
+          "shrink": 9
+        },
+        "mean_lambda_per_acquisition": 0.8814038889734317,
+        "paired_ridge_minus_shrink_bootstrap": {
+          "effect_old_minus_new_mAh": -2.573121286739502,
+          "exploratory_ci95_mAh": [
+            -3.814362303007208,
+            -1.2226303238662581
+          ],
+          "n_resamples": 10000,
+          "note": "exploratory target-cell stratified paired bootstrap; shared source and training folds dependent, prior post-selection on same data"
+        }
+      }
+    },
+    "30": {
+      "random": {
+        "five_domain_macro_mAh": {
+          "ridge": 41.757984987875986,
+          "offset": 42.30115499333353,
+          "shrink": 42.899998357025204
+        },
+        "source_only_macro_mAh": 73.76434500216817,
+        "n_test_cells_negative_vs_source": {
+          "ridge": 10,
+          "offset": 10,
+          "shrink": 9
+        },
+        "mean_lambda_per_acquisition": 0.8818404177814898,
+        "paired_ridge_minus_shrink_bootstrap": {
+          "effect_old_minus_new_mAh": -1.1420133691492205,
+          "exploratory_ci95_mAh": [
+            -2.4208015173197595,
+            0.29843454092415483
+          ],
+          "n_resamples": 10000,
+          "note": "exploratory target-cell stratified paired bootstrap; shared source and training folds dependent, prior post-selection on same data"
+        }
+      },
+      "pred_quartiles": {
+        "five_domain_macro_mAh": {
+          "ridge": 41.08097349075691,
+          "offset": 42.21469558106936,
+          "shrink": 42.4472745672613
+        },
+        "source_only_macro_mAh": 73.76434500216817,
+        "n_test_cells_negative_vs_source": {
+          "ridge": 10,
+          "offset": 10,
+          "shrink": 9
+        },
+        "mean_lambda_per_acquisition": 0.9252184026214065,
+        "paired_ridge_minus_shrink_bootstrap": {
+          "effect_old_minus_new_mAh": -1.3663010765043873,
+          "exploratory_ci95_mAh": [
+            -2.3634623730659645,
+            -0.23913225401039015
+          ],
+          "n_resamples": 10000,
+          "note": "exploratory target-cell stratified paired bootstrap; shared source and training folds dependent, prior post-selection on same data"
+        }
+      }
+    }
+  },
+  "by_domain": {
+    "2C": {
+      "n_target_cells": 8,
+      "summary": {
+        "10": {
+          "random": {
+            "methods": {
+              "ridge": 39.88131656853857,
+              "offset": 40.13391004841113,
+              "shrink": 45.882796620732236
+            },
+            "source_only_mAh": 60.35023986520309,
+            "mean_lambda": 0.6683304466338528,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.12,
+            "min_lambda": 0.049724346045501695,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 25,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 0,
+            "n_cells_worsened_shrink_vs_ridge": 8,
+            "paired_per_cell": [
+              {
+                "id": "2C_battery-1",
+                "source": 55.02157552662031,
+                "ridge": 26.71213494943921,
+                "offset": 26.759249804700325,
+                "shrink": 31.06025382285814
+              },
+              {
+                "id": "2C_battery-2",
+                "source": 51.13093832334862,
+                "ridge": 36.23245294225681,
+                "offset": 36.72979306914025,
+                "shrink": 44.7874832604481
+              },
+              {
+                "id": "2C_battery-3",
+                "source": 53.35036427525038,
+                "ridge": 29.598664069003366,
+                "offset": 29.6383735620713,
+                "shrink": 33.07928350051377
+              },
+              {
+                "id": "2C_battery-4",
+                "source": 63.9443798099459,
+                "ridge": 45.226375738731505,
+                "offset": 45.882140588319,
+                "shrink": 55.492893401772974
+              },
+              {
+                "id": "2C_battery-5",
+                "source": 73.04973696446437,
+                "ridge": 50.268564143020114,
+                "offset": 50.3690060754992,
+                "shrink": 56.65357619178735
+              },
+              {
+                "id": "2C_battery-6",
+                "source": 76.66143586805853,
+                "ridge": 59.575933986170206,
+                "offset": 60.02427140632288,
+                "shrink": 68.14449696897016
+              },
+              {
+                "id": "2C_battery-7",
+                "source": 64.46193191270588,
+                "ridge": 46.77912848075043,
+                "offset": 46.974394237569484,
+                "shrink": 48.22443372516213
+              },
+              {
+                "id": "2C_battery-8",
+                "source": 45.18155624123075,
+                "ridge": 24.657278238936954,
+                "offset": 24.69405164366662,
+                "shrink": 29.619952094345287
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "methods": {
+              "ridge": 39.75041597351531,
+              "offset": 39.93793341106792,
+              "shrink": 47.74945574339302
+            },
+            "source_only_mAh": 60.35023986520309,
+            "mean_lambda": 0.644796686179712,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.2,
+            "min_lambda": 0.3858318434055564,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 5,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 0,
+            "n_cells_worsened_shrink_vs_ridge": 7,
+            "paired_per_cell": [
+              {
+                "id": "2C_battery-1",
+                "source": 55.02157552662031,
+                "ridge": 30.992947698941776,
+                "offset": 31.03233922394707,
+                "shrink": 37.02476102034768
+              },
+              {
+                "id": "2C_battery-2",
+                "source": 51.13093832334862,
+                "ridge": 34.027794025781034,
+                "offset": 34.598768116696384,
+                "shrink": 43.83053375924858
+              },
+              {
+                "id": "2C_battery-3",
+                "source": 53.35036427525038,
+                "ridge": 32.84011539958752,
+                "offset": 32.74065898113611,
+                "shrink": 37.67861362424464
+              },
+              {
+                "id": "2C_battery-4",
+                "source": 63.9443798099459,
+                "ridge": 43.419048749947045,
+                "offset": 43.79859115010656,
+                "shrink": 55.65968438546324
+              },
+              {
+                "id": "2C_battery-5",
+                "source": 73.04973696446437,
+                "ridge": 50.5995750883394,
+                "offset": 50.764441260018835,
+                "shrink": 64.19082766933396
+              },
+              {
+                "id": "2C_battery-6",
+                "source": 76.66143586805853,
+                "ridge": 58.719670735945535,
+                "offset": 58.923689910807255,
+                "shrink": 58.719670735945535
+              },
+              {
+                "id": "2C_battery-7",
+                "source": 64.46193191270588,
+                "ridge": 43.05399226159221,
+                "offset": 43.0149855710001,
+                "shrink": 48.49255823136143
+              },
+              {
+                "id": "2C_battery-8",
+                "source": 45.18155624123075,
+                "ridge": 24.350183827987934,
+                "offset": 24.629993074831024,
+                "shrink": 36.3989965211991
+              }
+            ]
+          }
+        },
+        "20": {
+          "random": {
+            "methods": {
+              "ridge": 33.88136939690164,
+              "offset": 34.30068054196359,
+              "shrink": 38.43886060663222
+            },
+            "source_only_mAh": 60.35023986520309,
+            "mean_lambda": 0.7979475273166854,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.12,
+            "min_lambda": 0.2565095486011953,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 25,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 0,
+            "n_cells_worsened_shrink_vs_ridge": 8,
+            "paired_per_cell": [
+              {
+                "id": "2C_battery-1",
+                "source": 55.02157552662031,
+                "ridge": 21.04366530712733,
+                "offset": 21.344306585591532,
+                "shrink": 23.586542832827888
+              },
+              {
+                "id": "2C_battery-2",
+                "source": 51.13093832334862,
+                "ridge": 32.505657474440525,
+                "offset": 33.24247576698521,
+                "shrink": 40.36404264880589
+              },
+              {
+                "id": "2C_battery-3",
+                "source": 53.35036427525038,
+                "ridge": 25.644333207541216,
+                "offset": 26.02026929018321,
+                "shrink": 27.454801500651392
+              },
+              {
+                "id": "2C_battery-4",
+                "source": 63.9443798099459,
+                "ridge": 39.1386820390147,
+                "offset": 39.87755848534427,
+                "shrink": 49.2903635580689
+              },
+              {
+                "id": "2C_battery-5",
+                "source": 73.04973696446437,
+                "ridge": 42.223705932156506,
+                "offset": 42.350268549327026,
+                "shrink": 46.33573216336189
+              },
+              {
+                "id": "2C_battery-6",
+                "source": 76.66143586805853,
+                "ridge": 50.640814110886275,
+                "offset": 51.159802917475545,
+                "shrink": 57.99768550237394
+              },
+              {
+                "id": "2C_battery-7",
+                "source": 64.46193191270588,
+                "ridge": 39.90441521245343,
+                "offset": 40.27825240900627,
+                "shrink": 40.65094669649764
+              },
+              {
+                "id": "2C_battery-8",
+                "source": 45.18155624123075,
+                "ridge": 19.949681891593148,
+                "offset": 20.13251033179564,
+                "shrink": 21.830769950470177
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "methods": {
+              "ridge": 33.18769254894018,
+              "offset": 33.51179582327863,
+              "shrink": 37.83989339943856
+            },
+            "source_only_mAh": 60.35023986520309,
+            "mean_lambda": 0.8196523833340741,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.2,
+            "min_lambda": 0.6872492538712224,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 5,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 0,
+            "n_cells_worsened_shrink_vs_ridge": 7,
+            "paired_per_cell": [
+              {
+                "id": "2C_battery-1",
+                "source": 55.02157552662031,
+                "ridge": 24.225459734042083,
+                "offset": 24.365096943721362,
+                "shrink": 27.719582320551375
+              },
+              {
+                "id": "2C_battery-2",
+                "source": 51.13093832334862,
+                "ridge": 29.804408664796846,
+                "offset": 30.773378531639647,
+                "shrink": 34.63819457125171
+              },
+              {
+                "id": "2C_battery-3",
+                "source": 53.35036427525038,
+                "ridge": 27.793272728574852,
+                "offset": 27.887845743544833,
+                "shrink": 30.27606011881117
+              },
+              {
+                "id": "2C_battery-4",
+                "source": 63.9443798099459,
+                "ridge": 36.32090527147104,
+                "offset": 36.797553993767316,
+                "shrink": 44.343117448846364
+              },
+              {
+                "id": "2C_battery-5",
+                "source": 73.04973696446437,
+                "ridge": 42.48133884360878,
+                "offset": 42.63209259184885,
+                "shrink": 51.61670166006042
+              },
+              {
+                "id": "2C_battery-6",
+                "source": 76.66143586805853,
+                "ridge": 48.80631877465243,
+                "offset": 49.04497441317611,
+                "shrink": 48.80631877465243
+              },
+              {
+                "id": "2C_battery-7",
+                "source": 64.46193191270588,
+                "ridge": 36.797651133724926,
+                "offset": 36.954839448602016,
+                "shrink": 40.00425512881622
+              },
+              {
+                "id": "2C_battery-8",
+                "source": 45.18155624123075,
+                "ridge": 19.272185240650476,
+                "offset": 19.638584919928924,
+                "shrink": 25.31491717251879
+              }
+            ]
+          }
+        },
+        "30": {
+          "random": {
+            "methods": {
+              "ridge": 30.3842252699328,
+              "offset": 30.92575206141173,
+              "shrink": 33.71771687532369
+            },
+            "source_only_mAh": 60.35023986520309,
+            "mean_lambda": 0.8586956095711702,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.12,
+            "min_lambda": 0.4309628965978363,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 25,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 0,
+            "n_cells_worsened_shrink_vs_ridge": 8,
+            "paired_per_cell": [
+              {
+                "id": "2C_battery-1",
+                "source": 55.02157552662031,
+                "ridge": 18.838135342407828,
+                "offset": 19.263094686203072,
+                "shrink": 20.322957340645594
+              },
+              {
+                "id": "2C_battery-2",
+                "source": 51.13093832334862,
+                "ridge": 30.567721050759907,
+                "offset": 31.467299633462567,
+                "shrink": 36.607205272454905
+              },
+              {
+                "id": "2C_battery-3",
+                "source": 53.35036427525038,
+                "ridge": 24.600431490664654,
+                "offset": 25.08920839650102,
+                "shrink": 25.485913807453358
+              },
+              {
+                "id": "2C_battery-4",
+                "source": 63.9443798099459,
+                "ridge": 34.75986178280593,
+                "offset": 35.51533150082182,
+                "shrink": 43.620506322833826
+              },
+              {
+                "id": "2C_battery-5",
+                "source": 73.04973696446437,
+                "ridge": 36.78395288267528,
+                "offset": 36.92546345085125,
+                "shrink": 39.623588959863426
+              },
+              {
+                "id": "2C_battery-6",
+                "source": 76.66143586805853,
+                "ridge": 43.603698934262674,
+                "offset": 44.17326971544861,
+                "shrink": 49.702866282413495
+              },
+              {
+                "id": "2C_battery-7",
+                "source": 64.46193191270588,
+                "ridge": 35.29854519954738,
+                "offset": 35.83714857240058,
+                "shrink": 35.69262319309606
+              },
+              {
+                "id": "2C_battery-8",
+                "source": 45.18155624123075,
+                "ridge": 18.621455476338745,
+                "offset": 19.135200535604923,
+                "shrink": 18.686073823828874
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "methods": {
+              "ridge": 29.34852568162,
+              "offset": 29.83516052685408,
+              "shrink": 31.73410692591704
+            },
+            "source_only_mAh": 60.35023986520309,
+            "mean_lambda": 0.8935829679539312,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.2,
+            "min_lambda": 0.8237952433720561,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 5,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 0,
+            "n_cells_worsened_shrink_vs_ridge": 7,
+            "paired_per_cell": [
+              {
+                "id": "2C_battery-1",
+                "source": 55.02157552662031,
+                "ridge": 20.094543104606522,
+                "offset": 20.29507823373256,
+                "shrink": 22.256891569241233
+              },
+              {
+                "id": "2C_battery-2",
+                "source": 51.13093832334862,
+                "ridge": 28.710064886695886,
+                "offset": 29.97651086850618,
+                "shrink": 29.86119092540185
+              },
+              {
+                "id": "2C_battery-3",
+                "source": 53.35036427525038,
+                "ridge": 25.01500135737893,
+                "offset": 25.193339692981397,
+                "shrink": 26.381729295200543
+              },
+              {
+                "id": "2C_battery-4",
+                "source": 63.9443798099459,
+                "ridge": 31.463285894512317,
+                "offset": 32.036133279726975,
+                "shrink": 36.365605219807385
+              },
+              {
+                "id": "2C_battery-5",
+                "source": 73.04973696446437,
+                "ridge": 36.6028884599878,
+                "offset": 36.76558352428114,
+                "shrink": 42.49287346590779
+              },
+              {
+                "id": "2C_battery-6",
+                "source": 76.66143586805853,
+                "ridge": 42.127307758716505,
+                "offset": 42.41620513778437,
+                "shrink": 42.127307758716505
+              },
+              {
+                "id": "2C_battery-7",
+                "source": 64.46193191270588,
+                "ridge": 33.22651146852956,
+                "offset": 33.5316902835266,
+                "shrink": 35.05747741187896
+              },
+              {
+                "id": "2C_battery-8",
+                "source": 45.18155624123075,
+                "ridge": 17.54860252253249,
+                "offset": 18.4667431942934,
+                "shrink": 19.329779761182053
+              }
+            ]
+          }
+        }
+      },
+      "archive_parity": {
+        "n_legacy_mae_checks": 288,
+        "max_legacy_mae_difference_mAh": 3.6661190705444824e-07,
+        "n_failures": 0
+      }
+    },
+    "3C": {
+      "n_target_cells": 15,
+      "summary": {
+        "10": {
+          "random": {
+            "methods": {
+              "ridge": 44.75818603854305,
+              "offset": 47.61446898563584,
+              "shrink": 39.4942235619916
+            },
+            "source_only_mAh": 35.11005493663938,
+            "mean_lambda": 0.4330519616547563,
+            "fraction_lambda_zero": 0.12,
+            "fraction_lambda_one": 0.12,
+            "min_lambda": 0.0,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 25,
+            "n_test_cells": 15,
+            "n_cells_negative_vs_source": {
+              "ridge": 11,
+              "offset": 11,
+              "shrink": 9
+            },
+            "n_cells_improved_shrink_vs_ridge": 10,
+            "n_cells_worsened_shrink_vs_ridge": 5,
+            "paired_per_cell": [
+              {
+                "id": "3C_battery-1",
+                "source": 16.298169234544435,
+                "ridge": 34.366040059347306,
+                "offset": 41.55935552264335,
+                "shrink": 33.53210346285189
+              },
+              {
+                "id": "3C_battery-2",
+                "source": 49.434925583893886,
+                "ridge": 33.06462511496976,
+                "offset": 32.45807630306821,
+                "shrink": 39.587576048026364
+              },
+              {
+                "id": "3C_battery-3",
+                "source": 73.95392786292436,
+                "ridge": 66.74467326953732,
+                "offset": 44.74602265269786,
+                "shrink": 71.23126926474146
+              },
+              {
+                "id": "3C_battery-4",
+                "source": 20.431217132308486,
+                "ridge": 32.14347243279246,
+                "offset": 37.5616810897785,
+                "shrink": 31.763574676908682
+              },
+              {
+                "id": "3C_battery-5",
+                "source": 26.064001671288462,
+                "ridge": 28.584352529343157,
+                "offset": 37.19634998771014,
+                "shrink": 25.068768622842086
+              },
+              {
+                "id": "3C_battery-6",
+                "source": 42.05215671018344,
+                "ridge": 27.903735887484498,
+                "offset": 31.92149217060762,
+                "shrink": 32.976285143575744
+              },
+              {
+                "id": "3C_battery-7",
+                "source": 86.01594210234093,
+                "ridge": 56.63705168176557,
+                "offset": 56.342250713411275,
+                "shrink": 71.96219809683633
+              },
+              {
+                "id": "3C_battery-8",
+                "source": 21.690065911414745,
+                "ridge": 34.34986119022096,
+                "offset": 49.21561699662017,
+                "shrink": 25.64176192178478
+              },
+              {
+                "id": "3C_battery-9",
+                "source": 17.941030196886256,
+                "ridge": 56.92531642445249,
+                "offset": 55.1963555833266,
+                "shrink": 45.28874840314845
+              },
+              {
+                "id": "3C_battery-10",
+                "source": 39.510365496696124,
+                "ridge": 45.642307486688345,
+                "offset": 43.99442880037427,
+                "shrink": 48.93244807353076
+              },
+              {
+                "id": "3C_battery-11",
+                "source": 39.89127642664675,
+                "ridge": 70.34006572856694,
+                "offset": 72.27359758490645,
+                "shrink": 41.561382653297166
+              },
+              {
+                "id": "3C_battery-12",
+                "source": 14.773110029790951,
+                "ridge": 42.688254450533144,
+                "offset": 46.66327157495829,
+                "shrink": 41.695207954620145
+              },
+              {
+                "id": "3C_battery-13",
+                "source": 14.827383019230368,
+                "ridge": 23.622606995088802,
+                "offset": 34.191663316296356,
+                "shrink": 13.84858774426992
+              },
+              {
+                "id": "3C_battery-14",
+                "source": 29.964986892217134,
+                "ridge": 61.45445986755616,
+                "offset": 67.7852355313311,
+                "shrink": 34.84181449738695
+              },
+              {
+                "id": "3C_battery-15",
+                "source": 33.802265779224435,
+                "ridge": 56.90596745979889,
+                "offset": 63.11163695680722,
+                "shrink": 34.48162686605333
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "methods": {
+              "ridge": 40.6115831913108,
+              "offset": 46.640362790922126,
+              "shrink": 35.929490549367536
+            },
+            "source_only_mAh": 35.11005493663938,
+            "mean_lambda": 0.573934447965413,
+            "fraction_lambda_zero": 0.2,
+            "fraction_lambda_one": 0.2,
+            "min_lambda": 0.0,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 5,
+            "n_test_cells": 15,
+            "n_cells_negative_vs_source": {
+              "ridge": 9,
+              "offset": 9,
+              "shrink": 8
+            },
+            "n_cells_improved_shrink_vs_ridge": 9,
+            "n_cells_worsened_shrink_vs_ridge": 3,
+            "paired_per_cell": [
+              {
+                "id": "3C_battery-1",
+                "source": 16.298169234544435,
+                "ridge": 34.89982088783042,
+                "offset": 67.4301725000898,
+                "shrink": 25.346910626651013
+              },
+              {
+                "id": "3C_battery-2",
+                "source": 49.434925583893886,
+                "ridge": 28.20254083436491,
+                "offset": 26.40601515129425,
+                "shrink": 27.51117914486871
+              },
+              {
+                "id": "3C_battery-3",
+                "source": 73.95392786292436,
+                "ridge": 67.45100183520316,
+                "offset": 63.812189170874696,
+                "shrink": 73.95392786292436
+              },
+              {
+                "id": "3C_battery-4",
+                "source": 20.431217132308486,
+                "ridge": 36.903266899471035,
+                "offset": 55.73748952556519,
+                "shrink": 27.570569319581043
+              },
+              {
+                "id": "3C_battery-5",
+                "source": 26.064001671288462,
+                "ridge": 24.320067961497163,
+                "offset": 18.71128465003361,
+                "shrink": 26.064001671288462
+              },
+              {
+                "id": "3C_battery-6",
+                "source": 42.05215671018344,
+                "ridge": 25.756387966499346,
+                "offset": 24.78012754726186,
+                "shrink": 30.890537230935518
+              },
+              {
+                "id": "3C_battery-7",
+                "source": 86.01594210234093,
+                "ridge": 64.56564168782806,
+                "offset": 61.50184097819042,
+                "shrink": 64.56564168782806
+              },
+              {
+                "id": "3C_battery-8",
+                "source": 21.690065911414745,
+                "ridge": 46.04703225142013,
+                "offset": 75.63900738448477,
+                "shrink": 33.8020480695868
+              },
+              {
+                "id": "3C_battery-9",
+                "source": 17.941030196886256,
+                "ridge": 30.417815626428027,
+                "offset": 29.970898663131205,
+                "shrink": 30.417815626428027
+              },
+              {
+                "id": "3C_battery-10",
+                "source": 39.510365496696124,
+                "ridge": 29.23450457375004,
+                "offset": 27.982040842735575,
+                "shrink": 29.23450457375004
+              },
+              {
+                "id": "3C_battery-11",
+                "source": 39.89127642664675,
+                "ridge": 46.34905214075734,
+                "offset": 41.75593261169384,
+                "shrink": 39.89127642664675
+              },
+              {
+                "id": "3C_battery-12",
+                "source": 14.773110029790951,
+                "ridge": 58.32904654281995,
+                "offset": 75.0117122067082,
+                "shrink": 37.36027800360861
+              },
+              {
+                "id": "3C_battery-13",
+                "source": 14.827383019230368,
+                "ridge": 43.534181320162006,
+                "offset": 59.89487754518694,
+                "shrink": 23.932402143644207
+              },
+              {
+                "id": "3C_battery-14",
+                "source": 29.964986892217134,
+                "ridge": 37.46140035692111,
+                "offset": 36.371875109388206,
+                "shrink": 34.377892052517986
+              },
+              {
+                "id": "3C_battery-15",
+                "source": 33.802265779224435,
+                "ridge": 35.70198698470935,
+                "offset": 34.59997797719333,
+                "shrink": 34.02337380025345
+              }
+            ]
+          }
+        },
+        "20": {
+          "random": {
+            "methods": {
+              "ridge": 40.75466648187204,
+              "offset": 41.54395089113579,
+              "shrink": 37.0531486060476
+            },
+            "source_only_mAh": 35.11005493663938,
+            "mean_lambda": 0.6755383013823842,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.08,
+            "min_lambda": 0.3124488777183995,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 25,
+            "n_test_cells": 15,
+            "n_cells_negative_vs_source": {
+              "ridge": 9,
+              "offset": 9,
+              "shrink": 9
+            },
+            "n_cells_improved_shrink_vs_ridge": 11,
+            "n_cells_worsened_shrink_vs_ridge": 4,
+            "paired_per_cell": [
+              {
+                "id": "3C_battery-1",
+                "source": 16.298169234544435,
+                "ridge": 33.2124427852879,
+                "offset": 39.12271563479334,
+                "shrink": 31.54618727026709
+              },
+              {
+                "id": "3C_battery-2",
+                "source": 49.434925583893886,
+                "ridge": 28.29870632522153,
+                "offset": 25.53831281259659,
+                "shrink": 31.508677604959143
+              },
+              {
+                "id": "3C_battery-3",
+                "source": 73.95392786292436,
+                "ridge": 60.03055724180401,
+                "offset": 45.51892005150139,
+                "shrink": 62.39199217468488
+              },
+              {
+                "id": "3C_battery-4",
+                "source": 20.431217132308486,
+                "ridge": 28.641651826929007,
+                "offset": 33.47343383547263,
+                "shrink": 27.65824138192388
+              },
+              {
+                "id": "3C_battery-5",
+                "source": 26.064001671288462,
+                "ridge": 24.407000260435336,
+                "offset": 25.53059688219789,
+                "shrink": 22.68540215343665
+              },
+              {
+                "id": "3C_battery-6",
+                "source": 42.05215671018344,
+                "ridge": 21.487376007995525,
+                "offset": 20.05497127738849,
+                "shrink": 25.379580599243944
+              },
+              {
+                "id": "3C_battery-7",
+                "source": 86.01594210234093,
+                "ridge": 45.97000197301493,
+                "offset": 41.66008887980423,
+                "shrink": 60.772175323104385
+              },
+              {
+                "id": "3C_battery-8",
+                "source": 21.690065911414745,
+                "ridge": 37.82738373448559,
+                "offset": 45.66929138595149,
+                "shrink": 32.99819423746383
+              },
+              {
+                "id": "3C_battery-9",
+                "source": 17.941030196886256,
+                "ridge": 48.70499421381771,
+                "offset": 53.407155078878326,
+                "shrink": 35.24147294558812
+              },
+              {
+                "id": "3C_battery-10",
+                "source": 39.510365496696124,
+                "ridge": 34.162577482329425,
+                "offset": 35.192635828537775,
+                "shrink": 33.79376948201444
+              },
+              {
+                "id": "3C_battery-11",
+                "source": 39.89127642664675,
+                "ridge": 63.607073183906536,
+                "offset": 62.83004723086033,
+                "shrink": 53.033174448912085
+              },
+              {
+                "id": "3C_battery-12",
+                "source": 14.773110029790951,
+                "ridge": 41.42314116959752,
+                "offset": 45.57833858182553,
+                "shrink": 39.50182190236994
+              },
+              {
+                "id": "3C_battery-13",
+                "source": 14.827383019230368,
+                "ridge": 25.189485078483322,
+                "offset": 29.96595294361354,
+                "shrink": 20.231982248876953
+              },
+              {
+                "id": "3C_battery-14",
+                "source": 29.964986892217134,
+                "ridge": 61.6305213995322,
+                "offset": 62.51431361728171,
+                "shrink": 40.64091092272284
+              },
+              {
+                "id": "3C_battery-15",
+                "source": 33.802265779224435,
+                "ridge": 56.727084545240096,
+                "offset": 57.10248932633381,
+                "shrink": 38.4136463951459
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "methods": {
+              "ridge": 41.57048549396775,
+              "offset": 45.04328075379287,
+              "shrink": 38.741704397201154
+            },
+            "source_only_mAh": 35.11005493663938,
+            "mean_lambda": 0.8774202357272867,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.2,
+            "min_lambda": 0.7345129323118109,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 5,
+            "n_test_cells": 15,
+            "n_cells_negative_vs_source": {
+              "ridge": 9,
+              "offset": 9,
+              "shrink": 9
+            },
+            "n_cells_improved_shrink_vs_ridge": 9,
+            "n_cells_worsened_shrink_vs_ridge": 3,
+            "paired_per_cell": [
+              {
+                "id": "3C_battery-1",
+                "source": 16.298169234544435,
+                "ridge": 44.02247348068891,
+                "offset": 64.01339849316138,
+                "shrink": 36.897713209623824
+              },
+              {
+                "id": "3C_battery-2",
+                "source": 49.434925583893886,
+                "ridge": 25.773618645432595,
+                "offset": 24.975321533413485,
+                "shrink": 23.4460836052206
+              },
+              {
+                "id": "3C_battery-3",
+                "source": 73.95392786292436,
+                "ridge": 57.6569006970712,
+                "offset": 56.507193125555744,
+                "shrink": 57.7722214135129
+              },
+              {
+                "id": "3C_battery-4",
+                "source": 20.431217132308486,
+                "ridge": 40.30196154889626,
+                "offset": 52.332864160346084,
+                "shrink": 34.61411221832638
+              },
+              {
+                "id": "3C_battery-5",
+                "source": 26.064001671288462,
+                "ridge": 17.315556166267548,
+                "offset": 15.859576153341374,
+                "shrink": 17.328344023931653
+              },
+              {
+                "id": "3C_battery-6",
+                "source": 42.05215671018344,
+                "ridge": 24.187265627759228,
+                "offset": 24.467696656838815,
+                "shrink": 28.77486319508557
+              },
+              {
+                "id": "3C_battery-7",
+                "source": 86.01594210234093,
+                "ridge": 61.661965271429075,
+                "offset": 61.30818963509952,
+                "shrink": 61.661965271429075
+              },
+              {
+                "id": "3C_battery-8",
+                "source": 21.690065911414745,
+                "ridge": 56.067449550114326,
+                "offset": 72.24945866844823,
+                "shrink": 47.836545303769384
+              },
+              {
+                "id": "3C_battery-9",
+                "source": 17.941030196886256,
+                "ridge": 31.320157073731362,
+                "offset": 30.145994114949097,
+                "shrink": 31.320157073731362
+              },
+              {
+                "id": "3C_battery-10",
+                "source": 39.510365496696124,
+                "ridge": 28.609606313130666,
+                "offset": 27.968226306481522,
+                "shrink": 28.609606313130666
+              },
+              {
+                "id": "3C_battery-11",
+                "source": 39.89127642664675,
+                "ridge": 48.817344129160546,
+                "offset": 46.489979831087076,
+                "shrink": 48.65584812631935
+              },
+              {
+                "id": "3C_battery-12",
+                "source": 14.773110029790951,
+                "ridge": 65.27668057987835,
+                "offset": 71.59493819977979,
+                "shrink": 55.24383682371932
+              },
+              {
+                "id": "3C_battery-13",
+                "source": 14.827383019230368,
+                "ridge": 50.08954913032687,
+                "offset": 56.511766336356345,
+                "shrink": 40.18364949693031
+              },
+              {
+                "id": "3C_battery-14",
+                "source": 29.964986892217134,
+                "ridge": 37.118281953519585,
+                "offset": 36.54031973067305,
+                "shrink": 34.713015093419486
+              },
+              {
+                "id": "3C_battery-15",
+                "source": 33.802265779224435,
+                "ridge": 35.338472242109745,
+                "offset": 34.684288361361475,
+                "shrink": 34.0676047898674
+              }
+            ]
+          }
+        },
+        "30": {
+          "random": {
+            "methods": {
+              "ridge": 40.74180195074622,
+              "offset": 40.89881107973934,
+              "shrink": 38.29613094858475
+            },
+            "source_only_mAh": 35.11005493663938,
+            "mean_lambda": 0.8122505126509597,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.28,
+            "min_lambda": 0.3482041783709019,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 25,
+            "n_test_cells": 15,
+            "n_cells_negative_vs_source": {
+              "ridge": 9,
+              "offset": 9,
+              "shrink": 9
+            },
+            "n_cells_improved_shrink_vs_ridge": 11,
+            "n_cells_worsened_shrink_vs_ridge": 4,
+            "paired_per_cell": [
+              {
+                "id": "3C_battery-1",
+                "source": 16.298169234544435,
+                "ridge": 35.52361415480242,
+                "offset": 40.25236024872733,
+                "shrink": 31.52216507816552
+              },
+              {
+                "id": "3C_battery-2",
+                "source": 49.434925583893886,
+                "ridge": 26.15521893474463,
+                "offset": 23.627830910426276,
+                "shrink": 28.641144459633313
+              },
+              {
+                "id": "3C_battery-3",
+                "source": 73.95392786292436,
+                "ridge": 55.8829684867424,
+                "offset": 46.21834845527404,
+                "shrink": 56.16062143912833
+              },
+              {
+                "id": "3C_battery-4",
+                "source": 20.431217132308486,
+                "ridge": 29.118199015393436,
+                "offset": 33.099663968662796,
+                "shrink": 26.721886433869827
+              },
+              {
+                "id": "3C_battery-5",
+                "source": 26.064001671288462,
+                "ridge": 22.418233384593773,
+                "offset": 22.39032972535324,
+                "shrink": 22.390217094653575
+              },
+              {
+                "id": "3C_battery-6",
+                "source": 42.05215671018344,
+                "ridge": 18.96186700954552,
+                "offset": 16.042214221187972,
+                "shrink": 23.24063924886635
+              },
+              {
+                "id": "3C_battery-7",
+                "source": 86.01594210234093,
+                "ridge": 44.41195474409832,
+                "offset": 38.28796672440276,
+                "shrink": 56.7978903400003
+              },
+              {
+                "id": "3C_battery-8",
+                "source": 21.690065911414745,
+                "ridge": 41.93326713443486,
+                "offset": 47.074860196448284,
+                "shrink": 39.11322596990492
+              },
+              {
+                "id": "3C_battery-9",
+                "source": 17.941030196886256,
+                "ridge": 49.10235616260102,
+                "offset": 55.07462644684817,
+                "shrink": 36.32705109777768
+              },
+              {
+                "id": "3C_battery-10",
+                "source": 39.510365496696124,
+                "ridge": 32.888769850188,
+                "offset": 33.43279837665138,
+                "shrink": 30.139080836258323
+              },
+              {
+                "id": "3C_battery-11",
+                "source": 39.89127642664675,
+                "ridge": 62.28751651669652,
+                "offset": 60.2207691730968,
+                "shrink": 61.132089664091595
+              },
+              {
+                "id": "3C_battery-12",
+                "source": 14.773110029790951,
+                "ridge": 42.87858556373666,
+                "offset": 47.410709969911515,
+                "shrink": 38.60741998282774
+              },
+              {
+                "id": "3C_battery-13",
+                "source": 14.827383019230368,
+                "ridge": 28.064044479758717,
+                "offset": 31.340323886348262,
+                "shrink": 25.47523566643992
+              },
+              {
+                "id": "3C_battery-14",
+                "source": 29.964986892217134,
+                "ridge": 63.39454131550809,
+                "offset": 62.42358052494834,
+                "shrink": 50.608671993016
+              },
+              {
+                "id": "3C_battery-15",
+                "source": 33.802265779224435,
+                "ridge": 58.105892508348894,
+                "offset": 56.585783367803046,
+                "shrink": 47.564624924137824
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "methods": {
+              "ridge": 42.47216011286016,
+              "offset": 44.75294991084154,
+              "shrink": 41.03948648235427
+            },
+            "source_only_mAh": 35.11005493663938,
+            "mean_lambda": 0.9234739227664324,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.4,
+            "min_lambda": 0.7702088654032205,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 5,
+            "n_test_cells": 15,
+            "n_cells_negative_vs_source": {
+              "ridge": 9,
+              "offset": 9,
+              "shrink": 9
+            },
+            "n_cells_improved_shrink_vs_ridge": 8,
+            "n_cells_worsened_shrink_vs_ridge": 1,
+            "paired_per_cell": [
+              {
+                "id": "3C_battery-1",
+                "source": 16.298169234544435,
+                "ridge": 49.70706394379025,
+                "offset": 63.128655584512444,
+                "shrink": 45.81863236149205
+              },
+              {
+                "id": "3C_battery-2",
+                "source": 49.434925583893886,
+                "ridge": 25.634919165945174,
+                "offset": 24.66754016464361,
+                "shrink": 24.01252871599567
+              },
+              {
+                "id": "3C_battery-3",
+                "source": 73.95392786292436,
+                "ridge": 52.404013578278125,
+                "offset": 52.67424129743332,
+                "shrink": 52.404013578278125
+              },
+              {
+                "id": "3C_battery-4",
+                "source": 20.431217132308486,
+                "ridge": 43.16777034391685,
+                "offset": 51.4537745610176,
+                "shrink": 39.92670258041915
+              },
+              {
+                "id": "3C_battery-5",
+                "source": 26.064001671288462,
+                "ridge": 16.307361505807844,
+                "offset": 16.0463687992375,
+                "shrink": 16.307361505807844
+              },
+              {
+                "id": "3C_battery-6",
+                "source": 42.05215671018344,
+                "ridge": 22.65293482977267,
+                "offset": 23.133201150398474,
+                "shrink": 26.981226635914275
+              },
+              {
+                "id": "3C_battery-7",
+                "source": 86.01594210234093,
+                "ridge": 60.016061933079676,
+                "offset": 60.3040155185896,
+                "shrink": 60.016061933079676
+              },
+              {
+                "id": "3C_battery-8",
+                "source": 21.690065911414745,
+                "ridge": 61.22026109691981,
+                "offset": 71.37176550409131,
+                "shrink": 57.085008071432966
+              },
+              {
+                "id": "3C_battery-9",
+                "source": 17.941030196886256,
+                "ridge": 32.22119368636756,
+                "offset": 31.08567786214319,
+                "shrink": 32.22119368636756
+              },
+              {
+                "id": "3C_battery-10",
+                "source": 39.510365496696124,
+                "ridge": 28.37684007706895,
+                "offset": 27.905134627347774,
+                "shrink": 28.37684007706895
+              },
+              {
+                "id": "3C_battery-11",
+                "source": 39.89127642664675,
+                "ridge": 50.62662479611021,
+                "offset": 50.814314902989466,
+                "shrink": 50.62662479611021
+              },
+              {
+                "id": "3C_battery-12",
+                "source": 14.773110029790951,
+                "ridge": 68.5519990094557,
+                "offset": 70.71019529113086,
+                "shrink": 63.76645436667626
+              },
+              {
+                "id": "3C_battery-13",
+                "source": 14.827383019230368,
+                "ridge": 53.28520062872311,
+                "offset": 55.63574010661035,
+                "shrink": 48.563127915946644
+              },
+              {
+                "id": "3C_battery-14",
+                "source": 29.964986892217134,
+                "ridge": 37.453822020031396,
+                "offset": 37.2957116989142,
+                "shrink": 35.22416075580302
+              },
+              {
+                "id": "3C_battery-15",
+                "source": 33.802265779224435,
+                "ridge": 35.4563350776351,
+                "offset": 35.06791159356348,
+                "shrink": 34.262360254921724
+              }
+            ]
+          }
+        }
+      },
+      "archive_parity": {
+        "n_legacy_mae_checks": 540,
+        "max_legacy_mae_difference_mAh": 5.590992842030573e-07,
+        "n_failures": 0
+      }
+    },
+    "R2.5": {
+      "n_target_cells": 8,
+      "summary": {
+        "10": {
+          "random": {
+            "methods": {
+              "ridge": 52.052626895865785,
+              "offset": 52.67245600126749,
+              "shrink": 54.82729963122843
+            },
+            "source_only_mAh": 77.73607868910442,
+            "mean_lambda": 0.84264963260708,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.04,
+            "min_lambda": 0.4240454750819532,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 25,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 0,
+            "n_cells_worsened_shrink_vs_ridge": 8,
+            "paired_per_cell": [
+              {
+                "id": "R2.5_battery-1",
+                "source": 90.94989095945633,
+                "ridge": 60.06167425150164,
+                "offset": 60.616651193743245,
+                "shrink": 63.34611254845462
+              },
+              {
+                "id": "R2.5_battery-2",
+                "source": 82.1666366056554,
+                "ridge": 57.76271900839329,
+                "offset": 58.42498519757586,
+                "shrink": 58.94580974371288
+              },
+              {
+                "id": "R2.5_battery-3",
+                "source": 66.99206406030756,
+                "ridge": 41.87608217661038,
+                "offset": 42.531686203996756,
+                "shrink": 43.01844206537464
+              },
+              {
+                "id": "R2.5_battery-4",
+                "source": 73.90484716655357,
+                "ridge": 50.75573956508107,
+                "offset": 51.53915141802262,
+                "shrink": 53.32843317525446
+              },
+              {
+                "id": "R2.5_battery-5",
+                "source": 100.18535158761519,
+                "ridge": 70.95525921580415,
+                "offset": 71.3491441438063,
+                "shrink": 74.1610707144814
+              },
+              {
+                "id": "R2.5_battery-6",
+                "source": 67.78906995433228,
+                "ridge": 48.825476859700565,
+                "offset": 49.47029125443756,
+                "shrink": 53.917872592721004
+              },
+              {
+                "id": "R2.5_battery-7",
+                "source": 62.26976541396996,
+                "ridge": 37.09628067954285,
+                "offset": 37.74533551665702,
+                "shrink": 39.49878664057543
+              },
+              {
+                "id": "R2.5_battery-8",
+                "source": 77.63100376494505,
+                "ridge": 49.08778341029232,
+                "offset": 49.70240308190055,
+                "shrink": 52.40186956925297
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "methods": {
+              "ridge": 51.35097459726774,
+              "offset": 51.88070861408241,
+              "shrink": 52.15661183799908
+            },
+            "source_only_mAh": 77.73607868910442,
+            "mean_lambda": 0.9537029184323005,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.0,
+            "min_lambda": 0.9029837426942223,
+            "max_lambda": 0.9830723192093891,
+            "n_fold_acquisitions": 5,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 0,
+            "n_cells_worsened_shrink_vs_ridge": 8,
+            "paired_per_cell": [
+              {
+                "id": "R2.5_battery-1",
+                "source": 90.94989095945633,
+                "ridge": 59.08637446156356,
+                "offset": 59.18344210286037,
+                "shrink": 59.563905915497806
+              },
+              {
+                "id": "R2.5_battery-2",
+                "source": 82.1666366056554,
+                "ridge": 54.57311093558312,
+                "offset": 55.277992860394114,
+                "shrink": 54.98649764218446
+              },
+              {
+                "id": "R2.5_battery-3",
+                "source": 66.99206406030756,
+                "ridge": 38.89391718172393,
+                "offset": 39.645655246516874,
+                "shrink": 39.27360468342434
+              },
+              {
+                "id": "R2.5_battery-4",
+                "source": 73.90484716655357,
+                "ridge": 51.693047560852506,
+                "offset": 52.503724635629524,
+                "shrink": 52.23316959412244
+              },
+              {
+                "id": "R2.5_battery-5",
+                "source": 100.18535158761519,
+                "ridge": 71.47749552062174,
+                "offset": 72.10725952291735,
+                "shrink": 74.11365473987442
+              },
+              {
+                "id": "R2.5_battery-6",
+                "source": 67.78906995433228,
+                "ridge": 47.52867418697825,
+                "offset": 48.03122724339011,
+                "shrink": 48.54969181672596
+              },
+              {
+                "id": "R2.5_battery-7",
+                "source": 62.26976541396996,
+                "ridge": 36.69430039493956,
+                "offset": 36.88656227628756,
+                "shrink": 36.88644685674198
+              },
+              {
+                "id": "R2.5_battery-8",
+                "source": 77.63100376494505,
+                "ridge": 50.86087653587921,
+                "offset": 51.40980502466337,
+                "shrink": 51.64592345542121
+              }
+            ]
+          }
+        },
+        "20": {
+          "random": {
+            "methods": {
+              "ridge": 44.9652614757652,
+              "offset": 45.883984667339405,
+              "shrink": 46.08556262925073
+            },
+            "source_only_mAh": 77.73607868910442,
+            "mean_lambda": 0.9414694242507516,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.08,
+            "min_lambda": 0.7692323601479945,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 25,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 0,
+            "n_cells_worsened_shrink_vs_ridge": 8,
+            "paired_per_cell": [
+              {
+                "id": "R2.5_battery-1",
+                "source": 90.94989095945633,
+                "ridge": 50.885626881901366,
+                "offset": 51.59427104265891,
+                "shrink": 52.38314183952538
+              },
+              {
+                "id": "R2.5_battery-2",
+                "source": 82.1666366056554,
+                "ridge": 50.01353079204538,
+                "offset": 50.81373793301468,
+                "shrink": 50.56975824726992
+              },
+              {
+                "id": "R2.5_battery-3",
+                "source": 66.99206406030756,
+                "ridge": 35.18177253394776,
+                "offset": 36.249868241943126,
+                "shrink": 35.60396173135899
+              },
+              {
+                "id": "R2.5_battery-4",
+                "source": 73.90484716655357,
+                "ridge": 45.03796845361712,
+                "offset": 46.283781208536084,
+                "shrink": 46.03630711797255
+              },
+              {
+                "id": "R2.5_battery-5",
+                "source": 100.18535158761519,
+                "ridge": 61.4486883691972,
+                "offset": 61.72429685692358,
+                "shrink": 63.01389383180093
+              },
+              {
+                "id": "R2.5_battery-6",
+                "source": 67.78906995433228,
+                "ridge": 43.66657148682949,
+                "offset": 44.89216245780614,
+                "shrink": 45.25264426146478
+              },
+              {
+                "id": "R2.5_battery-7",
+                "source": 62.26976541396996,
+                "ridge": 33.87448586646212,
+                "offset": 35.00237230034249,
+                "shrink": 34.4917207040451
+              },
+              {
+                "id": "R2.5_battery-8",
+                "source": 77.63100376494505,
+                "ridge": 39.61344742212119,
+                "offset": 40.51138729749022,
+                "shrink": 41.333073300568216
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "methods": {
+              "ridge": 44.632387686650254,
+              "offset": 45.51074734366028,
+              "shrink": 44.99001283981421
+            },
+            "source_only_mAh": 77.73607868910442,
+            "mean_lambda": 0.9799387257165533,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.2,
+            "min_lambda": 0.9548052124902145,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 5,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 0,
+            "n_cells_worsened_shrink_vs_ridge": 6,
+            "paired_per_cell": [
+              {
+                "id": "R2.5_battery-1",
+                "source": 90.94989095945633,
+                "ridge": 51.08061398412527,
+                "offset": 51.32589273343832,
+                "shrink": 51.20716907604261
+              },
+              {
+                "id": "R2.5_battery-2",
+                "source": 82.1666366056554,
+                "ridge": 47.67867699847122,
+                "offset": 48.6356746550799,
+                "shrink": 47.67867699847122
+              },
+              {
+                "id": "R2.5_battery-3",
+                "source": 66.99206406030756,
+                "ridge": 33.59387999641173,
+                "offset": 34.85704753266796,
+                "shrink": 33.59387999641173
+              },
+              {
+                "id": "R2.5_battery-4",
+                "source": 73.90484716655357,
+                "ridge": 45.14520186815933,
+                "offset": 46.58938513847859,
+                "shrink": 45.42506442184167
+              },
+              {
+                "id": "R2.5_battery-5",
+                "source": 100.18535158761519,
+                "ridge": 61.81710585487708,
+                "offset": 62.40806236429889,
+                "shrink": 63.38129927226786
+              },
+              {
+                "id": "R2.5_battery-6",
+                "source": 67.78906995433228,
+                "ridge": 43.45757888723317,
+                "offset": 44.47143404641669,
+                "shrink": 43.79179354298967
+              },
+              {
+                "id": "R2.5_battery-7",
+                "source": 62.26976541396996,
+                "ridge": 34.180884418042176,
+                "offset": 34.71946510694085,
+                "shrink": 34.20082303341956
+              },
+              {
+                "id": "R2.5_battery-8",
+                "source": 77.63100376494505,
+                "ridge": 40.105159485882055,
+                "offset": 41.07901717196099,
+                "shrink": 40.641396377069405
+              }
+            ]
+          }
+        },
+        "30": {
+          "random": {
+            "methods": {
+              "ridge": 41.68811145020934,
+              "offset": 42.865652877287765,
+              "shrink": 42.22556990640915
+            },
+            "source_only_mAh": 77.73607868910442,
+            "mean_lambda": 0.9667939842720266,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.16,
+            "min_lambda": 0.8842316604152919,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 25,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 0,
+            "n_cells_worsened_shrink_vs_ridge": 8,
+            "paired_per_cell": [
+              {
+                "id": "R2.5_battery-1",
+                "source": 90.94989095945633,
+                "ridge": 45.04556137036765,
+                "offset": 45.775194809423425,
+                "shrink": 45.813624231795686
+              },
+              {
+                "id": "R2.5_battery-2",
+                "source": 82.1666366056554,
+                "ridge": 46.05255294390186,
+                "offset": 47.082608586457454,
+                "shrink": 46.495190289731546
+              },
+              {
+                "id": "R2.5_battery-3",
+                "source": 66.99206406030756,
+                "ridge": 32.7067822699932,
+                "offset": 34.1398182061656,
+                "shrink": 32.95546936351763
+              },
+              {
+                "id": "R2.5_battery-4",
+                "source": 73.90484716655357,
+                "ridge": 42.9189394118443,
+                "offset": 44.39732840186067,
+                "shrink": 43.372675307483554
+              },
+              {
+                "id": "R2.5_battery-5",
+                "source": 100.18535158761519,
+                "ridge": 55.198270267577506,
+                "offset": 55.41042391002272,
+                "shrink": 56.070339929970984
+              },
+              {
+                "id": "R2.5_battery-6",
+                "source": 67.78906995433228,
+                "ridge": 42.14715302689213,
+                "offset": 43.77187733949311,
+                "shrink": 42.66241545107332
+              },
+              {
+                "id": "R2.5_battery-7",
+                "source": 62.26976541396996,
+                "ridge": 33.88521569687712,
+                "offset": 35.47809937402502,
+                "shrink": 34.04248724878751
+              },
+              {
+                "id": "R2.5_battery-8",
+                "source": 77.63100376494505,
+                "ridge": 35.550416614220964,
+                "offset": 36.86987239085413,
+                "shrink": 36.39235742891293
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "methods": {
+              "ridge": 41.669799038119336,
+              "offset": 42.80147001970501,
+              "shrink": 41.95608629602345
+            },
+            "source_only_mAh": 77.73607868910442,
+            "mean_lambda": 0.9823384773926879,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.2,
+            "min_lambda": 0.9644316467357897,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 5,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 1,
+            "n_cells_worsened_shrink_vs_ridge": 5,
+            "paired_per_cell": [
+              {
+                "id": "R2.5_battery-1",
+                "source": 90.94989095945633,
+                "ridge": 45.979822760181875,
+                "offset": 46.275758164569986,
+                "shrink": 46.04152588673522
+              },
+              {
+                "id": "R2.5_battery-2",
+                "source": 82.1666366056554,
+                "ridge": 44.34033681978675,
+                "offset": 45.543064369462726,
+                "shrink": 44.34033681978675
+              },
+              {
+                "id": "R2.5_battery-3",
+                "source": 66.99206406030756,
+                "ridge": 32.06095378354827,
+                "offset": 33.69519785308172,
+                "shrink": 32.06095378354827
+              },
+              {
+                "id": "R2.5_battery-4",
+                "source": 73.90484716655357,
+                "ridge": 42.754453187605826,
+                "offset": 44.50117466993253,
+                "shrink": 43.02559386931402
+              },
+              {
+                "id": "R2.5_battery-5",
+                "source": 100.18535158761519,
+                "ridge": 56.2943314370663,
+                "offset": 56.83746204925591,
+                "shrink": 57.654391518129025
+              },
+              {
+                "id": "R2.5_battery-6",
+                "source": 67.78906995433228,
+                "ridge": 42.274381427636804,
+                "offset": 43.55676512937901,
+                "shrink": 42.398312579318464
+              },
+              {
+                "id": "R2.5_battery-7",
+                "source": 62.26976541396996,
+                "ridge": 34.11337554359882,
+                "offset": 34.90871884733842,
+                "shrink": 34.100552087569795
+              },
+              {
+                "id": "R2.5_battery-8",
+                "source": 77.63100376494505,
+                "ridge": 35.5407373455301,
+                "offset": 37.093619074619795,
+                "shrink": 36.027023823786045
+              }
+            ]
+          }
+        }
+      },
+      "archive_parity": {
+        "n_legacy_mae_checks": 288,
+        "max_legacy_mae_difference_mAh": 3.5629609129728124e-07,
+        "n_failures": 0
+      }
+    },
+    "R3": {
+      "n_target_cells": 8,
+      "summary": {
+        "10": {
+          "random": {
+            "methods": {
+              "ridge": 59.90054930744366,
+              "offset": 60.857213500110745,
+              "shrink": 70.93647632490898
+            },
+            "source_only_mAh": 94.76727476200064,
+            "mean_lambda": 0.6951353015978718,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.04,
+            "min_lambda": 0.39018071480964683,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 25,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 1,
+            "n_cells_worsened_shrink_vs_ridge": 7,
+            "paired_per_cell": [
+              {
+                "id": "R3_battery-1",
+                "source": 89.61749463995778,
+                "ridge": 53.12611214955545,
+                "offset": 54.77416464023493,
+                "shrink": 69.28875893653967
+              },
+              {
+                "id": "R3_battery-2",
+                "source": 79.39241837100911,
+                "ridge": 43.71172834363365,
+                "offset": 44.86521899415042,
+                "shrink": 54.16487772630681
+              },
+              {
+                "id": "R3_battery-3",
+                "source": 128.08496623274465,
+                "ridge": 94.0645042258894,
+                "offset": 95.03056633828311,
+                "shrink": 101.73755457663624
+              },
+              {
+                "id": "R3_battery-4",
+                "source": 159.17959263152017,
+                "ridge": 116.73828335606811,
+                "offset": 118.945966701469,
+                "shrink": 129.86255769824766
+              },
+              {
+                "id": "R3_battery-5",
+                "source": 80.71354842806345,
+                "ridge": 47.54767306737939,
+                "offset": 48.643720829808714,
+                "shrink": 62.57753740753935
+              },
+              {
+                "id": "R3_battery-6",
+                "source": 94.31188848959596,
+                "ridge": 50.264282810721916,
+                "offset": 51.60501538956688,
+                "shrink": 63.09110494673406
+              },
+              {
+                "id": "R3_battery-7",
+                "source": 44.69932162544854,
+                "ridge": 37.04595322883388,
+                "offset": 35.86029493328737,
+                "shrink": 30.811077157609663
+              },
+              {
+                "id": "R3_battery-8",
+                "source": 82.13896767766543,
+                "ridge": 36.7058572774675,
+                "offset": 37.13276017408553,
+                "shrink": 55.958342149658435
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "methods": {
+              "ridge": 59.29063736792976,
+              "offset": 61.009342439223666,
+              "shrink": 74.3091374404416
+            },
+            "source_only_mAh": 94.76727476200064,
+            "mean_lambda": 0.5949248660789005,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.0,
+            "min_lambda": 0.4558344190102578,
+            "max_lambda": 0.7728867216248123,
+            "n_fold_acquisitions": 5,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 1,
+            "n_cells_worsened_shrink_vs_ridge": 7,
+            "paired_per_cell": [
+              {
+                "id": "R3_battery-1",
+                "source": 89.61749463995778,
+                "ridge": 44.23842023152625,
+                "offset": 47.89033846685578,
+                "shrink": 67.5555423110546
+              },
+              {
+                "id": "R3_battery-2",
+                "source": 79.39241837100911,
+                "ridge": 39.38887288286893,
+                "offset": 41.45827292740875,
+                "shrink": 60.27389998657573
+              },
+              {
+                "id": "R3_battery-3",
+                "source": 128.08496623274465,
+                "ridge": 100.370343835917,
+                "offset": 101.40277430833187,
+                "shrink": 106.55920061568732
+              },
+              {
+                "id": "R3_battery-4",
+                "source": 159.17959263152017,
+                "ridge": 130.28902277368348,
+                "offset": 130.59341223356859,
+                "shrink": 136.80538418186137
+              },
+              {
+                "id": "R3_battery-5",
+                "source": 80.71354842806345,
+                "ridge": 39.41050919852496,
+                "offset": 42.07140022167663,
+                "shrink": 61.16335382804583
+              },
+              {
+                "id": "R3_battery-6",
+                "source": 94.31188848959596,
+                "ridge": 47.63135060542435,
+                "offset": 50.388132992706566,
+                "shrink": 72.39674543228654
+              },
+              {
+                "id": "R3_battery-7",
+                "source": 44.69932162544854,
+                "ridge": 32.69134738113121,
+                "offset": 32.88346215861134,
+                "shrink": 29.91298997644291
+              },
+              {
+                "id": "R3_battery-8",
+                "source": 82.13896767766543,
+                "ridge": 40.305232034361936,
+                "offset": 41.386946204629794,
+                "shrink": 59.805983191578584
+              }
+            ]
+          }
+        },
+        "20": {
+          "random": {
+            "methods": {
+              "ridge": 51.851647974522656,
+              "offset": 52.67374516795789,
+              "shrink": 58.74748813814139
+            },
+            "source_only_mAh": 94.76727476200064,
+            "mean_lambda": 0.8053275396281347,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.0,
+            "min_lambda": 0.5853046877021632,
+            "max_lambda": 0.9901497746925864,
+            "n_fold_acquisitions": 25,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 1,
+            "n_cells_worsened_shrink_vs_ridge": 7,
+            "paired_per_cell": [
+              {
+                "id": "R3_battery-1",
+                "source": 89.61749463995778,
+                "ridge": 41.52438614531911,
+                "offset": 43.12107398609701,
+                "shrink": 54.34293507979972
+              },
+              {
+                "id": "R3_battery-2",
+                "source": 79.39241837100911,
+                "ridge": 37.99467003638894,
+                "offset": 38.98564967050076,
+                "shrink": 44.33066437636112
+              },
+              {
+                "id": "R3_battery-3",
+                "source": 128.08496623274465,
+                "ridge": 81.10762570759002,
+                "offset": 82.03000577342874,
+                "shrink": 87.70860917606959
+              },
+              {
+                "id": "R3_battery-4",
+                "source": 159.17959263152017,
+                "ridge": 102.1266088194632,
+                "offset": 103.5814388478766,
+                "shrink": 112.11800596779786
+              },
+              {
+                "id": "R3_battery-5",
+                "source": 80.71354842806345,
+                "ridge": 37.55141718384593,
+                "offset": 38.53638668850716,
+                "shrink": 48.684251745108774
+              },
+              {
+                "id": "R3_battery-6",
+                "source": 94.31188848959596,
+                "ridge": 39.97453624498078,
+                "offset": 40.980643346464504,
+                "shrink": 48.97648369824786
+              },
+              {
+                "id": "R3_battery-7",
+                "source": 44.69932162544854,
+                "ridge": 44.496316064560475,
+                "offset": 44.45545920012971,
+                "shrink": 33.7893969114555
+              },
+              {
+                "id": "R3_battery-8",
+                "source": 82.13896767766543,
+                "ridge": 30.037623594032823,
+                "offset": 29.699303830658625,
+                "shrink": 40.029558150290676
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "methods": {
+              "ridge": 49.553913498602974,
+              "offset": 50.959735996409734,
+              "shrink": 58.71039682249545
+            },
+            "source_only_mAh": 94.76727476200064,
+            "mean_lambda": 0.7914320521985972,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.0,
+            "min_lambda": 0.6712025894601557,
+            "max_lambda": 0.9400619468825764,
+            "n_fold_acquisitions": 5,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 1,
+            "n_cells_worsened_shrink_vs_ridge": 7,
+            "paired_per_cell": [
+              {
+                "id": "R3_battery-1",
+                "source": 89.61749463995778,
+                "ridge": 32.22652124639862,
+                "offset": 34.929592533585,
+                "shrink": 48.8683534586052
+              },
+              {
+                "id": "R3_battery-2",
+                "source": 79.39241837100911,
+                "ridge": 29.99455528102112,
+                "offset": 31.69144973187885,
+                "shrink": 43.22569561949569
+              },
+              {
+                "id": "R3_battery-3",
+                "source": 128.08496623274465,
+                "ridge": 87.45831490304695,
+                "offset": 88.12969168672106,
+                "shrink": 89.80694441775654
+              },
+              {
+                "id": "R3_battery-4",
+                "source": 159.17959263152017,
+                "ridge": 116.2009372108333,
+                "offset": 116.10663552127976,
+                "shrink": 118.71106323957142
+              },
+              {
+                "id": "R3_battery-5",
+                "source": 80.71354842806345,
+                "ridge": 28.48479209559398,
+                "offset": 30.533290267612745,
+                "shrink": 43.651009007985515
+              },
+              {
+                "id": "R3_battery-6",
+                "source": 94.31188848959596,
+                "ridge": 34.18144616833713,
+                "offset": 36.17417306369209,
+                "shrink": 52.58861028890422
+              },
+              {
+                "id": "R3_battery-7",
+                "source": 44.69932162544854,
+                "ridge": 38.926905786410074,
+                "offset": 40.33529118751936,
+                "shrink": 32.15108527552854
+              },
+              {
+                "id": "R3_battery-8",
+                "source": 82.13896767766543,
+                "ridge": 28.95783529718257,
+                "offset": 29.777763978988958,
+                "shrink": 40.68041327211646
+              }
+            ]
+          }
+        },
+        "30": {
+          "random": {
+            "methods": {
+              "ridge": 48.12110550439992,
+              "offset": 48.80853284785429,
+              "shrink": 52.29315446535924
+            },
+            "source_only_mAh": 94.76727476200064,
+            "mean_lambda": 0.8450321697651113,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.0,
+            "min_lambda": 0.6482815850585419,
+            "max_lambda": 0.9918605862753934,
+            "n_fold_acquisitions": 25,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 1,
+              "offset": 1,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 1,
+            "n_cells_worsened_shrink_vs_ridge": 7,
+            "paired_per_cell": [
+              {
+                "id": "R3_battery-1",
+                "source": 89.61749463995778,
+                "ridge": 35.14490763548679,
+                "offset": 36.5949513830309,
+                "shrink": 45.885330588217485
+              },
+              {
+                "id": "R3_battery-2",
+                "source": 79.39241837100911,
+                "ridge": 36.1804107264516,
+                "offset": 37.1269745271454,
+                "shrink": 40.133935418672365
+              },
+              {
+                "id": "R3_battery-3",
+                "source": 128.08496623274465,
+                "ridge": 72.68446314803029,
+                "offset": 73.4505126314942,
+                "shrink": 78.3443540712093
+              },
+              {
+                "id": "R3_battery-4",
+                "source": 159.17959263152017,
+                "ridge": 92.35610460567969,
+                "offset": 93.61441692468364,
+                "shrink": 101.07434131368947
+              },
+              {
+                "id": "R3_battery-5",
+                "source": 80.71354842806345,
+                "ridge": 32.95421359828415,
+                "offset": 33.78860419312569,
+                "shrink": 40.76101594416991
+              },
+              {
+                "id": "R3_battery-6",
+                "source": 94.31188848959596,
+                "ridge": 34.97155068577038,
+                "offset": 35.89141577089035,
+                "shrink": 42.02416274059143
+              },
+              {
+                "id": "R3_battery-7",
+                "source": 44.69932162544854,
+                "ridge": 51.53094060447677,
+                "offset": 51.91737884481321,
+                "shrink": 37.973564253292274
+              },
+              {
+                "id": "R3_battery-8",
+                "source": 82.13896767766543,
+                "ridge": 29.146253031019672,
+                "offset": 28.08400850765089,
+                "shrink": 32.148531393031625
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "methods": {
+              "ridge": 44.99433732558606,
+              "offset": 46.28728352515468,
+              "shrink": 50.364978110685705
+            },
+            "source_only_mAh": 94.76727476200064,
+            "mean_lambda": 0.8505816712226762,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.0,
+            "min_lambda": 0.7529138859422054,
+            "max_lambda": 0.9761823914364826,
+            "n_fold_acquisitions": 5,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 1,
+              "offset": 1,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 1,
+            "n_cells_worsened_shrink_vs_ridge": 7,
+            "paired_per_cell": [
+              {
+                "id": "R3_battery-1",
+                "source": 89.61749463995778,
+                "ridge": 25.36813557607019,
+                "offset": 27.538636030759196,
+                "shrink": 38.13601363692817
+              },
+              {
+                "id": "R3_battery-2",
+                "source": 79.39241837100911,
+                "ridge": 26.913872595278974,
+                "offset": 28.42513924328951,
+                "shrink": 34.053163868175794
+              },
+              {
+                "id": "R3_battery-3",
+                "source": 128.08496623274465,
+                "ridge": 79.0023393918126,
+                "offset": 79.56298451680448,
+                "shrink": 80.11466233135893
+              },
+              {
+                "id": "R3_battery-4",
+                "source": 159.17959263152017,
+                "ridge": 107.03240040468957,
+                "offset": 106.82871630187883,
+                "shrink": 108.22669745430086
+              },
+              {
+                "id": "R3_battery-5",
+                "source": 80.71354842806345,
+                "ridge": 24.100771732979922,
+                "offset": 25.821032344991256,
+                "shrink": 33.52803376184805
+              },
+              {
+                "id": "R3_battery-6",
+                "source": 94.31188848959596,
+                "ridge": 26.50461925099605,
+                "offset": 28.34089284559329,
+                "shrink": 40.67168361331377
+              },
+              {
+                "id": "R3_battery-7",
+                "source": 44.69932162544854,
+                "ridge": 45.95446394013498,
+                "offset": 47.75883461704565,
+                "shrink": 36.37243467147376
+              },
+              {
+                "id": "R3_battery-8",
+                "source": 82.13896767766543,
+                "ridge": 25.078095712726192,
+                "offset": 26.02203230087519,
+                "shrink": 31.817135548086338
+              }
+            ]
+          }
+        }
+      },
+      "archive_parity": {
+        "n_legacy_mae_checks": 288,
+        "max_legacy_mae_difference_mAh": 5.440758172881033e-07,
+        "n_failures": 0
+      }
+    },
+    "Sim_satellite": {
+      "n_target_cells": 8,
+      "summary": {
+        "10": {
+          "random": {
+            "methods": {
+              "ridge": 52.02302683624298,
+              "offset": 52.150921516820034,
+              "shrink": 53.82993170543945
+            },
+            "source_only_mAh": 100.85807675789337,
+            "mean_lambda": 0.8990187389662985,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.2,
+            "min_lambda": 0.566412594463268,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 25,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 2,
+            "n_cells_worsened_shrink_vs_ridge": 6,
+            "paired_per_cell": [
+              {
+                "id": "Sim_satellite_battery-1",
+                "source": 107.75097246460388,
+                "ridge": 53.316330997402346,
+                "offset": 54.25499766054387,
+                "shrink": 64.47869477349778
+              },
+              {
+                "id": "Sim_satellite_battery-2",
+                "source": 129.50403069114523,
+                "ridge": 68.64589671155804,
+                "offset": 70.33643906288776,
+                "shrink": 72.97538919423303
+              },
+              {
+                "id": "Sim_satellite_battery-3",
+                "source": 84.31648957199793,
+                "ridge": 39.60936197403492,
+                "offset": 39.24079093972288,
+                "shrink": 40.37635505620383
+              },
+              {
+                "id": "Sim_satellite_battery-4",
+                "source": 86.20061121569275,
+                "ridge": 42.06754332219885,
+                "offset": 40.45397867147278,
+                "shrink": 42.926559789588026
+              },
+              {
+                "id": "Sim_satellite_battery-5",
+                "source": 65.77157587174405,
+                "ridge": 25.440355256489898,
+                "offset": 23.36307842275208,
+                "shrink": 21.184646475099463
+              },
+              {
+                "id": "Sim_satellite_battery-6",
+                "source": 171.38496866870025,
+                "ridge": 108.95761674168907,
+                "offset": 112.08556571285715,
+                "shrink": 110.52600961880887
+              },
+              {
+                "id": "Sim_satellite_battery-7",
+                "source": 77.70188896473236,
+                "ridge": 40.05257448749331,
+                "offset": 39.40066775756815,
+                "shrink": 39.62120668771015
+              },
+              {
+                "id": "Sim_satellite_battery-8",
+                "source": 84.2340766145304,
+                "ridge": 38.094535199077356,
+                "offset": 38.07185390675567,
+                "shrink": 38.55059204837446
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "methods": {
+              "ridge": 52.02165560718879,
+              "offset": 52.288751301057076,
+              "shrink": 53.25519538306234
+            },
+            "source_only_mAh": 100.85807675789337,
+            "mean_lambda": 0.950813775291907,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.2,
+            "min_lambda": 0.8713030949504179,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 5,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 1,
+            "n_cells_worsened_shrink_vs_ridge": 5,
+            "paired_per_cell": [
+              {
+                "id": "Sim_satellite_battery-1",
+                "source": 107.75097246460388,
+                "ridge": 56.73281273946819,
+                "offset": 57.28645810642573,
+                "shrink": 62.74659755752715
+              },
+              {
+                "id": "Sim_satellite_battery-2",
+                "source": 129.50403069114523,
+                "ridge": 79.64731137296137,
+                "offset": 80.80531007255537,
+                "shrink": 80.59887862219914
+              },
+              {
+                "id": "Sim_satellite_battery-3",
+                "source": 84.31648957199793,
+                "ridge": 32.181226365599095,
+                "offset": 31.887149286737845,
+                "shrink": 33.065575242963334
+              },
+              {
+                "id": "Sim_satellite_battery-4",
+                "source": 86.20061121569275,
+                "ridge": 46.7124791148577,
+                "offset": 46.894185225385506,
+                "shrink": 48.51989906219145
+              },
+              {
+                "id": "Sim_satellite_battery-5",
+                "source": 65.77157587174405,
+                "ridge": 19.189157015982307,
+                "offset": 19.011773722040978,
+                "shrink": 19.52763164456799
+              },
+              {
+                "id": "Sim_satellite_battery-6",
+                "source": 171.38496866870025,
+                "ridge": 107.06629298893863,
+                "offset": 110.130273436862,
+                "shrink": 107.06629298893863
+              },
+              {
+                "id": "Sim_satellite_battery-7",
+                "source": 77.70188896473236,
+                "ridge": 36.895972738137004,
+                "offset": 35.205567760528,
+                "shrink": 36.768695424544994
+              },
+              {
+                "id": "Sim_satellite_battery-8",
+                "source": 84.2340766145304,
+                "ridge": 37.74799252156605,
+                "offset": 37.089292797921196,
+                "shrink": 37.74799252156605
+              }
+            ]
+          }
+        },
+        "20": {
+          "random": {
+            "methods": {
+              "ridge": 51.035406096086064,
+              "offset": 51.08499926692079,
+              "shrink": 52.784458733535345
+            },
+            "source_only_mAh": 100.85807675789337,
+            "mean_lambda": 0.8997844595186452,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.12,
+            "min_lambda": 0.574766585903746,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 25,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 2,
+            "n_cells_worsened_shrink_vs_ridge": 6,
+            "paired_per_cell": [
+              {
+                "id": "Sim_satellite_battery-1",
+                "source": 107.75097246460388,
+                "ridge": 53.207486694306134,
+                "offset": 54.22824425471123,
+                "shrink": 64.12769251155476
+              },
+              {
+                "id": "Sim_satellite_battery-2",
+                "source": 129.50403069114523,
+                "ridge": 67.91321576943692,
+                "offset": 69.0989019400454,
+                "shrink": 72.49049225761726
+              },
+              {
+                "id": "Sim_satellite_battery-3",
+                "source": 84.31648957199793,
+                "ridge": 37.54991227209715,
+                "offset": 37.46525188574492,
+                "shrink": 38.96591715371955
+              },
+              {
+                "id": "Sim_satellite_battery-4",
+                "source": 86.20061121569275,
+                "ridge": 41.41998894178313,
+                "offset": 40.24772320789431,
+                "shrink": 42.02842780932885
+              },
+              {
+                "id": "Sim_satellite_battery-5",
+                "source": 65.77157587174405,
+                "ridge": 25.523207061815377,
+                "offset": 23.59226481948771,
+                "shrink": 20.675007872091292
+              },
+              {
+                "id": "Sim_satellite_battery-6",
+                "source": 171.38496866870025,
+                "ridge": 106.98434415566912,
+                "offset": 108.71015468722699,
+                "shrink": 108.11825456064953
+              },
+              {
+                "id": "Sim_satellite_battery-7",
+                "source": 77.70188896473236,
+                "ridge": 38.64000658430808,
+                "offset": 38.489352615546466,
+                "shrink": 38.6157003434478
+              },
+              {
+                "id": "Sim_satellite_battery-8",
+                "source": 84.2340766145304,
+                "ridge": 37.04508728927264,
+                "offset": 36.84810072470931,
+                "shrink": 37.25417735987369
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "methods": {
+              "ridge": 50.90055065447812,
+              "offset": 51.236948528194574,
+              "shrink": 52.42862885738741
+            },
+            "source_only_mAh": 100.85807675789337,
+            "mean_lambda": 0.9385760478906473,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.0,
+            "min_lambda": 0.8618437658519502,
+            "max_lambda": 0.9921410505583498,
+            "n_fold_acquisitions": 5,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 2,
+            "n_cells_worsened_shrink_vs_ridge": 6,
+            "paired_per_cell": [
+              {
+                "id": "Sim_satellite_battery-1",
+                "source": 107.75097246460388,
+                "ridge": 54.929781148835936,
+                "offset": 55.79069273123925,
+                "shrink": 61.5952230407369
+              },
+              {
+                "id": "Sim_satellite_battery-2",
+                "source": 129.50403069114523,
+                "ridge": 76.46551245960266,
+                "offset": 77.58188602482072,
+                "shrink": 78.32820432860363
+              },
+              {
+                "id": "Sim_satellite_battery-3",
+                "source": 84.31648957199793,
+                "ridge": 31.08293272768527,
+                "offset": 31.008056232945926,
+                "shrink": 32.24053597138647
+              },
+              {
+                "id": "Sim_satellite_battery-4",
+                "source": 86.20061121569275,
+                "ridge": 45.29749687578063,
+                "offset": 45.5898475645458,
+                "shrink": 47.61350214066541
+              },
+              {
+                "id": "Sim_satellite_battery-5",
+                "source": 65.77157587174405,
+                "ridge": 19.29393911757724,
+                "offset": 19.220851979593405,
+                "shrink": 19.06432960572352
+              },
+              {
+                "id": "Sim_satellite_battery-6",
+                "source": 171.38496866870025,
+                "ridge": 107.2121078012583,
+                "offset": 108.81616699794813,
+                "shrink": 107.69170712416933
+              },
+              {
+                "id": "Sim_satellite_battery-7",
+                "source": 77.70188896473236,
+                "ridge": 35.960970894152595,
+                "offset": 35.26639223071792,
+                "shrink": 35.79562693932747
+              },
+              {
+                "id": "Sim_satellite_battery-8",
+                "source": 84.2340766145304,
+                "ridge": 36.96166421093231,
+                "offset": 36.62169446374542,
+                "shrink": 37.09990170848654
+              }
+            ]
+          }
+        },
+        "30": {
+          "random": {
+            "methods": {
+              "ridge": 47.85468076409162,
+              "offset": 48.007026100374574,
+              "shrink": 47.96741958944918
+            },
+            "source_only_mAh": 100.85807675789337,
+            "mean_lambda": 0.9264298126481815,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.08,
+            "min_lambda": 0.6698282588753979,
+            "max_lambda": 1.0,
+            "n_fold_acquisitions": 25,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 4,
+            "n_cells_worsened_shrink_vs_ridge": 4,
+            "paired_per_cell": [
+              {
+                "id": "Sim_satellite_battery-1",
+                "source": 107.75097246460388,
+                "ridge": 45.914231723278256,
+                "offset": 47.214620365661105,
+                "shrink": 53.892946269729144
+              },
+              {
+                "id": "Sim_satellite_battery-2",
+                "source": 129.50403069114523,
+                "ridge": 58.29831181781869,
+                "offset": 60.10718908847498,
+                "shrink": 62.030036802025236
+              },
+              {
+                "id": "Sim_satellite_battery-3",
+                "source": 84.31648957199793,
+                "ridge": 34.53153836470271,
+                "offset": 34.52415780992482,
+                "shrink": 33.99749275441788
+              },
+              {
+                "id": "Sim_satellite_battery-4",
+                "source": 86.20061121569275,
+                "ridge": 41.818909511167185,
+                "offset": 40.90280173136911,
+                "shrink": 39.90975312750542
+              },
+              {
+                "id": "Sim_satellite_battery-5",
+                "source": 65.77157587174405,
+                "ridge": 28.70708007236214,
+                "offset": 26.504350408218233,
+                "shrink": 20.332773154682307
+              },
+              {
+                "id": "Sim_satellite_battery-6",
+                "source": 171.38496866870025,
+                "ridge": 100.58786193646338,
+                "offset": 101.84448415734653,
+                "shrink": 101.8798859691012
+              },
+              {
+                "id": "Sim_satellite_battery-7",
+                "source": 77.70188896473236,
+                "ridge": 37.69878406985528,
+                "offset": 37.869162934280816,
+                "shrink": 36.377495228379225
+              },
+              {
+                "id": "Sim_satellite_battery-8",
+                "source": 84.2340766145304,
+                "ridge": 35.28072861708529,
+                "offset": 35.08944230772097,
+                "shrink": 35.31897340975299
+              }
+            ]
+          },
+          "pred_quartiles": {
+            "methods": {
+              "ridge": 46.92004529559901,
+              "offset": 47.39661392279149,
+              "shrink": 47.141715021326036
+            },
+            "source_only_mAh": 100.85807675789337,
+            "mean_lambda": 0.9761149737713047,
+            "fraction_lambda_zero": 0.0,
+            "fraction_lambda_one": 0.0,
+            "min_lambda": 0.9460110462238986,
+            "max_lambda": 0.9954009549928078,
+            "n_fold_acquisitions": 5,
+            "n_test_cells": 8,
+            "n_cells_negative_vs_source": {
+              "ridge": 0,
+              "offset": 0,
+              "shrink": 0
+            },
+            "n_cells_improved_shrink_vs_ridge": 2,
+            "n_cells_worsened_shrink_vs_ridge": 6,
+            "paired_per_cell": [
+              {
+                "id": "Sim_satellite_battery-1",
+                "source": 107.75097246460388,
+                "ridge": 46.11751087345354,
+                "offset": 47.13682236597254,
+                "shrink": 48.87007092448961
+              },
+              {
+                "id": "Sim_satellite_battery-2",
+                "source": 129.50403069114523,
+                "ridge": 65.3912678746375,
+                "offset": 67.04415915592661,
+                "shrink": 65.98134606700044
+              },
+              {
+                "id": "Sim_satellite_battery-3",
+                "source": 84.31648957199793,
+                "ridge": 29.16099590062171,
+                "offset": 29.132769247014007,
+                "shrink": 29.37414153016441
+              },
+              {
+                "id": "Sim_satellite_battery-4",
+                "source": 86.20061121569275,
+                "ridge": 39.71665398890234,
+                "offset": 40.6345948389062,
+                "shrink": 40.14056311822359
+              },
+              {
+                "id": "Sim_satellite_battery-5",
+                "source": 65.77157587174405,
+                "ridge": 24.13725081113447,
+                "offset": 23.412575566583335,
+                "shrink": 21.97195988280762
+              },
+              {
+                "id": "Sim_satellite_battery-6",
+                "source": 171.38496866870025,
+                "ridge": 99.56168160022926,
+                "offset": 100.78659477435838,
+                "shrink": 99.8705494045156
+              },
+              {
+                "id": "Sim_satellite_battery-7",
+                "source": 77.70188896473236,
+                "ridge": 36.2810962324791,
+                "offset": 36.26662860384523,
+                "shrink": 35.90974708091959
+              },
+              {
+                "id": "Sim_satellite_battery-8",
+                "source": 84.2340766145304,
+                "ridge": 34.99390508333416,
+                "offset": 34.75876682972559,
+                "shrink": 35.01534216248745
+              }
+            ]
+          }
+        }
+      },
+      "archive_parity": {
+        "n_legacy_mae_checks": 288,
+        "max_legacy_mae_difference_mAh": 5.810367440517439e-07,
+        "n_failures": 0
+      }
+    }
+  },
+  "caveats": [
+    "Developer-only reused 47 XJTU target cells; no preregistration on unseen data",
+    "N10 selection uses first 12 unlabeled feature cycles; cannot retroactively measure early capacity unless recorded",
+    "This is capacity MAE in mAh, not SOH percentage-point error"
+  ]
+}
