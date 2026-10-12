@@ -1,5 +1,18 @@
 # Physics-Informed Battery PHM
 
+## v14 统一源保持局部核校准：55电芯实验（2026-10-12）
+
+**在用户要求的单一连续校准函数中融合零/弱/强修正，不使用“是否校准”的独立分类开关。** 首轮开发集RBF核残差补偿：两块目标电芯各前N=10/20/30条容量标签，原RW8源Ridge/六个特征、五工况全部电芯级五折与随机/四分位选样严格冻结。真实XJTU55电芯执行完毕，**37/37项测试通过，1,739项与v12已归档逐电芯误差一致性检查全部通过（最大差0mAh）**。
+
+N30四分位选样五域宏MAE：原Ridge **41.081mAh**、普通输入核**RBF-X 40.055mAh**、额外源预测容量方向的**RBF-XQ 40.849mAh**。普通RBF-X在3C由42.472降至38.028mAh，但仍差于源模型35.110mAh且**3C负迁移电芯仍9/15**；在Satellite由46.920恶化到49.424mAh。任务引导XQ在6组N×选样对照里均不优于普通核，因此未证实新增任务距离维度的有效性。
+
+**研究边界**：RBF核岭、GP残差转移已有大量先例；我们目前只有开发集内的固定条件改造与实际实验，不能宣传原创核回归、显著SOTA、消除负迁移或独立验证。历史v8-v13保留原样。
+
+[详细科研报告](reports/v14_unified_kernel_calibration_20261012.md) | [实际五域全数据](results/v14/summary_five_domains.json) | [可运行源码](experiments/rw_multitarget/source_anchored_kernel_v14.py) | [先于实验的固定协议](docs/V14_SOURCE_ANCHORED_LOCAL_KERNEL_PROTOCOL_20261012.md) | [GitHub Actions执行](https://github.com/Fan-1-boop/battery-physics-informed-phm/actions/runs/38258247664)
+
+---
+
+
 ## v13 选择性容量校准的理想性能空间诊断（2026-10-12）
 
 **正式执行完成；仅使用v12已归档测试电芯全寿命MAE进行事后Oracle诊断，没有训练/验证新模型。** N30四分位标注(两电芯各30容量标签)下，3C的15块电芯中9块更适合Source-only，6块更适合Ridge：Source-only **35.110**，Ridge **42.472**，LOCO **41.039**，事后理想折级二选一 **31.531**，逐电芯理想二选一 **27.667** mAh。五工况宏平均Ridge **41.081**，事后电芯Oracle **38.089** mAh。
