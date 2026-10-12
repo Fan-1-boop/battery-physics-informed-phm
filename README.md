@@ -1,5 +1,16 @@
 # Physics-Informed Battery PHM
 
+## v15 标注电芯间分歧约束的统一连续校准：完整负结果（2026-10-12）
+
+**实际运行完成，用户要求的“单一校准函数自然包含零/弱/强修正”保持不变，不使用独立校准/不校准二分类器。** 在v14固定RBF-X局部残差核基础上，用两块已标注电芯各自核残差预测的分歧，构造连续信号/分歧比校准强度；没有增加容量标签或根据测试真值调超参。
+
+完整55电芯XJTU原始数据复算，**47/47测试PASS，2585个历史逐电芯误差对照PASS（最大差1.31e-12mAh）**。N30四分位：v14 RBF-X五域宏MAE **40.055mAh**、v15 **40.550mAh**；3C从38.028改善至36.558mAh，但仍劣于源模型35.110，**3C负迁移仍9/15**。N10/20/30×随机/四分位的6组实验，v15**全部劣于v14**，已完整归档，不宣传创新成功。
+
+[RBF-X vs 分歧约束真实科研报告](reports/v15_intercell_disagreement_calibration_20261012.md) | [完整五域/逐电芯数据](results/v15/summary_five_domains.json) | [Python代码](experiments/rw_multitarget/disagreement_calibration_v15.py) | [执行前规则](docs/V15_INTERCELL_DISAGREEMENT_CALIBRATION_PROTOCOL_20261012.md) | [实际GitHub Actions运行](https://github.com/Fan-1-boop/battery-physics-informed-phm/actions/runs/38268084190)
+
+---
+
+
 ## v14 统一源保持局部核校准：55电芯实验（2026-10-12）
 
 **在用户要求的单一连续校准函数中融合零/弱/强修正，不使用“是否校准”的独立分类开关。** 首轮开发集RBF核残差补偿：两块目标电芯各前N=10/20/30条容量标签，原RW8源Ridge/六个特征、五工况全部电芯级五折与随机/四分位选样严格冻结。真实XJTU55电芯执行完毕，**37/37项测试通过，1,739项与v12已归档逐电芯误差一致性检查全部通过（最大差0mAh）**。
