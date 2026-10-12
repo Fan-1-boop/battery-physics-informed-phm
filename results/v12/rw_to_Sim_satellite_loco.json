@@ -1,0 +1,6157 @@
+{
+  "domain": "Sim_satellite",
+  "n_target_cells": 8,
+  "source_sha": [
+    {
+      "id": "Sim_satellite_battery-1",
+      "git_blob_sha": "48e723c4f292ace6c323ed2138bfaa132654de14",
+      "cycles": 695
+    },
+    {
+      "id": "Sim_satellite_battery-2",
+      "git_blob_sha": "ce362e9620051617bae29182539dcc878e5bcca8",
+      "cycles": 908
+    },
+    {
+      "id": "Sim_satellite_battery-3",
+      "git_blob_sha": "a36daf9a0ed30f146940b164b7006ac1e495d7aa",
+      "cycles": 669
+    },
+    {
+      "id": "Sim_satellite_battery-4",
+      "git_blob_sha": "d1269a5d116511a4b36bdb76c70e4d06030f2256",
+      "cycles": 699
+    },
+    {
+      "id": "Sim_satellite_battery-5",
+      "git_blob_sha": "37e38d3e6e252338c4f86994e3b806e01b617b4a",
+      "cycles": 942
+    },
+    {
+      "id": "Sim_satellite_battery-6",
+      "git_blob_sha": "e1751f12c03044fd806616c4b601443202d1515a",
+      "cycles": 791
+    },
+    {
+      "id": "Sim_satellite_battery-7",
+      "git_blob_sha": "9c129731851d0cd6362c4ec4c17c641f537d059c",
+      "cycles": 678
+    },
+    {
+      "id": "Sim_satellite_battery-8",
+      "git_blob_sha": "6fef7f88b609c7a78640746eb7685e0c3d1d48c8",
+      "cycles": 764
+    }
+  ],
+  "folds": [
+    [
+      "Sim_satellite_battery-8",
+      "Sim_satellite_battery-6"
+    ],
+    [
+      "Sim_satellite_battery-5",
+      "Sim_satellite_battery-1"
+    ],
+    [
+      "Sim_satellite_battery-3",
+      "Sim_satellite_battery-7"
+    ],
+    [
+      "Sim_satellite_battery-4"
+    ],
+    [
+      "Sim_satellite_battery-2"
+    ]
+  ],
+  "source_predictions": [
+    {
+      "id": "Sim_satellite_battery-6",
+      "mae_mAh": 171.38496866870025
+    },
+    {
+      "id": "Sim_satellite_battery-8",
+      "mae_mAh": 84.2340766145304
+    },
+    {
+      "id": "Sim_satellite_battery-1",
+      "mae_mAh": 107.75097246460388
+    },
+    {
+      "id": "Sim_satellite_battery-5",
+      "mae_mAh": 65.77157587174405
+    },
+    {
+      "id": "Sim_satellite_battery-3",
+      "mae_mAh": 84.31648957199793
+    },
+    {
+      "id": "Sim_satellite_battery-7",
+      "mae_mAh": 77.70188896473236
+    },
+    {
+      "id": "Sim_satellite_battery-4",
+      "mae_mAh": 86.20061121569275
+    },
+    {
+      "id": "Sim_satellite_battery-2",
+      "mae_mAh": 129.50403069114523
+    }
+  ],
+  "records": [
+    {
+      "fold": 0,
+      "policy": "random",
+      "repeat": 0,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-2",
+        "Sim_satellite_battery-5"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.9418729963821757,
+      "loco": {
+        "cross_product": 0.008793672377432019,
+        "squared_prediction": 0.00933636744148028,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.03165499243040859
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.03069523128540955
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 105.37759611192824
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 36.55058747062397
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 108.11115401659147
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 36.385029767853965
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 109.03148245546242
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 37.59378500659615
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "repeat": 0,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-2",
+        "Sim_satellite_battery-5"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9601247048680772,
+      "loco": {
+        "cross_product": 0.010200162593380883,
+        "squared_prediction": 0.010623789328264814,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.0259306949875841
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.026331787026054605
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 102.16261625950239
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 35.57719819452128
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 103.76169524378997
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 35.206444121441734
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 104.79451033641162
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 36.04141267907917
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "repeat": 0,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-2",
+        "Sim_satellite_battery-5"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.959175647292018,
+      "loco": {
+        "cross_product": 0.012212179433276252,
+        "squared_prediction": 0.012731953180581838,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.02897086511553785
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.028009813603915683
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 96.67660512812785
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 34.8968989822308
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 97.75254579823597
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 34.5951829426863
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 99.52728931135172
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 34.942457655418565
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "repeat": 1,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-4",
+        "Sim_satellite_battery-3"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 1.0,
+      "loco": {
+        "cross_product": 0.007695864478178159,
+        "squared_prediction": 0.007572292591129402,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.027931826313066767
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.02623378570470568
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 109.72992712885576
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 38.93215480629935
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 113.36387811793696
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 38.49118393464704
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 109.72992712885576
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 38.93215480629935
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "repeat": 1,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-4",
+        "Sim_satellite_battery-3"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 1.0,
+      "loco": {
+        "cross_product": 0.007543442259618269,
+        "squared_prediction": 0.007507812420522126,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.021347283786072292
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.019829737068312096
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 111.58437274190939
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 38.70433320619927
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 113.52179817393076
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 38.56810554764546
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 111.58437274190939
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 38.70433320619927
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "repeat": 1,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-4",
+        "Sim_satellite_battery-3"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 1.0,
+      "loco": {
+        "cross_product": 0.010189094773357773,
+        "squared_prediction": 0.010184090341983863,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.024933894242744222
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.023408742149028307
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 102.71754601277104
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 35.286059301078694
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 104.46048702704292
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 35.357863320857845
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 102.71754601277104
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 35.286059301078694
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "repeat": 2,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-2",
+        "Sim_satellite_battery-5"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.9418729963821757,
+      "loco": {
+        "cross_product": 0.008793672377432019,
+        "squared_prediction": 0.00933636744148028,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.03165499243040859
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.03069523128540955
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 105.37759611192824
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 36.55058747062397
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 108.11115401659147
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 36.385029767853965
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 109.03148245546242
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 37.59378500659615
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "repeat": 2,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-2",
+        "Sim_satellite_battery-5"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9601247048680772,
+      "loco": {
+        "cross_product": 0.010200162593380883,
+        "squared_prediction": 0.010623789328264814,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.0259306949875841
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.026331787026054605
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 102.16261625950239
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 35.57719819452128
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 103.76169524378997
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 35.206444121441734
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 104.79451033641162
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 36.04141267907917
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "repeat": 2,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-2",
+        "Sim_satellite_battery-5"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.959175647292018,
+      "loco": {
+        "cross_product": 0.012212179433276252,
+        "squared_prediction": 0.012731953180581838,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.02897086511553785
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.028009813603915683
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 96.67660512812785
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 34.8968989822308
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 97.75254579823597
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 34.5951829426863
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 99.52728931135172
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 34.942457655418565
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "repeat": 3,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.9907028585673812,
+      "loco": {
+        "cross_product": 0.007387404687379215,
+        "squared_prediction": 0.007456730969830721,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.024785329609784686
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.022032986731698654
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 110.94219386096616
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 38.54902695043818
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 113.78989238403246
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 38.69895385360392
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 111.47638555949675
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 38.74291612497932
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "repeat": 3,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9933330517071545,
+      "loco": {
+        "cross_product": 0.008770320733781312,
+        "squared_prediction": 0.008829184449977306,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.01941041408599617
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.018477813674959032
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 107.3759803977922
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 36.91838821143328
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 108.8993882473449
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 36.65021211804728
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 107.78174426887583
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 37.03540959532277
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "repeat": 3,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.9891982385013945,
+      "loco": {
+        "cross_product": 0.010662102646475321,
+        "squared_prediction": 0.010778529754185657,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.021739087530967226
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.01973406144374517
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 101.7973298941793
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 35.4692946640471
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 102.78033118628838
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 35.021587033074724
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 102.50704585888919
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 35.55790102089756
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "repeat": 4,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-5",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 1.0,
+      "loco": {
+        "cross_product": 0.00658576723312282,
+        "squared_prediction": 0.006507272052318354,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.019072573888622758
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.0295890319988565
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 113.36077049476698
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 39.89031929740135
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 117.05175002913339
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 40.39907220981947
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 113.36077049476698
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 39.89031929740135
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "repeat": 4,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-5",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 1.0,
+      "loco": {
+        "cross_product": 0.0074688976640639405,
+        "squared_prediction": 0.007436733316454738,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.016156697386510047
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.021959786489775982
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 111.63613511963918
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 38.44831863968806
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 113.60619652727937
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 38.60929771497037
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 111.63613511963918
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 38.44831863968806
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "random",
+      "repeat": 4,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-5",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.999223708371418,
+      "loco": {
+        "cross_product": 0.009549289321779685,
+        "squared_prediction": 0.009556708114285606,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.016522659778761554
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.025154499897960852
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 105.07122351911086
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 35.85449115583906
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 106.4765109769294
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 35.8773952992997
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 105.12025935114237
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 35.86599141595157
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "pred_quartiles",
+      "repeat": 0,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-3"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 1.0,
+      "loco": {
+        "cross_product": 0.008534584754362695,
+        "squared_prediction": 0.008467038659517678,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.021337969607243195
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.027289231804180396
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 107.06629298893863
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 37.74799252156605
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 110.130273436862
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 37.089292797921196
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 107.06629298893863
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 37.74799252156605
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "pred_quartiles",
+      "repeat": 0,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-3"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9921410505583498,
+      "loco": {
+        "cross_product": 0.008823343580353738,
+        "squared_prediction": 0.008893235065103094,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.019119020258349148
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.02223343767178314
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 107.2121078012583
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 36.96166421093231
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 108.81616699794813
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 36.62169446374542
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 107.69170712416933
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 37.09990170848654
+        }
+      ]
+    },
+    {
+      "fold": 0,
+      "policy": "pred_quartiles",
+      "repeat": 0,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-3"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.9954009549928078,
+      "loco": {
+        "cross_product": 0.011387876884220025,
+        "squared_prediction": 0.011440492222857378,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.01977720720923193
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.024442728800498775
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 99.56168160022926
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 34.99390508333416
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 100.78659477435838
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 34.75876682972559
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-6",
+          "mae_mAh": 99.8705494045156
+        },
+        {
+          "id": "Sim_satellite_battery-8",
+          "mae_mAh": 35.01534216248745
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "repeat": 0,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.566412594463268,
+      "loco": {
+        "cross_product": 0.010822096898655743,
+        "squared_prediction": 0.019106384646885813,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.09501524367439448
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.09293179566383131
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 41.061363645926335
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 33.04228727788747
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 42.22671737143566
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 28.42926869654715
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 66.50782635948994
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 21.247691424196464
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "repeat": 0,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.574766585903746,
+      "loco": {
+        "cross_product": 0.011106500733532169,
+        "squared_prediction": 0.019323497583055627,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.09271414155309682
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.09187758363385214
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 40.129951695845755
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 33.73516277866928
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 41.86872422789519
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 28.885665903409485
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 65.34104917850081
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 20.457060712505186
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "repeat": 0,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.6698282588753979,
+      "loco": {
+        "cross_product": 0.015105748295858552,
+        "squared_prediction": 0.022551673650228213,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.08848351712151543
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.08966298701288525
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 35.40080969205433
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 41.19718558349129
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 37.07962739668913
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 36.45895800180678
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 54.28558543591715
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 20.448406254980718
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "repeat": 1,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.566412594463268,
+      "loco": {
+        "cross_product": 0.010822096898655743,
+        "squared_prediction": 0.019106384646885813,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.09501524367439448
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.09293179566383131
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 41.061363645926335
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 33.04228727788747
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 42.22671737143566
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 28.42926869654715
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 66.50782635948994
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 21.247691424196464
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "repeat": 1,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.574766585903746,
+      "loco": {
+        "cross_product": 0.011106500733532169,
+        "squared_prediction": 0.019323497583055627,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.09271414155309682
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.09187758363385214
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 40.129951695845755
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 33.73516277866928
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 41.86872422789519
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 28.885665903409485
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 65.34104917850081
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 20.457060712505186
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "repeat": 1,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-8"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.6698282588753979,
+      "loco": {
+        "cross_product": 0.015105748295858552,
+        "squared_prediction": 0.022551673650228213,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.08848351712151543
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.08966298701288525
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 35.40080969205433
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 41.19718558349129
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 37.07962739668913
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 36.45895800180678
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 54.28558543591715
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 20.448406254980718
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "repeat": 2,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-7",
+        "Sim_satellite_battery-3"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.9625949688791109,
+      "loco": {
+        "cross_product": 0.005920250546842512,
+        "squared_prediction": 0.006150302815042052,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.02205528757848561
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.03308024647308028
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 62.243264526158285
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 19.904224389643215
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 63.05404440537342
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 19.91441191056854
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 63.79764722958588
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 20.318355292468198
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "repeat": 2,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-7",
+        "Sim_satellite_battery-3"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9685275817465302,
+      "loco": {
+        "cross_product": 0.0058972420265463055,
+        "squared_prediction": 0.006088873603281286,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.019244382429534634
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.025159349981193214
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 62.74144649591193
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 19.79387071803567
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 63.31815528608985
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 20.02842819729328
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 64.04096091348713
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 20.302126435875476
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "repeat": 2,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-7",
+        "Sim_satellite_battery-3"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.9966798936033578,
+      "loco": {
+        "cross_product": 0.009471731503796198,
+        "squared_prediction": 0.00950328341585428,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.03286241490125655
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.024439809023151148
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 51.70754488290637
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 20.495472368967132
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 53.10347981519009
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 19.9571237516894
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 51.86718152969028
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 20.413743129322167
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "repeat": 3,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-8"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.916106668296484,
+      "loco": {
+        "cross_product": 0.005155399261306491,
+        "squared_prediction": 0.005627509808320732,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.036462890981554724
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.02814504146561685
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 64.18385252010981
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 20.369853320519674
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 65.34628383931549
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 21.06498851529778
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 67.54836327003216
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 22.266370218124536
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "repeat": 3,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-8"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9276097391707449,
+      "loco": {
+        "cross_product": 0.005173896376601796,
+        "squared_prediction": 0.005577665000830094,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.028866957303744414
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.024598263567599806
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 64.65408676117276
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 20.490303726255384
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 65.53679899731976
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 21.181315298123156
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 67.53340646453054
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 22.297256192123342
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "repeat": 3,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-8"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.9579266895992228,
+      "loco": {
+        "cross_product": 0.007753712981143685,
+        "squared_prediction": 0.008094265527133064,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.029719995472935853
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.030138708606645758
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 56.10468183122565
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 19.121686121184972
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 57.353897566365994
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 19.007705042202538
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 58.069066428970565
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 18.829439429451902
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "repeat": 4,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 1.0,
+      "loco": {
+        "cross_product": 0.007695864478178159,
+        "squared_prediction": 0.007572292591129402,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.02623378570470568
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.027931826313066767
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 58.03181064889099
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 20.84312401651167
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 58.4212253151591
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 18.977454294799763
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 58.03181064889099
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 20.84312401651167
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "repeat": 4,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 1.0,
+      "loco": {
+        "cross_product": 0.007543442259618269,
+        "squared_prediction": 0.007507812420522126,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.019829737068312096
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.021347283786072292
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 58.381996822754466
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 19.86153530744729
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 58.54881853435613
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 18.980248795203153
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 58.381996822754466
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 19.86153530744729
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "random",
+      "repeat": 4,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 1.0,
+      "loco": {
+        "cross_product": 0.010189094773357773,
+        "squared_prediction": 0.010184090341983863,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.023408742149028307
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.024933894242744222
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 50.95731251815058
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 21.523870704676032
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 51.456469653371194
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 20.639007243585667
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 50.95731251815058
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 21.523870704676032
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "pred_quartiles",
+      "repeat": 0,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-2",
+        "Sim_satellite_battery-7"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.8713030949504179,
+      "loco": {
+        "cross_product": 0.00747611660402395,
+        "squared_prediction": 0.008580385685935598,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.038355689223113255
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.03613606722868807
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 56.73281273946819
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 19.189157015982307
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 57.28645810642573
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 19.011773722040978
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 62.74659755752715
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 19.52763164456799
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "pred_quartiles",
+      "repeat": 0,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-2",
+        "Sim_satellite_battery-7"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.8618437658519502,
+      "loco": {
+        "cross_product": 0.007913502275972487,
+        "squared_prediction": 0.009182061284796587,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.03792558991542169
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.03763409250822165
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 54.929781148835936
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 19.29393911757724
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 55.79069273123925
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 19.220851979593405
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 61.5952230407369
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 19.06432960572352
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "policy": "pred_quartiles",
+      "repeat": 0,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-2",
+        "Sim_satellite_battery-7"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-5"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.9460110462238986,
+      "loco": {
+        "cross_product": 0.012005500178375827,
+        "squared_prediction": 0.012690655385364714,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.029571809148390613
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.04072952179432533
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 46.11751087345354
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 24.13725081113447
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 47.13682236597254
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 23.412575566583335
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-1",
+          "mae_mAh": 48.87007092448961
+        },
+        {
+          "id": "Sim_satellite_battery-5",
+          "mae_mAh": 21.97195988280762
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "repeat": 0,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-2"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.9879946264674174,
+      "loco": {
+        "cross_product": 0.010560832196934409,
+        "squared_prediction": 0.010689159550082521,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.025556256922221673
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.024380318580464317
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 31.111936927053762
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 37.04330416038085
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 30.57036541038556
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 35.35337312258681
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 31.29323848883637
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 36.929079412969536
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "repeat": 0,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-2"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9895811485423339,
+      "loco": {
+        "cross_product": 0.01172165909213722,
+        "squared_prediction": 0.011845071128732978,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.020687309450881715
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.019436355476463336
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 30.084993726769117
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 36.718576096873875
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 29.621812774360034
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 35.75120655957292
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 30.20707270759683
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 36.60498937508219
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "repeat": 0,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-2"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.9912562671126428,
+      "loco": {
+        "cross_product": 0.014254095766480054,
+        "squared_prediction": 0.014379829151547013,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.02185454869017446
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.021311298065853607
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 29.390137536525536
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 37.538889751547906
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 29.019531546565204
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 37.03664160487436
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 29.36033267872464
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 37.38104745730483
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "repeat": 1,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.7573863668054862,
+      "loco": {
+        "cross_product": 0.015932508204412818,
+        "squared_prediction": 0.021036169784271603,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.07623680058763213
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.07774309129772429
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 34.084051599474684
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 43.61598528193982
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 30.74096444978053
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 40.218077082777505
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 31.79508725506811
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 37.523100597964934
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "repeat": 1,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.7606036409797499,
+      "loco": {
+        "cross_product": 0.01614412112517697,
+        "squared_prediction": 0.02122540605298889,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.07404776807666051
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.07483643295145095
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 33.26566235587467
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 42.6119908889941
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 30.94936590197513
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 40.490401263622125
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 31.150209064369673
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 36.727142061264374
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "repeat": 1,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.8060109305684237,
+      "loco": {
+        "cross_product": 0.019845268093509595,
+        "squared_prediction": 0.024621586805918503,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.07209603408821659
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.07362612745963937
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 36.51314602622376
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 45.97007730180799
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 34.475875609853766
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 44.36123567010563
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 30.123666990822514
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 38.05212815574383
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "repeat": 2,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-8",
+        "Sim_satellite_battery-5"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.9467923784176652,
+      "loco": {
+        "cross_product": 0.004551816304270316,
+        "squared_prediction": 0.004807618236088442,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.02292292458558322
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.024478585592323614
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 44.28360711454871
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 39.86786099838195
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 44.964208279482776
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 40.47729619415881
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 46.26448317903823
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 41.21795114253875
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "repeat": 2,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-8",
+        "Sim_satellite_battery-5"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9224902241675004,
+      "loco": {
+        "cross_product": 0.0051956779879188085,
+        "squared_prediction": 0.005632230945978467,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.024771317186326122
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.025536177684201845
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 41.466301759280654
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 37.95648864522415
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 42.251693584129804
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 38.73505175151243
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 44.49076799887709
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 39.915456760297474
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "repeat": 2,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-8",
+        "Sim_satellite_battery-5"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.967513590156077,
+      "loco": {
+        "cross_product": 0.0073230232047480056,
+        "squared_prediction": 0.007568909914295543,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.027801083240852932
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.02094263074906969
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 35.58480275358809
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 34.99498443197351
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 36.37512729773505
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 35.98264579880803
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 36.83448803418074
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 35.484766842949156
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "repeat": 3,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-8",
+        "Sim_satellite_battery-5"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.9467923784176652,
+      "loco": {
+        "cross_product": 0.004551816304270316,
+        "squared_prediction": 0.004807618236088442,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.02292292458558322
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.024478585592323614
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 44.28360711454871
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 39.86786099838195
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 44.964208279482776
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 40.47729619415881
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 46.26448317903823
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 41.21795114253875
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "repeat": 3,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-8",
+        "Sim_satellite_battery-5"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9224902241675004,
+      "loco": {
+        "cross_product": 0.0051956779879188085,
+        "squared_prediction": 0.005632230945978467,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.024771317186326122
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.025536177684201845
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 41.466301759280654
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 37.95648864522415
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 42.251693584129804
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 38.73505175151243
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 44.49076799887709
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 39.915456760297474
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "repeat": 3,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-8",
+        "Sim_satellite_battery-5"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.967513590156077,
+      "loco": {
+        "cross_product": 0.0073230232047480056,
+        "squared_prediction": 0.007568909914295543,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.027801083240852932
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.02094263074906969
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 35.58480275358809
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 34.99498443197351
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 36.37512729773505
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 35.98264579880803
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 36.83448803418074
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 35.484766842949156
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "repeat": 4,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-5",
+        "Sim_satellite_battery-8"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.9467923784176652,
+      "loco": {
+        "cross_product": 0.004551816304270316,
+        "squared_prediction": 0.004807618236088442,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.024478585592323614
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.02292292458558322
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 44.28360711454871
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 39.86786099838195
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 44.964208279482776
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 40.47729619415881
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 46.26448317903823
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 41.21795114253875
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "repeat": 4,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-5",
+        "Sim_satellite_battery-8"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9224902241675004,
+      "loco": {
+        "cross_product": 0.0051956779879188085,
+        "squared_prediction": 0.005632230945978467,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.025536177684201845
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.024771317186326122
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 41.466301759280654
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 37.95648864522415
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 42.251693584129804
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 38.73505175151243
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 44.49076799887709
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 39.915456760297474
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "random",
+      "repeat": 4,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-5",
+        "Sim_satellite_battery-8"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.967513590156077,
+      "loco": {
+        "cross_product": 0.0073230232047480056,
+        "squared_prediction": 0.007568909914295543,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.02094263074906969
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.027801083240852932
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 35.58480275358809
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 34.99498443197351
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 36.37512729773505
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 35.98264579880803
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 36.83448803418074
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 35.484766842949156
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "pred_quartiles",
+      "repeat": 0,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-2",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.9638921540185882,
+      "loco": {
+        "cross_product": 0.009437341735288072,
+        "squared_prediction": 0.00979086892236087,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.02868552578471655
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.035483037330053264
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 32.181226365599095
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 36.895972738137004
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 31.887149286737845
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 35.205567760528
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 33.065575242963334
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 36.768695424544994
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "pred_quartiles",
+      "repeat": 0,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-2",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9538872195805933,
+      "loco": {
+        "cross_product": 0.00999450117505607,
+        "squared_prediction": 0.010477654978384623,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.027106461856243033
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.031185868754634208
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 31.08293272768527
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 35.960970894152595
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 31.008056232945926
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 35.26639223071792
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 32.24053597138647
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 35.79562693932747
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "policy": "pred_quartiles",
+      "repeat": 0,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-2",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-3",
+        "Sim_satellite_battery-7"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.9694429346462968,
+      "loco": {
+        "cross_product": 0.012774016113530018,
+        "squared_prediction": 0.013176656053706392,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.02664193027611197
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.031920330777899596
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 29.16099590062171
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 36.2810962324791
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 29.132769247014007
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 36.26662860384523
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-3",
+          "mae_mAh": 29.37414153016441
+        },
+        {
+          "id": "Sim_satellite_battery-7",
+          "mae_mAh": 35.90974708091959
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "repeat": 0,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-2"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.9879946264674174,
+      "loco": {
+        "cross_product": 0.010560832196934409,
+        "squared_prediction": 0.010689159550082521,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.025556256922221673
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.024380318580464317
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 41.27605732200543
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 40.50650897301453
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 41.425473343570765
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "repeat": 0,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-2"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9895811485423339,
+      "loco": {
+        "cross_product": 0.01172165909213722,
+        "squared_prediction": 0.011845071128732978,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.020687309450881715
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.019436355476463336
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 40.31763481529645
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 39.72308238211687
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 40.39955785913905
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "repeat": 0,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-2"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.9912562671126428,
+      "loco": {
+        "cross_product": 0.014254095766480054,
+        "squared_prediction": 0.014379829151547013,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.02185454869017446
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.021311298065853607
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 39.7963380765999
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 39.37482883171279
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 39.74407373287177
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "repeat": 1,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-2"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.9879946264674174,
+      "loco": {
+        "cross_product": 0.010560832196934409,
+        "squared_prediction": 0.010689159550082521,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.025556256922221673
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.024380318580464317
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 41.27605732200543
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 40.50650897301453
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 41.425473343570765
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "repeat": 1,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-2"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9895811485423339,
+      "loco": {
+        "cross_product": 0.01172165909213722,
+        "squared_prediction": 0.011845071128732978,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.020687309450881715
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.019436355476463336
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 40.31763481529645
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 39.72308238211687
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 40.39955785913905
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "repeat": 1,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-2"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.9912562671126428,
+      "loco": {
+        "cross_product": 0.014254095766480054,
+        "squared_prediction": 0.014379829151547013,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.02185454869017446
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.021311298065853607
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 39.7963380765999
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 39.37482883171279
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 39.74407373287177
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "repeat": 2,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-7"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.6332064076510331,
+      "loco": {
+        "cross_product": 0.012403417977761995,
+        "squared_prediction": 0.019588269840436694,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.08938955106529738
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.08636508886638027
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 41.533778922838266
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 39.838320350279574
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 46.77316464266198
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "repeat": 2,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-7"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.6386896878100456,
+      "loco": {
+        "cross_product": 0.012652280329593993,
+        "squared_prediction": 0.019809745751456286,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.08707340204125034
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.08573657388217598
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 40.99093811619742
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 39.90983769774474
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 46.003400025332255
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "repeat": 2,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-7"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.7704317678525672,
+      "loco": {
+        "cross_product": 0.018446772002992173,
+        "squared_prediction": 0.023943420783918427,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.07705848450371372
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.08095131608014065
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 43.7147076964377
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 43.042297908169374
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 39.380347302701445
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "repeat": 3,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-5",
+        "Sim_satellite_battery-6"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.7264719922843639,
+      "loco": {
+        "cross_product": 0.014699930212538865,
+        "squared_prediction": 0.020234682642500074,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.07770592779851922
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.0806906986102071
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 44.51713138351848
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 40.49986423862632
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 42.946276451311356
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "repeat": 3,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-5",
+        "Sim_satellite_battery-6"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.7733788542186545,
+      "loco": {
+        "cross_product": 0.016387973372559407,
+        "squared_prediction": 0.02119009756106688,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.0716799135627268
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.07311753833338402
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 44.58708273056015
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 41.21417287149224
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 41.69170346776018
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "repeat": 3,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-5",
+        "Sim_satellite_battery-6"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.7863377765054406,
+      "loco": {
+        "cross_product": 0.01894707478158613,
+        "squared_prediction": 0.02409533834911089,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.07385515022411505
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.07516907581474656
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 46.43188977361673
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 43.366205042699164
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 41.24209250081054
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "repeat": 4,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-2",
+        "Sim_satellite_battery-3"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.9798894758919958,
+      "loco": {
+        "cross_product": 0.010083733271558287,
+        "squared_prediction": 0.010290684326800265,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.026059637048986582
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.03199413507025292
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 41.734691660626645
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 40.91869082242895
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 42.06241116682528
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "repeat": 4,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-2",
+        "Sim_satellite_battery-3"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9598031527125549,
+      "loco": {
+        "cross_product": 0.010221444810650515,
+        "squared_prediction": 0.010649522021013477,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.02604503011279012
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.029227600078090908
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 40.88665423156517
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 40.66844070600082
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 41.647919835273754
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "random",
+      "repeat": 4,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-2",
+        "Sim_satellite_battery-3"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.9739737526977474,
+      "loco": {
+        "cross_product": 0.013033505081519377,
+        "squared_prediction": 0.013381782666543844,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-2",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.025617476161446516
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-2",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.029848510910043903
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 39.35527393258169
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 39.355848042551415
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 39.43817836827156
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "pred_quartiles",
+      "repeat": 0,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-7"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.9391633696469206,
+      "loco": {
+        "cross_product": 0.00624843781597214,
+        "squared_prediction": 0.006653195831435851,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.030070811864430266
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.024970355148636745
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 46.7124791148577
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 46.894185225385506
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 48.51989906219145
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "pred_quartiles",
+      "repeat": 0,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-7"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9224729820297238,
+      "loco": {
+        "cross_product": 0.006790558957807675,
+        "squared_prediction": 0.007361255115425017,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.028966402701105523
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.026982480475776314
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 45.29749687578063
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 45.5898475645458
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 47.61350214066541
+        }
+      ]
+    },
+    {
+      "fold": 3,
+      "policy": "pred_quartiles",
+      "repeat": 0,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-7"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-4"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.9796566630253245,
+      "loco": {
+        "cross_product": 0.010410999532002111,
+        "squared_prediction": 0.010627192081612967,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.022875580603300895
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.03502944361292258
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 39.71665398890234
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 40.6345948389062
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-4",
+          "mae_mAh": 40.14056311822359
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "repeat": 0,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-7",
+        "Sim_satellite_battery-8"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.9941349653117925,
+      "loco": {
+        "cross_product": 0.003825154297828667,
+        "squared_prediction": 0.0038477213168223857,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.015842275903194657
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.017908648799175177
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 85.5848278352043
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 87.50921128171522
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 85.83401032439473
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "repeat": 0,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-7",
+        "Sim_satellite_battery-8"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9924198395624557,
+      "loco": {
+        "cross_product": 0.003981288735798473,
+        "squared_prediction": 0.004011698050649379,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.014187632669618012
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.015165419924460148
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 85.21991924534696
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 86.64439271950904
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 85.54257504831594
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "repeat": 0,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-7",
+        "Sim_satellite_battery-8"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.9895498313245567,
+      "loco": {
+        "cross_product": 0.007093977027398538,
+        "squared_prediction": 0.00716889317024382,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.03375966652063642
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.025832517933219282
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 69.58237072451966
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 73.10979149677733
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 70.16660474442253
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "repeat": 1,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-4",
+        "Sim_satellite_battery-1"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 1.0,
+      "loco": {
+        "cross_product": 0.007995586416048372,
+        "squared_prediction": 0.00796587272596168,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.029538471245944296
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.02214788650276016
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 69.00386727655803
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 70.3076399955471
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 69.00386727655803
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "repeat": 1,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-4",
+        "Sim_satellite_battery-1"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9893660984286147,
+      "loco": {
+        "cross_product": 0.008630739751506248,
+        "squared_prediction": 0.008723504641218488,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.02408074368197433
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.019701775548459505
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 67.23016305018017
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 67.82493603138698
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 67.84238088357338
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "repeat": 1,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-4",
+        "Sim_satellite_battery-1"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.9935664814253186,
+      "loco": {
+        "cross_product": 0.01116029974776415,
+        "squared_prediction": 0.011232564661152987,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.026302940147211514
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.020288590913821045
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 59.42867830158882
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 60.17032394700417
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 59.83074591389201
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "repeat": 2,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.7573863668054862,
+      "loco": {
+        "cross_product": 0.015932508204412818,
+        "squared_prediction": 0.021036169784271603,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.07623680058763213
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.07774309129772429
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 41.69523532614344
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 43.593397500138074
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 60.11128460896098
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "repeat": 2,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.7606036409797499,
+      "loco": {
+        "cross_product": 0.01614412112517697,
+        "squared_prediction": 0.02122540605298889,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.07404776807666051
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.07483643295145095
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 41.233301961605136
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 43.04406644579239
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 59.51536339360515
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "repeat": 2,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-6",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.8060109305684237,
+      "loco": {
+        "cross_product": 0.019845268093509595,
+        "squared_prediction": 0.024621586805918503,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-6",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.07209603408821659
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-6",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.07362612745963937
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 34.783876160854994
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 36.69677213260977
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 50.01926910897435
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "repeat": 3,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-3"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 1.0,
+      "loco": {
+        "cross_product": 0.008534584754362695,
+        "squared_prediction": 0.008467038659517678,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.021337969607243195
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.027289231804180396
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 67.51642644716439
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 68.50192025714541
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 67.51642644716439
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "repeat": 3,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-3"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9921410505583498,
+      "loco": {
+        "cross_product": 0.008823343580353738,
+        "squared_prediction": 0.008893235065103094,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.019119020258349148
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.02223343767178314
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 66.71982912050764
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 67.21951010909908
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 67.17477884061518
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "repeat": 3,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-1",
+        "Sim_satellite_battery-3"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.9954009549928078,
+      "loco": {
+        "cross_product": 0.011387876884220025,
+        "squared_prediction": 0.011440492222857378,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-1",
+            "trained_on": "Sim_satellite_battery-3",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.01977720720923193
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-3",
+            "trained_on": "Sim_satellite_battery-1",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.024442728800498775
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 58.949585037198666
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 59.57014945560621
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 59.23920920703147
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "repeat": 4,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-8",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.936656207318193,
+      "loco": {
+        "cross_product": 0.004823759911655052,
+        "squared_prediction": 0.005149979121439127,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.025226374859176903
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.035458032930658294
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 79.42912667272005
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 81.77002627989293
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 82.411357314087
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "repeat": 4,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-8",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.9321384504183737,
+      "loco": {
+        "cross_product": 0.005066739801304185,
+        "squared_prediction": 0.005435608625553499,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.0236763270811667
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.02903043853726238
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 79.16286546954464
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 80.76160439443947
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 82.37736312197659
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "random",
+      "repeat": 4,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-8",
+        "Sim_satellite_battery-4"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.9621169760528667,
+      "loco": {
+        "cross_product": 0.007607671104229452,
+        "squared_prediction": 0.007907220528880288,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-8",
+            "trained_on": "Sim_satellite_battery-4",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.029328391390619955
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-4",
+            "trained_on": "Sim_satellite_battery-8",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.03006932083767623
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 68.74704886493134
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 70.98890841037742
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 70.89435503580583
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "pred_quartiles",
+      "repeat": 0,
+      "budget": 10,
+      "selected": [
+        "Sim_satellite_battery-5",
+        "Sim_satellite_battery-7"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        10,
+        10
+      ],
+      "lambda": 0.9797102578436082,
+      "loco": {
+        "cross_product": 0.005217644122498582,
+        "squared_prediction": 0.0053257012272004585,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.02163380674767326
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 10,
+            "cross_cell_residual_rmse_Ah": 0.017579237407321886
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 79.64731137296137
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 80.80531007255537
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 80.59887862219914
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "pred_quartiles",
+      "repeat": 0,
+      "budget": 20,
+      "selected": [
+        "Sim_satellite_battery-5",
+        "Sim_satellite_battery-7"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        20,
+        20
+      ],
+      "lambda": 0.96253522143262,
+      "loco": {
+        "cross_product": 0.005917490806008098,
+        "squared_prediction": 0.006147817424489268,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.02144472586781553
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 20,
+            "cross_cell_residual_rmse_Ah": 0.01944852565471317
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 76.46551245960266
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 77.58188602482072
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 78.32820432860363
+        }
+      ]
+    },
+    {
+      "fold": 4,
+      "policy": "pred_quartiles",
+      "repeat": 0,
+      "budget": 30,
+      "selected": [
+        "Sim_satellite_battery-5",
+        "Sim_satellite_battery-7"
+      ],
+      "heldout": [
+        "Sim_satellite_battery-2"
+      ],
+      "n_labeled_cycles": [
+        30,
+        30
+      ],
+      "lambda": 0.9900632699681968,
+      "loco": {
+        "cross_product": 0.008966913347010722,
+        "squared_prediction": 0.009056909410747821,
+        "loco_cells": [
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-5",
+            "trained_on": "Sim_satellite_battery-7",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.016567040794662768
+          },
+          {
+            "heldout_labeled_cell": "Sim_satellite_battery-7",
+            "trained_on": "Sim_satellite_battery-5",
+            "n_validation_labels": 30,
+            "cross_cell_residual_rmse_Ah": 0.03240197880867998
+          }
+        ]
+      },
+      "ridge": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 65.3912678746375
+        }
+      ],
+      "offset": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 67.04415915592661
+        }
+      ],
+      "shrink": [
+        {
+          "id": "Sim_satellite_battery-2",
+          "mae_mAh": 65.98134606700044
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "10": {
+      "random": {
+        "methods": {
+          "ridge": 52.02302683624298,
+          "offset": 52.150921516820034,
+          "shrink": 53.82993170543945
+        },
+        "source_only_mAh": 100.85807675789337,
+        "mean_lambda": 0.8990187389662985,
+        "fraction_lambda_zero": 0.0,
+        "fraction_lambda_one": 0.2,
+        "min_lambda": 0.566412594463268,
+        "max_lambda": 1.0,
+        "n_fold_acquisitions": 25,
+        "n_test_cells": 8,
+        "n_cells_negative_vs_source": {
+          "ridge": 0,
+          "offset": 0,
+          "shrink": 0
+        },
+        "n_cells_improved_shrink_vs_ridge": 2,
+        "n_cells_worsened_shrink_vs_ridge": 6,
+        "paired_per_cell": [
+          {
+            "id": "Sim_satellite_battery-1",
+            "source": 107.75097246460388,
+            "ridge": 53.316330997402346,
+            "offset": 54.25499766054387,
+            "shrink": 64.47869477349778
+          },
+          {
+            "id": "Sim_satellite_battery-2",
+            "source": 129.50403069114523,
+            "ridge": 68.64589671155804,
+            "offset": 70.33643906288776,
+            "shrink": 72.97538919423303
+          },
+          {
+            "id": "Sim_satellite_battery-3",
+            "source": 84.31648957199793,
+            "ridge": 39.60936197403492,
+            "offset": 39.24079093972288,
+            "shrink": 40.37635505620383
+          },
+          {
+            "id": "Sim_satellite_battery-4",
+            "source": 86.20061121569275,
+            "ridge": 42.06754332219885,
+            "offset": 40.45397867147278,
+            "shrink": 42.926559789588026
+          },
+          {
+            "id": "Sim_satellite_battery-5",
+            "source": 65.77157587174405,
+            "ridge": 25.440355256489898,
+            "offset": 23.36307842275208,
+            "shrink": 21.184646475099463
+          },
+          {
+            "id": "Sim_satellite_battery-6",
+            "source": 171.38496866870025,
+            "ridge": 108.95761674168907,
+            "offset": 112.08556571285715,
+            "shrink": 110.52600961880887
+          },
+          {
+            "id": "Sim_satellite_battery-7",
+            "source": 77.70188896473236,
+            "ridge": 40.05257448749331,
+            "offset": 39.40066775756815,
+            "shrink": 39.62120668771015
+          },
+          {
+            "id": "Sim_satellite_battery-8",
+            "source": 84.2340766145304,
+            "ridge": 38.094535199077356,
+            "offset": 38.07185390675567,
+            "shrink": 38.55059204837446
+          }
+        ]
+      },
+      "pred_quartiles": {
+        "methods": {
+          "ridge": 52.02165560718879,
+          "offset": 52.288751301057076,
+          "shrink": 53.25519538306234
+        },
+        "source_only_mAh": 100.85807675789337,
+        "mean_lambda": 0.950813775291907,
+        "fraction_lambda_zero": 0.0,
+        "fraction_lambda_one": 0.2,
+        "min_lambda": 0.8713030949504179,
+        "max_lambda": 1.0,
+        "n_fold_acquisitions": 5,
+        "n_test_cells": 8,
+        "n_cells_negative_vs_source": {
+          "ridge": 0,
+          "offset": 0,
+          "shrink": 0
+        },
+        "n_cells_improved_shrink_vs_ridge": 1,
+        "n_cells_worsened_shrink_vs_ridge": 5,
+        "paired_per_cell": [
+          {
+            "id": "Sim_satellite_battery-1",
+            "source": 107.75097246460388,
+            "ridge": 56.73281273946819,
+            "offset": 57.28645810642573,
+            "shrink": 62.74659755752715
+          },
+          {
+            "id": "Sim_satellite_battery-2",
+            "source": 129.50403069114523,
+            "ridge": 79.64731137296137,
+            "offset": 80.80531007255537,
+            "shrink": 80.59887862219914
+          },
+          {
+            "id": "Sim_satellite_battery-3",
+            "source": 84.31648957199793,
+            "ridge": 32.181226365599095,
+            "offset": 31.887149286737845,
+            "shrink": 33.065575242963334
+          },
+          {
+            "id": "Sim_satellite_battery-4",
+            "source": 86.20061121569275,
+            "ridge": 46.7124791148577,
+            "offset": 46.894185225385506,
+            "shrink": 48.51989906219145
+          },
+          {
+            "id": "Sim_satellite_battery-5",
+            "source": 65.77157587174405,
+            "ridge": 19.189157015982307,
+            "offset": 19.011773722040978,
+            "shrink": 19.52763164456799
+          },
+          {
+            "id": "Sim_satellite_battery-6",
+            "source": 171.38496866870025,
+            "ridge": 107.06629298893863,
+            "offset": 110.130273436862,
+            "shrink": 107.06629298893863
+          },
+          {
+            "id": "Sim_satellite_battery-7",
+            "source": 77.70188896473236,
+            "ridge": 36.895972738137004,
+            "offset": 35.205567760528,
+            "shrink": 36.768695424544994
+          },
+          {
+            "id": "Sim_satellite_battery-8",
+            "source": 84.2340766145304,
+            "ridge": 37.74799252156605,
+            "offset": 37.089292797921196,
+            "shrink": 37.74799252156605
+          }
+        ]
+      }
+    },
+    "20": {
+      "random": {
+        "methods": {
+          "ridge": 51.035406096086064,
+          "offset": 51.08499926692079,
+          "shrink": 52.784458733535345
+        },
+        "source_only_mAh": 100.85807675789337,
+        "mean_lambda": 0.8997844595186452,
+        "fraction_lambda_zero": 0.0,
+        "fraction_lambda_one": 0.12,
+        "min_lambda": 0.574766585903746,
+        "max_lambda": 1.0,
+        "n_fold_acquisitions": 25,
+        "n_test_cells": 8,
+        "n_cells_negative_vs_source": {
+          "ridge": 0,
+          "offset": 0,
+          "shrink": 0
+        },
+        "n_cells_improved_shrink_vs_ridge": 2,
+        "n_cells_worsened_shrink_vs_ridge": 6,
+        "paired_per_cell": [
+          {
+            "id": "Sim_satellite_battery-1",
+            "source": 107.75097246460388,
+            "ridge": 53.207486694306134,
+            "offset": 54.22824425471123,
+            "shrink": 64.12769251155476
+          },
+          {
+            "id": "Sim_satellite_battery-2",
+            "source": 129.50403069114523,
+            "ridge": 67.91321576943692,
+            "offset": 69.0989019400454,
+            "shrink": 72.49049225761726
+          },
+          {
+            "id": "Sim_satellite_battery-3",
+            "source": 84.31648957199793,
+            "ridge": 37.54991227209715,
+            "offset": 37.46525188574492,
+            "shrink": 38.96591715371955
+          },
+          {
+            "id": "Sim_satellite_battery-4",
+            "source": 86.20061121569275,
+            "ridge": 41.41998894178313,
+            "offset": 40.24772320789431,
+            "shrink": 42.02842780932885
+          },
+          {
+            "id": "Sim_satellite_battery-5",
+            "source": 65.77157587174405,
+            "ridge": 25.523207061815377,
+            "offset": 23.59226481948771,
+            "shrink": 20.675007872091292
+          },
+          {
+            "id": "Sim_satellite_battery-6",
+            "source": 171.38496866870025,
+            "ridge": 106.98434415566912,
+            "offset": 108.71015468722699,
+            "shrink": 108.11825456064953
+          },
+          {
+            "id": "Sim_satellite_battery-7",
+            "source": 77.70188896473236,
+            "ridge": 38.64000658430808,
+            "offset": 38.489352615546466,
+            "shrink": 38.6157003434478
+          },
+          {
+            "id": "Sim_satellite_battery-8",
+            "source": 84.2340766145304,
+            "ridge": 37.04508728927264,
+            "offset": 36.84810072470931,
+            "shrink": 37.25417735987369
+          }
+        ]
+      },
+      "pred_quartiles": {
+        "methods": {
+          "ridge": 50.90055065447812,
+          "offset": 51.236948528194574,
+          "shrink": 52.42862885738741
+        },
+        "source_only_mAh": 100.85807675789337,
+        "mean_lambda": 0.9385760478906473,
+        "fraction_lambda_zero": 0.0,
+        "fraction_lambda_one": 0.0,
+        "min_lambda": 0.8618437658519502,
+        "max_lambda": 0.9921410505583498,
+        "n_fold_acquisitions": 5,
+        "n_test_cells": 8,
+        "n_cells_negative_vs_source": {
+          "ridge": 0,
+          "offset": 0,
+          "shrink": 0
+        },
+        "n_cells_improved_shrink_vs_ridge": 2,
+        "n_cells_worsened_shrink_vs_ridge": 6,
+        "paired_per_cell": [
+          {
+            "id": "Sim_satellite_battery-1",
+            "source": 107.75097246460388,
+            "ridge": 54.929781148835936,
+            "offset": 55.79069273123925,
+            "shrink": 61.5952230407369
+          },
+          {
+            "id": "Sim_satellite_battery-2",
+            "source": 129.50403069114523,
+            "ridge": 76.46551245960266,
+            "offset": 77.58188602482072,
+            "shrink": 78.32820432860363
+          },
+          {
+            "id": "Sim_satellite_battery-3",
+            "source": 84.31648957199793,
+            "ridge": 31.08293272768527,
+            "offset": 31.008056232945926,
+            "shrink": 32.24053597138647
+          },
+          {
+            "id": "Sim_satellite_battery-4",
+            "source": 86.20061121569275,
+            "ridge": 45.29749687578063,
+            "offset": 45.5898475645458,
+            "shrink": 47.61350214066541
+          },
+          {
+            "id": "Sim_satellite_battery-5",
+            "source": 65.77157587174405,
+            "ridge": 19.29393911757724,
+            "offset": 19.220851979593405,
+            "shrink": 19.06432960572352
+          },
+          {
+            "id": "Sim_satellite_battery-6",
+            "source": 171.38496866870025,
+            "ridge": 107.2121078012583,
+            "offset": 108.81616699794813,
+            "shrink": 107.69170712416933
+          },
+          {
+            "id": "Sim_satellite_battery-7",
+            "source": 77.70188896473236,
+            "ridge": 35.960970894152595,
+            "offset": 35.26639223071792,
+            "shrink": 35.79562693932747
+          },
+          {
+            "id": "Sim_satellite_battery-8",
+            "source": 84.2340766145304,
+            "ridge": 36.96166421093231,
+            "offset": 36.62169446374542,
+            "shrink": 37.09990170848654
+          }
+        ]
+      }
+    },
+    "30": {
+      "random": {
+        "methods": {
+          "ridge": 47.85468076409162,
+          "offset": 48.007026100374574,
+          "shrink": 47.96741958944918
+        },
+        "source_only_mAh": 100.85807675789337,
+        "mean_lambda": 0.9264298126481815,
+        "fraction_lambda_zero": 0.0,
+        "fraction_lambda_one": 0.08,
+        "min_lambda": 0.6698282588753979,
+        "max_lambda": 1.0,
+        "n_fold_acquisitions": 25,
+        "n_test_cells": 8,
+        "n_cells_negative_vs_source": {
+          "ridge": 0,
+          "offset": 0,
+          "shrink": 0
+        },
+        "n_cells_improved_shrink_vs_ridge": 4,
+        "n_cells_worsened_shrink_vs_ridge": 4,
+        "paired_per_cell": [
+          {
+            "id": "Sim_satellite_battery-1",
+            "source": 107.75097246460388,
+            "ridge": 45.914231723278256,
+            "offset": 47.214620365661105,
+            "shrink": 53.892946269729144
+          },
+          {
+            "id": "Sim_satellite_battery-2",
+            "source": 129.50403069114523,
+            "ridge": 58.29831181781869,
+            "offset": 60.10718908847498,
+            "shrink": 62.030036802025236
+          },
+          {
+            "id": "Sim_satellite_battery-3",
+            "source": 84.31648957199793,
+            "ridge": 34.53153836470271,
+            "offset": 34.52415780992482,
+            "shrink": 33.99749275441788
+          },
+          {
+            "id": "Sim_satellite_battery-4",
+            "source": 86.20061121569275,
+            "ridge": 41.818909511167185,
+            "offset": 40.90280173136911,
+            "shrink": 39.90975312750542
+          },
+          {
+            "id": "Sim_satellite_battery-5",
+            "source": 65.77157587174405,
+            "ridge": 28.70708007236214,
+            "offset": 26.504350408218233,
+            "shrink": 20.332773154682307
+          },
+          {
+            "id": "Sim_satellite_battery-6",
+            "source": 171.38496866870025,
+            "ridge": 100.58786193646338,
+            "offset": 101.84448415734653,
+            "shrink": 101.8798859691012
+          },
+          {
+            "id": "Sim_satellite_battery-7",
+            "source": 77.70188896473236,
+            "ridge": 37.69878406985528,
+            "offset": 37.869162934280816,
+            "shrink": 36.377495228379225
+          },
+          {
+            "id": "Sim_satellite_battery-8",
+            "source": 84.2340766145304,
+            "ridge": 35.28072861708529,
+            "offset": 35.08944230772097,
+            "shrink": 35.31897340975299
+          }
+        ]
+      },
+      "pred_quartiles": {
+        "methods": {
+          "ridge": 46.92004529559901,
+          "offset": 47.39661392279149,
+          "shrink": 47.141715021326036
+        },
+        "source_only_mAh": 100.85807675789337,
+        "mean_lambda": 0.9761149737713047,
+        "fraction_lambda_zero": 0.0,
+        "fraction_lambda_one": 0.0,
+        "min_lambda": 0.9460110462238986,
+        "max_lambda": 0.9954009549928078,
+        "n_fold_acquisitions": 5,
+        "n_test_cells": 8,
+        "n_cells_negative_vs_source": {
+          "ridge": 0,
+          "offset": 0,
+          "shrink": 0
+        },
+        "n_cells_improved_shrink_vs_ridge": 2,
+        "n_cells_worsened_shrink_vs_ridge": 6,
+        "paired_per_cell": [
+          {
+            "id": "Sim_satellite_battery-1",
+            "source": 107.75097246460388,
+            "ridge": 46.11751087345354,
+            "offset": 47.13682236597254,
+            "shrink": 48.87007092448961
+          },
+          {
+            "id": "Sim_satellite_battery-2",
+            "source": 129.50403069114523,
+            "ridge": 65.3912678746375,
+            "offset": 67.04415915592661,
+            "shrink": 65.98134606700044
+          },
+          {
+            "id": "Sim_satellite_battery-3",
+            "source": 84.31648957199793,
+            "ridge": 29.16099590062171,
+            "offset": 29.132769247014007,
+            "shrink": 29.37414153016441
+          },
+          {
+            "id": "Sim_satellite_battery-4",
+            "source": 86.20061121569275,
+            "ridge": 39.71665398890234,
+            "offset": 40.6345948389062,
+            "shrink": 40.14056311822359
+          },
+          {
+            "id": "Sim_satellite_battery-5",
+            "source": 65.77157587174405,
+            "ridge": 24.13725081113447,
+            "offset": 23.412575566583335,
+            "shrink": 21.97195988280762
+          },
+          {
+            "id": "Sim_satellite_battery-6",
+            "source": 171.38496866870025,
+            "ridge": 99.56168160022926,
+            "offset": 100.78659477435838,
+            "shrink": 99.8705494045156
+          },
+          {
+            "id": "Sim_satellite_battery-7",
+            "source": 77.70188896473236,
+            "ridge": 36.2810962324791,
+            "offset": 36.26662860384523,
+            "shrink": 35.90974708091959
+          },
+          {
+            "id": "Sim_satellite_battery-8",
+            "source": 84.2340766145304,
+            "ridge": 34.99390508333416,
+            "offset": 34.75876682972559,
+            "shrink": 35.01534216248745
+          }
+        ]
+      }
+    }
+  },
+  "archive_parity": {
+    "n_legacy_mae_checks": 288,
+    "max_legacy_mae_difference_mAh": 5.810367440517439e-07,
+    "n_failures": 0
+  }
+}
