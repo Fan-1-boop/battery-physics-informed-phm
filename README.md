@@ -1,5 +1,16 @@
 # Physics-Informed Battery PHM
 
+## v11 原始55电芯独立 Python 复算验收（2026-10-12）
+
+**PASS：** GitHub Actions 下载固定作者commit的55份原始CSV，在全新Python 3.11环境重训RW8源Ridge，并逐折重算v8/v9/v10的原有实验，**7186项一致性检查无失败、最大逐电芯MAE差6.63e-7mAh**，v8/v9/v10 20项单元测试全部通过。修复了v9导入路径的可移植性bug（只改路径不改公式）；兼容v10 3C历史记录的`repeat`字段。
+
+原始v8/v9/v10结果仍不可称为独立外部数据确认，四分位选样优于Random的证据不足。基于v10逐电芯归档的诊断还显示：N30四分位+Ridge校准后较source-only变差的电芯为**10/47，其中3C为9/15**。
+
+[独立验收报告](reports/v11_portability_replay_audit_20261012.md) | [复算CI记录及artifact](https://github.com/Fan-1-boop/battery-physics-informed-phm/actions/runs/38198412254) | [验证器](experiments/rw_multitarget/verify_portability_v11.py) | [逐电芯负迁移诊断](results/v11/v10_posthoc_cellwise_diagnostics.json)
+
+---
+
+
 ## 当前阶段：v10 固定标注成本实验（2026-10-12）
 
 **研究对象**：XJTU RW8 为唯一源模型、47 个目标电芯的五种目标工况、同一六维可测充电统计特征。模型任务是逐循环**放电容量估计** (MAE mAh)，不是 Che 2025 原四电极隐状态跨化学迁移。

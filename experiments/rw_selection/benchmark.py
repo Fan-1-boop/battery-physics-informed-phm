@@ -16,7 +16,7 @@ import sys
 
 import numpy as np
 
-V8_PATH = Path(__file__).resolve().parents[2] / 'rw_multitarget' / 'benchmark.py'
+V8_PATH = Path(__file__).resolve().parents[1] / 'rw_multitarget' / 'benchmark.py'
 if not V8_PATH.is_file():
     V8_PATH = Path(__file__).resolve().parent / '_v8_reference.py'
 _spec = importlib.util.spec_from_file_location('phm_v8_benchmark', V8_PATH)

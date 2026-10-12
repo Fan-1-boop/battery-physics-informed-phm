@@ -1,0 +1,35 @@
+name: RW 55-cell Python replay audit
+
+on:
+  push:
+    branches: [research/v11-python-replay-audit]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - run: python -m pip install numpy
+      - name: Offline unit tests
+        run: |
+          python -m unittest discover -s tests -p 'test_rw_multitarget_v8.py' -v
+          python -m unittest discover -s tests -p 'test_rw_selection_v9.py' -v
+          python -m unittest discover -s tests -p 'test_fixed_budget_v10.py' -v
+      - name: Independent raw-data replay and cell-level verification
+        run: |
+          python experiments/rw_multitarget/verify_portability_v11.py --output outputs/v11_python_replay_audit.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rw-python-replay-audit
+          path: outputs/v11_python_replay_audit.json
+          if-no-files-found: ignore
