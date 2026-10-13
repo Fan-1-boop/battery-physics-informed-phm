@@ -80,17 +80,17 @@ class V16GuardTests(unittest.TestCase):
         self.assertEqual(v.FEATURE_NAMES[12],"CV Q")
 
     def test_no_duplicate_or_independent_random_repeat_in_summary(self):
-        cells=["t1","t2"]
+        cells=[f"t{i}" for i in range(5)]
         src=[{"id":k,"mae_mAh":10.,"nmae_nominal_pct":.5} for k in cells]
         fake=[]
         for f in range(5):
             for rep in range(5):
-                rows=[{"id":k,"mae_mAh":20.,"nmae_nominal_pct":1.} for k in cells]
+                rows=[{"id":cells[f],"mae_mAh":20.,"nmae_nominal_pct":1.}]
                 fake.append({"fold":f,"repeat":rep,"budget":30,"policy":"random",
                              "offset":rows,"ridge":rows,"RBF-X":rows,"RBF-XQ":rows,"v15":rows})
-        # Intentionally fake duplicated test cells across folds: would average per cell, never count 50 as cells
+        # Five repeats per unique cell must NOT count as 25 independent target cells.
         out=v.summarize(fake,src,30,"random")
-        self.assertEqual(out["n_target_test_cells"],2)
+        self.assertEqual(out["n_target_test_cells"],5)
         self.assertAlmostEqual(out["metrics"]["ridge"]["mean_capacity_MAE_mAh"],20.)
 
     def test_source_normalizer_rejects_wrong_upstream(self):
