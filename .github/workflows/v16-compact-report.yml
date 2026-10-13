@@ -1,0 +1,32 @@
+name: v16 compact reporting on already executed external corpus
+
+on:
+  push:
+    branches: [research/v16-external-corpus-validation]
+    paths:
+      - 'experiments/rw_multitarget/compact_v16.py'
+      - '.github/workflows/v16-compact-report.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  compact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate compact diagnostics from committed immutable external scores
+        run: python experiments/rw_multitarget/compact_v16.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v16-external-compact-summary
+          path: results/v16/compact_summary.json
+      - name: Commit compact summary (no model training)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/v16/compact_summary.json
+          git diff --cached --quiet || git commit -m "results: record short v16 external validation readout from frozen per-cell output"
+          git push origin HEAD:refs/heads/research/v16-external-corpus-validation
