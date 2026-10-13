@@ -1,0 +1,354 @@
+{
+  "source_file": "results/v16/summary_external_cohorts.json",
+  "scientific_status": "external_data_evaluation_of_frozen_v8_v10_v14_v15_methods",
+  "n_manifest_csv": 244,
+  "n_eligible": 240,
+  "n_excluded": 4,
+  "all_budget_macros": {
+    "10": {
+      "random": {
+        "n_eligible_external_cells": 240,
+        "nominal_nMAE_pct": {
+          "source": 17.553490029379518,
+          "offset": 7.338859845433751,
+          "ridge": 7.278699704003337,
+          "RBF-X": 9.720958277745066,
+          "RBF-XQ": 9.938795358400084,
+          "v15": 10.31557544759678
+        },
+        "negative_transfer_test_cells": {
+          "offset": 35,
+          "ridge": 32,
+          "RBF-X": 2,
+          "RBF-XQ": 2,
+          "v15": 2
+        }
+      },
+      "pred_quartiles": {
+        "n_eligible_external_cells": 240,
+        "nominal_nMAE_pct": {
+          "source": 17.553490029379518,
+          "offset": 7.13737674535897,
+          "ridge": 7.118997961851581,
+          "RBF-X": 8.815595716656738,
+          "RBF-XQ": 9.010448858697522,
+          "v15": 9.692767782349307
+        },
+        "negative_transfer_test_cells": {
+          "offset": 36,
+          "ridge": 30,
+          "RBF-X": 1,
+          "RBF-XQ": 1,
+          "v15": 1
+        }
+      }
+    },
+    "20": {
+      "random": {
+        "n_eligible_external_cells": 240,
+        "nominal_nMAE_pct": {
+          "source": 17.553490029379518,
+          "offset": 7.258859803907711,
+          "ridge": 7.142416176291558,
+          "RBF-X": 9.541911128387154,
+          "RBF-XQ": 9.75155334188872,
+          "v15": 10.164209848527438
+        },
+        "negative_transfer_test_cells": {
+          "offset": 35,
+          "ridge": 32,
+          "RBF-X": 2,
+          "RBF-XQ": 2,
+          "v15": 2
+        }
+      },
+      "pred_quartiles": {
+        "n_eligible_external_cells": 240,
+        "nominal_nMAE_pct": {
+          "source": 17.553490029379518,
+          "offset": 7.103953904664225,
+          "ridge": 6.980503672032315,
+          "RBF-X": 8.642312489442709,
+          "RBF-XQ": 8.786400869721566,
+          "v15": 9.569868868529305
+        },
+        "negative_transfer_test_cells": {
+          "offset": 35,
+          "ridge": 31,
+          "RBF-X": 1,
+          "RBF-XQ": 1,
+          "v15": 1
+        }
+      }
+    },
+    "30": {
+      "random": {
+        "n_eligible_external_cells": 240,
+        "nominal_nMAE_pct": {
+          "source": 17.553490029379518,
+          "offset": 7.188899942374555,
+          "ridge": 7.0440796818276485,
+          "RBF-X": 9.362501225596358,
+          "RBF-XQ": 9.565117377891362,
+          "v15": 10.005763634768718
+        },
+        "negative_transfer_test_cells": {
+          "offset": 35,
+          "ridge": 32,
+          "RBF-X": 2,
+          "RBF-XQ": 3,
+          "v15": 2
+        }
+      },
+      "pred_quartiles": {
+        "n_eligible_external_cells": 240,
+        "nominal_nMAE_pct": {
+          "source": 17.553490029379518,
+          "offset": 7.061394642280079,
+          "ridge": 6.881729927096956,
+          "RBF-X": 8.316649561115478,
+          "RBF-XQ": 8.475776332400303,
+          "v15": 9.300001420719157
+        },
+        "negative_transfer_test_cells": {
+          "offset": 35,
+          "ridge": 31,
+          "RBF-X": 2,
+          "RBF-XQ": 2,
+          "v15": 1
+        }
+      }
+    }
+  },
+  "primary_N30_pred_quartiles": {
+    "TJU_NCA": {
+      "n_raw_csv": 66,
+      "n_test_cells": 62,
+      "n_excluded": 4,
+      "excluded": [
+        {
+          "id": "TJU_NCA__CY25-1_1-#3",
+          "file": "data/TJU data/Dataset_1_NCA_battery/CY25-1_1-#3.csv",
+          "nominal_Ah": 3.5,
+          "original_blob_sha": "bb2c804ad3070a60c34b7a27a348e93b6e372f78",
+          "n_valid_cycles": 28,
+          "status": "excluded_fewer_than_30_valid_cycles"
+        },
+        {
+          "id": "TJU_NCA__CY25-1_1-#6",
+          "file": "data/TJU data/Dataset_1_NCA_battery/CY25-1_1-#6.csv",
+          "nominal_Ah": 3.5,
+          "original_blob_sha": "db75ef734b659fcf1d07cca857c8810fc610de9b",
+          "n_valid_cycles": 28,
+          "status": "excluded_fewer_than_30_valid_cycles"
+        },
+        {
+          "id": "TJU_NCA__CY25-1_1-#8",
+          "file": "data/TJU data/Dataset_1_NCA_battery/CY25-1_1-#8.csv",
+          "nominal_Ah": 3.5,
+          "original_blob_sha": "8bc909b03209e77a155dcd261a2dd8c7c17d525a",
+          "n_valid_cycles": 29,
+          "status": "excluded_fewer_than_30_valid_cycles"
+        },
+        {
+          "id": "TJU_NCA__CY35-05_1-#3",
+          "file": "data/TJU data/Dataset_1_NCA_battery/CY35-05_1-#3.csv",
+          "nominal_Ah": 3.5,
+          "original_blob_sha": "64431f3e8399cb63988b1cebd2597d5c1a90ed3c",
+          "n_valid_cycles": 28,
+          "status": "excluded_fewer_than_30_valid_cycles"
+        }
+      ],
+      "nominal_Ah": 3.5,
+      "N30_quartile": {
+        "source": {
+          "mean_capacity_MAE_mAh": 920.1963598754951,
+          "mean_nominal_nMAE_pct": 26.29132456787129,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "offset": {
+          "mean_capacity_MAE_mAh": 266.9417044380759,
+          "mean_nominal_nMAE_pct": 7.626905841087882,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "ridge": {
+          "mean_capacity_MAE_mAh": 238.2285139619103,
+          "mean_nominal_nMAE_pct": 6.806528970340293,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "RBF-X": {
+          "mean_capacity_MAE_mAh": 461.7087297744864,
+          "mean_nominal_nMAE_pct": 13.191677993556755,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "RBF-XQ": {
+          "mean_capacity_MAE_mAh": 476.65787780454446,
+          "mean_nominal_nMAE_pct": 13.618796508701267,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "v15": {
+          "mean_capacity_MAE_mAh": 537.4092874673495,
+          "mean_nominal_nMAE_pct": 15.354551070495699,
+          "n_negative_transfer_cells_vs_source": 0
+        }
+      },
+      "N30_quartile_mean_observed_kernel_similarity": 0.7830424488769632,
+      "N30_quartile_mean_v15_lambda": 0.8330661253399382,
+      "n_fold_records": 5,
+      "n_per_cell_results": 62
+    },
+    "TJU_NCM": {
+      "n_raw_csv": 55,
+      "n_test_cells": 55,
+      "n_excluded": 0,
+      "excluded": [],
+      "nominal_Ah": 3.5,
+      "N30_quartile": {
+        "source": {
+          "mean_capacity_MAE_mAh": 842.3785592743322,
+          "mean_nominal_nMAE_pct": 24.06795883640949,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "offset": {
+          "mean_capacity_MAE_mAh": 175.18092249803988,
+          "mean_nominal_nMAE_pct": 5.005169214229711,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "ridge": {
+          "mean_capacity_MAE_mAh": 196.61479199060105,
+          "mean_nominal_nMAE_pct": 5.617565485445745,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "RBF-X": {
+          "mean_capacity_MAE_mAh": 404.9870000913293,
+          "mean_nominal_nMAE_pct": 11.571057145466549,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "RBF-XQ": {
+          "mean_capacity_MAE_mAh": 410.41665014280903,
+          "mean_nominal_nMAE_pct": 11.72619000408026,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "v15": {
+          "mean_capacity_MAE_mAh": 469.64214303835735,
+          "mean_nominal_nMAE_pct": 13.418346943953063,
+          "n_negative_transfer_cells_vs_source": 0
+        }
+      },
+      "N30_quartile_mean_observed_kernel_similarity": 0.7727183769054985,
+      "N30_quartile_mean_v15_lambda": 0.8167534198969487,
+      "n_fold_records": 5,
+      "n_per_cell_results": 55
+    },
+    "HUST": {
+      "n_raw_csv": 77,
+      "n_test_cells": 77,
+      "n_excluded": 0,
+      "excluded": [],
+      "nominal_Ah": 1.1,
+      "N30_quartile": {
+        "source": {
+          "mean_capacity_MAE_mAh": 114.99837539333552,
+          "mean_nominal_nMAE_pct": 10.4543977630305,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "offset": {
+          "mean_capacity_MAE_mAh": 109.0987899756774,
+          "mean_nominal_nMAE_pct": 9.91807181597067,
+          "n_negative_transfer_cells_vs_source": 33
+        },
+        "ridge": {
+          "mean_capacity_MAE_mAh": 105.85426522449426,
+          "mean_nominal_nMAE_pct": 9.62311502040857,
+          "n_negative_transfer_cells_vs_source": 29
+        },
+        "RBF-X": {
+          "mean_capacity_MAE_mAh": 74.80380993716373,
+          "mean_nominal_nMAE_pct": 6.800346357923976,
+          "n_negative_transfer_cells_vs_source": 2
+        },
+        "RBF-XQ": {
+          "mean_capacity_MAE_mAh": 76.38203004879138,
+          "mean_nominal_nMAE_pct": 6.943820913526489,
+          "n_negative_transfer_cells_vs_source": 2
+        },
+        "v15": {
+          "mean_capacity_MAE_mAh": 74.03336972314678,
+          "mean_nominal_nMAE_pct": 6.730306338467889,
+          "n_negative_transfer_cells_vs_source": 1
+        }
+      },
+      "N30_quartile_mean_observed_kernel_similarity": 0.9427587220545713,
+      "N30_quartile_mean_v15_lambda": 0.9889120547952651,
+      "n_fold_records": 5,
+      "n_per_cell_results": 77
+    },
+    "MIT_2017A": {
+      "n_raw_csv": 46,
+      "n_test_cells": 46,
+      "n_excluded": 0,
+      "excluded": [],
+      "nominal_Ah": 1.1,
+      "N30_quartile": {
+        "source": {
+          "mean_capacity_MAE_mAh": 103.40306845227477,
+          "mean_nominal_nMAE_pct": 9.400278950206799,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "offset": {
+          "mean_capacity_MAE_mAh": 62.64974867615257,
+          "mean_nominal_nMAE_pct": 5.695431697832052,
+          "n_negative_transfer_cells_vs_source": 2
+        },
+        "ridge": {
+          "mean_capacity_MAE_mAh": 60.27681255412541,
+          "mean_nominal_nMAE_pct": 5.479710232193218,
+          "n_negative_transfer_cells_vs_source": 2
+        },
+        "RBF-X": {
+          "mean_capacity_MAE_mAh": 18.738684222660925,
+          "mean_nominal_nMAE_pct": 1.7035167475146291,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "RBF-XQ": {
+          "mean_capacity_MAE_mAh": 17.75727693622515,
+          "mean_nominal_nMAE_pct": 1.6142979032931952,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "v15": {
+          "mean_capacity_MAE_mAh": 18.66481462955973,
+          "mean_nominal_nMAE_pct": 1.6968013299599747,
+          "n_negative_transfer_cells_vs_source": 0
+        }
+      },
+      "N30_quartile_mean_observed_kernel_similarity": 0.7746106981049885,
+      "N30_quartile_mean_v15_lambda": 0.9957510045418732,
+      "n_fold_records": 5,
+      "n_per_cell_results": 46
+    }
+  },
+  "primary_bootstrap": {
+    "ridge_minus_RBF-X": {
+      "cohort_equal_effect_nominal_nMAE_pp": -1.434919634018521,
+      "exploratory_cell_bootstrap_ci95_pp": [
+        -1.8140843691560709,
+        -1.0619997393559526
+      ],
+      "n_boot": 10000,
+      "seed": 20261305,
+      "limitations": "Previously fixed XJTU methods; 4 external cohorts, same source and overlapping target train/test folds; cell bootstrap descriptive only"
+    },
+    "RBF-X_minus_v15": {
+      "cohort_equal_effect_nominal_nMAE_pp": -0.9833518596036792,
+      "exploratory_cell_bootstrap_ci95_pp": [
+        -1.05795655806825,
+        -0.9114555169609402
+      ],
+      "n_boot": 10000,
+      "seed": 20261305,
+      "limitations": "Previously fixed XJTU methods; 4 external cohorts, same source and overlapping target train/test folds; cell bootstrap descriptive only"
+    }
+  },
+  "important_interpretation": "An out-of-domain evaluation of an XJTU-developed model; 4 cohorts from 3 external data families; nominal-capacity bridge fixed a priori",
+  "posthoc_support_diagnostic_warning": "Mean kernel similarity is exploratory and must not be used to tune the fixed methods on these same confirmed external target test cells"
+}
