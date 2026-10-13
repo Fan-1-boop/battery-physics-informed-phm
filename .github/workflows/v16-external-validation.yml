@@ -1,0 +1,54 @@
+name: v16 untouched external-corpus 244-cell confirmation
+
+on:
+  push:
+    branches: [research/v16-external-corpus-validation]
+    paths:
+      - 'docs/V16_EXTERNAL_CORPUS_VALIDATION_PROTOCOL_20261013.md'
+      - 'docs/v16_external_manifest.json'
+      - 'experiments/rw_multitarget/external_validation_v16.py'
+      - 'tests/test_external_validation_v16.py'
+      - '.github/workflows/v16-external-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  confirm:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install frozen runtime dependency
+        run: python -m pip install numpy==2.4.6
+      - name: Run historical and v16 methodology unit tests
+        run: |
+          python -m unittest discover -s tests -p 'test_rw_multitarget_v8.py' -v
+          python -m unittest discover -s tests -p 'test_rw_selection_v9.py' -v
+          python -m unittest discover -s tests -p 'test_fixed_budget_v10.py' -v
+          python -m unittest discover -s tests -p 'test_reliability_v12.py' -v
+          python -m unittest discover -s tests -p 'test_source_anchored_kernel_v14.py' -v
+          python -m unittest discover -s tests -p 'test_disagreement_calibration_v15.py' -v
+          python -m unittest discover -s tests -p 'test_external_validation_v16.py' -v
+      - name: Execute all pinned external raw CSVs and export blind fixed-model results
+        run: python experiments/rw_multitarget/external_validation_v16.py --outdir results/v16
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v16-external-battery-confirmation-all-data
+          path: results/v16/
+          if-no-files-found: ignore
+      - name: Commit full predeclared outcome to research branch
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/v16/*.json
+          git diff --cached --quiet || git commit -m "results: record v16 frozen-method external TJU-HUST-MIT cohort confirmation"
+          git push origin HEAD:refs/heads/research/v16-external-corpus-validation
