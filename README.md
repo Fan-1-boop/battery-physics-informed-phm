@@ -1,5 +1,20 @@
 # Physics-Informed Battery PHM
 
+## v16 首次跨独立数据集验证：240块未参与方法开发的外部电芯（2026-10-13）
+
+**v8–v15方法固定后、任何外部预测运行前，已冻结4个外部目标队列、244份作者官方CSV文件SHA和容量尺度桥接规则。** 首次真实验证：TJU-NCA（62有效/66原始）、TJU-NCM（55）、HUST（77）、MIT 2017-05-12（46），共240外部电芯、4个目标队列、3个外部数据家族；原RW8源模型和v10/v14/v15算法无调参变化，容量标签预算仍为每fold选2块目标电芯各前10/20/30循环。
+
+**主要N30四分位目标标注验证结果（4队列等权nominal nMAE，%）**：Source **17.553%**、Mean offset **7.061%**、Residual Ridge **6.882%**、v14 RBF-X **8.317%**、RBF-XQ **8.476%**、v15分歧收缩 **9.300%**。**与XJTU开发数据结果相反：Ridge在宏均更好，RBF核并未获得跨数据集一致的优势。**
+
+不同cohort严重异质：TJU NCA/NCM的Ridge分别 **6.807%/5.618%**，RBF-X分别 **13.192%/11.571%**；但HUST与MIT的RBF-X分别 **6.800%/1.704%**，优于Ridge **9.623%/5.480%**。与此同时，240个外部测试电芯中相对各自Source-only的负迁移计数：Ridge **31**、RBF-X **2**、v15 **1**。**这提示统一校准未来需兼顾平均误差与负迁移幅度，而不是额外创建校准/不校准二元开关。**
+
+**研究边界**：六种已冻结方法、两个选样策略、三种真实容量标签预算均已完整报告，反复调v16测试数据以优化rho/新gate会破坏本次独立验证；不同标称容量(2.0→1.1/3.5Ah)使用的仅是原作者发布的额定容量元数据、并不使用测试容量估计scale。指标不是SOH百分点。真实外部CSV不在仓库再分发。
+
+[完整中文外部验证报告](reports/v16_external_confirmation_20261013.md) | [易读完整表](results/v16/compact_summary.json) | [固定244文件SHA清单](docs/v16_external_manifest.json) | [执行前协议](docs/V16_EXTERNAL_CORPUS_VALIDATION_PROTOCOL_20261013.md) | [完整原始折评价与机器摘要](results/v16/summary_external_cohorts.json) | [校验和执行代码](experiments/rw_multitarget/external_validation_v16.py) | [官方原始数据执行](https://github.com/Fan-1-boop/battery-physics-informed-phm/actions/runs/38332506290)
+
+---
+
+
 ## v15 标注电芯间分歧约束的统一连续校准：完整负结果（2026-10-12）
 
 **实际运行完成，用户要求的“单一校准函数自然包含零/弱/强修正”保持不变，不使用独立校准/不校准二分类器。** 在v14固定RBF-X局部残差核基础上，用两块已标注电芯各自核残差预测的分歧，构造连续信号/分歧比校准强度；没有增加容量标签或根据测试真值调超参。
