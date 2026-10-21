@@ -1,0 +1,560 @@
+{
+  "manifest_version": "v17_final_unseen_targets_v1",
+  "source_repo": "wang-fujin/PINN4SOH",
+  "source_commit": "cc3cc5053caf38f04e0665f7f88cb109144d035e",
+  "frozen_before_new_target_prediction_run": true,
+  "schema": "16 preprocessed charging statistics then discharge capacity in Ah",
+  "raw_files_policy": "fetch official pinned original bytes; verify Git blob SHA1; never distribute original CSV",
+  "nominal_capacities_source": "PINN4SOH pinned dataloader/dataloader.py: XJTU=2, TJU Dataset3=2.5, MIT=1.1 Ah",
+  "cohorts": {
+    "TJU_MIX": {
+      "path": "data/TJU data/Dataset_3_NCM_NCA_battery",
+      "nominal_Ah": 2.5,
+      "n_files_expected": 9,
+      "files": [
+        {
+          "path": "data/TJU data/Dataset_3_NCM_NCA_battery/CY25-05_1-#1.csv",
+          "name": "CY25-05_1-#1.csv",
+          "git_blob_sha": "f390b04584bd7d7a20f7a765fa988f51b992f17b",
+          "size_bytes": 302184
+        },
+        {
+          "path": "data/TJU data/Dataset_3_NCM_NCA_battery/CY25-05_1-#2.csv",
+          "name": "CY25-05_1-#2.csv",
+          "git_blob_sha": "b2e1b3344ceda4ab415d64f9e0f551322dedeec1",
+          "size_bytes": 307436
+        },
+        {
+          "path": "data/TJU data/Dataset_3_NCM_NCA_battery/CY25-05_1-#3.csv",
+          "name": "CY25-05_1-#3.csv",
+          "git_blob_sha": "d1bd065a5a8872ba64f13eb4f022b2f1e4472eb4",
+          "size_bytes": 319827
+        },
+        {
+          "path": "data/TJU data/Dataset_3_NCM_NCA_battery/CY25-05_2-#1.csv",
+          "name": "CY25-05_2-#1.csv",
+          "git_blob_sha": "98e0da8ec3e8286504427c86582118d472208c44",
+          "size_bytes": 315565
+        },
+        {
+          "path": "data/TJU data/Dataset_3_NCM_NCA_battery/CY25-05_2-#2.csv",
+          "name": "CY25-05_2-#2.csv",
+          "git_blob_sha": "e9e4494a661bcb721b7a1ce8ba52bb7e6a046fa3",
+          "size_bytes": 307205
+        },
+        {
+          "path": "data/TJU data/Dataset_3_NCM_NCA_battery/CY25-05_2-#3.csv",
+          "name": "CY25-05_2-#3.csv",
+          "git_blob_sha": "0380df894d9b4bff23ffba227e80c75e524a7c62",
+          "size_bytes": 329473
+        },
+        {
+          "path": "data/TJU data/Dataset_3_NCM_NCA_battery/CY25-05_4-#1.csv",
+          "name": "CY25-05_4-#1.csv",
+          "git_blob_sha": "b1fc32f06c475b3b1de31058ddbffa9a5261aa26",
+          "size_bytes": 317067
+        },
+        {
+          "path": "data/TJU data/Dataset_3_NCM_NCA_battery/CY25-05_4-#2.csv",
+          "name": "CY25-05_4-#2.csv",
+          "git_blob_sha": "e27c3b1ea7d613acc8baafb9015678aa400453f0",
+          "size_bytes": 314454
+        },
+        {
+          "path": "data/TJU data/Dataset_3_NCM_NCA_battery/CY25-05_4-#3.csv",
+          "name": "CY25-05_4-#3.csv",
+          "git_blob_sha": "e4a407f1d3f54ae312f60d6f02aa60165a8c7f06",
+          "size_bytes": 291352
+        }
+      ]
+    },
+    "MIT_2017B": {
+      "path": "data/MIT data/2017-06-30",
+      "nominal_Ah": 1.1,
+      "n_files_expected": 43,
+      "files": [
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-1.csv",
+          "name": "2017-06-30_battery-1.csv",
+          "git_blob_sha": "7518a4937161d5f70e64b252c7660c5348cad0e7",
+          "size_bytes": 89167
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-11.csv",
+          "name": "2017-06-30_battery-11.csv",
+          "git_blob_sha": "a46c2934b3cd2a331b87cc618e32f455f3a0fb20",
+          "size_bytes": 11813
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-12.csv",
+          "name": "2017-06-30_battery-12.csv",
+          "git_blob_sha": "65125e908d55e534ed7a2d2a547e6c353733e6c1",
+          "size_bytes": 146492
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-13.csv",
+          "name": "2017-06-30_battery-13.csv",
+          "git_blob_sha": "e39ec6b552e7b5b603e879a1fb7175c69fe3480f",
+          "size_bytes": 136600
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-14.csv",
+          "name": "2017-06-30_battery-14.csv",
+          "git_blob_sha": "35d9efffbba2f3826b0433720f4fb706a4fa38ad",
+          "size_bytes": 85374
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-15.csv",
+          "name": "2017-06-30_battery-15.csv",
+          "git_blob_sha": "a6c03dd9aba23cdc1a05eee6cc034574ea4efa2b",
+          "size_bytes": 148529
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-18.csv",
+          "name": "2017-06-30_battery-18.csv",
+          "git_blob_sha": "ae3a4e06e7e79bf2d73fd0b386b588f5ea654d0c",
+          "size_bytes": 151939
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-19.csv",
+          "name": "2017-06-30_battery-19.csv",
+          "git_blob_sha": "2fa43f10f7dc0def3ab8c976a4e6d0b0b91a2cf4",
+          "size_bytes": 148963
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-2.csv",
+          "name": "2017-06-30_battery-2.csv",
+          "git_blob_sha": "94ee2ff60459e64e62798aa39c784b2a406407f3",
+          "size_bytes": 42375
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-20.csv",
+          "name": "2017-06-30_battery-20.csv",
+          "git_blob_sha": "c96a8e8cc0fb23bc94db41ac3db404a187c64767",
+          "size_bytes": 141708
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-21.csv",
+          "name": "2017-06-30_battery-21.csv",
+          "git_blob_sha": "b6fcb47709cd2b7bb33e75f58eec3a88a622369f",
+          "size_bytes": 154291
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-22.csv",
+          "name": "2017-06-30_battery-22.csv",
+          "git_blob_sha": "d497252d31a222a8599eb4221bb9cbf14c6afd17",
+          "size_bytes": 150157
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-23.csv",
+          "name": "2017-06-30_battery-23.csv",
+          "git_blob_sha": "8c9c9f038042950d81ec3a0aa89dba02ed79a0ee",
+          "size_bytes": 157823
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-24.csv",
+          "name": "2017-06-30_battery-24.csv",
+          "git_blob_sha": "267284005dc23370f77d2bf298969e749c94e6f0",
+          "size_bytes": 160831
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-25.csv",
+          "name": "2017-06-30_battery-25.csv",
+          "git_blob_sha": "4c0c90ca18b088f894e5584e40cbcee91d1aa5ae",
+          "size_bytes": 64420
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-26.csv",
+          "name": "2017-06-30_battery-26.csv",
+          "git_blob_sha": "efa22cdd5f80419a18350507bb1e34cd5795d172",
+          "size_bytes": 47808
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-27.csv",
+          "name": "2017-06-30_battery-27.csv",
+          "git_blob_sha": "9e7e95fe07f48518b7470337eb0ffa27fdd5ceec",
+          "size_bytes": 58176
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-28.csv",
+          "name": "2017-06-30_battery-28.csv",
+          "git_blob_sha": "15b9fc99ceda9febe19d79d0f93c2f1524c5223d",
+          "size_bytes": 143511
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-29.csv",
+          "name": "2017-06-30_battery-29.csv",
+          "git_blob_sha": "eafef4361369837cadfc8c9278d14808fa32bd2b",
+          "size_bytes": 157365
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-3.csv",
+          "name": "2017-06-30_battery-3.csv",
+          "git_blob_sha": "236fe40b71b5e1a392797965f2300c36dfdc6bfe",
+          "size_bytes": 134177
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-30.csv",
+          "name": "2017-06-30_battery-30.csv",
+          "git_blob_sha": "ab88fc93cdfe27ddc5ef03c56d197c72e775d45e",
+          "size_bytes": 152436
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-31.csv",
+          "name": "2017-06-30_battery-31.csv",
+          "git_blob_sha": "b0d1974a3a9fc809a3091a84c342285e5ec15a21",
+          "size_bytes": 145471
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-32.csv",
+          "name": "2017-06-30_battery-32.csv",
+          "git_blob_sha": "3c6b18c1236cd7500d0933da3b82286bc43b2f15",
+          "size_bytes": 151400
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-33.csv",
+          "name": "2017-06-30_battery-33.csv",
+          "git_blob_sha": "8058931136a609ec761c360628aecd9f94d831c5",
+          "size_bytes": 160263
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-34.csv",
+          "name": "2017-06-30_battery-34.csv",
+          "git_blob_sha": "0d35ccc4d418784b6fd640494c35e78650a6e786",
+          "size_bytes": 159934
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-35.csv",
+          "name": "2017-06-30_battery-35.csv",
+          "git_blob_sha": "be5286ddafc82fa50752cceb7ae07ee028d78c5d",
+          "size_bytes": 153752
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-36.csv",
+          "name": "2017-06-30_battery-36.csv",
+          "git_blob_sha": "7a822a2f048be0cd63b135818f1928b4c402c936",
+          "size_bytes": 142783
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-37.csv",
+          "name": "2017-06-30_battery-37.csv",
+          "git_blob_sha": "bd128c09f4667988588b9fc25b7ac6a005fc88f5",
+          "size_bytes": 163632
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-38.csv",
+          "name": "2017-06-30_battery-38.csv",
+          "git_blob_sha": "ee26ed92f1de63a45c164b4f1275dabc13e9ca22",
+          "size_bytes": 146760
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-39.csv",
+          "name": "2017-06-30_battery-39.csv",
+          "git_blob_sha": "e4badba5dcc0585c9a90c8b49a64874e90d0379b",
+          "size_bytes": 142769
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-4.csv",
+          "name": "2017-06-30_battery-4.csv",
+          "git_blob_sha": "8d263363a2d950aa9a50dc0f4116798b4dd46402",
+          "size_bytes": 97463
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-40.csv",
+          "name": "2017-06-30_battery-40.csv",
+          "git_blob_sha": "a2009c6af16a1f9d91e2f559eb6a53f5a72fe893",
+          "size_bytes": 141729
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-41.csv",
+          "name": "2017-06-30_battery-41.csv",
+          "git_blob_sha": "b203f82a0d5b7338cbf2f76dc6925efedab6e7dc",
+          "size_bytes": 150628
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-42.csv",
+          "name": "2017-06-30_battery-42.csv",
+          "git_blob_sha": "d491a13c675ffb57d5204ca7293b4001f47b6b73",
+          "size_bytes": 131600
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-43.csv",
+          "name": "2017-06-30_battery-43.csv",
+          "git_blob_sha": "a8da8fb8d94458040c613417d03d6c5ee0d9acae",
+          "size_bytes": 138393
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-44.csv",
+          "name": "2017-06-30_battery-44.csv",
+          "git_blob_sha": "b01657fa94a7c62a468c166699b93d5be12f846e",
+          "size_bytes": 136999
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-45.csv",
+          "name": "2017-06-30_battery-45.csv",
+          "git_blob_sha": "9bb44e16469c6e6250e59a55607233c4d038e9fc",
+          "size_bytes": 137159
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-46.csv",
+          "name": "2017-06-30_battery-46.csv",
+          "git_blob_sha": "fe11e773f0d9a68c3d1dc3893c80f53b3282cd0b",
+          "size_bytes": 147404
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-47.csv",
+          "name": "2017-06-30_battery-47.csv",
+          "git_blob_sha": "5f6a5f6504329b62a2128a3a6d90cebd8b30a90b",
+          "size_bytes": 128902
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-48.csv",
+          "name": "2017-06-30_battery-48.csv",
+          "git_blob_sha": "a687cacd80a93a454667147bd2749cce323a654d",
+          "size_bytes": 216030
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-5.csv",
+          "name": "2017-06-30_battery-5.csv",
+          "git_blob_sha": "2e37b0ebd0d546add07b0b31168312438051010f",
+          "size_bytes": 136578
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-6.csv",
+          "name": "2017-06-30_battery-6.csv",
+          "git_blob_sha": "6bbd8662ca1220e3bec715eb162afba88f3aedd8",
+          "size_bytes": 147514
+        },
+        {
+          "path": "data/MIT data/2017-06-30/2017-06-30_battery-7.csv",
+          "name": "2017-06-30_battery-7.csv",
+          "git_blob_sha": "f267dec95edeafc7570d60b357ee6d810186ce44",
+          "size_bytes": 153812
+        }
+      ]
+    },
+    "MIT_2018A": {
+      "path": "data/MIT data/2018-04-12",
+      "nominal_Ah": 1.1,
+      "n_files_expected": 36,
+      "files": [
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-1.csv",
+          "name": "2018-04-12_battery-1.csv",
+          "git_blob_sha": "66c66dd7aec01a5f87040faf1c8de2f267f34cac",
+          "size_bytes": 305976
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-10.csv",
+          "name": "2018-04-12_battery-10.csv",
+          "git_blob_sha": "b6eac71a2bd86d3a6991a48bcdcfb2d82610b3ed",
+          "size_bytes": 313852
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-11.csv",
+          "name": "2018-04-12_battery-11.csv",
+          "git_blob_sha": "ba2832cf0b06ce68f07f1c2d3d2924bd47b29a1f",
+          "size_bytes": 40184
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-12.csv",
+          "name": "2018-04-12_battery-12.csv",
+          "git_blob_sha": "aeb0452e45051cbd68a486181eec0ac8796d691e",
+          "size_bytes": 246606
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-14.csv",
+          "name": "2018-04-12_battery-14.csv",
+          "git_blob_sha": "49e0b2a72b19a67c1c4e24c0ee9c1c6e28c4c8ce",
+          "size_bytes": 212764
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-15.csv",
+          "name": "2018-04-12_battery-15.csv",
+          "git_blob_sha": "6c54189841628c5fee5795832ca45d6c1cf0e2b3",
+          "size_bytes": 260054
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-16.csv",
+          "name": "2018-04-12_battery-16.csv",
+          "git_blob_sha": "7184ef15f7e4f537a7a421cef1886653ced87772",
+          "size_bytes": 264734
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-18.csv",
+          "name": "2018-04-12_battery-18.csv",
+          "git_blob_sha": "28b78af256e6a7b2169051bd382c08b8ee227a35",
+          "size_bytes": 397488
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-19.csv",
+          "name": "2018-04-12_battery-19.csv",
+          "git_blob_sha": "c21faa7837a90168d7a655ad042208f8282d22ef",
+          "size_bytes": 201058
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-2.csv",
+          "name": "2018-04-12_battery-2.csv",
+          "git_blob_sha": "c4079e72f6c7a0b1bdbd753e83d4262dddfb8056",
+          "size_bytes": 316781
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-21.csv",
+          "name": "2018-04-12_battery-21.csv",
+          "git_blob_sha": "d48bcc58667b6bbf4f47dce430cd69ed787af3c5",
+          "size_bytes": 242478
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-22.csv",
+          "name": "2018-04-12_battery-22.csv",
+          "git_blob_sha": "b0f6f5098b150b382f1cd7eebba9dfb999ae1464",
+          "size_bytes": 228761
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-24.csv",
+          "name": "2018-04-12_battery-24.csv",
+          "git_blob_sha": "18a7fadf654fba7226f3cc499262860bbe8139f8",
+          "size_bytes": 642539
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-25.csv",
+          "name": "2018-04-12_battery-25.csv",
+          "git_blob_sha": "531b2b58f4d06f85f1264933846f5a451e1fe3bd",
+          "size_bytes": 248156
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-26.csv",
+          "name": "2018-04-12_battery-26.csv",
+          "git_blob_sha": "ebbe3b5e18581f4a3971bc4084f59d26821d9d1a",
+          "size_bytes": 41251
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-27.csv",
+          "name": "2018-04-12_battery-27.csv",
+          "git_blob_sha": "5f77ba61ccd089f86e04bc46eb5f4c5a1db4a98b",
+          "size_bytes": 307331
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-29.csv",
+          "name": "2018-04-12_battery-29.csv",
+          "git_blob_sha": "518b0384636c64ab6adcda54f7c3fe8b09c3bbeb",
+          "size_bytes": 163524
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-30.csv",
+          "name": "2018-04-12_battery-30.csv",
+          "git_blob_sha": "8938f49f48647c45dfdd14edc915b3af9afd3e2c",
+          "size_bytes": 259286
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-31.csv",
+          "name": "2018-04-12_battery-31.csv",
+          "git_blob_sha": "5369609ad19b10f27143dc86cc6b3a6bef918c33",
+          "size_bytes": 82146
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-33.csv",
+          "name": "2018-04-12_battery-33.csv",
+          "git_blob_sha": "33bc457b57ef23811e0f0fc6d71c697304c9384a",
+          "size_bytes": 695595
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-34.csv",
+          "name": "2018-04-12_battery-34.csv",
+          "git_blob_sha": "c794ece671dab363368f82bab572d76817a0092a",
+          "size_bytes": 390674
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-36.csv",
+          "name": "2018-04-12_battery-36.csv",
+          "git_blob_sha": "9c3ff093be258708fbfafbccf15d0dfce6647f8b",
+          "size_bytes": 324466
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-37.csv",
+          "name": "2018-04-12_battery-37.csv",
+          "git_blob_sha": "41412bbd0832521cec4b9e6cedbff16ed3cd167e",
+          "size_bytes": 261594
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-38.csv",
+          "name": "2018-04-12_battery-38.csv",
+          "git_blob_sha": "8a68c97f8a5c9b47521cc91c36f5c10d0c85e79c",
+          "size_bytes": 419599
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-39.csv",
+          "name": "2018-04-12_battery-39.csv",
+          "git_blob_sha": "367f642db02517a0d7edd25a5f5cb99242d11664",
+          "size_bytes": 29994
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-4.csv",
+          "name": "2018-04-12_battery-4.csv",
+          "git_blob_sha": "d56770479995f29d0b487f690ba91ef37af12acc",
+          "size_bytes": 334375
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-40.csv",
+          "name": "2018-04-12_battery-40.csv",
+          "git_blob_sha": "ba9f762011eb1b6dc04ae15432282cfc972a94c7",
+          "size_bytes": 133509
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-41.csv",
+          "name": "2018-04-12_battery-41.csv",
+          "git_blob_sha": "8318a1502634859fad22b420fce4561696f7623f",
+          "size_bytes": 217325
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-42.csv",
+          "name": "2018-04-12_battery-42.csv",
+          "git_blob_sha": "70160a87e7bfa5c2f02fe1a380514041f07801c2",
+          "size_bytes": 87008
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-43.csv",
+          "name": "2018-04-12_battery-43.csv",
+          "git_blob_sha": "ca9b1617419fcf244fc94351d94ef4ac1c2f7481",
+          "size_bytes": 74857
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-44.csv",
+          "name": "2018-04-12_battery-44.csv",
+          "git_blob_sha": "6931aef47f2d146b1ce1dedbf8df0ffa04f26fe2",
+          "size_bytes": 181022
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-45.csv",
+          "name": "2018-04-12_battery-45.csv",
+          "git_blob_sha": "cb2a2b1cc7324a0f7959000558d7195663a207b4",
+          "size_bytes": 116460
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-46.csv",
+          "name": "2018-04-12_battery-46.csv",
+          "git_blob_sha": "704d59e995fc8477557998fac0fc82b96495290a",
+          "size_bytes": 540992
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-6.csv",
+          "name": "2018-04-12_battery-6.csv",
+          "git_blob_sha": "640fb2014044b838c0df6b78b39cc411a7c66156",
+          "size_bytes": 248575
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-8.csv",
+          "name": "2018-04-12_battery-8.csv",
+          "git_blob_sha": "e0d52c87a57e6bac7989f5cde8de258e83057074",
+          "size_bytes": 548745
+        },
+        {
+          "path": "data/MIT data/2018-04-12/2018-04-12_battery-9.csv",
+          "name": "2018-04-12_battery-9.csv",
+          "git_blob_sha": "5ecdf8c9ab7daef2bb61e5906574b933ef20c52b",
+          "size_bytes": 32825
+        }
+      ]
+    }
+  }
+}
