@@ -1,0 +1,468 @@
+{
+  "status": "v17_predeclared_go_no_go_on_new_external_battery_cohorts",
+  "n_frozen_raw_external_files": 88,
+  "n_eligible_external_cells": 88,
+  "n_excluded_external_cells": 0,
+  "upstream_commit": "cc3cc5053caf38f04e0665f7f88cb109144d035e",
+  "binding_go_no_go_decision": {
+    "binding_protocol": "docs/V17_FINAL_GO_NO_GO_PROTOCOL_20261021.md",
+    "automatic_final_decision": "GO_UNIFIED_CALIBRATION",
+    "candidate_unified_calibration_GO": true,
+    "representative_acquisition_only_GO": false,
+    "per_criterion_calibration": {
+      "gain_at_least_0_5_pp": true,
+      "paired_descriptive_ci_lower_above_zero": true,
+      "at_least_two_of_three_cohorts_nmae_non_worse": true,
+      "no_cohort_more_than_1_0_pp_worse": true,
+      "negative_transfer_count_no_higher_than_ridge": true,
+      "not_both_N20_quartile_and_N30_random_excessively_worse": true
+    },
+    "per_criterion_selection": {
+      "gain_at_least_0_2_pp": false,
+      "at_least_two_of_three_cohorts_improved": false,
+      "paired_descriptive_ci_lower_above_zero": false
+    },
+    "observed_ridge_minus_new_macro_pp": 3.968623325871076,
+    "observed_random_minus_quartile_ridge_macro_pp": -0.2860402325608912,
+    "per_cohort_candidate": [
+      {
+        "cohort": "TJU_MIX",
+        "ridge_pct": 12.239284973020915,
+        "global_local_pct": 5.112425546993881,
+        "ridge_minus_GL_pp": 7.126859426027034
+      },
+      {
+        "cohort": "MIT_2017B",
+        "ridge_pct": 4.663516408911394,
+        "global_local_pct": 1.670964932626564,
+        "ridge_minus_GL_pp": 2.99255147628483
+      },
+      {
+        "cohort": "MIT_2018A",
+        "ridge_pct": 4.611177773325293,
+        "global_local_pct": 2.8247186980239265,
+        "ridge_minus_GL_pp": 1.7864590753013667
+      }
+    ],
+    "per_cohort_selection": {
+      "TJU_MIX": {
+        "random_ridge_pct": 11.950029115882966,
+        "quartiles_ridge_pct": 12.239284973020915,
+        "gain_pp": -0.2892558571379489
+      },
+      "MIT_2017B": {
+        "random_ridge_pct": 4.252571122095256,
+        "quartiles_ridge_pct": 4.663516408911394,
+        "gain_pp": -0.41094528681613784
+      },
+      "MIT_2018A": {
+        "random_ridge_pct": 4.4532582195967025,
+        "quartiles_ridge_pct": 4.611177773325293,
+        "gain_pp": -0.15791955372859068
+      }
+    },
+    "interpretation_if_NO_GO": "Stop repeated gate/kernel method search and do not portray unified kernel or predicted quartile labeling as a verified novel master-thesis method; archival cross-domain comparison retains value."
+  },
+  "primary_bootstrap": {
+    "ridge_minus_GL-KRR": {
+      "cohort_equal_effect_nominal_nMAE_pp": 3.9686233258710772,
+      "exploratory_cell_bootstrap_ci95_pp": [
+        3.8243365501565605,
+        4.106282468301121
+      ],
+      "n_boot": 10000,
+      "seed": 20261707,
+      "limitations": "Previously fixed XJTU methods; 4 external cohorts, same source and overlapping target train/test folds; cell bootstrap descriptive only"
+    },
+    "RBF-X_minus_GL-KRR": {
+      "cohort_equal_effect_nominal_nMAE_pp": 0.07859973544776404,
+      "exploratory_cell_bootstrap_ci95_pp": [
+        -0.06435693834212308,
+        0.21704050999951785
+      ],
+      "n_boot": 10000,
+      "seed": 20261707,
+      "limitations": "Previously fixed XJTU methods; 4 external cohorts, same source and overlapping target train/test folds; cell bootstrap descriptive only"
+    }
+  },
+  "bootstrap_acquisition": {
+    "effect_random_ridge_minus_quartile_ridge_nominal_pp": -0.2860402325608912,
+    "exploratory_cell_bootstrap_ci95_pp": [
+      -0.3856424557697518,
+      -0.18954459720776867
+    ],
+    "seed": 20261707,
+    "n_boot": 10000,
+    "limitations": "Random has five dependent acquisitions averaged within each heldout cell; target training pools and source model overlap; this is descriptive not a valid independent preregistered test"
+  },
+  "by_budget": {
+    "10": {
+      "random": {
+        "cohort_equal_nominal_nMAE_pct": {
+          "source": 7.842140260120483,
+          "offset": 7.561838858340697,
+          "ridge": 7.396289682799899,
+          "RBF-X": 3.3274624585745176,
+          "GL-KRR": 3.165789861532731
+        },
+        "total_negative_transfer_test_cells_vs_source": {
+          "offset": 21,
+          "ridge": 19,
+          "RBF-X": 0,
+          "GL-KRR": 1
+        },
+        "n_eligible_external_cells": 88,
+        "n_target_capacity_truths_per_fold": 20
+      },
+      "pred_quartiles": {
+        "cohort_equal_nominal_nMAE_pct": {
+          "source": 7.842140260120483,
+          "offset": 7.673783084406886,
+          "ridge": 7.5038318842221265,
+          "RBF-X": 3.322209809464832,
+          "GL-KRR": 3.245166866695168
+        },
+        "total_negative_transfer_test_cells_vs_source": {
+          "offset": 20,
+          "ridge": 20,
+          "RBF-X": 0,
+          "GL-KRR": 1
+        },
+        "n_eligible_external_cells": 88,
+        "n_target_capacity_truths_per_fold": 20
+      }
+    },
+    "20": {
+      "random": {
+        "cohort_equal_nominal_nMAE_pct": {
+          "source": 7.842140260120483,
+          "offset": 7.407883874409642,
+          "ridge": 7.164364961762316,
+          "RBF-X": 3.304069081827038,
+          "GL-KRR": 3.127005448997631
+        },
+        "total_negative_transfer_test_cells_vs_source": {
+          "offset": 20,
+          "ridge": 19,
+          "RBF-X": 0,
+          "GL-KRR": 1
+        },
+        "n_eligible_external_cells": 88,
+        "n_target_capacity_truths_per_fold": 40
+      },
+      "pred_quartiles": {
+        "cohort_equal_nominal_nMAE_pct": {
+          "source": 7.842140260120483,
+          "offset": 7.544945007430472,
+          "ridge": 7.342138213480328,
+          "RBF-X": 3.3098284854673357,
+          "GL-KRR": 3.223851625203506
+        },
+        "total_negative_transfer_test_cells_vs_source": {
+          "offset": 20,
+          "ridge": 20,
+          "RBF-X": 0,
+          "GL-KRR": 1
+        },
+        "n_eligible_external_cells": 88,
+        "n_target_capacity_truths_per_fold": 40
+      }
+    },
+    "30": {
+      "random": {
+        "cohort_equal_nominal_nMAE_pct": {
+          "source": 7.842140260120483,
+          "offset": 7.24904017916873,
+          "ridge": 6.8852861525249756,
+          "RBF-X": 3.260993710068608,
+          "GL-KRR": 3.096964429022842
+        },
+        "total_negative_transfer_test_cells_vs_source": {
+          "offset": 20,
+          "ridge": 18,
+          "RBF-X": 0,
+          "GL-KRR": 1
+        },
+        "n_eligible_external_cells": 88,
+        "n_target_capacity_truths_per_fold": 60
+      },
+      "pred_quartiles": {
+        "cohort_equal_nominal_nMAE_pct": {
+          "source": 7.842140260120483,
+          "offset": 7.439125117388507,
+          "ridge": 7.171326385085867,
+          "RBF-X": 3.2813027946625546,
+          "GL-KRR": 3.202703059214791
+        },
+        "total_negative_transfer_test_cells_vs_source": {
+          "offset": 20,
+          "ridge": 20,
+          "RBF-X": 0,
+          "GL-KRR": 1
+        },
+        "n_eligible_external_cells": 88,
+        "n_target_capacity_truths_per_fold": 60
+      }
+    }
+  },
+  "cohorts": {
+    "TJU_MIX": {
+      "n_eligible": 9,
+      "nominal_Ah": 2.5,
+      "excluded": [],
+      "primary_n30_quartile_metrics": {
+        "source": {
+          "mean_capacity_MAE_mAh": 189.7988870074647,
+          "mean_nominal_nMAE_pct": 7.59195548029859,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "offset": {
+          "mean_capacity_MAE_mAh": 316.86699333287805,
+          "mean_nominal_nMAE_pct": 12.67467973331512,
+          "n_negative_transfer_cells_vs_source": 9
+        },
+        "ridge": {
+          "mean_capacity_MAE_mAh": 305.98212432552293,
+          "mean_nominal_nMAE_pct": 12.239284973020915,
+          "n_negative_transfer_cells_vs_source": 9
+        },
+        "RBF-X": {
+          "mean_capacity_MAE_mAh": 151.5308229420675,
+          "mean_nominal_nMAE_pct": 6.061232917682699,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "GL-KRR": {
+          "mean_capacity_MAE_mAh": 127.81063867484704,
+          "mean_nominal_nMAE_pct": 5.112425546993881,
+          "n_negative_transfer_cells_vs_source": 0
+        }
+      },
+      "n20_quartile_metrics": {
+        "source": {
+          "mean_capacity_MAE_mAh": 189.7988870074647,
+          "mean_nominal_nMAE_pct": 7.59195548029859,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "offset": {
+          "mean_capacity_MAE_mAh": 322.91750004789975,
+          "mean_nominal_nMAE_pct": 12.91670000191599,
+          "n_negative_transfer_cells_vs_source": 9
+        },
+        "ridge": {
+          "mean_capacity_MAE_mAh": 317.15090757147334,
+          "mean_nominal_nMAE_pct": 12.686036302858932,
+          "n_negative_transfer_cells_vs_source": 9
+        },
+        "RBF-X": {
+          "mean_capacity_MAE_mAh": 153.81978259924517,
+          "mean_nominal_nMAE_pct": 6.152791303969807,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "GL-KRR": {
+          "mean_capacity_MAE_mAh": 128.68467947208313,
+          "mean_nominal_nMAE_pct": 5.147387178883325,
+          "n_negative_transfer_cells_vs_source": 0
+        }
+      },
+      "n30_random_metrics": {
+        "source": {
+          "mean_capacity_MAE_mAh": 189.7988870074647,
+          "mean_nominal_nMAE_pct": 7.59195548029859,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "offset": {
+          "mean_capacity_MAE_mAh": 312.4945540284076,
+          "mean_nominal_nMAE_pct": 12.499782161136306,
+          "n_negative_transfer_cells_vs_source": 9
+        },
+        "ridge": {
+          "mean_capacity_MAE_mAh": 298.7507278970742,
+          "mean_nominal_nMAE_pct": 11.950029115882966,
+          "n_negative_transfer_cells_vs_source": 9
+        },
+        "RBF-X": {
+          "mean_capacity_MAE_mAh": 150.8258764228039,
+          "mean_nominal_nMAE_pct": 6.033035056912155,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "GL-KRR": {
+          "mean_capacity_MAE_mAh": 127.33957188090348,
+          "mean_nominal_nMAE_pct": 5.093582875236139,
+          "n_negative_transfer_cells_vs_source": 0
+        }
+      }
+    },
+    "MIT_2017B": {
+      "n_eligible": 43,
+      "nominal_Ah": 1.1,
+      "excluded": [],
+      "primary_n30_quartile_metrics": {
+        "source": {
+          "mean_capacity_MAE_mAh": 106.3828256079483,
+          "mean_nominal_nMAE_pct": 9.671165964358938,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "offset": {
+          "mean_capacity_MAE_mAh": 53.82585369299168,
+          "mean_nominal_nMAE_pct": 4.893259426635607,
+          "n_negative_transfer_cells_vs_source": 3
+        },
+        "ridge": {
+          "mean_capacity_MAE_mAh": 51.298680498025334,
+          "mean_nominal_nMAE_pct": 4.663516408911394,
+          "n_negative_transfer_cells_vs_source": 3
+        },
+        "RBF-X": {
+          "mean_capacity_MAE_mAh": 25.718949618735632,
+          "mean_nominal_nMAE_pct": 2.3380863289759666,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "GL-KRR": {
+          "mean_capacity_MAE_mAh": 18.38061425889221,
+          "mean_nominal_nMAE_pct": 1.670964932626564,
+          "n_negative_transfer_cells_vs_source": 0
+        }
+      },
+      "n20_quartile_metrics": {
+        "source": {
+          "mean_capacity_MAE_mAh": 106.3828256079483,
+          "mean_nominal_nMAE_pct": 9.671165964358938,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "offset": {
+          "mean_capacity_MAE_mAh": 53.8073594590886,
+          "mean_nominal_nMAE_pct": 4.891578132644418,
+          "n_negative_transfer_cells_vs_source": 3
+        },
+        "ridge": {
+          "mean_capacity_MAE_mAh": 51.37101711862933,
+          "mean_nominal_nMAE_pct": 4.6700924653299385,
+          "n_negative_transfer_cells_vs_source": 3
+        },
+        "RBF-X": {
+          "mean_capacity_MAE_mAh": 25.61720024006547,
+          "mean_nominal_nMAE_pct": 2.3288363854604968,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "GL-KRR": {
+          "mean_capacity_MAE_mAh": 18.40969727364292,
+          "mean_nominal_nMAE_pct": 1.6736088430584468,
+          "n_negative_transfer_cells_vs_source": 0
+        }
+      },
+      "n30_random_metrics": {
+        "source": {
+          "mean_capacity_MAE_mAh": 106.3828256079483,
+          "mean_nominal_nMAE_pct": 9.671165964358938,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "offset": {
+          "mean_capacity_MAE_mAh": 50.87250339942006,
+          "mean_nominal_nMAE_pct": 4.624773036310913,
+          "n_negative_transfer_cells_vs_source": 1
+        },
+        "ridge": {
+          "mean_capacity_MAE_mAh": 46.77828234304784,
+          "mean_nominal_nMAE_pct": 4.252571122095256,
+          "n_negative_transfer_cells_vs_source": 1
+        },
+        "RBF-X": {
+          "mean_capacity_MAE_mAh": 25.174758690435933,
+          "mean_nominal_nMAE_pct": 2.2886144264032664,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "GL-KRR": {
+          "mean_capacity_MAE_mAh": 17.814803142099695,
+          "mean_nominal_nMAE_pct": 1.6195275583726993,
+          "n_negative_transfer_cells_vs_source": 0
+        }
+      }
+    },
+    "MIT_2018A": {
+      "n_eligible": 36,
+      "nominal_Ah": 1.1,
+      "excluded": [],
+      "primary_n30_quartile_metrics": {
+        "source": {
+          "mean_capacity_MAE_mAh": 68.89629269274313,
+          "mean_nominal_nMAE_pct": 6.26329933570392,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "offset": {
+          "mean_capacity_MAE_mAh": 52.24379811436275,
+          "mean_nominal_nMAE_pct": 4.749436192214794,
+          "n_negative_transfer_cells_vs_source": 8
+        },
+        "ridge": {
+          "mean_capacity_MAE_mAh": 50.72295550657823,
+          "mean_nominal_nMAE_pct": 4.611177773325293,
+          "n_negative_transfer_cells_vs_source": 8
+        },
+        "RBF-X": {
+          "mean_capacity_MAE_mAh": 15.890480510618984,
+          "mean_nominal_nMAE_pct": 1.4445891373289985,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "GL-KRR": {
+          "mean_capacity_MAE_mAh": 31.071905678263192,
+          "mean_nominal_nMAE_pct": 2.8247186980239265,
+          "n_negative_transfer_cells_vs_source": 1
+        }
+      },
+      "n20_quartile_metrics": {
+        "source": {
+          "mean_capacity_MAE_mAh": 68.89629269274313,
+          "mean_nominal_nMAE_pct": 6.26329933570392,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "offset": {
+          "mean_capacity_MAE_mAh": 53.09212576504109,
+          "mean_nominal_nMAE_pct": 4.826556887731008,
+          "n_negative_transfer_cells_vs_source": 8
+        },
+        "ridge": {
+          "mean_capacity_MAE_mAh": 51.373144594773215,
+          "mean_nominal_nMAE_pct": 4.670285872252111,
+          "n_negative_transfer_cells_vs_source": 8
+        },
+        "RBF-X": {
+          "mean_capacity_MAE_mAh": 15.926435436688731,
+          "mean_nominal_nMAE_pct": 1.4478577669717023,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "GL-KRR": {
+          "mean_capacity_MAE_mAh": 31.35614739035619,
+          "mean_nominal_nMAE_pct": 2.850558853668745,
+          "n_negative_transfer_cells_vs_source": 1
+        }
+      },
+      "n30_random_metrics": {
+        "source": {
+          "mean_capacity_MAE_mAh": 68.89629269274313,
+          "mean_nominal_nMAE_pct": 6.26329933570392,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "offset": {
+          "mean_capacity_MAE_mAh": 50.848218740648655,
+          "mean_nominal_nMAE_pct": 4.622565340058969,
+          "n_negative_transfer_cells_vs_source": 10
+        },
+        "ridge": {
+          "mean_capacity_MAE_mAh": 48.98584041556374,
+          "mean_nominal_nMAE_pct": 4.4532582195967025,
+          "n_negative_transfer_cells_vs_source": 8
+        },
+        "RBF-X": {
+          "mean_capacity_MAE_mAh": 16.07464811579443,
+          "mean_nominal_nMAE_pct": 1.461331646890402,
+          "n_negative_transfer_cells_vs_source": 0
+        },
+        "GL-KRR": {
+          "mean_capacity_MAE_mAh": 28.355611388056566,
+          "mean_nominal_nMAE_pct": 2.5777828534596874,
+          "n_negative_transfer_cells_vs_source": 1
+        }
+      }
+    }
+  }
+}

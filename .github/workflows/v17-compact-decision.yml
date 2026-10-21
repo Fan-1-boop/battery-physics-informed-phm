@@ -1,0 +1,31 @@
+name: v17 compact final outcome report (no training)
+
+on:
+  push:
+    branches: [research/v17-final-go-no-go]
+    paths:
+      - 'experiments/rw_multitarget/compact_final_v17.py'
+      - '.github/workflows/v17-compact-decision.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: python experiments/rw_multitarget/compact_final_v17.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v17-brief-binding-decision
+          path: results/v17/compact_final_decision.json
+      - name: Archive concise report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/v17/compact_final_decision.json
+          git diff --cached --quiet || git commit -m "results: expose concise v17 binding thesis go/no-go evidence"
+          git push origin HEAD:refs/heads/research/v17-final-go-no-go

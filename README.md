@@ -1,5 +1,18 @@
 # Physics-Informed Battery PHM
 
+## v17 最终硕士论文方向去留决定（2026-10-21）
+
+**最终取舍：GO——保留统一连续容量校准作为一个收缩后的研究主线；NO-GO——不再将预测容量四分位目标电芯选择作为创新点。** 在执行任何v17目标电芯容量评分前，已冻结唯一候选核`1+RBF-X`、判定门槛和**88份全新MIT/TJU原始CSV SHA清单**。
+
+本轮真实88电芯、三新目标队列、每折两芯各前30循环容量标注、四分位选择：三cohort等权额定容量归一化nMAE，RW Source **7.842%**、offset **7.439%**、Ridge **7.171%**、v14 RBF-X **3.281%**、新GL-KRR **3.203%**。GL-KRR三个队列均比Ridge更好，负迁移**1/88** vs Ridge**20/88**，因此达到事先科研GO门槛；但**GL-KRR比v14 RBF-X仅增益0.079pp，配对描述区间包含0，算法新颖性没有证明**。
+
+N30 Ridge选四分位在新三队列**全部不如随机**：三组等权Quartile7.171% vs Random6.885%，四分位比随机劣化0.286pp，与历史v16结论相反，故停止以该方法为论文核心选样创新。保留同成本随机作简单强对照，不继续搜新分位阈值或后验改核。
+
+[完整中文最终决策报告](reports/v17_binding_thesis_direction_decision_20261021.md) | [短版可核验GO/NO-GO决定](results/v17/compact_final_decision.json) | [原始88文件SHA清单](docs/v17_final_unseen_manifest.json) | [执行前冻结协议](docs/V17_FINAL_GO_NO_GO_PROTOCOL_20261021.md) | [真实运行及67项单测](https://github.com/Fan-1-boop/battery-physics-informed-phm/actions/runs/39603971268)
+
+---
+
+
 ## v16 首次跨独立数据集验证：240块未参与方法开发的外部电芯（2026-10-13）
 
 **v8–v15方法固定后、任何外部预测运行前，已冻结4个外部目标队列、244份作者官方CSV文件SHA和容量尺度桥接规则。** 首次真实验证：TJU-NCA（62有效/66原始）、TJU-NCM（55）、HUST（77）、MIT 2017-05-12（46），共240外部电芯、4个目标队列、3个外部数据家族；原RW8源模型和v10/v14/v15算法无调参变化，容量标签预算仍为每fold选2块目标电芯各前10/20/30循环。
